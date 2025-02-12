@@ -61,7 +61,7 @@ button {
 #backtotop.visible a:hover {
     outline: none;
     opacity: 0.9;
-    background: $secondary;
+    background: $primary;
 }
 
 #backtotop a {
@@ -71,7 +71,7 @@ button {
     display: block;
     width: 46px;
     height: 46px;
-    background-color: $medium-grey;
+    background-color: $primary;
     opacity: 1;
     transition: all 0.3s;
     border-radius: 50%;

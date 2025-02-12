@@ -8009,6 +8009,8 @@ img.pushed-image {
     color: #A9ABAC;
     font-size: 1rem;
     font-weight: 400; }
+  .media.icon-box .media-left {
+    width: 150px; }
 
 /* ==========================================================================
 Hero styles
@@ -8093,7 +8095,7 @@ Classes to change the feel of bulma buttons
   .button.primary-btn:hover {
     color: #fff; }
   .button.primary-btn.raised:hover {
-    box-shadow: 0 14px 26px -12px rgba(79, 193, 234, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(79, 193, 234, 0.2) !important;
+    box-shadow: 0 14px 26px -12px rgba(143, 29, 80, 0.42), 0 4px 23px 0px rgba(143, 29, 80, 0.12), 0 8px 10px -5px rgba(143, 29, 80, 0.2) !important;
     opacity: 0.8; }
   .button.primary-btn.btn-outlined {
     border-color: #8f1d50;
@@ -8112,7 +8114,7 @@ Classes to change the feel of bulma buttons
   .button.secondary-btn:hover {
     color: #fff; }
   .button.secondary-btn.raised:hover {
-    box-shadow: 0 14px 26px -12px rgba(243, 146, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(243, 146, 0, 0.2) !important;
+    box-shadow: 0 14px 26px -12px rgba(27, 21, 65, 0.42), 0 4px 23px 0px rgba(27, 21, 65, 0.12), 0 8px 10px -5px rgba(27, 21, 65, 0.2) !important;
     opacity: 0.8; }
   .button.secondary-btn.btn-outlined {
     border-color: #1b1541;
@@ -8644,7 +8646,7 @@ button:focus, button:active {
 #backtotop.visible a:hover {
   outline: none;
   opacity: 0.9;
-  background: #1b1541; }
+  background: #8f1d50; }
 
 #backtotop a {
   outline: none;
@@ -8653,7 +8655,7 @@ button:focus, button:active {
   display: block;
   width: 46px;
   height: 46px;
-  background-color: #66676b;
+  background-color: #8f1d50;
   opacity: 1;
   transition: all 0.3s;
   border-radius: 50%;

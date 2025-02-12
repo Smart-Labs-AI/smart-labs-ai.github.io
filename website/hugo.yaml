@@ -44,7 +44,7 @@ params:
     # Button text
     buttontext: Erfahre mehr.
     # Where the main hero button links to
-    buttonlink: "#"
+    buttonlink: "#contact"
     # Hero image (from static/images/___)
     image: illustrations/worker.svg
     # Footer logos (from static/images/logos/clients/*.svg)
@@ -60,13 +60,13 @@ params:
     features:
     - title: KI-Sicherheit & Compliance
       text: Schutz vor Angriffen, Prompt Injection & Datenlecks.
-      icon: laptop-globe
+      icon: laptop-cloud
     - title: Bias-Reduktion & Transparenz
       text: KI-Modelle fairer & nachvollziehbarer machen.
-      icon: doc-sync
+      icon: mouse-globe
     - title: Regulatorische Absicherung
       text: Unterstützung bei EU-AI-Act, DORA & weiteren Vorschriften.
-      icon: mobile-feed
+      icon: doc-sync
   section_contact:
     title: Teste deine KI-Sicherheit!
     subtitle: Jetzt PoC-Partner werden.
