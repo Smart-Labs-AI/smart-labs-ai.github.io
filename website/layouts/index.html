@@ -4,8 +4,8 @@
     {{ partial "hero.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.section1 }}
-    {{ partial "section1.html" . }}
+    {{ if .Site.Params.section_services }}
+    {{ partial "section_services.html" . }}
     {{ end }}
 
     {{ if .Site.Params.section2 }}
@@ -24,8 +24,8 @@
     {{ partial "section4.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.section5 }}
-    {{ partial "section5.html" . }}
+    {{ if .Site.Params.section_contact }}
+    {{ partial "section_contact.html" . }}
     {{ end }}
 
     {{ if .Site.Params.footer }}
