@@ -3,7 +3,7 @@ name: Deploy docs
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -18,7 +18,7 @@ jobs:
           extended: true
 
       - name: Build
-        working-directory: docs
+        working-directory: website
         run: hugo --minify
 
       - name: Deploy
@@ -27,4 +27,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force_orphan: true
           commit_message: '[skip ci] Deploy:'
-          publish_dir: docs/public
+          publish_dir: website/public
