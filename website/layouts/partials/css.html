@@ -11,7 +11,6 @@
 {{- $fontFace     := replace $fontName " " "+" }}
 {{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," }}
 {{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fontFace $fontSizes }}
-<link rel="icon" type="image/png" href="{{ "images/favicon.png" | relURL }}" />
 <link href="{{ $fontUrl }}" rel="stylesheet">
 {{- if $inServerMode }}
 {{- $css := resources.Get $sass | toCSS $cssOpts }}
@@ -21,3 +20,9 @@
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
 <link rel="stylesheet" type="text/css" href="{{ "css/icons.css" | relURL }}">
+
+<!-- Favicon -->  
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
