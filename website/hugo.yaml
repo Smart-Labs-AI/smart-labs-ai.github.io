@@ -40,7 +40,7 @@ params:
     # Main hero title
     title: KI verändert alles – aber ist sie auch sicher?
     # Hero subtitle (optional)
-    subtitle: Wir helfen Unternehmen, ihre KI-Modelle sicher & regelkonform zu machen.
+    subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle sicher, regelkonform und vertrauenswürdig zu machen.
     # Button text
     buttontext: Erfahre mehr.
     # Where the main hero button links to
@@ -56,21 +56,21 @@ params:
   section_services:
   section2:
     title: Wie sicher ist deine KI?
-    subtitle: Finden wir es gemeinsam heraus!
+    subtitle: Finden Sie es mit uns heraus!
     features:
     - title: KI-Sicherheit & Compliance
       text: Schutz vor Angriffen, Prompt Injection & Datenlecks.
       icon: laptop-cloud
-    - title: Bias-Reduktion & Transparenz
-      text: KI-Modelle fairer & nachvollziehbarer machen.
+    - title: Fairness & Transparenz
+      text: Reduzierung von Bias und mehr Nachvollziehbarkeit in KI-Modellen.
       icon: mouse-globe
     - title: Regulatorische Absicherung
-      text: Unterstützung bei EU-AI-Act, DORA & weiteren Vorschriften.
+      text: Unterstützung bei EU AI Act, DORA und weiteren Vorschriften.
       icon: doc-sync
   section_contact:
     title: Teste deine KI-Sicherheit!
-    subtitle: Jetzt PoC-Partner werden.
-    buttonText: Send Message
+    subtitle: Jetzt PoC-Partner werden und KI absichern.
+    buttonText: Nachricht senden
     action: https://form.smart-labs.ai/contact
     method: POST
   footer:
