@@ -71,8 +71,8 @@ params:
     title: Teste deine KI-Sicherheit!
     subtitle: Jetzt PoC-Partner werden.
     buttonText: Send Message
-    # action: https://formspree.io/f/<form_id>
-    # method: POST
+    action: https://form.smart-labs.ai/contact
+    method: POST
   footer:
     # Logo (from static/images/logos/___)
     logo: logo-white.svg
