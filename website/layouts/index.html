@@ -24,7 +24,32 @@
     {{ partial "section4.html" . }}
     {{ end }}
 
-    {{ partial "latest-posts.html"}}
+    <section class="section">
+      <div class="container">
+        <h1 class="title has-text-left">Latest Blog Posts</h1>
+        <div class="columns is-multiline">
+          {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+            <div class="column is-one-third">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <p class="title">{{ .Title }}</p>
+                  <p class="subtitle">{{ .Date.Format "Jan 2, 2006" }}</p>
+                  <div class="content">
+                    {{ .Summary }}
+                  </div>
+                  <a href="{{ .Permalink }}" class="button is-link">Read More</a>
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
 
     {{ if .Site.Params.section_contact }}
     {{ partial "section_contact.html" . }}
