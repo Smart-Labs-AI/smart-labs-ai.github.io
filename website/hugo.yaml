@@ -50,6 +50,8 @@ params:
     # Footer logos (from static/images/logos/clients/*.svg)
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
+  - title: Blog
+    url: /blog
   - title: Kontakt
     url: /#contact
     button: true
