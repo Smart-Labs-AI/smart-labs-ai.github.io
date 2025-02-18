@@ -24,6 +24,8 @@ Cards and Card content styles
     }
     .card-text {
         padding: 0 40px;
+        height: 50px; /* Set a fixed height for uniformity */
+        overflow: hidden; /* Hide overflow */
         p {
             color: $muted-grey;
             display: -webkit-box;
