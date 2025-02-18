@@ -1,4 +1,6 @@
 {{ define "main" }}
+  {{ partial "navbar.html" . }}
+
   <section class="section">
     <div class="container">
       <h1 class="title has-text-left">All Blog Posts</h1>
@@ -25,4 +27,6 @@
       </div>
     </div>
   </section>
+
+  {{ partial "footer.html" . }}
 {{ end }}
