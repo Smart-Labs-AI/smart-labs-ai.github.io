@@ -9,10 +9,10 @@
       <div class="columns is-multiline">
         {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
           <div class="column is-one-third">
-            <div class="card">
+            <div class="feature-card">
               <div class="card-image">
                 <figure class="image is-4by3">
-                  <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                  <img src="blog/{{ .Params.image }}" alt="{{ .Title }}">
                 </figure>
               </div>
               <div class="card-content">
