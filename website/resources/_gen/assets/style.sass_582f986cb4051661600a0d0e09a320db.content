@@ -7986,7 +7986,7 @@ Section Styles
 .divider {
   height: 3px;
   border-radius: 50px;
-  background: #1b1541;
+  background: #8f1d50;
   width: 60px; }
   .divider.is-centered {
     margin: 0 auto; }

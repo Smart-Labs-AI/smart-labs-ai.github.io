@@ -3,8 +3,8 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-left" style="margin-bottom: 20px;">All Blog Posts</h1>
-      <div class="divider" style="margin-bottom: 20px; text-align: left; background-color: var(--primary-color);"></div>
+      <h1 class="title has-text-left" style="margin-bottom: 20px;">{{ .Title }}</h1>
+      <div class="divider" style="margin-bottom: 20px; text-align: left"></div>
       <div class="columns is-multiline" style="margin-top: 20px;">
         {{ range .Pages }}
           <div class="column is-one-third">
