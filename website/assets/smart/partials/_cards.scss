@@ -26,6 +26,11 @@ Cards and Card content styles
         padding: 0 40px;
         p {
             color: $muted-grey;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* Limit to 2 lines */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Add ellipsis */
         }
     }
     .card-action {
