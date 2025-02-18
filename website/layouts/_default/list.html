@@ -9,12 +9,12 @@
         {{ range .Pages }}
           <div class="column is-one-third">
             <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                </figure>
-              </div>
               <div class="card-content">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                  </figure>
+                </div>
                 <p class="title">{{ .Title }}</p>
                 <p class="subtitle">{{ .Date.Format "Jan 2, 2006" }}</p>
                 <div class="content">
