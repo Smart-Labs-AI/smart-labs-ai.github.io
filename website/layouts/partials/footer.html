@@ -9,7 +9,11 @@
     <div class="columns">
       <div class="column">
         <div class="footer-logo">
-          <img src="{{ printf "/images/logos/%s" $logo | relURL }}">
+          {{ if $logo }}
+            <img src="{{ printf "/images/logos/%s" $logo | relURL }}">
+          {{ else }}
+            <img src="{{ "/images/logos/default-logo.png" | relURL }}">
+          {{ end }}
         </div>
       </div>
       {{- range $quickLinks }}
