@@ -1,7 +1,7 @@
 ---
 title: "The Impact of AI on Healthcare"
 date: 2025-02-10
-image: "images/illustrations/icons/doc-sync.svg"
+image: "images/example.svg"
 summary: "How AI is revolutionizing the healthcare industry, improving patient outcomes and operational efficiency."
 ---
 

@@ -33,8 +33,18 @@ footer.footer-dark {
                 color: $smoke-white;
             }
         }
-        .level-item .icon {
-            color: $secondary;
+        .level-item .icon {    
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            
             transition: all 0.5s;
             :hover {
                 color: $smoke-white;

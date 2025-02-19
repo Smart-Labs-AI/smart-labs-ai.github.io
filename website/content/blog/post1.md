@@ -1,7 +1,7 @@
 ---
 title: "Exploring the Future of AI"
 date: 2025-02-18
-image: "images/illustrations/icons/laptop-cloud.svg"
+image: "images/example.svg"
 summary: "A deep dive into the advancements and future prospects of artificial intelligence."
 ---
 

@@ -40,17 +40,13 @@
             <h3>{{ $socialMediaTitle }}</h3>
             <nav class="level is-mobile">
               <div class="level-left">
-                <a class="level-item" href="http://linkedin.com">
-                  <span class="icon"><i class="fa fa-linkedin"></i></span>
-                </a>
                 {{- range $socialMedia }}
                 <a class="level-item" href="{{ .link }}">
-                  <span class="icon"><i class="fa fa-{{ .icon }}"></i></span>
+                  <span class="icon"><i class="fab fa-{{ .icon }}"></i></span>
                 </a>
                 {{- end }}
               </div>
             </nav>
-
           </div>
         </div>
       </div>
