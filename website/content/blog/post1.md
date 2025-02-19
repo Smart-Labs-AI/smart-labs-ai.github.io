@@ -2,13 +2,11 @@
 title: "Are AI Agents Secure?"
 date: 2025-02-18
 layout: "blog"
-header_image: "images/example.svg"
+image: "images/agents.jpg"
 summary: "A deep dive into the advancements and future prospects of artificial intelligence."
 include_footer: true
 sidebar: true
 ---
-
-# Are AI Agents Secure? A Deep Dive into the Challenges of Large Language Models
 
 Large Language Models (LLMs) are not inherently secure. The risks they pose extend beyond mere hallucinations or incorrect outputs—LLMs can be manipulated. Traditional security measures, such as content filtering and access control, have not proven to be robust enough to prevent attacks. For instance, "jailbreak" techniques can be used to bypass restrictions and compel an LLM to perform actions it was explicitly programmed to avoid. 
 
