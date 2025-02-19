@@ -1,8 +1,11 @@
 ---
 title: "Are AI Agents Secure?"
 date: 2025-02-18
-image: "images/example.svg"
+layout: "blog"
+header_image: "images/example.svg"
 summary: "A deep dive into the advancements and future prospects of artificial intelligence."
+include_footer: true
+sidebar: true
 ---
 
 # Are AI Agents Secure? A Deep Dive into the Challenges of Large Language Models
