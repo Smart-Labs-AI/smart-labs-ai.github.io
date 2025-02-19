@@ -2,7 +2,7 @@
   <div class="card-content">
     <div class="card-image">
       <figure class="image is-4by3">
-        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+        <img src="{{ .Site.BaseURL }}{{ .Params.image | relURL }}" alt="{{ .Title }}">
       </figure>
     </div>
     <p class="title" style="margin-bottom: 0.5rem;">{{ .Title }}</p>
