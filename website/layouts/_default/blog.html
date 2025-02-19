@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+  <div class="blog-header">
+    <img src="{{ .Params.header_image }}" alt="Blog Header Image" class="header-image">
+  </div>
+
+  <div class="blog-content" style="max-width: 800px; margin: 0 auto;">
+    {{ partial "single/single.html" . }}
+
+    {{ if .Params.include_footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+    {{ if .Params.sidebar }}
+    {{ partial "single/sidebar.html" . }}
+    {{ end }}
+  </div>
+
+{{ end }}
