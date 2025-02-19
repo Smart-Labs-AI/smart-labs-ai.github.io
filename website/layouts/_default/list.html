@@ -16,9 +16,9 @@
                   </figure>
                 </div>
                 <p class="title">{{ .Title }}</p>
-                <p class="content">{{ .Date.Format "Jan 2, 2006" }}</p>
+                <p class="content">{{ .Summary }}</p>
                 <div class="subtitle">
-                  {{ .Summary }}
+                  {{ .Date.Format "Jan 2, 2006" }}
                 </div>
                 <a href="{{ .Permalink }}" class="button cta primary-btn raised">Read More</a>
               </div>
