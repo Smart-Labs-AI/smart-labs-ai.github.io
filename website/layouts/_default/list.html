@@ -15,9 +15,9 @@
                     <img src="{{ .Params.image }}" alt="{{ .Title }}">
                   </figure>
                 </div>
-                <p class="title">{{ .Title }}</p>
+                <p class="title" style="margin-bottom: 0.5rem;">{{ .Title }}</p>
                 <p class="content">{{ .Summary }}</p>
-                <div class="subtitle">
+                <div class="subtitle" style="margin-top: 0.5rem;">
                   {{ .Date.Format "Jan 2, 2006" }}
                 </div>
                 <a href="{{ .Permalink }}" class="button cta primary-btn raised">Read More</a>
