@@ -10,9 +10,9 @@
       <div class="column">
         <div class="footer-logo">
           {{ if $logo }}
-            <img src="{{ printf "/images/logos/%s" $logo | relURL }}">
+            <img src="{{ printf "images/logos/%s" $logo | relURL }}">
           {{ else }}
-            <img src="{{ "/images/logos/default-logo.png" | relURL }}">
+            <img src="{{ "images/logos/default-logo.png" | relURL }}">
           {{ end }}
         </div>
       </div>
