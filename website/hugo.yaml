@@ -52,6 +52,8 @@ params:
   navbar:
   - title: Blog
     url: /blog
+  - title: Karriere
+    url: /careers/
   - title: Kontakt
     url: /#contact
     button: true
