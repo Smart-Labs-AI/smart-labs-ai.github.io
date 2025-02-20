@@ -17,7 +17,9 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-height: calc(1.5em * 2); /* Forces 2 lines minimum height */
+    max-height: calc(1.5em * 2); /* Maximum height of two lines */
+    line-height: 1.5em;
+    margin-bottom: 0.5rem;
   }
   .date {
     padding-top: -10px;
