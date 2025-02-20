@@ -2,7 +2,7 @@
 title: "DeepSeek: Revolutionäre Trainingsmethode"
 date: 2025-02-12
 layout: "blog"
-image: "blog/images/deepseek_training.webp"
+image: "/blog/images/deepseek_training.webp"
 summary: "DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen."
 ---
 
