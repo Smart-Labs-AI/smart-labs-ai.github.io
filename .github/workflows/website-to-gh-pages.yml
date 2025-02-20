@@ -30,3 +30,4 @@ jobs:
           force_orphan: true
           commit_message: '[skip ci] Deploy:'
           publish_dir: website/public
+          cname: smart-labs.ai
