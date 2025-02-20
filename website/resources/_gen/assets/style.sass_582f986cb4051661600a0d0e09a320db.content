@@ -8152,6 +8152,10 @@ Classes to change the feel of bulma buttons
       color: #fff;
       background-color: #1D8F5C; }
 
+.card-image {
+  margin-bottom: 1rem;
+  /* Add space below the image */ }
+
 .card-content .content {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -8167,6 +8171,10 @@ Classes to change the feel of bulma buttons
   text-overflow: ellipsis;
   min-height: calc(1.5em * 2);
   /* Forces 2 lines minimum height */ }
+
+.card-content .date {
+  padding-top: -10px;
+  color: #666; }
 
 /* ==========================================================================
 Inputs styles

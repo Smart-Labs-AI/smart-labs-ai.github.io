@@ -19,4 +19,8 @@
     text-overflow: ellipsis;
     min-height: calc(1.5em * 2); /* Forces 2 lines minimum height */
   }
+  .date {
+    padding-top: -10px;
+    color: #666;
+  }
 }

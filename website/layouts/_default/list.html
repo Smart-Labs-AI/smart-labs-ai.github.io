@@ -8,21 +8,7 @@
       <div class="columns is-multiline" style="margin-top: 20px;">
         {{ range .Pages }}
           <div class="column is-one-third">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                  </figure>
-                </div>
-                <p class="title" style="margin-bottom: 0.5rem;">{{ .Title }}</p>
-                <p class="content">{{ .Summary }}</p>
-                <div class="subtitle" style="margin-top: 0.5rem;">
-                  {{ .Date.Format "Jan 2, 2006" }}
-                </div>
-                <a href="{{ .Permalink }}" class="button cta primary-btn raised">Read More</a>
-              </div>
-            </div>
+            {{ partial "card.html" . }}
           </div>
         {{ end }}
       </div>
@@ -31,3 +17,4 @@
 
   {{ partial "footer.html" . }}
 {{ end }}
+

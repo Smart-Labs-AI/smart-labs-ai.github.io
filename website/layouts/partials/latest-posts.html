@@ -9,22 +9,8 @@
       <div class="columns is-multiline">
         {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
           <div class="column is-one-third">
-            <div class="card">
-                <div class="card-content">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="blog/{{ .Params.image }}" alt="{{ .Title }}">
-                    </figure>
+                    {{ partial "card.html" . }}
                   </div>
-                  <p class="title">{{ .Title }}</p>
-                  <p class="subtitle">{{ .Date.Format "Jan 2, 2006" }}</p>
-                  <div class="content">
-                    {{ .Summary }}
-                  </div>
-                  <a href="{{ .Permalink }}" class="button cta primary-btn raised">Read More</a>
-                </div>
-              </div>
-          </div>
         {{ end }}
       </div>
     </div>

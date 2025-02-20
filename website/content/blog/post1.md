@@ -32,3 +32,4 @@ Starting in August 2025, the EU AI Act will mandate the implementation of state-
 Given these developments, organizations and researchers must rigorously assess their AI-driven workflows to determine whether their agents are genuinely secure. The question remains: **Is your AI agent truly secure?** The answer requires continuous testing, monitoring, and adaptation of security measures to stay ahead of evolving threats.
 
 
+![AI Agent Security](../images/agents.jpg)
