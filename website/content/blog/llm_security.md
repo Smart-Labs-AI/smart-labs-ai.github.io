@@ -1,5 +1,5 @@
 ---
-title: "Gefährliche KI-Modelle entdeckt"
+title: "Gefährliche KI-Modelle"
 date: 2025-02-10
 layout: "blog"
 image: "images/llm_security.webp"

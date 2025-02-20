@@ -5,9 +5,9 @@
 .card-content {
   .content {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden;
+    overflow: auto;
     text-overflow: ellipsis;
   }
   
@@ -15,9 +15,9 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: hidden;
+    overflow: auto;
     text-overflow: ellipsis;
-    max-height: calc(1.5em * 2); /* Maximum height of two lines */
+    height: calc(1.5em * 2); /* Maximum height of two lines */
     line-height: 1.5em;
     margin-bottom: 0.5rem;
   }

@@ -5,7 +5,7 @@
         <img src="{{ .Site.BaseURL }}blog{{ .Params.image | relURL }}" alt="{{ .Title }}" style="object-fit: cover; object-position: center;">
       </figure>
     </div>
-    <p class="title is-size-4" style="margin-bottom: 0.5rem;">{{ .Title }}</p>
+    <p class="title is-size-4">{{ .Title }}</p>
     <p class="content is-size-5">{{ .Summary }}</p>
     <div class="subtitle is-size-6" style="color: #666">
       {{ .Date.Format "Jan 2, 2006" }}

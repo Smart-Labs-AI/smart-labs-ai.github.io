@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek: Revolutionäre Trainingsmethode für günstige und leistungsstarke LLMs"
+title: "DeepSeek: Revolutionäre Trainingsmethode"
 date: 2025-01-25
 layout: "blog"
 image: "images/deepseek_training.webp"

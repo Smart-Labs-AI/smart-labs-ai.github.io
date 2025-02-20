@@ -1,5 +1,5 @@
 ---
-title: "Are AI Agents Secure?"
+title: "Sind KI-Agenten sicher?"
 date: 2025-02-18
 layout: "blog"
 image: "images/agents_secure.jpg"
