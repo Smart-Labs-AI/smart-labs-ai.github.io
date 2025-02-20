@@ -97,7 +97,7 @@ params:
         - text: Blog
           link: /blog
         - text: Karriere
-          link: /karriere
+          link: /careers/
         - text: Kontakt
           link: /#contact
       column2:
