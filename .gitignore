@@ -5,3 +5,4 @@ resources
 .venv
 .DS*
 .env
+website/resources/_gen
