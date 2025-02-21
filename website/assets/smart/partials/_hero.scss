@@ -5,7 +5,7 @@ Hero styles
 .hero-body {
     padding-top: 6rem;
     padding-bottom: 6rem;
-    .title, .subtitle {
+    .title, .subtitle, .content {
         font-family: 'Open Sans', sans-serif;
     }
     .title {
@@ -15,8 +15,14 @@ Hero styles
     }
     .subtitle {
         &.is-muted {
-            color: $muted-grey;
+            color: $medium-grey;
         }
+    }
+    .content {
+        &.is-muted {
+            color: $medium-grey;
+        }
+        font-size: 120%;
     }
 }
 

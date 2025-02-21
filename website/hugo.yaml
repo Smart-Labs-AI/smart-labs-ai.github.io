@@ -41,6 +41,8 @@ params:
     title: KI verändert alles – aber ist sie auch sicher?
     # Hero subtitle (optional)
     subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle sicher, regelkonform und vertrauenswürdig zu machen.
+    # Hero text
+    content: Wir identifizieren Schwachstellen und entwickeln gezielte Maßnahmen, um Ihre Systeme gegen Angriffe abzusichern und eine zuverlässige Funktionalität zu gewährleisten.  Unsere Expertise basiert auf regelmäßiger Teilnahme an CTFs und Challenges, bei denen wir Angriffe auf KI-Systeme simulieren und verteidigen. Dieses praxisnahe Wissen fließt direkt in unsere Strategien ein, um Ihre KI nachhaltig und sicher zu gestalten.
     # Button text
     buttontext: Erfahre mehr
     # Where the main hero button links to
@@ -61,17 +63,17 @@ params:
     subtitle: Finden Sie es mit uns heraus!
     features:
     - title: KI-Sicherheit & Compliance
-      text: Schutz vor Angriffen, Prompt Injection & Datenlecks.
+      text: Schütze deine KI-Systeme vor Cyberangriffen, **Prompt Injection** und **Datenlecks**. Erhöhe die Widerstandsfähigkeit deiner Modelle und schaffe eine sichere Umgebung für sensible Daten.
       icon: laptop-cloud
     - title: Fairness & Transparenz
-      text: Reduzierung von Bias und mehr Nachvollziehbarkeit in KI-Modellen.
+      text: Reduziere **Bias** in KI-Modellen und sorge für eine faire, nachvollziehbare Entscheidungsfindung.  Setze auf transparente Algorithmen und gewinne das Vertrauen deiner Nutzer und Partner.
       icon: mouse-globe
     - title: Regulatorische Absicherung
-      text: Unterstützung bei EU AI Act, DORA und weiteren Vorschriften.
+      text: Navigiere sicher durch die komplexe Welt der KI-Regulierungen. Erfülle Vorschriften wie den **EU AI Act**, **DORA** und weitere Compliance-Anforderungen, um rechtliche Risiken zu minimieren.
       icon: doc-sync
   section_contact:
-    title: Teste deine KI-Sicherheit!
-    subtitle: Jetzt PoC-Partner werden und KI absichern.
+    title: Teste jetzt deine KI-Sicherheit!
+    subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere deine KI mit innovativen Lösungen ab.
     buttonText: Nachricht senden
     action: https://form.smart-labs.ai/contact
     method: POST
@@ -94,8 +96,6 @@ params:
           link: /
         - text: Blog
           link: /blog
-        - text: Karriere
-          link: /karriere
         - text: Kontakt
           link: /#contact
       column2:

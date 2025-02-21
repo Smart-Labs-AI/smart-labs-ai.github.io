@@ -80,6 +80,9 @@ img.pushed-image {
             color: $title-grey;
             font-size: 1rem;
             font-weight: 400;
+            strong {
+                color: $medium-grey;
+            }
         }
     }
     .media-left {
