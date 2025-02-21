@@ -8178,6 +8178,25 @@ Classes to change the feel of bulma buttons
   padding-top: -10px;
   color: #666; }
 
+.card-content .subtitle.is-6 {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: #4a4a4a; }
+
+.card-footer {
+  border-top: 1px solid #ededed;
+  margin-top: auto;
+  padding: 0.75rem; }
+  .card-footer-item {
+    padding: 0.5rem;
+    transition: color 0.2s ease; }
+    .card-footer-item:hover {
+      background-color: whitesmoke; }
+    .card-footer-item.has-text-primary {
+      color: #8f1d50 !important; }
+      .card-footer-item.has-text-primary:hover {
+        color: #651438 !important; }
+
 /* ==========================================================================
 Inputs styles
 ========================================================================== */

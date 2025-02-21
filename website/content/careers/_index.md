@@ -1,4 +1,4 @@
 ---
 title: "Karriere"
-layout: list
+layout: "careers/list"
 ---
