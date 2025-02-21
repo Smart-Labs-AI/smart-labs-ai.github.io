@@ -20,13 +20,13 @@ kontakt@smart-labs.ai
 
 <br>
 
-{{% title4 "Telefon:" %}}
+{{% title4 "Telefon" %}}
 +49 40 604 29 83 0
 
 <br>
 
 {{% title4 "Geschäftsführer" %}}
-Benjamin Gnahm, Tobias P. Metz, Stefan Fenn
+Benjamin Gnahm, Tobias P. Metz, Stefan A. Fenn
 
 <br>
 
@@ -40,7 +40,7 @@ HRB 26891 KI
 
 <br>
 {{% title4 "Inhaltlich Verantwortlicher" %}}
- Stefan Fenn
+Stefan A. Fenn, Fabian Bühler
 
 <br>
 
