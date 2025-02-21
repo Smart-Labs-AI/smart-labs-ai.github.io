@@ -28,7 +28,7 @@ params:
   # preloader: false
   navbarlogo:
   # Logo (from static/images/logos/___)
-    image: logos/logo.png
+    image: logos/logo.svg
     link: /
     # Default width/height. Uncomment if you need to change
     # width: 112
@@ -42,7 +42,7 @@ params:
     # Hero subtitle (optional)
     subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle sicher, regelkonform und vertrauenswürdig zu machen.
     # Button text
-    buttontext: Erfahre mehr.
+    buttontext: Erfahre mehr
     # Where the main hero button links to
     buttonlink: "#contact"
     # Hero image (from static/images/___)
