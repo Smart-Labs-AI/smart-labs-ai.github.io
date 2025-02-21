@@ -2,7 +2,15 @@
   <div class="card-content">
     <div class="card-image">
       <figure class="image is-4by3">
-        <img src="{{ .Site.BaseURL }}{{ .Params.image | relURL }}" alt="{{ .Title }}" style="object-fit: cover; object-position: center;">
+        {{ $imagePath := trim .Params.image "/" }} 
+        {{ $original := resources.Get $imagePath }}
+        
+        {{ if $original }}
+          {{ $thumbnail := $original.Resize "384x webp" }}
+          <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; object-position: center;">
+        {{ else }}
+          {{ errorf "Image not found: %s" .Params.image }}
+        {{ end }}
       </figure>
     </div>
     <p class="title is-size-4">{{ .Title }}</p>

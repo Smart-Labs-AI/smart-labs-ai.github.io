@@ -7,7 +7,15 @@
 
     <div class="content" style="max-width: 800px; margin: 0 auto;">
       <div class="blog-header">
-        <img src="{{ .Site.BaseURL }}{{ .Params.image | relURL }}" alt="{{ .Title }}">
+        {{ $imagePath := trim .Params.image "/" }} 
+        {{ $original := resources.Get $imagePath }}
+        
+        {{ if $original }}
+          {{ $thumbnail := $original.Resize "800x webp" }}
+          <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; object-position: center;">
+        {{ else }}
+          {{ errorf "Image not found: %s" .Params.image }}
+        {{ end }}
       </div>
       <div class="column is-centered-tablet-portrait">
         <h1 class="title section-title">{{ .Title }} </h1>
