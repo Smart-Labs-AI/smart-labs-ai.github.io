@@ -39,6 +39,12 @@ Handelsregister, Registergericht Kiel
 HRB 26891 KI
 
 <br>
+
+{{% title4 "Umsatzsteuer-Identifikationsnummer" %}}
+DE 368 388 426
+
+
+<br>
 {{% title4 "Inhaltlich Verantwortlicher" %}}
 Stefan A. Fenn, Fabian Bühler
 
