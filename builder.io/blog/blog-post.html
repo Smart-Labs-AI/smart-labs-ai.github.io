@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepSeek: Revolutionäre Trainingsmethode</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgba(0, 0, 43, 1);
+        font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+        color: #ffffff;
+        line-height: 1.5;
+      }
+
+      .blog-post {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+      }
+
+      .navbar {
+        background-color: rgba(0, 0, 43, 0.8);
+        width: 100%;
+        padding: 20px 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        justify-content: center;
+      }
+
+      @media (max-width: 991px) {
+        .navbar {
+          max-width: 100%;
+          padding: 20px;
+        }
+      }
+
+      .navbar-container {
+        display: flex;
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 20px;
+        align-items: center;
+        gap: 40px 100px;
+        overflow: hidden;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 991px) {
+        .navbar-container {
+          max-width: 100%;
+        }
+      }
+
+      .logo {
+        align-self: stretch;
+        display: flex;
+        margin: auto 0;
+        width: 113px;
+        flex-shrink: 0;
+        height: 36px;
+        background-color: #ffffff; /* Placeholder for logo */
+      }
+
+      .nav-links {
+        align-self: stretch;
+        display: flex;
+        min-width: 240px;
+        margin: auto 0;
+        align-items: center;
+        gap: 36px;
+        justify-content: start;
+      }
+
+      @media (max-width: 991px) {
+        .nav-links {
+          max-width: 100%;
+        }
+      }
+
+      .nav-link {
+        align-self: stretch;
+        margin: auto 0;
+        padding: 12px 0;
+        gap: 10px;
+        white-space: nowrap;
+        text-align: center;
+      }
+
+      @media (max-width: 991px) {
+        .nav-link {
+          white-space: initial;
+        }
+      }
+
+      .nav-link-active {
+        align-self: stretch;
+        margin: auto 0;
+        padding: 12px 0;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .contact-button {
+        align-self: stretch;
+        border-radius: 99px;
+        background-color: rgba(255, 255, 255, 1);
+        margin: auto 0;
+        padding: 12px 24px;
+        gap: 12px;
+        color: rgba(26, 20, 73, 1);
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 991px) {
+        .contact-button {
+          padding: 12px 20px;
+          white-space: initial;
+        }
+      }
+
+      .post-date {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.3;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      @media (max-width: 991px) {
+        .post-date {
+          margin-top: 40px;
+        }
+      }
+
+      .post-title {
+        color: #fff;
+        text-align: center;
+        font-family: Merriweather, -apple-system, Roboto, Helvetica, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 62px;
+        margin-top: 33px;
+      }
+
+      @media (max-width: 991px) {
+        .post-title {
+          max-width: 100%;
+          font-size: 40px;
+          line-height: 58px;
+        }
+      }
+
+      .post-subtitle {
+        color: rgba(255, 255, 255, 1);
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        margin-top: 36px;
+        width: 803px;
+      }
+
+      @media (max-width: 991px) {
+        .post-subtitle {
+          max-width: 100%;
+        }
+      }
+
+      .post-image {
+        aspect-ratio: 1.75;
+        object-fit: contain;
+        object-position: center;
+        width: 959px;
+        border-radius: 18px;
+        margin-top: 73px;
+        max-width: 100%;
+      }
+
+      @media (max-width: 991px) {
+        .post-image {
+          margin-top: 40px;
+        }
+      }
+
+      .post-content {
+        color: rgba(255, 255, 255, 1);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 29px;
+        margin-top: 69px;
+        width: 800px;
+      }
+
+      @media (max-width: 991px) {
+        .post-content {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+      }
+
+      .section-heading {
+        font-weight: 600;
+        font-size: 28px;
+        margin: 20px 0;
+      }
+
+      .post-content ol {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .post-content li {
+        margin-bottom: 10px;
+      }
+
+      .post-content strong {
+        font-weight: 600;
+      }
+
+      .footer {
+        width: 100%;
+        margin-top: 112px;
+        padding: 60px 80px 28px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+      }
+
+      @media (max-width: 991px) {
+        .footer {
+          max-width: 100%;
+          padding: 60px 20px 28px;
+          margin-top: 40px;
+        }
+      }
+
+      .footer-container {
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      @media (max-width: 991px) {
+        .footer-container {
+          max-width: 100%;
+        }
+      }
+
+      .footer-content {
+        display: flex;
+        padding: 0 20px;
+        align-items: flex-start;
+        gap: 40px 100px;
+        overflow: hidden;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 991px) {
+        .footer-content {
+          max-width: 100%;
+        }
+      }
+
+      .footer-logo {
+        display: flex;
+        width: 113px;
+        flex-shrink: 0;
+        height: 36px;
+        background-color: #ffffff; /* Placeholder for logo */
+      }
+
+      .sitemap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+        width: 63px;
+      }
+
+      .sitemap-title {
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        align-self: stretch;
+      }
+
+      .sitemap-link {
+        margin-top: 5px;
+      }
+
+      .sitemap-link:first-of-type {
+        margin-top: 19px;
+      }
+
+      @media (max-width: 991px) {
+        .sitemap-link-uberuns {
+          margin-right: 2px;
+        }
+      }
+
+      .expertise-section {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+        width: 186px;
+      }
+
+      .expertise-title {
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        align-self: flex-start;
+      }
+
+      .expertise-link {
+        margin-top: 5px;
+      }
+
+      .expertise-link:first-of-type {
+        margin-top: 19px;
+      }
+
+      @media (max-width: 991px) {
+        .expertise-link-security {
+          margin-right: 5px;
+        }
+      }
+
+      .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 127px;
+      }
+
+      .contact-title {
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.3;
+      }
+
+      .contact-info {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        align-self: stretch;
+        margin-top: 19px;
+      }
+
+      .social-icons {
+        display: flex;
+        margin-top: 20px;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .social-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 16px;
+        flex-shrink: 0;
+      }
+
+      .footer-divider {
+        border-color: rgba(255, 255, 255, 0.15);
+        border-style: solid;
+        border-width: 1px;
+        margin: 35px 20px 0;
+        width: 960px;
+        flex-shrink: 0;
+        max-width: 100%;
+        height: 1px;
+      }
+
+      @media (max-width: 991px) {
+        .footer-divider {
+          margin-right: 10px;
+        }
+      }
+
+      .footer-bottom {
+        display: flex;
+        margin: 27px 20px 0;
+        align-items: stretch;
+        gap: 20px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 991px) {
+        .footer-bottom {
+          max-width: 100%;
+          margin-right: 10px;
+        }
+      }
+
+      .legal-links {
+        display: flex;
+        align-items: stretch;
+        gap: 30px;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 991px) {
+        .legal-links {
+          white-space: initial;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blog-post">
+      <header class="navbar">
+        <div class="navbar-container">
+          <div class="logo"></div>
+          <nav class="nav-links">
+            <a href="#" class="nav-link">Expertise</a>
+            <a href="#" class="nav-link-active">Über uns</a>
+            <a href="#" class="nav-link">Jobs</a>
+            <a href="#" class="nav-link">Blog</a>
+            <a href="#" class="contact-button">Kontakt</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <article>
+          <time class="post-date">27. Februar 2025</time>
+          <h1 class="post-title">DeepSeek: Revolutionäre Trainingsmethode</h1>
+          <p class="post-subtitle">
+            DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um
+            optimierte Daten für das leistungsstärkere DeepSeek-R1 zu
+            generieren, wodurch kostengünstige und effiziente LLMs entstehen.
+          </p>
+
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f6ed857c779f9bb0c3d92dbe1f057531aadaada9f4627dd8bd52d29269804430?placeholderIfAbsent=true&apiKey=e98041591a5d4f1c93f56d0ff4d04df3"
+            alt="DeepSeek AI Visualisierung"
+            class="post-image"
+          />
+
+          <div class="post-content">
+            <p>
+              DeepSeek hat nicht nur mit seiner Performance für Aufsehen
+              gesorgt, sondern auch mit der Art und Weise, wie das Modell
+              trainiert wurde. Die innovative Trainingsmethode ermöglicht es,
+              ein leistungsfähiges Large Language Model (LLM) mit
+              vergleichsweise geringen Kosten zu entwickeln.
+            </p>
+            <br />
+            <br />
+
+            <h2 class="section-heading">
+              Selbstgenerierte Trainingsdaten als Gamechanger
+            </h2>
+            <br />
+            <br />
+
+            <p>
+              Der Kern der Strategie liegt in einem zweistufigen
+              Trainingsprozess:
+            </p>
+            <br />
+            <ol>
+              <li>
+                <strong>Training von DeepSeek-R1-Zero:</strong>
+                Zunächst wurde ein kleineres Modell, DeepSeek-R1-Zero,
+                trainiert.
+              </li>
+              <li>
+                <strong>Erstellung eines neuen Trainingsdatensatzes:</strong>
+                Anschließend wurde dieses Modell genutzt, um einen optimierten
+                und größeren Trainingsdatensatz zu generieren.
+              </li>
+              <li>
+                <strong>Training von DeepSeek-R1:</strong>
+                Der so gewonnene Datensatz diente als Grundlage für das
+                eigentliche Training des leistungsstarken DeepSeek-R1.
+              </li>
+            </ol>
+            <br />
+
+            <p>
+              Dieser Ansatz ist besonders bemerkenswert, weil er eines der
+              zentralen Probleme in der Weiterentwicklung von LLMs adressiert:
+              den Mangel an qualitativ hochwertigen Trainingsdaten. Häufig wird
+              kritisiert, dass es kaum noch neue, frei zugängliche Daten gibt,
+              um immer bessere Modelle zu trainieren. DeepSeek zeigt, dass
+              dieser Engpass durch KI-generierte Daten überwunden werden kann.
+            </p>
+            <br />
+            <br />
+            <br />
+
+            <h2 class="section-heading">
+              Ein Schritt in Richtung "Intelligence Explosion"?
+            </h2>
+            <br />
+            <br />
+
+            <p>
+              Diese Technik könnte weitreichende Konsequenzen haben. Wenn ein
+              Modell genutzt wird, um bessere Trainingsdaten für nachfolgende
+              Modelle zu erstellen, entsteht ein selbstverstärkender Effekt:
+              Jedes neue Modell verbessert den Datensatz für die nächste
+              Generation. Sollte dieser Ansatz weiter optimiert werden, könnte
+              dies der erste Schritt in Richtung einer sich selbst verbessernden
+              KI sein – ein Konzept, das oft mit der sogenannten "Intelligence
+              Explosion" in Verbindung gebracht wird.
+            </p>
+            <br />
+            <br />
+            <br />
+
+            <h2 class="section-heading">
+              Inspiration aus dem Computer Vision Bereich
+            </h2>
+            <br />
+            <br />
+
+            <p>
+              Interessanterweise ist dieser "Self-Training"-Ansatz keineswegs
+              neu. In der Computer Vision wurde bereits in den 2010er Jahren mit
+              selbstgenerierten Daten gearbeitet. Beispielsweise wurden
+              schwächere Modelle genutzt, um Pseudo-Labels für unlabeled Daten
+              zu generieren, wodurch stärkere Modelle trainiert werden konnten.
+              Dass dieser Trick nun im Bereich der Large Language Models
+              erfolgreich angewendet wird, könnte ein Gamechanger für die
+              gesamte KI-Entwicklung sein.
+            </p>
+            <br />
+            <br />
+            <br />
+
+            <h2 class="section-heading">Fazit</h2>
+            <br />
+            <br />
+
+            <p>
+              DeepSeek demonstriert eindrucksvoll, dass durch geschickte Nutzung
+              von KI-generierten Daten die Kosten für das Training
+              leistungsfähiger Modelle drastisch gesenkt werden können.
+              Gleichzeitig zeigt es eine mögliche Zukunft auf, in der KIs sich
+              zunehmend selbst verbessern – eine Entwicklung mit weitreichenden
+              Implikationen für die gesamte KI-Forschung.
+            </p>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-logo"></div>
+
+            <div class="sitemap">
+              <h3 class="sitemap-title">Sitemap</h3>
+              <a href="#" class="sitemap-link">Start</a>
+              <a href="#" class="sitemap-link">Expertise</a>
+              <a href="#" class="sitemap-link sitemap-link-uberuns">Über uns</a>
+              <a href="#" class="sitemap-link">Jobs</a>
+              <a href="#" class="sitemap-link">Blog</a>
+              <a href="#" class="sitemap-link">Kontakt</a>
+            </div>
+
+            <div class="expertise-section">
+              <h3 class="expertise-title">Unsere Expertise</h3>
+              <a href="#" class="expertise-link expertise-link-security"
+                >KI-Sicherheit & Compliance</a
+              >
+              <a href="#" class="expertise-link">Fairness & Transparenz</a>
+              <a href="#" class="expertise-link">Regulatorische Absicherung</a>
+            </div>
+
+            <div class="contact-section">
+              <h3 class="contact-title">Kontakt</h3>
+              <address class="contact-info">
+                Vikrotiastraße 3b<br />
+                86150 Augbsurg<br />
+                <br />
+                +49 123 4567890<br />
+                mail@smart-labs.ai
+              </address>
+              <div class="social-icons">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/4171b9c5ffbfb0baff27dee435ff054fa503b0f41e847bec752c6d98355c9aca?placeholderIfAbsent=true&apiKey=e98041591a5d4f1c93f56d0ff4d04df3"
+                  alt="Social Media Icon"
+                  class="social-icon"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b2192ad2dc2ac4090a85af455855d9bee567442a796b41185f57815b7f32d4ea?placeholderIfAbsent=true&apiKey=e98041591a5d4f1c93f56d0ff4d04df3"
+                  alt="Social Media Icon"
+                  class="social-icon"
+                />
+              </div>
+            </div>
+          </div>
+
+          <hr class="footer-divider" />
+
+          <div class="footer-bottom">
+            <p>© 2025 Smart Labs AI GmbH – Alle Rechte vorbehalten</p>
+            <div class="legal-links">
+              <a href="#">Impressum</a>
+              <a href="#">Datenschutz</a>
+              <a href="#">AGB</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
