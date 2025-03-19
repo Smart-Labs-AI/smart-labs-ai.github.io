@@ -3,7 +3,13 @@ Hero styles
 ========================================================================== */
 
 .hero-body {
-    padding-top: 6rem;
+    background-image: url('/images/hero/hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 160% auto;
+    height: 2023px;
+    margin-top: -96px;
+    padding-top: calc(6rem + 96px);
     padding-bottom: 6rem;
     .title, .subtitle {
         font-family: 'Open Sans', sans-serif;
