@@ -28,7 +28,7 @@ params:
   # preloader: false
   navbarlogo:
   # Logo (from static/images/logos/___)
-    image: logos/logo.png
+    image: logos/logo.svg
     link: /
     # Default width/height. Uncomment if you need to change
     # width: 112
@@ -50,10 +50,14 @@ params:
     # Footer logos (from static/images/logos/clients/*.svg)
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
+  - title: Expertise
+    url: /careers/
+  - title: Über uns
+    url: /careers/
+  - title: Jobs
+    url: /careers/
   - title: Blog
     url: /blog
-  - title: Karriere
-    url: /careers/
   - title: Kontakt
     url: /#contact
     button: true

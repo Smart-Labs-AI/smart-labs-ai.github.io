@@ -2,52 +2,74 @@
 Navbar
 ========================================================================== */
 
-//Navbar
+// Variables
+$navbar-min-height: 3.8rem;
+$navbar-default-height: 6rem;
+$navbar-burger-size: $navbar-default-height;
+$navbar-brand-img-max-height: 36px;
+$navbar-brand-img-height: 36px;
+$navbar-dropdown-top: 3.4rem;
+$navbar-dropdown-min-width: 220px;
+
+// Navbar
 .navbar.is-fresh {
     position: relative;
-    min-height: 3.8rem;
+    min-height: $navbar-min-height;
     transition: all .3s;
     z-index: 99;
+    
     .container {
-        min-height: 4rem;
+        min-height: $navbar-default-height;
     }
+    
     &.no-shadow {
         box-shadow: none !important;
     }
-    //Responsive menu icon
+    
+    // Responsive menu icon
     .navbar-burger {
-        width: 4rem;
-        height: 4rem;
+        width: $navbar-burger-size;
+        height: $navbar-burger-size;
     }
-    //Brand
+    
+    // Brand
     .navbar-brand {
-        min-height: 4rem;
+        min-height: $navbar-default-height;
+        
         img {
-            max-height: 36px !important;
-            height: 36px;
+            max-height: $navbar-brand-img-max-height !important;
+            height: $navbar-brand-img-height;
         }
-        //Removing navbar item default hover behaviour
+        
+        // Removing navbar item default hover behaviour
         &:hover {
             .navbar-item {
                 background: transparent !important;
             }
         }
     }
+    
     .navbar-end {
         align-items: center;
     }
-    //Navbar items
+    
+    // Navbar items
     .navbar-item {
-        color: $muted-grey;
+        color: $white;
+        padding: 0.5rem 1.35rem;
+        
         &.is-secondary {
             &:hover {
                 color: $secondary !important;
             }
         }
+        
         &.has-dropdown {
             padding: 10px 0;
+            
             .navbar-link {
                 color: $muted-grey;
+                
                 &:after {
                     top: 55%;
                     height: 0.5em;
@@ -56,42 +78,49 @@ Navbar
                     border-color: $muted-grey;
                 }
             }
+            
             .navbar-dropdown {
-                top: 3.4rem;
-                min-width: 220px;
+                top: $navbar-dropdown-top;
+                min-width: $navbar-dropdown-min-width;
                 margin-top: 4px;
                 border-top-color: $secondary;
+                
                 .navbar-item {
                     padding: 10px 20px;
                 }
             }
+            
             &:hover {
                 .navbar-link {
                     color: $secondary;
+                    
                     &:after {
                         border-color: $secondary;
                     }
                 }
             }
         }
+        
         .signup {
             display: block;
             line-height: 0;
             font-size: .9rem !important;
         }
     }
-
-    //Fixed navbar modifier
+    
+    // Fixed navbar modifier
     &.is-fixed {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        min-height: 4rem !important;
-        background: $white;
+        min-height: $navbar-default-height !important;
+        background: $body-background-color;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+        
         a {
             color: $blue-grey;
+            
             &:hover {
                 color: $primary;
             }
@@ -99,17 +128,18 @@ Navbar
     }
 }
 
-//Cloned fixed navbar
+// Cloned fixed navbar
 #navbar-clone {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: $white;
+    background: $body-background-color-nav;
     transform: translateY(-100%);
     z-index: 100;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+    
     &.is-active {
-        transform: translateY(0); 
+        transform: translateY(0);
     }
 }

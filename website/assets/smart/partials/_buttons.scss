@@ -26,12 +26,9 @@ Classes to change the feel of bulma buttons
     &.btn-outlined {
         background: transparent;
     }
-    &.signup-button {
-        font-size: .9rem;
-        font-weight: 600;
-        font-family: 'Open Sans', sans-serif;
-        padding: 24px 26px;
-        width: 130px;
+    &.contact-button {
+        font-weight: 500;
+        padding: 22px 22px;
     }
 }
 
@@ -40,7 +37,7 @@ Classes to change the feel of bulma buttons
         outline: none;
         border-color: $primary;
         background-color: $primary;
-        color: $white;
+        color: $primary-invert;
         transition: all 0.5s;
         &:hover {
             color: $white;
