@@ -72,6 +72,7 @@ params:
     - title: Erfahre mehr darüber, wie wir Dir helfen können und buche jetzt eine **kostenlose Erstanalyse**.
       icon: smart-labs-ai-white
       url: /#contact
+      cardType: call-to-action
   section_contact:
     title: Teste deine KI-Sicherheit!
     subtitle: Jetzt PoC-Partner werden und KI absichern.

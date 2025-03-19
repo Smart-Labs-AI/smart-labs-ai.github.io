@@ -16,7 +16,7 @@
     <div class="columns is-multiline">
       {{- range $features }}
       <div class="column is-6">
-        <div class="card is-flex is-flex-direction-column is-full-height">
+        <div class="card {{ with .cardType }} {{ . }}{{ end }} is-flex is-flex-direction-column is-full-height">
           <div class="card-content is-flex-grow-1 is-flex is-flex-direction-column">
             <figure class="image is-64x64">
               <img src="{{ printf "images/illustrations/icons/%s.svg" .icon | relURL }}" alt="{{ .title }}">

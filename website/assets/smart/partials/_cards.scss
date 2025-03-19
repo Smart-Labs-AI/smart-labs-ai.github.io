@@ -1,25 +1,40 @@
+:root {
+  --border-width: 1.5px;
+}
+
+@mixin gradient-background($start-color, $end-color, $angle: -30deg) {
+  background: linear-gradient($angle, $start-color 0%, $end-color 100%);
+}
+
+@mixin border-gradient($start-color, $end-color) {
+  background: linear-gradient(180deg, $start-color 0%, $end-color 100%);
+}
+
 .section {
+  $border-radius: 18px;
   $card-transparency: 10%;
   $card-color-start: rgba(#0c0a3c, $card-transparency);
   $card-color-end: rgba(#21042e, $card-transparency);
+  $cta-color-start: rgba(60, 49, 152, 1);
+  $cta-color-end: rgba(169, 26, 88, 1);
 
   $border-color-start: rgba(255, 255, 255, 0.2);
   $border-color-end: rgba(255, 255, 255, 0.05);
-  $border-width: 1.5px;
-  $border-radius: 18px; // Passe den Wert an deine Ecken an
+  $cta-border-start: rgba(255, 255, 255, 0.2);
+  $cta-border-end: rgba(255, 255, 255, 0.05);
 
   .border-gradient, .card {
     position: relative;
     border-radius: $border-radius;
-    padding: $border-width; // Platz für den Rahmen
+    padding: var(--border-width);
     
     &::before {
       content: "";
       position: absolute;
-      inset: 0; // Gleiche Größe wie das Element
-      border-radius: inherit; // Übernimmt die abgerundeten Ecken
-      padding: $border-width;
-      background: linear-gradient(180deg, $border-color-start 0%, $border-color-end 100%);
+      inset: 0;
+      border-radius: inherit;
+      padding: var(--border-width);
+      @include border-gradient($border-color-start, $border-color-end);
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
@@ -28,82 +43,48 @@
   }
 
   .card {
-      background: linear-gradient(-30deg, $card-color-start 0%, $card-color-end 100%);
-      padding: 2rem;
+    @include gradient-background($card-color-start, $card-color-end);
+    padding: 2rem;
+    color: var(--card-title-color);
 
+    strong {
       color: $card-title-color;
-      strong {
-        color: $card-title-color;
-      }
-
-      .title {
-        font-size: $card-title-size;
-
-      }
-
-      .subtitle {
-        font-size: $card-subtitle-size;
-        opacity: 0.7;
-      }
-  }
-}
-
-
-
-.card-image {
-  margin-bottom: 1rem;  /* Add space below the image */
-}
-
-.card-content {
-  .content {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .title {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 0.5rem;
-    font-family: $card-title-family;
-  }
-
-  .date {
-    padding-top: -10px;
-    color: #666;
-  }
-
-  .subtitle.is-6 {
-    font-size: 0.875rem;
-    margin-bottom: 0.75rem;
-  }
-}
-
-// Career card specific styles
-.card-footer {
-  border-top: 1px solid $border-light;
-  margin-top: auto;
-  padding: 0.75rem;
-  
-  &-item {
-    padding: 0.5rem;
-    transition: color 0.2s ease;
-    
-    &:hover {
-      background-color: $background;
     }
+
+    .title {
+      font-family: $card-title-family;
+      font-size: $card-title-size;
+    }
+
+    .subtitle {
+      font-size: $card-subtitle-size;
+      opacity: 0.7;
+    }
+  }
+
+  .call-to-action {
+    @include gradient-background($cta-color-start, $cta-color-end);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: $border-radius;
+    font-weight: bold;
     
-    &.has-text-primary {
-      color: $primary !important;
-      
-      &:hover {
-        color: darken($primary, 10%) !important;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: var(--border-width);
+      @include border-gradient($cta-border-start, $cta-border-end);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .title {
+      color: rgba(255, 255, 255, 0.6);
     }
   }
 }
