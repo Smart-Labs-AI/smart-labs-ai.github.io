@@ -18,14 +18,11 @@ Hero styles
     padding-top: 6rem;
     padding-bottom: 6rem;
     .title {
-        font-size: 260%;
         &.is-bold {
             font-weight: 700;
         }
     }
     .subtitle {
-        font-size: 130%;
-
         strong {
             color: $title-color;
             font-weight: 800;

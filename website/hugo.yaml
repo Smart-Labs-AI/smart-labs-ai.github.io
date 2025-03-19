@@ -64,7 +64,7 @@ params:
   section_services:
   section2:
     title: Wie sicher ist deine KI?
-    subtitle: Finden Sie es mit uns heraus!
+    subtitle: Finden Sie es mit uns heraus.
     features:
     - title: KI-Sicherheit & Compliance
       text: Schutz vor Angriffen, Prompt Injection & Datenlecks.
