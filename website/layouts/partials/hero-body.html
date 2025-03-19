@@ -4,16 +4,19 @@
 {{- $buttonText := index $hero "buttontext" }}
 {{- $buttonLink := index $hero "buttonlink" }}
 {{- $image      := index $hero "image" }}
+
+<div class="hero-background">
+</div>
 <div class="hero-body">
   <div class="container">
     <div class="columns is-vcentered">
-      <div class="column is-5 is-offset-1 landing-caption">
+      <div class="column is-8 landing-caption">
         <h1 class="title is-1 is-bold is-spaced">
           {{ $title }}
         </h1>
         {{ with $subtitle }}
-        <h2 class="subtitle is-5 is-muted">
-          {{ . }}
+        <h2 class="subtitle is-5">
+          {{ . | markdownify }}
         </h2>
         {{ end }}
         <p>
@@ -22,8 +25,8 @@
           </a>
         </p>
       </div>
-      <div class="column is-5 is-offset-1">
-        <figure class="image is-4by3">
+      <div class="column is-4 figure-column">
+        <figure class="image is-pulled-right">
           <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
         </figure>
       </div>

@@ -40,13 +40,13 @@ params:
     # Main hero title
     title: KI verändert alles – aber ist sie auch sicher?
     # Hero subtitle (optional)
-    subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle sicher, regelkonform und vertrauenswürdig zu machen.
-    # Button text
+    subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle **sicher**, **regelkonform** und **vertrauenswürdig** zu machen.
+    # Button textu
     buttontext: Erfahre mehr.
     # Where the main hero button links to
     buttonlink: "#contact"
     # Hero image (from static/images/___)
-    image: illustrations/worker.svg
+    image: hero/padlock.png
     # Footer logos (from static/images/logos/clients/*.svg)
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
