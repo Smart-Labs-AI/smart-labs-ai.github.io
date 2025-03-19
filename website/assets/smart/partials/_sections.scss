@@ -2,6 +2,10 @@
 Section Styles
 ========================================================================== */
 
+$card-transparency: 10%;
+$card-color-start: rgba(#0c0a3c, $card-transparency);
+$card-color-end: rgba(#21042e, $card-transparency);
+
 //Sections
 .section {
     &.section-light-grey {
@@ -16,71 +20,21 @@ Section Styles
     &.section-half {
         height: 75vh !important;
     }
-    .title, .subtitle {
-
-    }
     .subtitle {
         &.is-muted {
             color: $muted-grey;
         }
     }
+
 }
 
 //Titles
 .title-wrapper {
     max-width: 500px;
     margin: 0 auto;
-    .title, .subtitle {
-
-    }
     .subtitle {
         &.is-muted {
             color: $muted-grey;
         }
-    }
-}
-
-//Divider
-.divider {
-    height: 3px;
-    border-radius: 50px;
-    background: $primary;
-    width: 60px;
-    &.is-centered {
-        margin: 0 auto;
-    }
-}
-
-//Wrapper
-.content-wrapper {
-    padding: 60px 0;
-}
-
-
-//Pulled image
-img.pushed-image {
-    margin-top: -5vh;
-}
-
-//Icon box
-.media.icon-box {
-    border-top: none !important;
-    .media-content .content p {
-        span {
-            display: block;
-        }
-        .icon-box-title {
-            color: $blue-grey;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        .icon-box-text {
-            color: $title-grey;
-            font-size: 1rem;
-            font-weight: 400;
-        }
-    }
-    .media-left {
-        width: 150px;
     }
 }

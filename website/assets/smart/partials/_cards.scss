@@ -1,3 +1,55 @@
+.section {
+  $card-transparency: 10%;
+  $card-color-start: rgba(#0c0a3c, $card-transparency);
+  $card-color-end: rgba(#21042e, $card-transparency);
+
+  $border-color-start: rgba(255, 255, 255, 0.2);
+  $border-color-end: rgba(255, 255, 255, 0.05);
+  $border-width: 1.5px;
+  $border-radius: 18px; // Passe den Wert an deine Ecken an
+
+  .border-gradient, .card {
+    position: relative;
+    border-radius: $border-radius;
+    padding: $border-width; // Platz für den Rahmen
+    
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0; // Gleiche Größe wie das Element
+      border-radius: inherit; // Übernimmt die abgerundeten Ecken
+      padding: $border-width;
+      background: linear-gradient(180deg, $border-color-start 0%, $border-color-end 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+  }
+
+  .card {
+      background: linear-gradient(-30deg, $card-color-start 0%, $card-color-end 100%);
+      padding: 2rem;
+
+      color: $card-title-color;
+      strong {
+        color: $card-title-color;
+      }
+
+      .title {
+        font-size: $card-title-size;
+
+      }
+
+      .subtitle {
+        font-size: $card-subtitle-size;
+        opacity: 0.7;
+      }
+  }
+}
+
+
+
 .card-image {
   margin-bottom: 1rem;  /* Add space below the image */
 }
@@ -7,7 +59,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: auto;
+    overflow: hidden;
     text-overflow: ellipsis;
   }
   
@@ -15,11 +67,10 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: auto;
+    overflow: hidden;
     text-overflow: ellipsis;
-    height: calc(1.5em * 2); /* Maximum height of two lines */
-    line-height: 1.5em;
     margin-bottom: 0.5rem;
+    font-family: $card-title-family;
   }
 
   .date {
@@ -30,7 +81,6 @@
   .subtitle.is-6 {
     font-size: 0.875rem;
     margin-bottom: 0.75rem;
-    color: $grey-dark;
   }
 }
 

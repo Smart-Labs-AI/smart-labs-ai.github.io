@@ -50,12 +50,6 @@ params:
     # Footer logos (from static/images/logos/clients/*.svg)
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
-  - title: Expertise
-    url: /careers/
-  - title: Über uns
-    url: /careers/
-  - title: Jobs
-    url: /careers/
   - title: Blog
     url: /blog
   - title: Kontakt
@@ -67,14 +61,17 @@ params:
     subtitle: Finden Sie es mit uns heraus.
     features:
     - title: KI-Sicherheit & Compliance
-      text: Schutz vor Angriffen, Prompt Injection & Datenlecks.
-      icon: laptop-cloud
+      text: Schütze deine KI-Systeme vor **Cyberangriffen**, **Prompt Injection** und **Datenlecks**. Erhöhe die Widerstandsfähigkeit deiner Modelle und schaffe eine sichere Umgebung für sensible Daten.
+      icon: ai-security
     - title: Fairness & Transparenz
-      text: Reduzierung von Bias und mehr Nachvollziehbarkeit in KI-Modellen.
-      icon: mouse-globe
+      text: Reduziere **Bias** in KI-Modellen und sorge für eine faire, nachvollziehbare Entscheidungsfindung. Setze auf transparente Algorithmen und gewinne das Vertrauen deiner Nutzer und Partner.
+      icon: ai-transparency
     - title: Regulatorische Absicherung
-      text: Unterstützung bei EU AI Act, DORA und weiteren Vorschriften.
-      icon: doc-sync
+      text: Navigiere sicher durch die komplexe Welt der KI-Regulierungen. Erfülle Vorschriften wie den **EU AI Act**, **DORA** und weitere Anforderungen, um rechtliche Risiken zu minimieren.
+      icon: eu-ai-act
+    - title: Erfahre mehr darüber, wie wir Dir helfen können und buche jetzt eine **kostenlose Erstanalyse**.
+      icon: smart-labs-ai-white
+      url: /#contact
   section_contact:
     title: Teste deine KI-Sicherheit!
     subtitle: Jetzt PoC-Partner werden und KI absichern.
