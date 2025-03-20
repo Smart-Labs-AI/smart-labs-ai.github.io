@@ -60,6 +60,24 @@
       font-size: $card-subtitle-size;
       opacity: 0.7;
     }
+
+    input.input, textarea {
+      background-color:transparent;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;     
+      margin-top: 1em;
+      font-size: 90%;
+      padding: 20px
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: $white;
+      opacity: 40%;
+    }
+
+    label {
+      color: $card-title-color;
+    }
   }
 
   .blog-card {

@@ -29,4 +29,4 @@ $primary: $white;
 $primary-invert: $dark-blue;
 $primary-invert-hover: lighten($dark-blue, 30%);
 $secondary: saturate(mix($primary, $primary-invert, 50%), 10%);
-$accent: #1D8F5C;
+$link: #901c4f;

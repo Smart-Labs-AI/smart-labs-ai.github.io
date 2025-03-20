@@ -74,8 +74,8 @@ params:
       url: /#contact
       cardType: call-to-action
   section_contact:
-    title: Teste deine KI-Sicherheit!
-    subtitle: Jetzt PoC-Partner werden und KI absichern.
+    title: Teste jetzt deine KI-Sicherheit
+    subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere Dich mit innovativen Lösungen ab.
     buttonText: Nachricht senden
     action: https://form.smart-labs.ai/contact
     method: POST

@@ -21,6 +21,9 @@ $card-color-end: rgba(#21042e, $card-transparency);
         height: 75vh !important;
     }
     .subtitle {
+        strong {
+            color: $title-color;
+        }
         &.is-muted {
             color: $muted-grey;
         }
