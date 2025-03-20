@@ -24,9 +24,10 @@ $section-grey: #fbfbfb;
 $smoke-white: #fcfcfc;
 $title-grey: #A9ABAC;
 $white: #fff;
+$hibiscus: #901c4f;
 
 $primary: $white;
 $primary-invert: $dark-blue;
 $primary-invert-hover: lighten($dark-blue, 30%);
 $secondary: saturate(mix($primary, $primary-invert, 50%), 10%);
-$link: #901c4f;
+$link: $hibiscus;

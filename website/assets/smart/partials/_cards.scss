@@ -78,6 +78,11 @@
     label {
       color: $card-title-color;
     }
+
+    label[for]:has(+ input:required)::after, label[for]:has(+ textarea:required)::after {
+      content: "*";
+      color: $hibiscus;
+    }
   }
 
   .blog-card {
