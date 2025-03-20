@@ -82,24 +82,25 @@ params:
   footer:
     # Logo (from static/images/logos/___)
     logo: logo-white.svg
-    # Social media links (GitHub, Twitter, etc.). All are optional.
-    socialmediatitle: Folge uns
-    # Social media links (GitHub, Twitter, etc.). All are optional.
-    socialmedia:
-    - link: https://www.linkedin.com/company/smart-labs-ai-gmbh
-      # Icons are from Font Awesome
-      icon: linkedin
+    contact:
+      title: Kontakt
+      address1: Südportal 3
+      address2: 22848 Norderstedt
+      phone: +49 40 604 29 83 0
+      mail: kontakt@smart-labs.ai
+      socialmedia:
+      - link: https://www.linkedin.com/company/smart-labs-ai-gmbh
+        # Icons are from Font Awesome
+        icon: linkedin
     bulmalogo: false
     quicklinks:
       column1:
-        title: "Inhalt"
+        title: "Sitemap"
         links:
-        - text: Home
+        - text: Start
           link: /
         - text: Blog
           link: /blog
-        - text: Karriere
-          link: /careers/
         - text: Kontakt
           link: /#contact
       column2:
@@ -109,3 +110,10 @@ params:
           link: /impressum
         - text: Datenschutzerklärung
           link: /datenschutzerklaerung
+    finalLine:
+      title: © 2025 Smart Labs AI GmbH – Alle Rechte vorbehalten
+      links:
+      - text: Impressum
+        link: /impressum
+      - text: Datenschutz
+        link: /datenschutzerklaerung
