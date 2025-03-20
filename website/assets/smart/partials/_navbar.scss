@@ -29,6 +29,8 @@ $navbar-dropdown-min-width: 220px;
     
     // Responsive menu icon
     .navbar-burger {
+        color: white;
+        font-weight: bold;
         width: $navbar-burger-size;
         height: $navbar-burger-size;
     }
