@@ -46,6 +46,7 @@
     @include gradient-background($card-color-start, $card-color-end);
     padding: 2rem;
     color: var(--card-title-color);
+    height: 100%;
 
     strong {
       color: $card-title-color;
@@ -66,7 +67,6 @@
     @include gradient-background($cta-color-start, $cta-color-end);
     color: white;
     padding: 1rem;
-    text-align: center;
     border-radius: $border-radius;
     font-weight: bold;
     
@@ -85,6 +85,11 @@
 
     .title {
       color: rgba(255, 255, 255, 0.6);
+    }
+
+    a.cta i {
+      color: #3d3199;
+      font-size: 160%;
     }
   }
 }

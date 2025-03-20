@@ -13,16 +13,23 @@
     </div>
   </div>
   <div class="container mt-6">
-    <div class="columns is-multiline">
+    <div class="columns is-multiline is-flex">
       {{- range $features }}
       <div class="column is-6">
-        <div class="card {{ with .cardType }} {{ . }}{{ end }} is-flex is-flex-direction-column is-full-height">
-          <div class="card-content is-flex-grow-1 is-flex is-flex-direction-column">
+        <div class="card {{ with .cardType }} {{ . }}{{ end }} is-flex is-flex-direction-column is-flex-grow-1" >
+          <div class="card-content is-flex-grow-1">
             <figure class="image is-64x64">
               <img src="{{ printf "images/illustrations/icons/%s.svg" .icon | relURL }}" alt="{{ .title }}">
             </figure>
             <h4 class="title is-4 mt-6">{{ .title | markdownify }}</h4>
             <p class="subtitle mt-4">{{ .text | markdownify }}</p>
+            {{- with .url }}
+              <a class="button cta rounded primary-btn raised mt-4 is-pulled-right" href="{{ . }}">
+                <span class="icon">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+              </a>
+            {{- end }}
           </div>
         </div>
       </div>
