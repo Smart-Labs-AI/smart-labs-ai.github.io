@@ -1,9 +1,9 @@
 {{- $footer      := .Site.Params.footer }}
 {{- $logo        := index $footer "logo" }}
 {{- $quickLinks  := index $footer "quicklinks" }}
-{{- $socialMedia := index $footer "socialmedia" }}
 {{- $bulmaLogo   := index $footer "bulmalogo" }}
-{{- $socialMediaTitle    := index $footer "socialmediatitle" }}
+{{- $contact    := index $footer "contact" }}
+{{- $finalLine    := index $footer "finalLine" }}
 <footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
@@ -36,18 +36,51 @@
       {{- end }}
       <div class="column">
         <div class="footer-column">
-          <div class="footer-header">
-            <h3>{{ $socialMediaTitle }}</h3>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                {{- range $socialMedia }}
-                <a class="level-item" href="{{ .link }}">
-                  <span class="icon"><i class="fab fa-{{ .icon }}"></i></span>
-                </a>
+          <div class="footer-header contact">
+            <h3>{{ $contact.title }}</h3>
+              <ul class="link-list">
+                <li>
+                  {{ $contact.address1 }}
+                </li>
+                <li>
+                  {{ $contact.address2 }}
+                </li>
+                <li class="mt-4">
+                  {{ $contact.phone}}
+                </li>
+                <li class="mb-4">
+                  <a href="mailto:{{ $contact.mail }}">{{ $contact.mail }}</a>
+                </li>
+                {{- range $contact.socialMedia }}
+                <li>
+                  <a class="social-media" href="{{ .link }}">
+                    <span class="icon"><i class="fab fa-{{ .icon }}"></i></span>
+                  </a>
+                </li>
                 {{- end }}
-              </div>
-            </nav>
+              </ul>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+          <hr class="divider"/>
+      </div>
+    </div>
+    <div class="columns last-line">
+      <div class="column">
+        {{ $finalLine.title}}
+      </div>
+      <div class="column is-pulled-right">
+        <div class="is-pulled-right footer-column">
+          <ul class="link-list">
+            {{- range $finalLine.links }}
+            <li>
+              <a href="{{ .link }}"> {{ .text }} </a>
+            </li>
+            {{- end }}
+          </ul>
         </div>
       </div>
     </div>

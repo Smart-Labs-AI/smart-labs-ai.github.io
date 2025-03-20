@@ -8,6 +8,7 @@ Responsive Styles
         text-align: center;
     }
     .navbar-menu {
+        background: $body-background-color-nav;
         .is-static {
             position: absolute;
             width: 100%;
@@ -24,6 +25,9 @@ Responsive Styles
         }
         .navbar-link {
             padding: 10px 20px !important;
+        }
+        .burger-button, .cross {
+            color: white !important;
         }
     }
     .title.section-title {
@@ -43,6 +47,10 @@ Responsive Styles
 
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .navbar-menu {
+        background: $body-background-color-nav;
+    }
+    
     .landing-caption {
         text-align: center;
     }
@@ -63,6 +71,9 @@ Responsive Styles
         }
         .navbar-link {
             padding: 10px 20px !important;
+        }
+        .burger-button, .cross {
+            color: white !important;
         }
     }
     .pushed-image {

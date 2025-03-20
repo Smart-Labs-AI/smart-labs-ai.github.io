@@ -40,15 +40,13 @@ params:
     # Main hero title
     title: KI verändert alles – aber ist sie auch sicher?
     # Hero subtitle (optional)
-    subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle sicher, regelkonform und vertrauenswürdig zu machen.
-    # Hero text
-    content: Wir identifizieren Schwachstellen und entwickeln gezielte Maßnahmen, um Ihre Systeme gegen Angriffe abzusichern und eine zuverlässige Funktionalität zu gewährleisten.  Unsere Expertise basiert auf regelmäßiger Teilnahme an CTFs und Challenges, bei denen wir Angriffe auf KI-Systeme simulieren und verteidigen. Dieses praxisnahe Wissen fließt direkt in unsere Strategien ein, um Ihre KI nachhaltig und sicher zu gestalten.
-    # Button text
-    buttontext: Erfahre mehr
+    subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle **sicher**, **regelkonform** und **vertrauenswürdig** zu machen.
+    # Button textu
+    buttontext: Erfahre mehr.
     # Where the main hero button links to
     buttonlink: "#contact"
     # Hero image (from static/images/___)
-    image: illustrations/worker.svg
+    image: hero/padlock.png
     # Footer logos (from static/images/logos/clients/*.svg)
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
@@ -60,39 +58,46 @@ params:
   section_services:
   section2:
     title: Wie sicher ist deine KI?
-    subtitle: Finden Sie es mit uns heraus!
+    subtitle: Finden Sie es mit uns heraus.
     features:
     - title: KI-Sicherheit & Compliance
-      text: Schütze deine KI-Systeme vor Cyberangriffen, **Prompt Injection** und **Datenlecks**. Erhöhe die Widerstandsfähigkeit deiner Modelle und schaffe eine sichere Umgebung für sensible Daten.
-      icon: laptop-cloud
+      text: Schütze deine KI-Systeme vor **Cyberangriffen**, **Prompt Injection** und **Datenlecks**. Erhöhe die Widerstandsfähigkeit deiner Modelle und schaffe eine sichere Umgebung für sensible Daten.
+      icon: ai-security
     - title: Fairness & Transparenz
-      text: Reduziere **Bias** in KI-Modellen und sorge für eine faire, nachvollziehbare Entscheidungsfindung.  Setze auf transparente Algorithmen und gewinne das Vertrauen deiner Nutzer und Partner.
-      icon: mouse-globe
+      text: Reduziere **Bias** in KI-Modellen und sorge für eine faire, nachvollziehbare Entscheidungsfindung. Setze auf transparente Algorithmen und gewinne das Vertrauen deiner Nutzer und Partner.
+      icon: ai-transparency
     - title: Regulatorische Absicherung
-      text: Navigiere sicher durch die komplexe Welt der KI-Regulierungen. Erfülle Vorschriften wie den **EU AI Act**, **DORA** und weitere Compliance-Anforderungen, um rechtliche Risiken zu minimieren.
-      icon: doc-sync
+      text: Navigiere sicher durch die komplexe Welt der KI-Regulierungen. Erfülle Vorschriften wie den **EU AI Act**, **DORA** und weitere Anforderungen, um rechtliche Risiken zu minimieren.
+      icon: eu-ai-act
+    - title: Erfahre mehr darüber, wie wir Dir helfen können und buche jetzt eine **kostenlose Erstanalyse**.
+      icon: smart-labs-ai-white
+      url: /#contact
+      cardType: call-to-action
   section_contact:
-    title: Teste jetzt deine KI-Sicherheit!
-    subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere deine KI mit innovativen Lösungen ab.
-    buttonText: Nachricht senden
+    title: Teste jetzt deine KI-Sicherheit
+    subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere Dich mit innovativen Lösungen ab.
+    buttonText: Absenden
     action: https://form.smart-labs.ai/contact
     method: POST
   footer:
     # Logo (from static/images/logos/___)
     logo: logo-white.svg
-    # Social media links (GitHub, Twitter, etc.). All are optional.
-    socialmediatitle: Folge uns
-    # Social media links (GitHub, Twitter, etc.). All are optional.
-    socialmedia:
-    - link: https://www.linkedin.com/company/smart-labs-ai-gmbh
-      # Icons are from Font Awesome
-      icon: linkedin
+    contact:
+      title: Kontakt
+      address1: Südportal 3
+      address2: 22848 Norderstedt
+      phone: +49 40 604 29 83 0
+      mail: kontakt@smart-labs.ai
+      socialmedia:
+      - link: https://www.linkedin.com/company/smart-labs-ai-gmbh
+        # Icons are from Font Awesome
+        icon: linkedin
     bulmalogo: false
     quicklinks:
       column1:
-        title: "Inhalt"
+        title: "Sitemap"
         links:
-        - text: Home
+        - text: Start
           link: /
         - text: Blog
           link: /blog
@@ -105,3 +110,10 @@ params:
           link: /impressum
         - text: Datenschutzerklärung
           link: /datenschutzerklaerung
+    finalLine:
+      title: © 2025 Smart Labs AI GmbH – Alle Rechte vorbehalten
+      links:
+      - text: Impressum
+        link: /impressum
+      - text: Datenschutz
+        link: /datenschutzerklaerung

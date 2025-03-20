@@ -1,0 +1,20 @@
+
+/* ==========================================================================
+Bulma Theme variables
+========================================================================== */
+@import 'partials/colors';
+
+$body-background-color: #00002b;
+$body-background-color-nav: rgba(0, 0, 43, 0.93); // TODO compute it in navbar.css
+$body-size: 1.00em;
+$family-primary: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+$primary: $white;
+$title-color: $white;
+$title-family: Merriweather, -apple-system, Roboto, Helvetica, sans-serif;
+$title-size: 260%;
+$subtitle-color: $white;
+$subtitle-size: 130%;
+$card-title-color: $title-color;
+$card-title-family: $family-primary;
+$card-title-size: 170%;
+$card-subtitle-size: 115%;

@@ -9,7 +9,7 @@
       <div class="columns is-multiline">
         {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
           <div class="column is-one-third">
-                    {{ partial "card.html" . }}
+                    {{ partial "blog-card.html" . }}
                   </div>
         {{ end }}
       </div>

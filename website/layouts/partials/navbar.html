@@ -8,7 +8,7 @@
     <div class="navbar-brand">
       {{- if $navbarLogo}}
       <a class="navbar-item" href="{{ $navbarLogo.link }}">
-        <img src="{{ printf "images/%s" $navbarLogo.image | relURL }}" alt="" style="max-width: 100%; height: auto;" width="{{ $navbarLogoWidth }}" height="{{ $navbarLogoHeight }}">
+          <img src="{{ printf "images/%s" $navbarLogo.image | relURL }}" alt="" style="max-width: 100%; height: auto" width="{{ $navbarLogoWidth }}" height="{{ $navbarLogoHeight }}">
       </a>
       {{- end}}
 
@@ -43,7 +43,7 @@
           </div>
           {{- else if .button }}
           <a href="{{ .url }}" class="navbar-item">
-            <span class="button signup-button rounded primary-btn raised">
+            <span class="button contact-button rounded primary-btn raised">
               {{ .title }}
             </span>
           </a>

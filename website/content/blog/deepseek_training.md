@@ -26,7 +26,7 @@ Diese Technik könnte weitreichende Konsequenzen haben. Wenn ein Modell genutzt 
 
 Interessanterweise ist dieser "Self-Training"-Ansatz keineswegs neu. In der Computer Vision wurde bereits in den 2010er Jahren mit selbstgenerierten Daten gearbeitet. Beispielsweise wurden schwächere Modelle genutzt, um Pseudo-Labels für unlabeled Daten zu generieren, wodurch stärkere Modelle trainiert werden konnten. Dass dieser Trick nun im Bereich der Large Language Models erfolgreich angewendet wird, könnte ein Gamechanger für die gesamte KI-Entwicklung sein.
 
-### Fazit
+## Fazit
 
 DeepSeek demonstriert eindrucksvoll, dass durch geschickte Nutzung von KI-generierten Daten die Kosten für das Training leistungsfähiger Modelle drastisch gesenkt werden können. Gleichzeitig zeigt es eine mögliche Zukunft auf, in der KIs sich zunehmend selbst verbessern – eine Entwicklung mit weitreichenden Implikationen für die gesamte KI-Forschung.
 

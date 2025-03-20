@@ -2,27 +2,37 @@
 Hero styles
 ========================================================================== */
 
+.hero-background {
+    background-image: url('/images/hero/hero.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 160% auto;
+    height: 2023px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
 .hero-body {
     padding-top: 6rem;
     padding-bottom: 6rem;
-    .title, .subtitle, .content {
-        font-family: 'Open Sans', sans-serif;
-    }
     .title {
         &.is-bold {
             font-weight: 700;
         }
     }
     .subtitle {
-        &.is-muted {
-            color: $medium-grey;
+        strong {
+            color: $title-color;
+            font-weight: 800;
         }
     }
-    .content {
-        &.is-muted {
-            color: $medium-grey;
-        }
-        font-size: 120%;
+
+    img {
+        height: 256px;
+        width: auto;
+        margin-top: -30px;
     }
 }
 

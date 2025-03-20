@@ -7,20 +7,97 @@
 {{- $action     := index $section_contact "action" }}
 {{- $method     := index $section_contact "method" }}
 {{- $buttonText := index $section_contact "buttontext" | default "Send Message" }}
-<section class="section section-primary is-medium" id="contact">
+<section class="section section-primary is-medium" id="contact" style="background-image: url('/images/formular/formular.png'); background-position: top; background-repeat: no-repeat; background-size: cover;">
   <div class="container">
     <div class="title-wrapper has-text-centered">
-      <h2 class="title is-3 is-spaced">{{ $title }}</h2>
-      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
-      <div class="divider is-centered"></div>
+      <h2 class="title is-2 is-spaced">{{ $title | markdownify }}</h2>
+      <h3 class="subtitle is-5">{{ $subtitle | markdownify }}</h3>
     </div>
 
     <div class="content-wrapper">
-      <div class="columns is-centered">
-        <div class="column is-half">
-          <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/c6vRsvlamMIgy5DpedBOJO2iKeQo5oS1jGfUAhGLcnel3y8O2RWhfULFXM2mB3Nt1V">
-            <script src="https://webforms.pipedrive.com/f/loader"></script>
+      <div class="columns mt-6">
+        <div class="column is-6 is-offset-3">
+          <div id="error-message" style="display: none;" class="notification is-danger has-text-centered">
+            Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.
           </div>
+          <div id="thankyou-message" style="display: none;" class="notification is-success has-text-centered">
+            Danke für Ihre Anfrage, wir werden uns in Kürze bei Ihnen melden!
+          </div>
+          <form id="contact-form" action="https://form.smart-labs.ai/contact" method="POST" onsubmit="submitForm(event)">
+            <div class="card is-flex is-flex-direction-column is-flex-grow-1">
+              <div class="card-content is-flex-grow-1">
+                <div class="columns is-multiline">
+                  <div class="column is-12">
+                    <label for="name">Dein Name</label>
+                    <input class="input is-medium" id="name" name="subject" type="text" placeholder="Name" required>
+                  </div>
+                  <div class="column is-12">
+                    <label for="email">Deine E-Mail Adresse</label>
+                    <input class="input is-medium" id="email" name="email" type="email" placeholder="E-Mail-Adresse" required>
+                  </div>
+                  <div class="column is-12">
+                    <label for="body">Deine Nachricht</label>
+                    <textarea class="textarea" id="body" name="body" rows="10" placeholder="Kontaktnachricht" required></textarea>
+                  </div>
+                  <div class="column is-12">
+                    <button type="submit" class="button cta is-link is-fullwidth mt-4" id="submit-button">{{ $buttonText }}</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          
+          <script>
+            async function submitForm(event) {
+              event.preventDefault();
+
+              const submitButton = document.getElementById('submit-button');
+              submitButton.disabled = true;
+              const errorMessage = document.getElementById('error-message');
+              errorMessage.style.display = 'none';
+              try {
+                const formData = {
+                  email: document.getElementById('email').value,
+                  subject: document.getElementById('subject').value,
+                  body: document.getElementById('body').value
+                };
+
+                const response = await fetch('https://form.smart-labs.ai/contact', {
+                  method: 'POST',
+                  headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(formData)
+                });
+                if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                document.getElementById('contact-form').style.display = 'none';
+                document.getElementById('thankyou-message').style.display = 'block';
+                const form = document.getElementById('contact-form');
+                const inputs = form.getElementsByTagName('input');
+                const textareas = form.getElementsByTagName('textarea');
+                const buttons = form.getElementsByTagName('button');
+
+                for (let input of inputs) {
+                  input.disabled = true;
+                }
+                for (let textarea of textareas) {
+                  textarea.disabled = true;
+                }
+                for (let button of buttons) {
+                  button.disabled = true;
+                }
+              } catch (error) {
+                console.error('Error:', error);
+                errorMessage.style.display = 'block';
+                submitButton.disabled = false;
+              }
+            }
+          </script>
         </div>
       </div>
     </div>
