@@ -1,3 +1,21 @@
 {{ partial "navbar.html" . }}
 {{ partial "navbar-clone.html" . }}
-{{ partial "single/content.html" . }}
+<div class="blog-content">
+  <style>
+    .blog-content {
+      color: white;
+    }
+    .blog-content a {
+      color: white;
+    }
+    .blog-content h1,
+    .blog-content h2,
+    .blog-content h3,
+    .blog-content h4,
+    .blog-content h5,
+    .blog-content h6 {
+      color: white !important;
+    }
+  </style>
+  {{ partial "single/content.html" . }}
+</div>
