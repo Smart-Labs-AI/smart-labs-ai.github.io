@@ -3,7 +3,7 @@ title: "DeepSeek: Revolutionäre Trainingsmethode"
 date: 2025-02-12
 layout: "blog"
 image: "/blog/images/deepseek_training.webp"
-summary: "DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen.DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen.DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen."
+summary: "DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen."
 ---
 
 DeepSeek hat nicht nur mit seiner Performance für Aufsehen gesorgt, sondern auch mit der Art und Weise, wie das Modell trainiert wurde. Die innovative Trainingsmethode ermöglicht es, ein leistungsfähiges Large Language Model (LLM) mit vergleichsweise geringen Kosten zu entwickeln.
@@ -26,7 +26,7 @@ Diese Technik könnte weitreichende Konsequenzen haben. Wenn ein Modell genutzt 
 
 Interessanterweise ist dieser "Self-Training"-Ansatz keineswegs neu. In der Computer Vision wurde bereits in den 2010er Jahren mit selbstgenerierten Daten gearbeitet. Beispielsweise wurden schwächere Modelle genutzt, um Pseudo-Labels für unlabeled Daten zu generieren, wodurch stärkere Modelle trainiert werden konnten. Dass dieser Trick nun im Bereich der Large Language Models erfolgreich angewendet wird, könnte ein Gamechanger für die gesamte KI-Entwicklung sein.
 
-### Fazit
+## Fazit
 
 DeepSeek demonstriert eindrucksvoll, dass durch geschickte Nutzung von KI-generierten Daten die Kosten für das Training leistungsfähiger Modelle drastisch gesenkt werden können. Gleichzeitig zeigt es eine mögliche Zukunft auf, in der KIs sich zunehmend selbst verbessern – eine Entwicklung mit weitreichenden Implikationen für die gesamte KI-Forschung.
 

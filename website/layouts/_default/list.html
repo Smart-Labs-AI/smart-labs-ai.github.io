@@ -5,8 +5,11 @@
   {{ partial "navbar-clone.html" . }}
 
   <section class="section">
-    <div class="container">
-      <h1 class="title has-text-left" style="margin-bottom: 20px;">{{ .Title }}</h1>
+    <div class="container has-text-centered">
+      <h1 class="title" style="margin-bottom: 20px;">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <h5 class="subtitle is-5 is-muted" style="color: white;">{{ . }}</h5>
+      {{ end }}
       <div class="divider" style="margin-bottom: 20px; text-align: left"></div>
       <div class="columns is-multiline" style="margin-top: 20px;">
         {{ range .Pages }}
