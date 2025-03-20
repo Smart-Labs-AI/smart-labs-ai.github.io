@@ -8137,11 +8137,11 @@ Classes to change the feel of bulma buttons
 :root {
   --border-width: 1.5px; }
 
-.section .border-gradient, .section .card {
+.section .border-gradient, .section .card, .section .blog-card {
   position: relative;
   border-radius: 18px;
   padding: var(--border-width); }
-  .section .border-gradient::before, .section .card::before {
+  .section .border-gradient::before, .section .card::before, .section .blog-card::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -8167,15 +8167,16 @@ Classes to change the feel of bulma buttons
     opacity: 0.7; }
 
 .section .blog-card {
-  background-color: #13142d;
+  background: linear-gradient(-30deg, #0c0a3c 0%, #21042e 100%);
+  color: var(--card-title-color);
   border-radius: 16px;
   overflow: hidden;
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 600px; }
-  .section .blog-card:hover {
-    transform: translateY(-5px); }
+  .section .blog-card strong {
+    color: #fff; }
   .section .blog-card .blog-image-container {
     width: 100%;
     height: 240px;
@@ -8206,15 +8207,18 @@ Classes to change the feel of bulma buttons
     margin: 0 24px 24px 24px;
     max-height: 244px;
     overflow: hidden;
-    flex: 1; }
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    margin-bottom: 0.5rem; }
     .section .blog-card .blog-excerpt::after {
       content: "";
       position: absolute;
       bottom: 0;
       right: 0;
       width: 100%;
-      height: 45px;
-      background: linear-gradient(180deg, transparent, #13142d 90%); }
+      height: 45px; }
   .section .blog-card .read-more {
     display: flex;
     align-items: center;
