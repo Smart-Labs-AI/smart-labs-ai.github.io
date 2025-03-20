@@ -3,7 +3,7 @@ title: "DeepSeek: Revolutionäre Trainingsmethode"
 date: 2025-02-12
 layout: "blog"
 image: "/blog/images/deepseek_training.webp"
-summary: "DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen."
+summary: "DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen.DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen.DeepSeek trainiert ein kleineres Modell (DeepSeek-R1-Zero), um optimierte Daten für das leistungsstärkere DeepSeek-R1 zu generieren, wodurch kostengünstige und effiziente LLMs entstehen."
 ---
 
 DeepSeek hat nicht nur mit seiner Performance für Aufsehen gesorgt, sondern auch mit der Art und Weise, wie das Modell trainiert wurde. Die innovative Trainingsmethode ermöglicht es, ein leistungsfähiges Large Language Model (LLM) mit vergleichsweise geringen Kosten zu entwickeln.
