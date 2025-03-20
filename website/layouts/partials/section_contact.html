@@ -7,16 +7,15 @@
 {{- $action     := index $section_contact "action" }}
 {{- $method     := index $section_contact "method" }}
 {{- $buttonText := index $section_contact "buttontext" | default "Send Message" }}
-<section class="section section-primary is-medium" id="contact">
+<section class="section section-primary is-medium" id="contact" style="background-image: url('/images/formular/formular.png'); background-position: top; background-repeat: no-repeat; background-size: cover;">
   <div class="container">
     <div class="title-wrapper has-text-centered">
-      <h2 class="title is-2 is-spaced">{{ $title }}</h2>
-      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
-      <div class="divider is-centered"></div>
+      <h2 class="title is-2 is-spaced">{{ $title | markdownify }}</h2>
+      <h3 class="subtitle is-5">{{ $subtitle | markdownify }}</h3>
     </div>
 
     <div class="content-wrapper">
-      <div class="columns">
+      <div class="columns mt-6">
         <div class="column is-6 is-offset-3">
           <div id="error-message" style="display: none;" class="notification is-danger has-text-centered">
             Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.
@@ -24,22 +23,30 @@
           <div id="thankyou-message" style="display: none;" class="notification is-success has-text-centered">
             Danke für Ihre Anfrage, wir werden uns in Kürze bei Ihnen melden!
           </div>
-          <form id="contact-form"{{ with $action }} action="https://form.smart-labs.ai/contact"{{end}} method="POST" onsubmit="submitForm(event)">
-            <div class="columns is-multiline">
-              <div class="column is-6">
-                <input class="input is-medium" id="subject" name="subject" type="text" placeholder="Name" required>
-              </div>
-              <div class="column is-6">
-                <input class="input is-medium" id="email" name="email" type="email" placeholder="E-Mail-Adresse" required>
-              </div>
-              <div class="column is-12">
-                <textarea class="textarea" id="body" name="body" rows="10" placeholder="Kontaktnachricht" required></textarea>
-              </div>
-              <div class="form-footer has-text-centered mt-10">
-                <button type="submit" class="button cta is-large primary-btn raised is-clear" id="submit-button">{{ $buttonText }}</button>
+          <form id="contact-form" action="https://form.smart-labs.ai/contact" method="POST" onsubmit="submitForm(event)">
+            <div class="card is-flex is-flex-direction-column is-flex-grow-1">
+              <div class="card-content is-flex-grow-1">
+                <div class="columns is-multiline">
+                  <div class="column is-12">
+                    <label for="name">Dein Name</label>
+                    <input class="input is-medium" id="name" name="subject" type="text" placeholder="Name" required>
+                  </div>
+                  <div class="column is-12">
+                    <label for="email">Deine E-Mail Adresse</label>
+                    <input class="input is-medium" id="email" name="email" type="email" placeholder="E-Mail-Adresse" required>
+                  </div>
+                  <div class="column is-12">
+                    <label for="body">Deine Nachricht</label>
+                    <textarea class="textarea" id="body" name="body" rows="10" placeholder="Kontaktnachricht" required></textarea>
+                  </div>
+                  <div class="column is-12">
+                    <button type="submit" class="button cta is-link is-fullwidth mt-4" id="submit-button">{{ $buttonText }}</button>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
+          
           <script>
             async function submitForm(event) {
               event.preventDefault();
