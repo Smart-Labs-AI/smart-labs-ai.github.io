@@ -17,6 +17,7 @@ $navbar-dropdown-min-width: 220px;
     min-height: $navbar-min-height;
     transition: all .3s;
     z-index: 99;
+    background-color: transparent;
     
     .container {
         min-height: $navbar-default-height;
