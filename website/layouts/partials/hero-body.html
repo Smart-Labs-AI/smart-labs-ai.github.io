@@ -10,8 +10,8 @@
 </div>
 <div class="hero-body">
   <div class="container">
-    <div class="columns is-vcentered">
-      <div class="column is-8 landing-caption">
+    <div class="columns is-vcentered is-multiline">
+      <div class="column is-8-desktop is-12-tablet landing-caption">
         <h1 class="title is-1 is-bold is-spaced">
           {{ $title }}
         </h1>
@@ -31,10 +31,17 @@
           </a>
         </p>
       </div>
-      <div class="column is-4 figure-column">
-        <figure class="image is-pulled-right">
-          <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
-        </figure>
+      <div class="column is-4-desktop is-12-tablet">
+        <div class="is-flex is-justify-content-flex-end is-hidden-touch">
+          <figure class="image">
+            <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
+          </figure>
+        </div>
+        <div class="is-flex is-justify-content-center mt-6 is-hidden-desktop">
+          <figure class="image">
+            <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
+          </figure>
+        </div>
       </div>
     </div>
   </div>
