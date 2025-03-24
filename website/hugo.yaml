@@ -43,7 +43,7 @@ params:
     # Where the main hero button links to
     buttonlink: "#contact"
     # Hero image (from static/images/___)
-    image: hero/padlock.png
+    image: hero/padlock.webp
     # Footer logos (from static/images/logos/clients/*.svg)
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
