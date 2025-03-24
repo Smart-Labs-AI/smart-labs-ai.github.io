@@ -33,9 +33,6 @@ params:
     # Default width/height. Uncomment if you need to change
     # width: 112
     # height: 28
-  font:
-    name: "Open Sans"
-    sizes: [400,600]
   hero:
     # Main hero title
     title: KI verändert alles – aber ist sie auch sicher?
