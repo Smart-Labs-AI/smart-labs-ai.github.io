@@ -2,16 +2,52 @@
 Hero styles
 ========================================================================== */
 
+/**
 .hero-background {
-    background-image: url('/images/hero/hero.jpg');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 160% auto;
+    background: url("https://www.transparenttextures.com/patterns/black-felt.png") repeat,
+                url('/images/hero/hero.png') no-repeat center/cover; 
+    background-size: 150px 75px, cover;
     height: 2023px;
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
+}
+*/
+
+.hero-background {
+    height: 2023px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 2023px;
+    overflow: hidden;
+}
+
+.hero-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2023px;
+    background: url('/images/hero/hero.png') no-repeat center/cover;
+    transform: rotate(180deg);
+    z-index: 0;
+}
+
+.hero-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2023px;
+    background: url("/images/hero/black-felt.png") repeat;
+    background-size: 150px 95px;
+    pointer-events: none;
+    //z-index: 1;
 }
 
 .hero-body {
