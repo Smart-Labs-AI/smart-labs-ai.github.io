@@ -8,7 +8,9 @@ Responsive Styles
         text-align: center;
     }
     .navbar-menu {
-        background: $body-background-color-nav;
+        //background: $body-background-color-nav;
+        background: transparent;
+        border-bottom: 1px solid rgba($white, 0.1);
         .is-static {
             position: absolute;
             width: 100%;
