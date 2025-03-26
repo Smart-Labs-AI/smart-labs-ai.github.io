@@ -64,7 +64,7 @@
   }
 
   .blog-card {
-    @include gradient-background($card-color-start, $card-color-end);
+    background-color: $dark-blue;
     color: var(--card-title-color);
     strong {
       color: $card-title-color;

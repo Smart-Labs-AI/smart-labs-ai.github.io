@@ -29,6 +29,9 @@ $card-color-end: rgba(#21042e, $card-transparency);
         }
     }
 
+    &.latest-blog-posts {
+        background: linear-gradient(120deg, rgba(#A81B58, 0.2) 0%, rgba(#3C3198,0.2) 100%);
+    }
 }
 
 //Titles
