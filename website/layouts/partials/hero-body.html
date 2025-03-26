@@ -4,6 +4,8 @@
 {{- $content    := index $hero "content" }}
 {{- $buttonText := index $hero "buttontext" }}
 {{- $buttonLink := index $hero "buttonlink" }}
+{{- $secondaryButtonText := index $hero "secondaryButtontext" }}
+{{- $secondaryButtonLink := index $hero "secondaryButtonlink" }}
 {{- $image      := index $hero "image" }}
 
 <div class="hero-background"></div>
@@ -25,11 +27,14 @@
           {{ . }}
         </h2>
         {{ end }}
-        <p>
-          <a class="button cta rounded primary-btn raised" href="{{ $buttonLink }}">
+        <div class="buttons mt-4">
+          <a class="button cta rounded primary-btn raised mr-4" href="{{ $buttonLink }}">
             {{ $buttonText }}
           </a>
-        </p>
+          <a class="button cta rounded secondary-btn raised" href="{{ $secondaryButtonLink }}">
+            {{ $secondaryButtonText }}
+          </a>
+        </div>
       </div>
       <div class="column is-4">
         <figure class="image">
@@ -60,9 +65,14 @@
         </figure>
       </div>
       <div class="column is-12 has-text-centered">
-          <a class="button cta rounded primary-btn raised mt-4" href="{{ $buttonLink }}">
+        <div class="buttons is-centered mt-4">
+          <a class="button cta rounded primary-btn raised mr-4" href="{{ $buttonLink }}">
             {{ $buttonText }}
           </a>
+          <a class="button cta rounded secondary-btn raised" href="{{ $secondaryButtonLink }}">
+            {{ $secondaryButtonText }}
+          </a>
+        </div>
       </div>
     </div>
 </div>

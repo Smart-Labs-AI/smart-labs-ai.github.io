@@ -34,17 +34,13 @@ params:
     # width: 112
     # height: 28
   hero:
-    # Main hero title
     title: KI verändert alles – Aber ist sie auch sicher?
-    # Hero subtitle (optional)
     subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle **sicher**, **regelkonform** und **vertrauenswürdig** zu machen.
-    # Button textu
-    buttontext: Erfahre mehr.
-    # Where the main hero button links to
+    buttontext: Erfahre mehr
     buttonlink: "#contact"
-    # Hero image (from static/images/___)
+    secondaryButtontext: Blog-Beiträge
+    secondaryButtonlink: /blog
     image: hero/padlock.webp
-    # Footer logos (from static/images/logos/clients/*.svg)
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
   - title: Blog

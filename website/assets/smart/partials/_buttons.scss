@@ -8,6 +8,8 @@ Classes to change the feel of bulma buttons
     cursor: pointer;
     transition: all 0.5s;
     border-radius: 12px;
+    border-width: 2px;
+    border-color: $white;
     &.cta {
         font-weight: 500;
     }
@@ -31,7 +33,7 @@ Classes to change the feel of bulma buttons
 }
 
 .button {
-    &.primary-btn, &secondary-btn {
+    &.primary-btn, &.secondary-btn {
         outline: none;
         padding: 12px 24px;
         transition: all 0.5s;
@@ -60,14 +62,12 @@ Classes to change the feel of bulma buttons
         }
     }
     &.secondary-btn {
-        border-color: $secondary;
-        background-color: $secondary;
+        background: transparent;
         color: $white;
         &:hover {
             color: $white;
         }
         &.btn-outlined {
-            border-color: $secondary;
             color: $secondary;
             background-color: transparent; 
             &:hover {
