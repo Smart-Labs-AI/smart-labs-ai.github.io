@@ -31,18 +31,23 @@ Classes to change the feel of bulma buttons
 }
 
 .button {
-    &.primary-btn {
+    &.primary-btn, &secondary-btn {
         outline: none;
+        padding: 12px 24px;
+        transition: all 0.5s;
+
+        &.raised:hover {
+            box-shadow: 0 14px 26px -12px rgba(27, 21, 65, 0.42), 0 4px 23px 0px rgba(27, 21, 65, 0.12), 0 8px 10px -5px rgba(27, 21, 65, 0.2) !important;
+            opacity: 0.8;
+        }
+    }
+
+    &.primary-btn {
         border-color: $primary;
         background-color: $primary;
         color: $primary-invert;
-        transition: all 0.5s;
         &:hover {
             color: $primary-invert-hover;
-        }
-        &.raised:hover {
-            box-shadow: 0 14px 26px -12px rgba(143,29,80, 0.42), 0 4px 23px 0px rgba(143,29,80, 0.12), 0 8px 10px -5px rgba(143,29,80, 0.2) !important;
-            opacity: 0.8;
         }
         &.btn-outlined {
             border-color: $primary;
@@ -55,17 +60,11 @@ Classes to change the feel of bulma buttons
         }
     }
     &.secondary-btn {
-        outline: none;
         border-color: $secondary;
         background-color: $secondary;
         color: $white;
-        transition: all 0.5s;
         &:hover {
             color: $white;
-        }
-        &.raised:hover {
-            box-shadow: 0 14px 26px -12px rgba(27, 21, 65, 0.42), 0 4px 23px 0px rgba(27, 21, 65, 0.12), 0 8px 10px -5px rgba(27, 21, 65, 0.2) !important;
-            opacity: 0.8;
         }
         &.btn-outlined {
             border-color: $secondary;
