@@ -38,7 +38,7 @@ params:
     subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle **sicher**, **regelkonform** und **vertrauenswürdig** zu machen.
     buttontext: Erfahre mehr
     buttonlink: "#contact"
-    secondaryButtontext: Blog-Beiträge
+    secondaryButtontext: Insights entdecken
     secondaryButtonlink: /blog
     image: hero/padlock.webp
   # Customizable navbar. For a dropdown, add a "sublinks" list.
