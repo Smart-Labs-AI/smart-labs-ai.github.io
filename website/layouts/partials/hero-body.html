@@ -6,13 +6,13 @@
 {{- $buttonLink := index $hero "buttonlink" }}
 {{- $image      := index $hero "image" }}
 
-<div class="hero-background"> </div>
-<div class="hero-background-grain"> </div>
+<div class="hero-background"></div>
+<div class="hero-background-grain"></div>
 <div class="hero-body">
   <div class="container">
-    <div class="columns is-vcentered is-multiline">
-      <div class="column is-8-desktop is-12-tablet landing-caption">
-        <h1 class="title is-1 is-bold is-spaced">
+    <div class="columns is-vcentered is-multiline is-hidden-touch">
+      <div class="column is-8 landing-caption">
+        <h1 class="title section-title is-1 is-bold is-spaced">
           {{ $title }}
         </h1>
         {{ with $subtitle }}
@@ -31,18 +31,38 @@
           </a>
         </p>
       </div>
-      <div class="column is-4-desktop is-12-tablet">
-        <div class="is-flex is-justify-content-flex-end is-hidden-touch">
-          <figure class="image">
-            <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
-          </figure>
-        </div>
-        <div class="is-flex is-justify-content-center mt-6 is-hidden-desktop">
-          <figure class="image">
-            <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
-          </figure>
-        </div>
+      <div class="column is-4">
+        <figure class="image">
+          <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
+        </figure>
       </div>
     </div>
-  </div>
+
+    <div class="columns is-vcentered is-multiline is-hidden-desktop">
+      <div class="column is-12 landing-caption">
+        <h1 class="title section-title is-1 is-bold is-spaced">
+          {{ $title }}
+        </h1>
+        {{ with $subtitle }}
+        <h2 class="subtitle is-5">
+          {{ . | markdownify }}
+        </h2>
+        {{ end }}
+        {{ with $content }}
+        <h2 class="content is-5 is-muted">
+          {{ . }}
+        </h2>
+        {{ end }}
+      </div>
+      <div class="column is-12 has-text-centered">
+        <figure class="image is-inline-block mt-4">
+          <img src="{{ printf "images/%s" $image | relURL }}" alt="Description">
+        </figure>
+      </div>
+      <div class="column is-12 has-text-centered">
+          <a class="button cta rounded primary-btn raised mt-4" href="{{ $buttonLink }}">
+            {{ $buttonText }}
+          </a>
+      </div>
+    </div>
 </div>

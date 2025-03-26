@@ -2,19 +2,6 @@
 Hero styles
 ========================================================================== */
 
-/**
-.hero-background {
-    background: url("https://www.transparenttextures.com/patterns/black-felt.png") repeat,
-                url('/images/hero/hero.png') no-repeat center/cover; 
-    background-size: 150px 75px, cover;
-    height: 2023px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-}
-*/
-
 .hero-background {
     height: 2023px;
     position: absolute;
@@ -65,10 +52,9 @@ Hero styles
         }
     }
 
-    img {
-        height: 256px;
+    .image  img {
+        height: 30vh;
         width: auto;
-        margin-top: -30px;
     }
 }
 

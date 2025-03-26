@@ -35,7 +35,7 @@ params:
     # height: 28
   hero:
     # Main hero title
-    title: KI verändert alles – aber ist sie auch sicher?
+    title: KI verändert alles – Aber ist sie auch sicher?
     # Hero subtitle (optional)
     subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle **sicher**, **regelkonform** und **vertrauenswürdig** zu machen.
     # Button textu
