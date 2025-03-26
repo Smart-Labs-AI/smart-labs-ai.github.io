@@ -17,7 +17,7 @@
         </div>
       </div>
       {{- range $quickLinks }}
-        <div class="column">
+        <div class="column is-narrow mr-6">
           <div class="footer-column">
             <div class="footer-header">
                 <h3>{{ .title }}</h3>
@@ -34,8 +34,8 @@
           </div>
         </div>
       {{- end }}
-      <div class="column">
-        <div class="footer-column">
+      <div class="column is-flex-grow-1">
+        <div class="footer-column is-pulled-right">
           <div class="footer-header contact">
             <h3>{{ $contact.title }}</h3>
               <ul class="link-list">
