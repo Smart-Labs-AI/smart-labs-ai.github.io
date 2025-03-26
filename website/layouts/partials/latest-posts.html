@@ -1,18 +1,19 @@
 <section class="section latest-blog-posts">
-    <div class="container">
-        <div class="title-wrapper has-text-centered" style="margin-bottom: 3rem;">
-            <h2 class="title section-title is-2 is-spaced">Aktuelle Blog Posts</h2>
-            <h3 class="subtitle is-5 is-muted"> Einblicke in die Welt der KI-Sicherheit.</h3>
-            <div class="divider is-centered"></div>
-          </div>
-
-      <div class="columns is-multiline">
-        {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
-          <div class="column is-one-third">
-                    {{ partial "blog-card.html" . }}
-                  </div>
-        {{ end }}
+  <div class="container">
+      <div class="title-wrapper has-text-centered" style="margin-bottom: 3rem;">
+          <h2 class="title section-title is-2 is-spaced">Aktuelle Blog Posts</h2>
+          <h3 class="subtitle is-5 is-muted">Einblicke in die Welt der KI-Sicherheit.</h3>
+          <div class="divider is-centered"></div>
       </div>
-    </div>
-    <div style="margin-top: 5rem;"></div> <!-- Increased margin for more spacing -->
-  </section>
+      <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+          {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+            <div class="column is-one-third is-flex">
+                <div class="box blog-card is-flex is-flex-direction-column is-flex-grow-1"> 
+                    {{ partial "blog-card.html" . }}
+                </div>
+            </div>
+          {{ end }}
+      </div>
+  </div>
+  <div style="margin-top: 5rem;"></div> 
+</section>
