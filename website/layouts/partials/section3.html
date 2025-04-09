@@ -18,18 +18,22 @@
       <div class="column is-6-desktop is-12-tablet">
         <div class="card {{ with .cardType }} {{ . }}{{ end }} is-flex is-flex-direction-column" style="height: 100%;">
           <div class="card-content is-flex-grow-1">
-            <figure class="image is-64x64">
-              <img class="round-image" src="{{ printf "images/illustrations/icons/%s.svg" .icon | relURL }}" alt="{{ .title }}">
-            </figure>
-            <h4 class="title is-4 mt-6">{{ .title | markdownify }}</h4>
-            <p class="subtitle mt-4">{{ .text | markdownify }}</p>
-            {{- with .url }}
-              <a class="button cta rounded primary-btn raised mt-4 is-pulled-right" href="{{ . }}">
-                <span class="icon">
-                  <i class="fas fa-arrow-right"></i>
-                </span>
-              </a>
-            {{- end }}
+            <div class="is-flex is-flex-direction-row is-align-items-center">
+              <figure class="image is-64x64">
+                <img class="round-image" src="{{ printf "images/illustrations/faces/%s.png" .icon | relURL }}" alt="{{ .title }}">
+              </figure>
+              <div class="ml-4 is-flex is-flex-direction-column">
+                <div class="is-flex is-flex-direction-column">
+                  <h4 class="title is-8">{{ .name | markdownify }}</h4>
+                </div>
+                <div class="is-flex is-flex-direction-column">
+                  <p class="subtitle mt-2">{{ .company | markdownify }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="content mt-4">
+              <p class="has-text-grey-light">{{ .text | markdownify }}
+            </div>
           </div>
         </div>
       </div>
