@@ -4,24 +4,12 @@
     {{ partial "hero.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.section_services }}
-    {{ partial "section_services.html" . }}
-    {{ end }}
-
     {{ if .Site.Params.section2 }}
     {{ partial "section2.html" . }}
     {{ end }}
 
     {{ if .Site.Params.section3 }}
     {{ partial "section3.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.sectionA }}
-    {{ partial "section3.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.section4 }}
-    {{ partial "section4.html" . }}
     {{ end }}
 
 

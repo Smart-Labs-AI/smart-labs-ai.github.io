@@ -48,7 +48,6 @@ params:
   - title: Kontakt
     url: /#contact
     button: true
-  section_services:
   section2:
     title: Wie sicher ist deine KI?
     subtitle: Finden Sie es mit uns heraus.
@@ -66,6 +65,13 @@ params:
       icon: smart-labs-ai-white
       url: /#contact
       cardType: call-to-action
+  section3:
+    title: Das sagen unsere Kunden
+    subtitle: Wir identifizieren Schwachstellen und entwickeln gezielte Maßnahmen, um Ihre Systeme gegen Angriffe abzusichern und eine zuverlässige Funktionalität zu gewährleisten. Unsere Expertise basiert auf regelmäßiger Teilnahme an CTFs und Challenges, bei denen wir Angriffe auf KI-Systeme simulieren und verteidigen. Dieses praxisnahe Wissen fließt direkt in unsere Strategien ein, um Ihre KI nachhaltig und sicher zu gestalten.
+    features:
+    - title: KI-Sicherheit & Compliance
+      text: Schütze deine KI-Systeme vor **Cyberangriffen**, **Prompt Injection** und **Datenlecks**. Erhöhe die Widerstandsfähigkeit deiner Modelle und schaffe eine sichere Umgebung für sensible Daten.
+      icon: ai-security
   section_contact:
     title: Teste jetzt deine KI-Sicherheit
     subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere Dich mit innovativen Lösungen ab.
