@@ -1,21 +1,27 @@
 ---
-title: "Interview mit dem Team „SCY Club“ über den CTF LLMail-Inject"
+title: "Wenn KI-Agenten unsere Mails verwalten: Wie sicher ist das?"
 date: 2025-04-09
 layout: "blog"
-image: "/blog/images/ToDo.webp"
-summary: "ToDo."
+image: "/blog/images/llminject.webp"
+summary: "Im spannenden Interview mit dem SCY Club-Team, das beim IEEE SaTML 2025 LLMail-Inject-Wettbewerb den 11. Platz unter 224 Teams erreichte, erfahren Sie aus erster Hand, wie verwundbar selbst Microsofts modernste KI-Sicherheitssysteme sind."
 ---
-ToDo: Teaser -> Teamvorstellung
 
-**Florian Ludwig** Sinologe, Data Scientist und technischer Vertriebler. Beschäftigt sich seit 2019 vertieft mit AI und Digitalisierung. Seit er auf Smart-Labs AI gestoßen ist, hat Sicherheit einen komplett neuen Stellenwert bekommen. [LinkedIn](https://www.linkedin.com/in/florian-p-ludwig/)
+Das Team aus erfahrenen Security-Experten und KI-Spezialisten von Smart Labs AI und Smart Cyber Security gibt Einblick in die faszinierende Welt der KI-Sicherheit:
 
-![Florian Ludwig](https://via.placeholder.com/150?text=Florian+Ludwig)
+🔍 Wie man mit Tricks wie "Capitalization" und "Best-of-N tailbreaking" modernste KI-Schutzsysteme umgehen kann
+🚨 Warum Unternehmen ihren KI-Agenten oft zu viele Berechtigungen einräumen
+⚔️ Das nie endende Katz-und-Maus-Spiel zwischen Angreifern und Verteidigern im KI-Sicherheitsbereich
+🔮 Was die Zukunft für autonome KI-Systeme und deren Sicherheit bringt
+
+**Dennis Rall:** arbeitet bei Smart Labs AI als AI Engineer und AI Researcher. Er beschäftigt sich mit Schwachstellen von Large Language Models (LLMs) und wie man diese sicher in bestehende IT-Landschaften integrieren kann und macht gerade seinen Dr. an der Universität AUgsburg. Der LLMail-Inject-Wettbewerb war sein erster CTF-Wettbewerb.[LinkedIn] (https://www.linkedin.com/in/dennis-rall/)
+  
+**Dr. Thomas Fraunholz** ist ein engagierter Wissenschaftler mit Schwerpunkt in angewandter Mathematik. Nach seiner Promotion entdeckte er in der Embedded-Programmierung und DevOps seine Leidenschaft, was ihn zum anerkannten MLOps- und NLP-Experten machte. Er leitete bereits zwei öffentlich geförderte Open-Source-Forschungsprogramme im Bereich KI in Kooperation mit dem Deutschen Zentrum für Luft- und Raumfahrt. Heute steht er an der Spitze der KI-basierten Cybersecurity-Forschung als Senior Reseracher bei der Smart Labs AI.[LinkedIn] (https://www.linkedin.com/in/thomas-fraunholz/)
 
 **Sandro Bauer** ist CTF Spieler und Pentester. Beschäftigt sich seit 2018 mit dem Thema Security und hat endlose Wochenenden in CTFs versenkt und hat sein Hobby nach dem Studium zum Beruf gemacht. [Website](https://sandr0.xyz)
 
-![Sandro Bauer](https://via.placeholder.com/150?text=Sandro+Bauer)
+**Florian Ludwig** ist Sinologe, Data Scientist und technischer Vertriebler. Beschäftigt sich seit 2019 vertieft mit AI und Digitalisierung. Seit er auf Smart-Labs AI gestoßen ist, hat Sicherheit einen komplett neuen Stellenwert bekommen. [LinkedIn](https://www.linkedin.com/in/florian-p-ludwig/)
 
-# Vorstellung des Teams
+## Vorstellung des Teams
 
 **Smart Labs AI:** Herzlich willkommen zum Interview über den spannenden LLMail-Inject-Wettbewerb im Rahmen der 3rd IEEE Conference on Secure and Trustworthy Machine Learning (SaTML) 2025! Ich freue mich, heute das Team „SCY Club“ begrüßen zu dürfen. Stellt euch doch bitte kurz vor.
 
