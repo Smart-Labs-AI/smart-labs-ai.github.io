@@ -2,7 +2,7 @@
 title: "Wenn KI-Agenten unsere Mails verwalten: Wie sicher ist das?"
 date: 2025-04-09
 layout: "blog"
-image: "/blog/images/llminject.webp"
+image: "/blog/images/llm_inject.webp"
 summary: "Im spannenden Interview mit dem SCY Club-Team, das beim IEEE SaTML 2025 LLMail-Inject-Wettbewerb den 11. Platz unter 224 Teams erreichte, erfahren Sie aus erster Hand, wie verwundbar selbst Microsofts modernste KI-Sicherheitssysteme sind."
 ---
 
