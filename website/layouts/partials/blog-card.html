@@ -1,8 +1,14 @@
 <article class="blog-card is-flex is-flex-direction-column h-full">
   <div class="blog-image-container">
-
-      <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="object-fit: cover; object-position: center;" class="blog-image" />
-      <div class="error-image">Bild nicht verfügbar</div>
+    {{ $imagePath := trim .Params.image "/" }} 
+    {{ $original := resources.Get $imagePath }}
+    
+    {{ if $original }}
+      {{ $thumbnail := $original.Resize "384x webp q85 drawing" }}
+      <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; object-position: center;" class="blog-image">
+    {{ else }}
+      {{ errorf "Image not found: %s" .Params.image }}
+    {{ end }}
   </div>
   <div class="blog-card-content is-flex is-flex-direction-column is-flex-grow-1">
     <time class="blog-date">{{ .Date.Format "02.01.2006" }}</time>

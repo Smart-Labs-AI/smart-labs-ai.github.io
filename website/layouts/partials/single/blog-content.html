@@ -8,8 +8,15 @@
             <h1 class="title section-title">{{ .Title }}</h1>
             <h5 class="subtitle is-5 is-muted">{{ .Summary }}</h5>
             <div class="blog-header">
-                
-                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}"/>
+              {{ $imagePath := trim .Params.image "/" }} 
+              {{ $original := resources.Get $imagePath }}
+              
+              {{ if $original }}
+                {{ $thumbnail := $original.Resize "959x webp q85 drawing" }}
+                <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}">
+              {{ else }}
+                {{ errorf "Image not found: %s" .Params.image }}
+              {{ end }}
             </div>
           </div>
           <div class="content">
