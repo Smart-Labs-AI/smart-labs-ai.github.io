@@ -65,14 +65,15 @@ params:
       icon: smart-labs-ai-white
       url: /#contact
       cardType: call-to-action
-  section3:
+  section_testimonial:
     title: Das sagen unsere Kunden
     subtitle: Wir identifizieren Schwachstellen und entwickeln gezielte Maßnahmen, um Ihre Systeme gegen Angriffe abzusichern und eine zuverlässige Funktionalität zu gewährleisten. Unsere Expertise basiert auf regelmäßiger Teilnahme an CTFs und Challenges, bei denen wir Angriffe auf KI-Systeme simulieren und verteidigen. Dieses praxisnahe Wissen fließt direkt in unsere Strategien ein, um Ihre KI nachhaltig und sicher zu gestalten.
     features:
     - name: Sebastian Henneberg
       company: synsugar GmbH
+      logo: synsugar.png
       text: SmartLabs hat uns gezeigt, wie wir die Sicherheit unser KI-Plattform deutlich verbessern können. Dank des detaillierten Audits wissen wir nicht nur wo Sicherheit verbessert werden kann, sondern auch, wie wir dies praktisch realisieren. Vielen Dank für die einfache und kompetente Zusammenarbeit!
-      icon: henneberg_64.jpg
+      face: henneberg.png
   section_contact:
     title: Teste jetzt deine KI-Sicherheit
     subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere Dich mit innovativen Lösungen ab.
