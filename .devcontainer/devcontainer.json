@@ -3,14 +3,18 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/go:1-1.22-bookworm",
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	// Installiere Node.js 18 über Dev Container Feature
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+		"version": "18"
+		}
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.132.2",
+	// Installiere Hugo Extended + npm deps nach Containerstart
+	"postCreateCommand": "CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.132.2 && cd website && npm install",
 
 	// Configure tool-specific properties.
 	// "customizations": {},

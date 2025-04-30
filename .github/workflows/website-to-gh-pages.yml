@@ -19,8 +19,19 @@ jobs:
           hugo-version: '0.110.0'
           extended: true
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install PostCSS dependencies
+        working-directory: website
+        run: npm install
+
       - name: Build
         working-directory: website
+        env:
+          HUGO_ENV: production
         run: hugo --minify
 
       - name: Deploy

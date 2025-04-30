@@ -13,10 +13,10 @@
 
 
 {{- if $inServerMode }}
-  {{- $css := resources.Get $sass | toCSS $cssOpts }}
+  {{- $css := resources.Get $sass | toCSS $cssOpts | postCSS (dict "config" "postcss.config.js") | minify }}
   <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
 {{- else }}
-  {{- $css := resources.Get $sass | toCSS $cssOpts | fingerprint }}
+  {{- $css := resources.Get $sass | toCSS $cssOpts | postCSS (dict "config" "postcss.config.js") | minify | fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
 

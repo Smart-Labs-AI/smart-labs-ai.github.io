@@ -7,3 +7,4 @@ _gen
 .DS*
 .env
 website/resources/_gen
+node_modules
