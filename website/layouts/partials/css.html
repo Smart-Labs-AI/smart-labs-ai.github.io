@@ -10,14 +10,17 @@
 {{- $fontName     := .Site.Params.font.name | default "Open Sans" }}
 {{- $fontFace     := replace $fontName " " "+" }}
 {{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," }}
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap">
+
 {{- if $inServerMode }}
-{{- $css := resources.Get $sass | toCSS $cssOpts }}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
+  {{- $css := resources.Get $sass | toCSS $cssOpts }}
+  <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
 {{- else }}
-{{- $css := resources.Get $sass | toCSS $cssOpts | minify | fingerprint }}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{- $css := resources.Get $sass | toCSS $cssOpts | fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
+
 <link rel="stylesheet" href="/css/fontawesome/6.7.2/css/all.min.css">
 
 <!-- Favicon -->  

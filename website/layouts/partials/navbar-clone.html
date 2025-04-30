@@ -7,8 +7,8 @@
   <div class="container">
     <div class="navbar-brand">
       {{- if $navbarLogo}}
-      <a class="navbar-item" href="{{ $navbarLogo.link }}">
-        <img src="{{ printf "images/%s" $navbarLogo.image | relURL }}" alt="" style="max-width: 100%; height: auto;" width="{{ $navbarLogoWidth }}" height="{{ $navbarLogoHeight }}">
+      <a class="navbar-item" href="{{ $navbarLogo.link }}" aria-label="home">
+        <img src="{{ printf "images/%s" $navbarLogo.image | relURL }}" alt="home" style="max-width: 100%; height: auto;" width="{{ $navbarLogoWidth }}" height="{{ $navbarLogoHeight }}">
       </a>
       {{- end}}
 
