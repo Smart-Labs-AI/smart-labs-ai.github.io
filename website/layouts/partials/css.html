@@ -15,7 +15,7 @@
 {{- $css := resources.Get $sass | toCSS $cssOpts | postCSS (dict "config" "postcss.config.js") | minify }}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
 
-{{ $fa := resources.Get "/css/fontawesome/6.7.2/all.min.css" | postCSS (dict "config" "postcss.config.js") | minify }}
+{{ $fa := resources.Get "/css/fontawesome/6.7.2/all.min.css" | minify }}
 <link rel="stylesheet" href="{{ $fa.RelPermalink }}">
 
 

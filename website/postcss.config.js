@@ -6,9 +6,7 @@ module.exports = {
       content: ['./layouts/**/*.html', './content/**/*.md'],
       safelist: [
         'call-to-action',
-        'title',
-        /^fa-/,
-        'fas'
+        'title'
       ],
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
     })
