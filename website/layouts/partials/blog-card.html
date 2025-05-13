@@ -10,13 +10,16 @@
       {{ errorf "Image not found: %s" .Params.image }}
     {{ end }}
   </div>
+
   <div class="blog-card-content is-flex is-flex-direction-column is-flex-grow-1">
     <time class="blog-date">{{ .Date.Format "02.01.2006" }}</time>
     <h2 class="blog-card-title">{{ .Title }}</h2>
     <p class="blog-excerpt is-size-6 mb-4">
       {{ .Summary }}
     </p>
-    <a href="{{ .Permalink }}" class="read-more mt-auto">
+
+    {{ $link := .Params.medium_url | default .Permalink }}
+    <a href="{{ $link }}" class="read-more mt-auto" target="_blank" rel="noopener">
       <span>Mehr erfahren</span>
       <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
