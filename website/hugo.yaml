@@ -74,6 +74,9 @@ params:
       logo: synsugar.png
       text: SmartLabs hat uns gezeigt, wie wir die Sicherheit unser KI-Plattform deutlich verbessern können. Dank des detaillierten Audits wissen wir nicht nur wo Sicherheit verbessert werden kann, sondern auch, wie wir dies praktisch realisieren. Vielen Dank für die einfache und kompetente Zusammenarbeit!
       face: henneberg.png
+    endorsements:
+    - logo: synsugar.png
+    - logo: ki-bundesverband.png
   section_contact:
     title: Teste jetzt deine KI-Sicherheit
     subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere Dich mit innovativen Lösungen ab.

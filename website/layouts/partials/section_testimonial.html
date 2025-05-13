@@ -2,6 +2,8 @@
 {{- $title    := index $section_testimonial "title" }}
 {{- $subtitle := index $section_testimonial "subtitle" }}
 {{- $features := index $section_testimonial "features" }}
+{{- $endorsements := index $section_testimonial "endorsements" }}
+
 
 <section class="section testimonial is-medium" id="section-testimonial">
   <div class="container has-text-centered">
@@ -59,7 +61,7 @@
     </div>
   </div>
   <div class="logo-container">
-    {{- range $features }}
+    {{- range $endorsements }}
     <div class="logo-item">
       {{ $companyName := .logo | default "" | strings.TrimPrefix "/" }}
       {{ $imagePath := printf "testimonial/images/logo/%s" $companyName }}
