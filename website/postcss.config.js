@@ -17,7 +17,8 @@ module.exports = (ctx) => {
           content: ['./layouts/**/*.html', './content/**/*.md'],
           safelist: [
             'call-to-action', 
-            'title'
+            'title',
+            'is-active'
           ],
           defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
         })
