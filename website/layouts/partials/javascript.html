@@ -1,6 +1,198 @@
-<script src="{{ "js/jquery-3.7.1.min.js" | relURL }}"></script>
-<script src="{{ "js/modernizr-custom.js" | relURL }}"></script>
-<script src="{{ "js/fresh.js" | relURL }}"></script>
-<script src="{{ "js/jquery.panelslider.min.js" | relURL }}"></script>
-<script src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js" data-app-id="CD9FC7F8-AC75-4B5E-8EB9-5B60AE3CAC4E"></script>
-<script>window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 13886412,playbookUuid: '10fd1b0a-bfe0-4733-8970-d52b00fcd920',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();</script><script src="https://leadbooster-chat.pipedrive.com/assets/loader.js" async></script>
+<!-- Klaro Konfiguration MUSS vor dem Laden der Bibliothek definiert werden -->
+<script>
+    // Klaro Konfiguration
+    window.klaroConfig = {
+      version: 1,
+      elementID: 'klaro',
+      noAutoLoad: false,
+      htmlTexts: true,
+      embedded: false,
+      groupByPurpose: true,
+      storageMethod: 'cookie',
+      cookieName: 'klaro',
+      cookieExpiresAfterDays: 120,
+      default: false,
+      mustConsent: true,
+      acceptAll: true,
+      hideDeclineAll: false,
+      hideLearnMore: false,
+      
+      lang: 'de',
+      
+      translations: {
+        de: {
+          privacyPolicyUrl: '/datenschutzerklaerung',
+          consentModal: {
+            title: 'Cookie-Einstellungen',
+            description: 'Wir verwenden Dienste von Drittanbietern, um unsere Website zu verbessern und dir personalisierte Inhalte anzubieten. Du kannst selbst entscheiden, welche Dienste du zulassen möchtest.',
+          },
+          consentNotice: {
+            description: 'Wir verwenden Cookies und externe Dienste auf unserer Website. Du kannst selbst entscheiden, welche aktiviert werden sollen.',
+            learnMore: 'Anpassen',
+            testing: 'Test-Modus!',
+            changeDescription: 'Es gab Änderungen an den Diensten seit deinem letzten Besuch, bitte aktualisiere deine Auswahl.'
+          },
+          ok: 'Akzeptieren',
+          save: 'Speichern',
+          decline: 'Ablehnen',
+          close: 'Schließen',
+          acceptAll: 'Alle akzeptieren',
+          acceptSelected: 'Auswahl akzeptieren',
+          service: {
+            disableAll: {
+              title: 'Alle Dienste an-/ausschalten',
+              description: 'Nutze diesen Schalter, um alle Dienste an- oder auszuschalten.'
+            }
+          },
+          purposes: {
+            functional: 'Funktionale Cookies',
+            analytics: 'Statistiken & Analyse',
+            marketing: 'Marketing & externe Inhalte',
+            preferences: 'Präferenzen'
+          }
+        }
+      },
+    
+      services: [
+        // Funktionale Services (immer erforderlich)
+        {
+          name: 'essential',
+          title: 'Essenzielle Dienste',
+          description: 'Diese Dienste sind für die Grundfunktionen der Website erforderlich.',
+          purposes: ['functional'],
+          required: true,
+          optOut: false,
+          onlyOnce: true
+        },
+    
+        // TelemetryDeck Analytics
+        {
+          name: 'telemetrydeck',
+          title: 'TelemetryDeck',
+          description: 'Datenschutzfreundliche Analyse-Software zur Verbesserung unserer Website.',
+          purposes: ['analytics'],
+          cookies: [
+            ['telemetrydeck-*', '/', 'Speichert anonyme Nutzungsstatistiken']
+          ],
+          required: false,
+          optOut: false,
+          onlyOnce: true,
+          default: true,
+          callback: function(consent, service) {
+            if (consent) {
+              if (!window.TelemetryDeck) {
+                window.TelemetryDeck = window.TelemetryDeck || {};
+                
+                var script = document.createElement('script');
+                script.src = 'https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js';
+                script.setAttribute('data-app-id', 'CD9FC7F8-AC75-4B5E-8EB9-5B60AE3CAC4E');
+
+                script.async = true;
+                document.head.appendChild(script);
+              }
+            } else {
+              // Analytics deaktivieren falls möglich
+              if (window.TelemetryDeck && window.TelemetryDeck.disable) {
+                window.TelemetryDeck.disable();
+              }
+            }
+          }
+        },
+    
+        // Pipedrive Chat
+        {
+          name: 'pipedrive-chat',
+          title: 'Pipedrive Chat',
+          description: 'Live-Chat-Widget für Kundenbetreuung und Support.',
+          purposes: ['marketing'],
+          cookies: [
+            ['_pipedriveLeadbooster*', '/', 'Pipedrive Chat-Funktionalität'],
+            ['leadbooster*', '.pipedrive.com', 'Chat-Sitzungsdaten']
+          ],
+          required: false,
+          optOut: false,
+          onlyOnce: true,
+          default: true,
+          callback: function(consent, service) {
+            if (consent) {
+              if (!window.pipedriveLeadboosterConfig) {
+                window.pipedriveLeadboosterConfig = {
+                  base: 'leadbooster-chat.pipedrive.com',
+                  companyId: 13886412,
+                  playbookUuid: '10fd1b0a-bfe0-4733-8970-d52b00fcd920',
+                  version: 2
+                };
+                
+                (function () {
+                  var w = window;
+                  if (w.LeadBooster) {
+                    console.warn('LeadBooster already exists');
+                    return;
+                  }
+                  
+                  w.LeadBooster = {
+                    q: [],
+                    on: function (n, h) {
+                      this.q.push({ t: 'o', n: n, h: h });
+                    },
+                    trigger: function (n) {
+                      this.q.push({ t: 't', n: n });
+                    }
+                  };
+                })();
+                
+                var script = document.createElement('script');
+                script.src = 'https://leadbooster-chat.pipedrive.com/assets/loader.js';
+                script.async = true;
+                document.body.appendChild(script);
+              }
+            } else {
+              // Chat-Widget entfernen falls vorhanden
+              var chatElements = document.querySelectorAll('[id*="leadbooster"], [class*="leadbooster"]');
+              chatElements.forEach(function(el) {
+                el.remove();
+              });
+            }
+          }
+        },
+
+        // Pipedrive Form
+        {
+            name: 'pipedrive-form',
+            title: 'Pipedrive Webformular',
+            description: 'Kontaktformular via Pipedrive.',
+            purposes: ['marketing'],
+            default: true,
+            required: false,
+            callback: function (consent, service) {
+                const placeholder = document.getElementById('pipedrive-form-placeholder');
+                if (consent && placeholder) {
+                    var script = document.createElement('script');
+                    script.src = 'https://webforms.pipedrive.com/f/loader';
+                    script.async = true;
+                    document.body.appendChild(script);
+
+                    placeholder.style.display = 'none';
+                } else {
+                    // Optional: leeren, falls Benutzer später ablehnt
+                    if (placeholder) {
+                        placeholder.innerHTML = '<h2>Um dieses Formular zu sehen, akzeptiere bitte Marketing-Cookies.</h2>';
+                        placeholder.style.display = 'block';
+                    }
+                }
+            }
+        }
+
+      ]
+    };
+    </script>
+    
+    <!-- Klaro laden NACH der Konfiguration -->
+    <script src="{{ "js/klaro-v0.7.js" | relURL }}"></script>
+    
+    <!-- Andere lokale Scripts (diese benötigen kein Consent) -->
+    <script src="{{ "js/jquery-3.7.1.min.js" | relURL }}"></script>
+    <script src="{{ "js/modernizr-custom.js" | relURL }}"></script>
+    <script src="{{ "js/fresh.js" | relURL }}"></script>
+    <script src="{{ "js/jquery.panelslider.min.js" | relURL }}"></script>
+    
