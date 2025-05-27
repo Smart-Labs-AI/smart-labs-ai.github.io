@@ -46,7 +46,7 @@ params:
   - title: Blog
     url: /blog
   - title: Sign in
-    url: https://acc.secphoria.app/realms/arinna/protocol/openid-connect/registrations?client_id=labs-ai-landing-page&scope=openid%20profile&redirect_uri=https://acc.secphoria.app&response_type=code
+    url: https://acc.secphoria.app/realms/arinna/protocol/openid-connect/auth?client_id=labs-ai-landing-page&scope=openid%20profile&redirect_uri=https://acc.secphoria.app&response_type=code
     buttonSecondary: true
   - title: Kontakt
     url: /#contact
