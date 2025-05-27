@@ -45,9 +45,12 @@ params:
   navbar:
   - title: Blog
     url: /blog
+  - title: Login
+    url: https://acc.secphoria.app/realms/arinna/protocol/openid-connect/registrations?client_id=labs-ai-landing-page&scope=openid%20profile&redirect_uri=https://acc.secphoria.app&response_type=code
+    buttonSecondary: true
   - title: Kontakt
     url: /#contact
-    button: true
+    buttonPrimary: true
   section2:
     title: Wie sicher ist deine KI?
     subtitle: Finden Sie es mit uns heraus.

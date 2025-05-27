@@ -41,9 +41,15 @@
               {{- end }}
             </div>
           </div>
-          {{- else if .button }}
+          {{- else if .buttonPrimary }}
           <a href="{{ .url }}" class="navbar-item">
             <span class="button contact-button rounded primary-btn raised">
+              {{ .title }}
+            </span>
+          </a>
+          {{- else if .buttonSecondary }}
+          <a href="{{ .url }}" class="navbar-item">
+            <span class="button contact-button rounded secondary-btn raised">
               {{ .title }}
             </span>
           </a>
