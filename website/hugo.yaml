@@ -117,6 +117,8 @@ params:
           link: /impressum
         - text: Datenschutzerklärung
           link: /datenschutzerklaerung
+        - text: Haftungshinweise
+          link: /haftungshinweise
     finalLine:
       title: © 2025 Smart Labs AI GmbH – Alle Rechte vorbehalten
       links:
