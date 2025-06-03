@@ -26,7 +26,7 @@ kontakt@smart-labs.ai
 <br>
 
 {{% title4 "Geschäftsführer" %}}
-Benjamin Gnahm, Tobias P. Metz, Stefan A. Fenn
+Benjamin Gnahm, Tobias P. Metz, Stefan A. Fenn, Fabian D. Bühler
 
 <br>
 
