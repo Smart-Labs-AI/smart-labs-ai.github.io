@@ -1,0 +1,18 @@
+{{/* Page Image Shortcode with configurable width */}}
+{{/* Usage: {{< page-image src="path/to/image.png" alt="Alt text" width="800" >}} */}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "Bild" }}
+{{ $width := .Get "width" | default "800" }}
+{{ $img := resources.Get $src }}
+{{ if $img }}
+  {{ $processString := printf "resize %sx webp q90" $width }}
+  {{ $processed := $img.Process $processString }}
+  <img src="{{ $processed.RelPermalink }}" alt="{{ $alt }}" loading="lazy" />
+{{ else }}
+  <div class="page-image-error">
+    <div class="error-icon">📷</div>
+    <div class="error-title">Bild nicht gefunden</div>
+    <div class="error-path">{{ $src }}</div>
+  </div>
+  {{ errorf "Image not found: %s" $src }}
+{{ end }}

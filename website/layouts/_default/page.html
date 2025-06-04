@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div style="background-color: #00002b; z-index: 1;">
+    {{ partial "navbar.html" . }}
+</div>
+    {{ partial "navbar-clone.html" . }}
+
+<!-- Page-spezifisches CSS laden -->
+<div class="page-content">
+  <style>
+    {{- $inServerMode := "" }}
+    {{- if gt (int (index (split hugo.Version ".") 1)) "120" }}
+      {{ $inServerMode = hugo.IsServer }}
+    {{- else }}
+      {{ $inServerMode = .Site.IsServer }}
+    {{- end }}
+    
+    {{- $pageCSS := resources.Get "smart/_page.scss" }}
+    {{- if $pageCSS }}
+      {{- $cssOpts := cond ($inServerMode) (dict "outputStyle" "expanded") (dict "outputStyle" "compressed") }}
+      {{- $compiledCSS := $pageCSS | toCSS $cssOpts }}
+      {{ $compiledCSS.Content | safeCSS }}
+    {{- end }}
+  </style>
+
+  <!-- Für Pages mit alternierenden Sections verwenden wir die volle Breite -->
+  {{ partial "single/page-content.html" . }}
+</div>
+
+{{ partial "footer.html" . }}
+{{ end }}

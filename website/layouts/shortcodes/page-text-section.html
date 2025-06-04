@@ -1,0 +1,18 @@
+{{/* 
+Shortcode für Text-Only Sections
+Usage: {{< page-text-section >}}
+# Titel
+- Listenpunkt 1
+- Listenpunkt 2
+{{< /page-text-section >}}
+*/}}
+
+<section>
+<div class="section-container">
+<div class="section-text-only">
+
+{{ .Inner | markdownify }}
+
+</div>
+</div>
+</section>

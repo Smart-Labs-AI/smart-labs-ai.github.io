@@ -1,0 +1,37 @@
+{{/* 
+Shortcode für alternierende Page-Sections
+Usage: {{< page-section image="path/to/image.png" alt="Alt text" >}}
+# Titel
+- Listenpunkt 1
+- Listenpunkt 2
+{{< /page-section >}}
+*/}}
+
+<section>
+<div class="section-container">
+<div class="section-text">
+
+{{ .Inner | markdownify }}
+
+</div>
+<div class="section-image">
+
+{{ if .Get "image" }}
+{{ $img := resources.Get (.Get "image") }}
+{{ if $img }}
+  {{ $width := .Get "width" | default "800" }}
+  {{ $processString := printf "resize %sx webp q90" $width }}
+  {{ $processed := $img.Process $processString }}
+  <img src="{{ $processed.RelPermalink }}" alt="{{ .Get "alt" | default "Bild" }}" loading="lazy" />
+{{ else }}
+  <div class="page-image-error">
+    <div class="error-icon">📷</div>
+    <div class="error-title">Bild nicht gefunden</div>
+    <div class="error-path">{{ .Get "image" }}</div>
+  </div>
+{{ end }}
+{{ end }}
+
+</div>
+</div>
+</section>

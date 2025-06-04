@@ -1,0 +1,44 @@
+{{/* 
+Shortcode für Call-to-Action Section
+Usage: {{< page-cta image="path/to/image.png" alt="Alt text" button-text="Jetzt starten" button-link="/contact" >}}
+# Titel
+Content hier
+{{< /page-cta >}}
+*/}}
+
+<section class="page-cta">
+<div class="section-container">
+<div class="section-text">
+
+{{ .Inner | markdownify }}
+
+{{ if .Get "button-text" }}
+<div>
+<a href="{{ .Get "button-link" | default "#" }}" class="page-cta-button">
+{{ .Get "button-text" }}
+</a>
+</div>
+{{ end }}
+
+</div>
+<div class="section-image">
+
+{{ if .Get "image" }}
+{{ $img := resources.Get (.Get "image") }}
+{{ if $img }}
+  {{ $width := .Get "width" | default "800" }}
+  {{ $processString := printf "resize %sx webp q90" $width }}
+  {{ $processed := $img.Process $processString }}
+  <img src="{{ $processed.RelPermalink }}" alt="{{ .Get "alt" | default "CTA Bild" }}" loading="lazy" />
+{{ else }}
+  <div class="page-image-error">
+    <div class="error-icon">📷</div>
+    <div class="error-title">Bild nicht gefunden</div>
+    <div class="error-path">{{ .Get "image" }}</div>
+  </div>
+{{ end }}
+{{ end }}
+
+</div>
+</div>
+</section>

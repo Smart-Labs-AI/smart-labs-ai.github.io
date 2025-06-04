@@ -1,0 +1,302 @@
+/* Page Sections - Alternierende Layouts */
+
+// Variables
+$page-brand-primary: rgba(168,27,88,1);
+$page-brand-secondary: rgba(60,49,152,1);
+$page-max-width: 1200px;
+$page-section-gap: 4rem;
+$page-section-padding: 4rem 0;
+$page-section-min-height: 60vh;
+
+// Page Header Section
+.page-header-section {
+  background: linear-gradient(120deg, rgba(168,27,88,.4) 0%, rgba(60,49,152,.4) 100%);
+  color: white;
+  padding: $page-section-padding;
+
+  .container {
+    max-width: $page-max-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .post-date {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .title.section-title {
+    color: white;
+    font-size: 3.5rem;
+    margin: 1.5rem 0;
+    font-family: Merriweather, serif;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .subtitle.is-5.is-muted {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.5;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .page-header {
+    margin-top: 3rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+}
+
+// Main Page Content
+.page-content {
+  
+  section {
+    padding: $page-section-padding;
+    margin: 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    min-height: $page-section-min-height;
+    display: flex;
+    align-items: center;
+
+    // Section Container
+    .section-container {
+      display: flex;
+      align-items: center;
+      max-width: $page-max-width;
+      margin: 0 auto;
+      padding: 0 2rem;
+      gap: $page-section-gap;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+
+    // Text Content
+    .section-text {
+      flex: 1;
+
+      @media (max-width: 768px) {
+        order: 1;
+      }
+    }
+
+    // Image Content
+    .section-image {
+      flex: 1;
+
+      @media (max-width: 768px) {
+        order: 2;
+      }
+
+      .multi-image {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    // Text-Only Section
+    .section-text-only {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    // Ungerade Sections - Bild links, Text rechts
+    &:nth-of-type(odd) {
+      background: linear-gradient(120deg, rgba(168,27,88,.2) 0%, rgba(60,49,152,.2) 100%);
+      color: white;
+
+      .section-text {
+        order: 2;
+      }
+
+      .section-image {
+        order: 1;
+      }
+    }
+
+    // Gerade Sections - Bild rechts, Text links
+    &:nth-of-type(even) {
+      background: linear-gradient(300deg, rgba(168,27,88,.2) 0%, rgba(60,49,152,.2) 100%);
+      color: white;
+
+      .section-text {
+        order: 1;
+      }
+
+      .section-image {
+        order: 2;
+      }
+    }
+
+    // Hero Section - Spezielle Styles
+    &.page-hero {
+      background: linear-gradient(120deg, rgba(168,27,88,.4) 0%, rgba(60,49,152,.4) 100%) !important;
+    }
+
+    // CTA Section - Spezielle Styles
+    &.page-cta {
+      background: linear-gradient(120deg, rgba(168,27,88,.6) 0%, rgba(60,49,152,.6) 100%) !important;
+    }
+
+    // Typography
+    h1, h2, h3 {
+      color: white;
+      margin-bottom: 1.5rem;
+      font-family: Merriweather, -apple-system, Roboto, Helvetica, sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    // Lists
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 0.8rem;
+
+      &:before {
+        content: "▶";
+        position: absolute;
+        left: 0;
+        color: $page-brand-primary;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+    }
+
+    // Blockquotes
+    blockquote {
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 4px solid $page-brand-primary;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+    }
+
+    // Responsive
+    @media (max-width: 768px) {
+      padding: 2rem 0;
+      min-height: auto;
+
+      &:nth-of-type(odd),
+      &:nth-of-type(even) {
+        .section-text {
+          order: 1;
+        }
+
+        .section-image {
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+// CTA Button
+.page-cta-button {
+  display: inline-block;
+  background: $page-brand-primary;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(168,27,88,0.3);
+  margin-top: 2rem;
+
+  &:hover {
+    background: rgba(168,27,88,0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168,27,88,0.4);
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// Error Placeholder für fehlende Bilder
+.page-image-error {
+  color: #ff6b6b;
+  background: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px dashed rgba(255,107,107,0.5);
+
+  .error-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .error-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .error-path {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}

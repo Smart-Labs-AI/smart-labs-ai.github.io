@@ -1,0 +1,41 @@
+{{/* 
+Shortcode für Sections mit mehreren Bildern
+Usage: {{< page-multi-image image1="path1.png" image2="path2.png" alt1="Alt 1" alt2="Alt 2" >}}
+# Titel
+Content hier
+{{< /page-multi-image >}}
+*/}}
+
+<section>
+<div class="section-container">
+<div class="section-text">
+
+{{ .Inner | markdownify }}
+
+</div>
+<div class="section-image">
+{{ if .Get "image1" }}
+<div class="multi-image">
+{{ $img1 := resources.Get (.Get "image1") }}
+{{ if $img1 }}
+  {{ $width1 := .Get "width1" | default "800" }}
+  {{ $processString1 := printf "resize %sx webp q90" $width1 }}
+  {{ $processed1 := $img1.Process $processString1 }}
+  <img src="{{ $processed1.RelPermalink }}" alt="{{ .Get "alt1" | default "Bild 1" }}" loading="lazy" />
+{{ end }}
+</div>
+{{ end }}
+{{ if .Get "image2" }}
+<div class="multi-image">
+{{ $img2 := resources.Get (.Get "image2") }}
+{{ if $img2 }}
+  {{ $width2 := .Get "width2" | default "800" }}
+  {{ $processString2 := printf "resize %sx webp q90" $width2 }}
+  {{ $processed2 := $img2.Process $processString2 }}
+  <img src="{{ $processed2.RelPermalink }}" alt="{{ .Get "alt2" | default "Bild 2" }}" loading="lazy" />
+{{ end }}
+</div>
+{{ end }}
+</div>
+</div>
+</section>
