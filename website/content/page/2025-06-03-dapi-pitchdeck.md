@@ -8,13 +8,13 @@ include_footer: true
 sidebar: true
 ---
 
-{{< page-hero image="page/images/2025-06-03-dapi-pitchdeck-01.png" alt="KI-Power" >}}
+{{< page-section image="page/images/2025-06-03-dapi-pitchdeck-01.png" alt="KI-Power" >}}
 # KI begeistert – aber wer kontrolliert sie?
 
 - KI begeistert – und ist schon im Alltag vieler Unternehmen angekommen
 - Aber: Wer zähmt den neuen Shootingstar?
 - Wahre Fälle: Chatbots, die Verträge schließen oder die Konkurrenz empfehlen
-{{< /page-hero >}}
+{{< /page-section >}}
 
 {{< page-section image="page/images/2025-06-03-dapi-pitchdeck-02.png" alt="KI im Blindflug" >}}
 # KI im Blindflug – Die unsichtbaren Risiken

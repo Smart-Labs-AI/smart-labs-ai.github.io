@@ -1,0 +1,19 @@
+{{/* 
+Shortcode für manuelle Seitenumbrüche im PDF
+Usage: 
+{{< page-break >}} - Seitenumbruch vor diesem Element
+{{< page-break type="after" >}} - Seitenumbruch nach diesem Element
+{{< page-break type="avoid" >}} - Verhindert Seitenumbruch in diesem Element
+*/}}
+
+{{ $type := .Get "type" | default "before" }}
+
+{{ if eq $type "before" }}
+<div class="page-break-before"></div>
+{{ else if eq $type "after" }}
+<div class="page-break-after"></div>
+{{ else if eq $type "avoid" }}
+<div class="no-page-break">
+{{ .Inner }}
+</div>
+{{ end }}

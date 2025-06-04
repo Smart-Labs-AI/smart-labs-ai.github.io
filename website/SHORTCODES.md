@@ -58,6 +58,40 @@ Beschreibungstext hier
 {{< /page-cta >}}
 ```
 
+## Print/PDF Features
+
+### Automatische Print-Optimierung
+Beim Drucken oder PDF-Export werden automatisch folgende Anpassungen vorgenommen:
+
+- **Layout**: Sections werden vertikal gestapelt (Text oben, Bild unten)
+- **Farben**: Hintergründe werden heller für bessere Lesbarkeit
+- **Typografie**: Schriftgrößen und Abstände für Print optimiert
+- **Seitenumbrüche**: Automatische Vermeidung von unschönen Umbrüchen
+- **Navigation**: Navbar, Footer und Buttons werden ausgeblendet
+
+### Print-spezifische Einstellungen
+- **Seitengröße**: A4 mit 1.5cm Rändern
+- **Farberhaltung**: Hintergründe und Farben bleiben erhalten
+- **Bildoptimierung**: Bilder werden auf 80% Breite skaliert
+- **Textausrichtung**: Blocksatz für bessere Lesbarkeit
+
+### PDF-Export Tipps
+1. **Browser**: Chrome/Edge für beste Ergebnisse verwenden
+2. **Einstellungen**: "Hintergründe drucken" aktivieren
+3. **Format**: A4 Hochformat wählen
+4. **Qualität**: Hohe Auflösung für scharfe Bilder
+
+### Manuelle Seitenumbruch-Kontrolle
+```markdown
+# Erste Section
+Inhalt...
+
+{{< page-break >}} <!-- Neue Seite beginnen -->
+
+# Zweite Section (auf neuer Seite)
+Inhalt...
+```
+
 **Parameter:**
 - `image` (optional): Pfad zum Bild
 - `alt` (optional): Alt-Text für das Bild
@@ -92,6 +126,25 @@ Content hier
 - `alt2` (optional): Alt-Text für das zweite Bild
 - `width1` (optional): Breite des ersten Bildes in Pixeln (Standard: "800")
 - `width2` (optional): Breite des zweiten Bildes in Pixeln (Standard: "800")
+
+### 7. `page-break` - Seitenumbruch für PDF
+Für manuelle Seitenumbrüche beim PDF-Export.
+
+```markdown
+{{< page-break >}} <!-- Seitenumbruch vor diesem Element -->
+
+{{< page-break type="after" >}} <!-- Seitenumbruch nach diesem Element -->
+
+{{< page-break type="avoid" >}}
+Dieser Inhalt soll nicht getrennt werden
+{{< /page-break >}}
+```
+
+**Parameter:**
+- `type` (optional): Art des Seitenumbruchs
+  - `"before"` (Standard): Seitenumbruch vor dem Element
+  - `"after"`: Seitenumbruch nach dem Element
+  - `"avoid"`: Verhindert Seitenumbruch innerhalb des Elements
 
 ## Styling
 

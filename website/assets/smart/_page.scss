@@ -300,3 +300,355 @@ $page-section-min-height: 60vh;
     opacity: 0.8;
   }
 }
+
+// Print Styles für PDF Export
+@media print {
+  // Allgemeine Print-Einstellungen
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  // Sicherstellen, dass der gesamte Hintergrund weiß ist
+  body, html {
+    background-color: white !important;
+  }
+
+  // Page Setup - Landscape Layout
+  @page {
+    size: A4 landscape;
+    margin: 0; // Kein zusätzlicher Rand, um sicherzustellen, dass der Inhalt die Seite ausfüllt
+  }
+
+  // Hide elements not needed in print
+  .navbar,
+  .navbar-clone,
+  .footer,
+  .sidebar,
+  .page-cta-button,
+  [id*="leadbooster"],
+  [class*="leadbooster"],
+  [id*="pipedrive"],
+  [class*="pipedrive"] {
+    display: none !important;
+  }
+
+  // Page Header für Print
+  .page-header-section {
+    background: white !important;
+    color: #333 !important;
+    padding: 2rem 0 !important;
+    page-break-inside: avoid;
+    margin-bottom: 0 !important;
+
+    min-height: 100vh; // Feste Höhe für die Seite
+    position: relative; // Für Pseudoelemente
+    page-break-after: always; // Erzwingt Seitenumbruch nach der Hero-Sektion
+
+    margin: 0 !important; // Kein Margin, um sicherzustellen, dass der Rand die Seite ausfüllt
+    border-radius: 0 !important; // Kein Border-Radius
+
+    .title.section-title {
+      font-size: 2.5rem !important;
+      line-height: 1.2 !important;
+      margin: 1rem 0 !important;
+      color: #333 !important;
+      position: relative;
+    }
+
+    .subtitle.is-5.is-muted {
+      font-size: 1.1rem !important;
+      line-height: 1.4 !important;
+      color: #666 !important;
+    }
+
+    img {
+      max-width: 50% !important;
+      max-height: 300px !important;
+      height: auto !important;
+      page-break-inside: avoid;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  // Page Content für Print
+  .page-content {
+    section {
+      width: 100% !important; // Feste Breite, um den Rand zu berücksichtigen
+      position: static !important;
+      left: 20px !important; // Verschiebung nach rechts, um den Rand links zu berücksichtigen
+      right: 20px !important; // Verschiebung nach links, um den Rand rechts zu berücksichtigen
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      min-height: 100vh; // Feste Höhe für die Seite
+      padding: 1.5rem 0 !important;
+      page-break-inside: avoid;
+      margin-bottom: 0 !important;
+      page-break-after: always; // Erzwingt Seitenumbruch nach jeder Sektion
+
+      margin: 0 !important; // Kein Margin, um sicherzustellen, dass der Rand die Seite ausfüllt
+      padding-left:60px !important;
+      padding-right:60px !important;
+      border-radius: 0 !important; // Kein Border-Radius
+
+      .section-container {
+        max-width: 100% !important;
+        padding: 1.5rem !important;
+        gap: 1.5rem !important;
+        display: flex !important;
+        align-items: stretch !important; // Wichtig für gleiche Höhe der Flex-Items
+        height: 100%; // Wichtig, damit Flex-Items die Höhe nutzen können
+
+        li {
+          font-size: 130%;
+        }
+      }
+
+      // Alternierende Text/Bild-Anordnung wie im Web
+      &:nth-of-type(odd) {
+        .section-container {
+          flex-direction: row !important;
+        }
+        
+        .section-text {
+          order: 2 !important;
+          flex: 0 0 50% !important; // 50% Breite erzwingen
+          max-width: 50% !important; // Sicherstellen
+          padding-left: 1rem !important;
+        }
+
+        .section-image {
+          order: 1 !important;
+          flex: 0 0 50% !important; // 50% Breite erzwingen
+          max-width: 50% !important; // Sicherstellen
+          text-align: left !important;
+          display: flex; // Flexbox für das Bild
+          align-items: center;
+          justify-content: center;
+          overflow: hidden; // Wichtig für object-fit
+
+          img {
+            width: 100% !important; // Bild füllt den Container
+            height: 100% !important; // Bild füllt den Container
+            object-fit: cover; // Bild wird zugeschnitten, um den Container zu füllen
+            page-break-inside: avoid;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 60px;
+          }
+        }
+      }
+      
+      &:nth-of-type(even) {
+        .section-container {
+          flex-direction: row !important;
+        }
+        
+        .section-text {
+          order: 1 !important;
+          flex: 0 0 50% !important; // 50% Breite erzwingen
+          max-width: 50% !important; // Sicherstellen
+          padding-right: 1rem !important;
+        }
+
+        .section-image {
+          order: 2 !important;
+          flex: 0 0 50% !important; // 50% Breite erzwingen
+          max-width: 50% !important; // Sicherstellen
+          text-align: right !important;
+          display: flex; // Flexbox für das Bild
+          align-items: center;
+          justify-content: center;
+          overflow: hidden; // Wichtig für object-fit
+
+          img {
+            width: 100% !important; // Bild füllt den Container
+            height: 100% !important; // Bild füllt den Container
+            object-fit: cover; // Bild wird zugeschnitten, um den Container zu füllen
+            page-break-inside: avoid;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 60px;
+          }
+        }
+      }
+      
+      // Hero und CTA Sections - nebeneinander
+      &.page-hero,
+      &.page-cta {
+        .section-container {
+          flex-direction: row !important; // Ändere zu row, um Text und Bild nebeneinander zu platzieren
+          align-items: stretch !important; // Wichtig für gleiche Höhe der Flex-Items
+        }
+        
+        .section-text {
+          order: 1 !important;
+          flex: 0 0 50% !important; // 50% Breite erzwingen
+          max-width: 50% !important; // Sicherstellen
+          padding-right: 1rem !important;
+        }
+
+        .section-image {
+          order: 2 !important;
+          flex: 0 0 50% !important; // 50% Breite erzwingen
+          max-width: 50% !important; // Sicherstellen
+          text-align: center !important;
+          display: flex; // Flexbox für das Bild
+          align-items: center;
+          justify-content: center;
+          overflow: hidden; // Wichtig für object-fit
+
+          img {
+            width: 100% !important; // Bild füllt den Container
+            height: 100% !important; // Bild füllt den Container
+            object-fit: cover; // Bild wird zugeschnitten, um den Container zu füllen
+          }
+        }
+      }
+
+      .section-text-only {
+        max-width: 100% !important;
+        text-align: left !important;
+      }
+
+      // Typography für Print
+      h1, h2, h3 {
+        color: #333 !important;
+        page-break-after: avoid;
+        margin-bottom: 0.8rem !important;
+      }
+
+      h1 {
+        font-size: 1.8rem !important;
+        border-bottom: 2px solid rgba(168,27,88,.5);
+        padding-bottom: 0.3rem;
+      }
+
+      h2 {
+        font-size: 1.5rem !important;
+      }
+
+      h3 {
+        font-size: 1.3rem !important;
+      }
+
+      p {
+        color: #333 !important;
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0.8rem !important;
+        text-align: justify;
+      }
+
+      ul {
+        color: #333 !important;
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+      }
+
+      li {
+        margin-bottom: 0.4rem !important;
+        page-break-inside: avoid;
+        
+        &:before {
+          color: rgba(168,27,88,.8) !important;
+        }
+      }
+
+      blockquote {
+        background: #f8f9fa !important;
+        border-left: 4px solid rgba(168,27,88,1) !important;
+        color: #333 !important;
+        padding: 1rem 1.5rem !important;
+        margin: 1rem 0 !important;
+        page-break-inside: avoid;
+        border-radius: 4px;
+        position: relative;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, rgba(168,27,88,1) 0%, rgba(60,49,152,1) 100%);
+        }
+        
+        p {
+          margin-bottom: 0.5rem !important;
+        }
+      }
+    }
+
+    // Regel, um die leere Seite am Ende zu entfernen
+    section:last-of-type {
+      page-break-after: avoid !important;
+    }
+  }
+
+  // Error Placeholder für Print
+  .page-image-error {
+    background: #f5f5f5 !important;
+    border: 2px dashed #ccc !important;
+    color: #666 !important;
+    padding: 1rem !important;
+    
+    .error-icon {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  // Multi-Image für Print
+  .multi-image {
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid;
+    
+    img {
+      max-width: 70% !important;
+    }
+  }
+
+  // Seitenumbruch-Klassen
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+  
+  // Responsive Fallback für sehr schmale Seiten
+  @media print and (max-width: 15cm) {
+    .page-content section {
+      &:nth-of-type(odd),
+      &:nth-of-type(even) {
+        .section-container {
+          flex-direction: column !important;
+        }
+        
+        .section-text {
+          order: 1 !important;
+          padding: 0 !important;
+          margin-bottom: 1rem !important;
+        }
+
+        .section-image {
+          order: 2 !important;
+          text-align: center !important;
+
+          img {
+            max-width: 80% !important;
+          }
+        }
+      }
+    }
+  }
+}
