@@ -329,6 +329,8 @@ $page-section-min-height: 60vh;
   .footer,
   .sidebar,
   .page-cta-button,
+  .proactiveChat,
+  #LeadboosterContainer,
   [id*="leadbooster"],
   [class*="leadbooster"],
   [id*="pipedrive"],
@@ -437,16 +439,15 @@ $page-section-min-height: 60vh;
           display: flex; // Flexbox für das Bild
           align-items: center;
           justify-content: center;
-          overflow: hidden; // Wichtig für object-fit
 
           img {
             width: 100% !important; // Bild füllt den Container
             height: 100% !important; // Bild füllt den Container
             object-fit: cover; // Bild wird zugeschnitten, um den Container zu füllen
             page-break-inside: avoid;
-            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 60px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important; /* Subtiler Schatten für Print */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important; /* Subtiler Schatten für Print */
+            margin: 0 auto;
           }
         }
       }
@@ -471,16 +472,14 @@ $page-section-min-height: 60vh;
           display: flex; // Flexbox für das Bild
           align-items: center;
           justify-content: center;
-          overflow: hidden; // Wichtig für object-fit
 
           img {
             width: 100% !important; // Bild füllt den Container
             height: 100% !important; // Bild füllt den Container
             object-fit: cover; // Bild wird zugeschnitten, um den Container zu füllen
             page-break-inside: avoid;
-            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 60px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important; /* Subtiler Schatten für Print */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important; /* Subtiler Schatten für Print */
           }
         }
       }
@@ -488,6 +487,8 @@ $page-section-min-height: 60vh;
       // Hero und CTA Sections - nebeneinander
       &.page-hero,
       &.page-cta {
+        background: white !important;
+
         .section-container {
           flex-direction: row !important; // Ändere zu row, um Text und Bild nebeneinander zu platzieren
           align-items: stretch !important; // Wichtig für gleiche Höhe der Flex-Items
@@ -508,7 +509,6 @@ $page-section-min-height: 60vh;
           display: flex; // Flexbox für das Bild
           align-items: center;
           justify-content: center;
-          overflow: hidden; // Wichtig für object-fit
 
           img {
             width: 100% !important; // Bild füllt den Container
