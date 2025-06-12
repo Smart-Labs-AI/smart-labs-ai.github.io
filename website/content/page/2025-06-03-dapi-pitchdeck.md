@@ -55,7 +55,7 @@ sidebar: true
 > *Sebastian Henneberg, synsugar GmbH*
 {{< /page-section >}}
 
-{{< page-cta image="page/images/2025-06-03-dapi-pitchdeck-06.png" alt="Jetzt starten" button-text="Kostenlosen Check starten" button-link="/contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Kostenlosen Check starten" button-link="/contact" >}}
 # Starten Sie jetzt – Bevor es zu spät ist!
 
 - Jeder ungeschützte KI-Einsatz ist ein Risiko
