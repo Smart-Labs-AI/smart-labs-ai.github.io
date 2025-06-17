@@ -469,6 +469,15 @@ $page-section-min-height: 60vh;
           flex: 0 0 50% !important; // 50% Breite erzwingen
           max-width: 50% !important; // Sicherstellen
           padding-left: 1rem !important;
+          
+          p, ul, ol, li {
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+          }
         }
 
         .section-image {
@@ -496,6 +505,12 @@ $page-section-min-height: 60vh;
             width: 100% !important;
             text-align: left !important;
             margin-bottom: 0.8rem !important;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
           }
 
           ul, ol {
@@ -514,6 +529,15 @@ $page-section-min-height: 60vh;
           flex: 0 0 50% !important; // 50% Breite erzwingen
           max-width: 50% !important; // Sicherstellen
           padding-right: 1rem !important;
+          
+          p, ul, ol, li {
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+          }
         }
 
         .section-image {
@@ -540,6 +564,12 @@ $page-section-min-height: 60vh;
             width: 100% !important;
             text-align: left !important;
             margin-bottom: 0.8rem !important;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
           }
 
           ul, ol {
@@ -563,6 +593,15 @@ $page-section-min-height: 60vh;
           flex: 0 0 50% !important; // 50% Breite erzwingen
           max-width: 50% !important; // Sicherstellen
           padding-right: 1rem !important;
+          
+          p, ul, ol, li {
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+          }
         }
 
         .section-image {
@@ -587,6 +626,12 @@ $page-section-min-height: 60vh;
             width: 100% !important;
             text-align: left !important;
             margin-bottom: 0.8rem !important;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
           }
 
           ul, ol {
@@ -628,7 +673,17 @@ $page-section-min-height: 60vh;
         font-size: 1.25rem !important;
         line-height: 1.5 !important;
         margin-bottom: 0.8rem !important;
-        text-align: justify;
+        text-align: left;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphenate-limit-chars: 6 3 3;
+        hyphenate-limit-lines: 2;
+        hyphenate-limit-last: always;
+        hyphenate-limit-zone: 8%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
       
       a {
@@ -640,11 +695,21 @@ $page-section-min-height: 60vh;
         font-size: 0.9rem !important;
         line-height: 1.4 !important;
         margin-bottom: 1rem !important;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
       }
 
       li {
         margin-bottom: 0.4rem !important;
         page-break-inside: avoid;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
         
         &:before {
           color: rgba(168,27,88,.8) !important;
