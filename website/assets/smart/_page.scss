@@ -201,9 +201,12 @@ $page-section-min-height: 60vh;
       line-height: 1.2;
     }
 
-    p {
+    & {
       font-size: 1.5rem;
       line-height: 1.7;
+    }
+
+    p {
       margin-bottom: 1.2rem;
     }
 
@@ -668,7 +671,7 @@ $page-section-min-height: 60vh;
         font-size: 1.3rem !important;
       }
 
-      p {
+      & {
         color: #333 !important;
         font-size: 1.25rem !important;
         line-height: 1.5 !important;
