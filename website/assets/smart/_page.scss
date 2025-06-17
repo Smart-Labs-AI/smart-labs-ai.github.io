@@ -83,12 +83,10 @@ $page-section-min-height: 60vh;
     display: flex;
     align-items: center;
 
-
-
     // Section Container
     .section-container {
       display: flex;
-      align-items: center;
+      align-items: start;
       max-width: $page-max-width;
       margin: 0 auto;
       padding: 0 2rem;
@@ -197,8 +195,14 @@ $page-section-min-height: 60vh;
       line-height: 1.2;
     }
 
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
     p {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
       line-height: 1.7;
       margin-bottom: 1.2rem;
     }
@@ -226,12 +230,48 @@ $page-section-min-height: 60vh;
       }
     }
 
+    ol {
+      counter-reset: custom-counter;
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    
+    ol li {
+      position: relative;
+      padding-left: 2.5rem;
+      margin-bottom: 0.8rem;
+      a {
+        color: white;
+      }
+      a:hover {
+        color: #98a9c2;
+      }
+    
+      &::before {
+        counter-increment: custom-counter;
+        content: counter(custom-counter) ".";
+        position: absolute;
+        left: 0;
+        top: 0.1rem;
+        color: $page-brand-primary; // Ersetze ggf. durch einen hex-Wert
+        font-weight: bold;
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 0.1rem 0.5rem;
+        border-radius: 4px;
+        min-width: 1.8rem;
+        text-align: center;
+      }
+    }
+
     // Blockquotes
     blockquote {
       background: rgba(255, 255, 255, 0.1);
       border-left: 4px solid $page-brand-primary;
       padding: 1.5rem 2rem;
-      margin: 2rem 0;
+      margin: 0;
       font-style: italic;
       border-radius: 0 8px 8px 0;
     }
@@ -539,6 +579,8 @@ $page-section-min-height: 60vh;
 
       h2 {
         font-size: 1.5rem !important;
+        border-bottom: 2px solid rgba(168,27,88,.5);
+        padding-bottom: 0.3rem;
       }
 
       h3 {
@@ -551,6 +593,10 @@ $page-section-min-height: 60vh;
         line-height: 1.5 !important;
         margin-bottom: 0.8rem !important;
         text-align: justify;
+      }
+      
+      a {
+        color: #333 !important;
       }
 
       ul {
@@ -574,7 +620,7 @@ $page-section-min-height: 60vh;
         border-left: 4px solid rgba(168,27,88,1) !important;
         color: #333 !important;
         padding: 1rem 1.5rem !important;
-        margin: 1rem 0 !important;
+        margin: 0 !important;
         page-break-inside: avoid;
         border-radius: 4px;
         position: relative;
