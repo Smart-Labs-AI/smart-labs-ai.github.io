@@ -478,16 +478,28 @@ $page-section-min-height: 60vh;
           text-align: left !important;
           display: flex; // Flexbox für das Bild
           align-items: flex-start;
-          justify-content: center;
+          justify-content: flex-start;
+          flex-direction: column; // Für Textinhalte
 
           img {
             width: 100% !important; // Bild füllt den Container
-            height: 100% !important; // Bild füllt den Container
-            object-fit: cover; // Bild wird zugeschnitten, um den Container zu füllen
+            height: auto !important; // Auto-Höhe für bessere Proportionen
+            object-fit: contain; // Bild behält Proportionen
             page-break-inside: avoid;
             border-radius: 60px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important; /* Subtiler Schatten für Print */
             margin: 0 auto;
+          }
+
+          // Textinhalte in section-image
+          p, ul, ol, h1, h2, h3, h4, h5, h6 {
+            width: 100% !important;
+            text-align: left !important;
+            margin-bottom: 0.8rem !important;
+          }
+
+          ul, ol {
+            padding-left: 1rem !important;
           }
         }
       }
@@ -508,18 +520,30 @@ $page-section-min-height: 60vh;
           order: 2 !important;
           flex: 0 0 50% !important; // 50% Breite erzwingen
           max-width: 50% !important; // Sicherstellen
-          text-align: right !important;
+          text-align: left !important;
           display: flex; // Flexbox für das Bild
           align-items: flex-start;
-          justify-content: center;
+          justify-content: flex-start;
+          flex-direction: column; // Für Textinhalte
 
           img {
             width: 100% !important; // Bild füllt den Container
-            height: 100% !important; // Bild füllt den Container
-            object-fit: cover; // Bild wird zugeschnitten, um den Container zu füllen
+            height: auto !important; // Auto-Höhe für bessere Proportionen
+            object-fit: contain; // Bild behält Proportionen
             page-break-inside: avoid;
             border-radius: 60px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important; /* Subtiler Schatten für Print */
+          }
+
+          // Textinhalte in section-image
+          p, ul, ol, h1, h2, h3, h4, h5, h6 {
+            width: 100% !important;
+            text-align: left !important;
+            margin-bottom: 0.8rem !important;
+          }
+
+          ul, ol {
+            padding-left: 1rem !important;
           }
         }
       }
@@ -545,16 +569,28 @@ $page-section-min-height: 60vh;
           order: 2 !important;
           flex: 0 0 50% !important; // 50% Breite erzwingen
           max-width: 50% !important; // Sicherstellen
-          text-align: center !important;
+          text-align: left !important;
           display: flex; // Flexbox für das Bild
           align-items: flex-start;
-          justify-content: center;
+          justify-content: flex-start;
+          flex-direction: column; // Für Textinhalte
 
           img {
             width: 100% !important; // Bild füllt den Container
-            height: 100% !important; // Bild füllt den Container
-            object-fit: cover; // Bild wird zugeschnitten, um den Container zu füllen
+            height: auto !important; // Auto-Höhe für bessere Proportionen
+            object-fit: contain; // Bild behält Proportionen
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important; /* Subtiler Schatten für Print */
+          }
+
+          // Textinhalte in section-image
+          p, ul, ol, h1, h2, h3, h4, h5, h6 {
+            width: 100% !important;
+            text-align: left !important;
+            margin-bottom: 0.8rem !important;
+          }
+
+          ul, ol {
+            padding-left: 1rem !important;
           }
         }
       }
