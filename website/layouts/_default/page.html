@@ -24,7 +24,30 @@
 
   <!-- Für Pages mit alternierenden Sections verwenden wir die volle Breite -->
   {{ partial "single/page-content.html" . }}
-</div>
+  
+  <section class="section related-topics">
+    <div class="container has-text-centered">
+      <h2 class="title section-title" style="margin-bottom: 20px;">Weitere Themen</h2>
+      <div class="divider" style="margin-bottom: 20px; text-align: left"></div>
+      <div class="columns is-multiline" style="margin-top: 20px;">
+        {{ $currentPageDate := .Date }}
+        {{ $currentCategories := .Params.categories }}
+        {{ $filteredPages := slice }}
+        {{ range (where .Site.RegularPages "Params.categories" "intersect" $currentCategories) }}
+          {{ if lt .Date $currentPageDate }}
+            {{ $filteredPages = $filteredPages | append . }}
+          {{ end }}
+        {{ end }}
+        {{ range first 3 $filteredPages }}
+        <div class="column is-one-third">
+          {{ partial "blog-card.html" . }}
+        </div>
+      {{ end }}
+      </div>
+    </div>
+  </section>
+  </div>
 
 {{ partial "footer.html" . }}
+
 {{ end }}

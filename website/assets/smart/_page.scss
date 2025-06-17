@@ -377,7 +377,8 @@ $page-section-min-height: 60vh;
   [id*="leadbooster"],
   [class*="leadbooster"],
   [id*="pipedrive"],
-  [class*="pipedrive"] {
+  [class*="pipedrive"],
+  .related-topics {
     display: none !important;
   }
 
