@@ -57,7 +57,12 @@ Der EU AI Act etabliert erstmals ein verbindliches Regelwerk für KI: Mit Risiko
 {{< page-content >}}
 # Top 5 LLM-Sicherheitsfallstricke im Überblick – und wie Sie sie vermeiden
 
-1. Fehlende Transparenz: Undurchsichtige Modelle erschweren Kontrolle und Fehlerbehebung. 2. Intransparente Trainingsdaten: Gefahr von Datenschutzverstößen und Bias. 3. Unzureichende Angriffserkennung (z.B. durch Jailbreaks/Prompt Injection). 4. Unklare Verantwortlichkeit zwischen Modellhersteller und deployendem Unternehmen. 5. Fehleinschätzung von Open-Source-LLMs („Sicherheit durch Offenheit“ ist trügerisch). Branchen-Benchmarks und wissenschaftliche Standards fordern einen proaktiven Ansatz mit kontinuierlichen Audits, spezifischen Schutzmechanismen und klaren Zuständigkeiten.
+1. Fehlende Transparenz: Undurchsichtige Modelle erschweren Kontrolle und Fehlerbehebung. 
+2. Intransparente Trainingsdaten: Gefahr von Datenschutzverstößen und Bias. 
+3. Unzureichende Angriffserkennung (z.B. durch Jailbreaks/Prompt Injection). 
+4. Unklare Verantwortlichkeit zwischen Modellhersteller und deployendem Unternehmen. 
+5. Fehleinschätzung von Open-Source-LLMs („Sicherheit durch Offenheit“ ist trügerisch). Branchen-Benchmarks und wissenschaftliche Standards fordern einen proaktiven Ansatz mit kontinuierlichen Audits, spezifischen Schutzmechanismen und klaren Zuständigkeiten.
+
 {{< /page-content >}}
 
 {{< page-outline >}}
