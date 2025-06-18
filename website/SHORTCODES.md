@@ -52,7 +52,7 @@ Für normale alternierende Sections.
 Für die letzte Section mit Button und verstärktem Hintergrund.
 
 ```markdown
-{{< page-cta image="page/images/cta.png" alt="CTA Bild" width="1000" button-text="Jetzt starten" button-link="/contact" >}}
+{{< page-cta image="page/images/cta.png" alt="CTA Bild" width="1000" button-text="Jetzt starten" button-link="/#contact" >}}
 # Call-to-Action Titel
 Beschreibungstext hier
 {{< /page-cta >}}
@@ -186,7 +186,7 @@ Content hier
 Mehr Content
 {{< /page-section >}}
 
-{{< page-cta image="page/images/cta.png" alt="CTA" button-text="Kontakt" button-link="/contact" >}}
+{{< page-cta image="page/images/cta.png" alt="CTA" button-text="Kontakt" button-link="/#contact" >}}
 # Jetzt handeln!
 Call-to-Action Text
 {{< /page-cta >}}

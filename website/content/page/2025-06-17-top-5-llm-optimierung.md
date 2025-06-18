@@ -119,7 +119,7 @@ Machen Sie Ihr Unternehmen fit für KI-Sichtbarkeit und nachhaltigen Erfolg – 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
 Jetzt durchstarten: Fordern Sie einen LLM-Readiness-Check an oder starten Sie Ihren Proof-of-Concept für nachhaltige KI-Sichtbarkeit. Die nächsten Innovationschampions machen es Ihnen vor – seien Sie dabei!
 {{< /page-cta >}}
 {{< page-section >}}

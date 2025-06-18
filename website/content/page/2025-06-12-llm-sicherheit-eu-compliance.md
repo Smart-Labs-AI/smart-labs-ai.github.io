@@ -110,7 +110,7 @@ Die europäische KI-Offensive stellt Unternehmen vor die Wahl: Zuschauer bleiben
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt unverbindlich anfragen" button-text="Kostenlosen Check starten" button-link="/contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt unverbindlich anfragen" button-text="Kostenlosen Check starten" button-link="/#contact" >}}
 Jetzt starten: Prüfen Sie Ihre LLM-Prozesse auf regulatorische Risiken, etablieren Sie funktionsübergreifende Governance, setzen Sie Guardrails und entwickeln Sie eine Compliance-Roadmap – gerne unterstützen wir Sie bei der konkreten Implementierung! Kontaktieren Sie unser Expertenteam oder informieren Sie sich zu branchenspezifischen KI-Sandbox-Angeboten.
 {{< /page-cta >}}
 {{< page-section >}}

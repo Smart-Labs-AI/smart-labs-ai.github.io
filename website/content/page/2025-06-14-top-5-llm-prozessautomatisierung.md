@@ -110,7 +110,7 @@ Ob Quick-Check, Pilotprojekt oder vollständiger Rollout: Die Chancen der KI-Aut
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
 
 Jetzt starten: Lassen Sie Ihr KI-Automatisierungsprojekt von Anfang an begleiten – mit individuell zugeschnittenen Beratungs- und Auditierungspaketen. Smart Labs AI bietet unverbindliche Erstgespräche, Compliance-Checks und Roadmaps zur sicheren Umsetzung. Kontaktieren Sie uns für passgenaue Unterstützung!
 {{< /page-cta >}}

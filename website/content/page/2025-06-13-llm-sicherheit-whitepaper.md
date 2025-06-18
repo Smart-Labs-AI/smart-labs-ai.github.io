@@ -98,7 +98,7 @@ Wer heute systematisch LLM-Sicherheit und Compliance angeht, schafft nicht nur S
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
 Sichern Sie Ihre Innovationskraft: Starten Sie jetzt mit einer Analyse Ihrer LLM-Prozesse, klären Sie Compliance-Lücken und bauen Sie eine tragfähige Governance für generative KI auf. Gerne begleiten wir Sie mit einem ersten Experten-Workshop oder bieten einen Compliance-Quick-Check an. Jetzt Kontakt aufnehmen!
 {{< /page-cta >}}
 {{< page-section >}}

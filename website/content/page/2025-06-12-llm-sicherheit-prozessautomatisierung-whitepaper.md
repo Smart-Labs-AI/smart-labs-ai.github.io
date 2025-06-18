@@ -116,7 +116,7 @@ Starten Sie jetzt! Richten Sie Ihr Unternehmen an den Leitplanken des EU AI Acts
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
 Jetzt den europäischen Weg gehen und LLM-Sicherheit zur strategischen Priorität machen! Kontaktieren Sie unsere Experten für eine Gap-Analyse oder ein individuelles Workshop-Angebot. Zukunft gelingt gemeinsam – starten Sie heute!
 {{< /page-cta >}}
 {{< page-section >}}
