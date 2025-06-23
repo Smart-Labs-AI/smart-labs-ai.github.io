@@ -60,7 +60,11 @@ Die OWASP Top 10 für LLMs legen offen: Prompt Injection, Daten- und Model-Poiso
 {{< page-content >}}
 # Technische Exzellenz: Top 5 Strategien für Sicherheit und Auditierbarkeit
 
-1) **Input-/Output-Validierung & Prompt-Kontrolle**: Strikte Prüfung (Filter, Allow-/Blocklists) verhindert Prompt Injection und unerwartete Ausgaben. 2) **Adversarial Training & Red Teaming**: Systeme mit simulierten Angriffen stärken[2][5]. 3) **Zugriffs- und Rollenmanagement**: Least Privilege-Prinzip, MFA und Audit-Logging sind Pflicht. 4) **Sichere Supply Chain & Datenherkunft**: Nur validierte Modelle/Daten ins Training/Deployment bringen. 5) **Auditierbarkeit & kontinuierliche Überwachung**: KI-gerechte Logging/Tracing-Lösungen sorgen für Nachvollziehbarkeit – auch bei externen Foundation Models.
+1) **Input-/Output-Validierung & Prompt-Kontrolle**: Strikte Prüfung (Filter, Allow-/Blocklists) verhindert Prompt Injection und unerwartete Ausgaben. 
+2) **Adversarial Training & Red Teaming**: Systeme mit simulierten Angriffen stärken[2][5]. 
+3) **Zugriffs- und Rollenmanagement**: Least Privilege-Prinzip, MFA und Audit-Logging sind Pflicht. 
+4) **Sichere Supply Chain & Datenherkunft**: Nur validierte Modelle/Daten ins Training/Deployment bringen. 
+5) **Auditierbarkeit & kontinuierliche Überwachung**: KI-gerechte Logging/Tracing-Lösungen sorgen für Nachvollziehbarkeit – auch bei externen Foundation Models.
 {{< /page-content >}}
 
 {{< page-outline >}}
