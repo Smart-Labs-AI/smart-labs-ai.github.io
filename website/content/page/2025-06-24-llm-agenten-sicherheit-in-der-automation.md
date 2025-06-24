@@ -46,7 +46,7 @@ LLM-Agenten öffnen Türen zu schnellen Innovationen, bergen aber erhebliche Ris
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+# Dos & ✗ Don'ts
 ✓ Frühzeitig Sicherheits-Governance etablieren
 ✓ Risikoanalyse für jeden KI-Anwendungsfall
 ✓ Output-Validierung und Sandboxing nutzen
@@ -107,7 +107,7 @@ Die Chancen werden nicht auf ewig bestehen bleiben: Wer heute beginnt, Security-
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+= Dos & ✗ Don'ts
 ✓ Stakeholder frühzeitig einbinden – Security, Legal, IT & Business!
 ✓ Proof-of-Concepts mit echten Audit-Trails starten
 ✗ Weder Security noch Compliance dem Zufall überlassen
