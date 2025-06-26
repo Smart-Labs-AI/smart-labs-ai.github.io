@@ -1,5 +1,5 @@
 ---
-title: Datenschutzerklärung der Smart labs AI GmbH
+title: Datenschutzerklärung der Smart Labs AI GmbH
 include_footer: true
 sidebar: false
 ---
