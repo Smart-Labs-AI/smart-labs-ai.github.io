@@ -77,7 +77,6 @@
           required: false,
           optOut: false,
           onlyOnce: true,
-          default: true,
           callback: function(consent, service) {
             if (consent) {
               if (!window.TelemetryDeck) {
@@ -112,7 +111,6 @@
           required: false,
           optOut: false,
           onlyOnce: true,
-          default: true,
           callback: function(consent, service) {
             if (consent) {
               if (!window.pipedriveLeadboosterConfig) {
@@ -162,7 +160,6 @@
             title: 'Pipedrive Webformular',
             description: 'Kontaktformular via Pipedrive.',
             purposes: ['marketing'],
-            default: true,
             required: false,
             callback: function (consent, service) {
                 const placeholder = document.getElementById('pipedrive-form-placeholder');
