@@ -56,13 +56,13 @@ Traditionelle Sicherheitstools greifen hier oft zu kurz oder erzeugen ein falsch
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Nutzen Sie Threat Modeling speziell für LLM/Agent-basierte Systeme
-✓ Implementieren Sie sichere Sandbox- und Session-Management-Konzepte
-✓ Überprüfen Sie Agenten-Regelwerke regelmäßig
-✗ Vertrauen Sie nicht allein klassischen Schutzmechanismen
-✗ Unterschätzen Sie nicht die Gefahr von Prompt Injection und Data Poisoning
-✗ Vernachlässigen Sie nicht die Auswirkungen von Systeminterdependenzen
+**✓ Dos & ✗ Don'ts**
+- ✓ Nutzen Sie Threat Modeling speziell für LLM/Agent-basierte Systeme
+- ✓ Implementieren Sie sichere Sandbox- und Session-Management-Konzepte
+- ✓ Überprüfen Sie Agenten-Regelwerke regelmäßig
+- ✗ Vertrauen Sie nicht allein klassischen Schutzmechanismen
+- ✗ Unterschätzen Sie nicht die Gefahr von Prompt Injection und Data Poisoning
+- ✗ Vernachlässigen Sie nicht die Auswirkungen von Systeminterdependenzen
 {{< /page-outline >}}
 
 {{< /page-section >}}

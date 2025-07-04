@@ -36,7 +36,7 @@ Die Folgen: Hohe Fehlerquoten, versteckte Kosten und Unsicherheiten beim Umgang 
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 ✓ Prozessautomatisierung strategisch planen
 ✓ Menschen in den Wandel einbeziehen
 ✓ Sicherheit und Compliance von Anfang an berücksichtigen
@@ -66,7 +66,7 @@ Die Folgen: Hohe Fehlerquoten, versteckte Kosten und Unsicherheiten beim Umgang 
 {{< page-outline >}}
 > 💡 Sicherheit als Enabler: "Der Rest liegt in der Pipeline, den Kontrollen und den Datenflüssen, die du um das LLM herum aufbauen wirst."[3]
 
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 ✓ Schulungen & Change Management
 ✓ Datenflüsse transparent halten
 ✓ Sicherheitsaudits regelmäßig durchführen

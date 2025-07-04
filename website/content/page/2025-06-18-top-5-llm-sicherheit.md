@@ -32,7 +32,7 @@ Viele setzen KI-Modelle ein, als seien sie bloße Software-Bausteine. Doch die D
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - ✓ Datenflüsse und Prompt-Strategien offenlegen
 - ✓ KI-Ausgaben regelmäßig prüfen und auditieren
 - ✗ KI-Modelle unbeaufsichtigt in Kernsysteme integrieren
@@ -68,7 +68,7 @@ Die OWASP Top 10 für LLMs legen offen: Prompt Injection, Daten- und Model-Poiso
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - ✓ Input/Output-Filter einsetzen
 - ✓ Red Teaming und Penetrationstests durchführen
 - ✓ Zugriffsrechte minimal halten und regelmäßig prüfen
@@ -115,7 +115,7 @@ Die LLM-Sicherheitswelt dreht sich 2025 schneller als jede Compliance-Agenda. Ve
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - ✓ Risk Assessment initiieren
 - ✓ Stakeholder einbinden
 - ✓ Security-Lösungen pilotieren

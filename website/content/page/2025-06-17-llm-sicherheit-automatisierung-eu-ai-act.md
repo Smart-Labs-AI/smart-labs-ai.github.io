@@ -32,7 +32,7 @@ Zu lange dominierte der Pragmatismus – KI pilotieren, erstmal ausprobieren, Gr
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Frühzeitig Risiko- und Wertebewertung einführen
 - ✅ KI-Einsätze dokumentieren und Rollen klären
 - ❌ KI-Modelle ohne Compliance-Checks produktiv setzen
@@ -78,7 +78,7 @@ Sichere LLM-Implementierungen setzen auf einen Mix aus robusten Datenpipelines, 
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Audit-Trails, menschliche Oversight, explizite Kennzeichnung von AI-Content
 - ✅ Prozessintegrierte Sicherheitsaudits und Incident Response
 - ❌ Ungetestete Modelle automatisiert einsetzen

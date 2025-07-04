@@ -46,7 +46,7 @@ Die Optimierung für LLMs folgt fünf zentralen Kriterien: (1) Kontextuelle Date
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Genaue Analyse, wie Inhalte von LLMs verarbeitet werden
 - ✅ Integration von Vektordaten/Metadaten für Retrieval
 - ✅ Regelmäßige Überprüfung auf Manipulationsrisiken
@@ -98,7 +98,7 @@ Unternehmen, die LLM-Optimierung als kontinuierlichen Prozess verstehen, wirken 
 {{< /page-content >}}
 
 {{< page-outline >}}
-> ✅ Dos & ❌ Don'ts
+> ✅ **Dos & ❌ Don'ts**
 - ✅ Interdisziplinarität von Anfang an
 - ✅ Transparenz und Auditierbarkeit schaffen
 - ❌ LLM-Optimierung als Einmalprojekt betrachten

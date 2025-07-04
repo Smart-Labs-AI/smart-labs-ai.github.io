@@ -32,7 +32,7 @@ Lange galt: Hauptsache automatisiert – Sicherheit, Governance und Wertschöpfu
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Risikobewertungen und Audits als festen Bestandteil jeder KI-Automatisierung etablieren
 - ❌ Modelle ohne Kenntnis ihrer Herkunft und Funktionen einsetzen
 - ✅ Compliance-by-Design als Grundprinzip

@@ -53,20 +53,11 @@ Neue Lösungen wie LLM Checker (ETH Zürich, LatticeFlow) bewerten Modelle nach 
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
-
-**Dos:**
-- Frühzeitig Rollen, Pflichten und AI-Risiken identifizieren
-- Risk Assessments und AI-Governance verankern
-- Monitoring, Audits und Incident Reporting implementieren
-- Schulungen im Team zu KI-Literacy und ethischen Fragestellungen bereitstellen
-- Technik (AI-Firewall, Wasserzeichen, Security Posture Management) einsetzen
-
-**Don'ts:**
-- Prüfpflichten und technische Doku vernachlässigen
-- Blind der KI vertrauen (Blackbox-Risiko!)
-- Nur auf Anbieter-Versprechen setzen
-- Relevanz von Trainingsdatenqualität unterschätzen
+**✅ Dos & ❌ Don'ts**
+- ✅ LLMs als eigenständige Risikokategorie betrachten.
+- ✅ Dynamische Sicherheitsanalysen durchführen.
+- ❌ Sich auf traditionelle Sicherheitsmaßnahmen verlassen.
+- ❌ Die unvorhersehbare Natur von LLMs ignorieren.
 {{< /page-outline >}}
 
 {{< /page-section >}}

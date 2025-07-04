@@ -46,7 +46,7 @@ Der EU AI Act (2024) unterteilt KI-Systeme nach Risiko (verboten, hochriskant, g
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Dos: Frühzeitige Klassifizierung eigener und zugekaufter KI-Modelle gemäß EU AI Act.
 - ✅ Dos: Transparente Dokumentation, kontinuierliches Monitoring.
 - ❌ Don'ts: Alleinige Fokussierung auf technische Sicherheit, ohne Datenschutz und ethische Implikationen zu betrachten.

@@ -46,7 +46,7 @@ LLM-Sicherheit ist kein Einzelfallproblem, sondern betrifft das ganze Unternehme
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - ✓ Do: Red Teaming, Überwachung & Prinzip der minimalen Rechte durchsetzen
 - ✓ Do: Datenschutz und Compliance by Design
 - ✗ Don’t: Blindes Vertrauen in Modellausgaben
@@ -78,7 +78,7 @@ Die Enterprise-KI von morgen basiert auf mehrschichtigen Sicherungsarchitekturen
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - ✓ Do: Sicherheitsarchitektur Layer einziehen (Sandbox, Monitoring, Zugriff)
 - ✓ Do: Security by Design – von Anfang an & Compliance-Integration
 - ✗ Don’t: Beruhigen lassen durch „state of the art“ Voreinstellungen

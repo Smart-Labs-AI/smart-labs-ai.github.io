@@ -32,7 +32,7 @@ Zu oft wird LLM-Sicherheit auf reine IT-Fragen oder DSGVO-Haken reduziert. In Wa
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Transparenzpflichten früh einplanen
 - ✅ KI-Einsatz dokumentieren & auditieren
 - ❌ Reine Technik-Checklisten ohne Kontext
@@ -80,7 +80,7 @@ Best Practices zeigen: Wer LLM-Sicherheit strikt an Governance-Richtlinien (z. B
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Früh mit Stakeholdern sprechen
 - ✅ Audits als Chance, nicht als Bremse
 - ❌ KI ohne menschliche Kontrolle betreiben

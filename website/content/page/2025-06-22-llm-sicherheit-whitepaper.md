@@ -32,7 +32,7 @@ Viele Unternehmen vertrauen auf klassische IT-Sicherheitskonzepte, die für LLMs
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 
 ✓ Risikomanagement regelmäßig auf LLM-spezifische Angriffe ausrichten
 ✗ Verlass auf klassische Firewalls und Pseudonymisierung
@@ -93,7 +93,7 @@ Die LLM-Revolution ist nicht aufzuhalten. Wer jetzt mit Verantwortung, Weitsicht
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 
 ✓ Überwachung und Audits einführen
 ✓ Teams kontinuierlich schulen

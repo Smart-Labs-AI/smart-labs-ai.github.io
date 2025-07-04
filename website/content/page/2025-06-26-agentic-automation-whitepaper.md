@@ -32,12 +32,12 @@ Es reicht nicht, Agentic AI einfach in bestehende Abläufe einzubetten. Ohne Gov
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 
-✓ Klare Governance-Spielregeln festlegen
-✓ Kritische KI-Agenten stets überwachen und evaluieren
-✗ Automatisierte Entscheidungen ungeprüft übernehmen
-✗ Datenschutz und Compliance vernachlässigen
+- ✓ Klare Governance-Spielregeln festlegen
+- ✓ Kritische KI-Agenten stets überwachen und evaluieren
+- ✗ Automatisierte Entscheidungen ungeprüft übernehmen
+- ✗ Datenschutz und Compliance vernachlässigen
 {{< /page-outline >}}
 
 {{< /page-section >}}

@@ -32,7 +32,7 @@ Viele Unternehmen setzen auf LLMs und vertrauen auf bewährte IT-Security, die p
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - ✓ Dos: Dynamische Gefährdungsanalysen einführen, Security laufend evaluieren, LLM-Ausgaben prüfen
 - ✗ Don'ts: Sich auf einmalige Prüfungen verlassen, LLMs ohne Kontextkontrolle produktiv schalten
 {{< /page-outline >}}
@@ -62,7 +62,7 @@ Viele Unternehmen unterschätzen die Risiken von kontinuierlich adaptierenden LL
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - ✓ Dos: Regeln für LLM-Einsatz, Zugriffskontrolle, Logging, Sensibilisierung des Teams
 - ✗ Don'ts: LLMs als Blackbox laufen lassen, Governance auf Compliance-Papier beschränken
 {{< /page-outline >}}

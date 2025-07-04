@@ -32,7 +32,7 @@ Viele Unternehmen vertrauen klassischen Sicherheitsmaßnahmen – doch Large Lan
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 ✓ Etablieren Sie spezifische LLM-Sicherheitsaudits, ✓ Berücksichtigen Sie Data Governance und Transparenz, ✗ Verlassen Sie sich nicht allein auf Standardnetzwerksicherheit, ✗ Unterschätzen Sie regulatorische Fallstricke.
 {{< /page-outline >}}
 
@@ -94,7 +94,7 @@ Smart Labs AI kombiniert regulatorische Beratung (EU AI Act), technische Audits 
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 ✓ Führen Sie regelmäßige Audits mit Experten durch, ✓ Schaffen Sie klare Verantwortlichkeiten, ✓ Nutzen Sie zertifizierte Templates und Frameworks, ✗ Verschieben Sie Governance-Fragen nicht auf später, ✗ Unterschätzen Sie die Skalierbarkeit von Sicherheitsmaßnahmen.
 {{< /page-outline >}}
 

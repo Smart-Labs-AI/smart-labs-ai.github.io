@@ -46,12 +46,12 @@ Der Schutz von LLM-Agenten verlangt ein Bündel an Maßnahmen – von Architektu
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Übernehmen Sie OWASP Top 10 als Basis-Framework für LLM-Sicherheit
-✓ Wählen Sie Provider und Modelle nach Transparenz und Governance-Leistungen
-✓ Kontrollieren Sie die Lieferkette und Third-Party-Komponenten
-✗ Verlassen Sie sich nicht auf automatisierte Standardkonfigurationen
-✗ Unterschätzen Sie nicht die Notwendigkeit periodischer Prüfungen
+**✓ Dos & ✗ Don'ts**
+- ✓ Übernehmen Sie OWASP Top 10 als Basis-Framework für LLM-Sicherheit
+- ✓ Wählen Sie Provider und Modelle nach Transparenz und Governance-Leistungen
+- ✓ Kontrollieren Sie die Lieferkette und Third-Party-Komponenten
+- ✗ Verlassen Sie sich nicht auf automatisierte Standardkonfigurationen
+- ✗ Unterschätzen Sie nicht die Notwendigkeit periodischer Prüfungen
 {{< /page-outline >}}
 
 {{< /page-section >}}
@@ -107,11 +107,11 @@ Sicherheit ist kein Ziel, sondern ein laufender kollektiver Lernprozess – gepr
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Sicherheit bereits bei der ersten Pilotierung und Architekturplanung verankern
-✓ In regelmäßige, unabhängige Audits investieren
-✗ Sicherheitsmaßnahmen als Hemmschuh für Innovationen bewerten
-✗ Blind auf "Best Practices" anderer Unternehmen vertrauen
+**✓ Dos & ✗ Don'ts**
+- ✓ Sicherheit bereits bei der ersten Pilotierung und Architekturplanung verankern
+- ✓ In regelmäßige, unabhängige Audits investieren
+- ✗ Sicherheitsmaßnahmen als Hemmschuh für Innovationen bewerten
+- ✗ Blind auf "Best Practices" anderer Unternehmen vertrauen
 {{< /page-outline >}}
 
 {{< /page-section >}}

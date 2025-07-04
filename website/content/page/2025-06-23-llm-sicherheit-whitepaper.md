@@ -32,11 +32,11 @@ Viele Unternehmen verlassen sich auf traditionelle IT-Security-Frameworks – un
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Bestehende Security-Policies kritisch auf ihre Anwendbarkeit für KI prüfen.
-✓ Neue Angriffstypen (Adversarial Prompts, Datenvergiftung, Halluzinationen) in Risikoanalysen einbeziehen.
-✗ KI-Systeme wie klassische IT-Systeme behandeln.
-✗ Fehlende Auditierbarkeit von Modellen ignorieren.
+**✓ Dos & ✗ Don'ts**
+- ✓ Bestehende Security-Policies kritisch auf ihre Anwendbarkeit für KI prüfen.
+- ✓ Neue Angriffstypen (Adversarial Prompts, Datenvergiftung, Halluzinationen) in Risikoanalysen einbeziehen.
+- ✗ KI-Systeme wie klassische IT-Systeme behandeln.
+- ✗ Fehlende Auditierbarkeit von Modellen ignorieren.
 {{< /page-outline >}}
 
 {{< /page-section >}}
@@ -78,11 +78,13 @@ Die Entwicklung fortschrittlicher Moderationstools, Adversarial Training (inkl. 
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ API-Security, feingliedrige Zugriffsrechte und Monitoring fest einplanen.
-✓ Red Teaming nutzen, um unerwartete Schwachstellen zu identifizieren.
-✗ Sich auf Einmal-Audits oder Standardlösungen verlassen.
-✗ Content-Moderation und Logging vernachlässigen.
+{{< page-outline >}}
+**✓ Dos & ✗ Don'ts**
+- ✓ API-Security, feingliedrige Zugriffsrechte und Monitoring fest einplanen.
+- ✓ Red Teaming nutzen, um unerwartete Schwachstellen zu identifizieren.
+- ✗ Sich auf Einmal-Audits oder Standardlösungen verlassen.
+- ✗ Content-Moderation und Logging vernachlässigen.
+{{< /page-outline >}}
 {{< /page-outline >}}
 
 {{< /page-section >}}

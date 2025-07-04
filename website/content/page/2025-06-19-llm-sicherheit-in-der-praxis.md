@@ -32,11 +32,11 @@ Wir haben gelernt, Security als Abwehr äußerer Angriffe zu verstehen. Doch bei
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ LLMs immer als möglichen Angriffsvektor sehen
-✓ Automatisierte Protokolle für Input/Output-Sicherheit nutzen
-✗ Sich auf traditionelle Firewall-Logik verlassen
-✗ Kontrolle nur an den Provider delegieren
+**✓ Dos & ✗ Don'ts**
+- ✓ LLMs immer als möglichen Angriffsvektor sehen
+- ✓ Automatisierte Protokolle für Input/Output-Sicherheit nutzen
+- ✗ Sich auf traditionelle Firewall-Logik verlassen
+- ✗ Kontrolle nur an den Provider delegieren
 {{< /page-outline >}}
 
 {{< /page-section >}}
@@ -110,11 +110,11 @@ Beginnen Sie jetzt mit einem AI Security Assessment. Nutzen Sie praxisorientiert
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Assessment & Red-Teaming initiieren
-✓ Bewusstsein und Governance stärken
-✗ LLM-Sicherheit als IT-„Add-On“ betrachten
-✗ Auf Automatisierung ohne Überwachung setzen
+**✓ Dos & ✗ Don'ts**
+- ✓ Assessment & Red-Teaming initiieren
+- ✓ Bewusstsein und Governance stärken
+- ✗ LLM-Sicherheit als IT-„Add-On“ betrachten
+- ✗ Auf Automatisierung ohne Überwachung setzen
 {{< /page-outline >}}
 
 {{< /page-section >}}

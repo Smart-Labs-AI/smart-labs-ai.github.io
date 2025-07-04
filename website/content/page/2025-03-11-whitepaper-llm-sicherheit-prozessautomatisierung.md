@@ -32,11 +32,11 @@ Viele Unternehmen unterschätzen die Fallstricke beim Ausrollen von LLMs in sens
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Risiken kritisch prüfen
-✓ Prozesse um KI-Modelle herum absichern
-✗ Nicht auf Hype allein vertrauen
-✗ Regulatorik oder Datenschutz ausblenden
+**✓ Dos & ✗ Don'ts**
+- ✓ Risiken kritisch prüfen
+- ✓ Prozesse um KI-Modelle herum absichern
+- ✗ Nicht auf Hype allein vertrauen
+- ✗ Regulatorik oder Datenschutz ausblenden
 {{< /page-outline >}}
 
 {{< /page-section >}}
@@ -64,11 +64,11 @@ Bei der Modellwahl gilt: Es existieren offene und proprietäre LLMs mit jeweils 
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Architektur(en) gezielt nach Risiko & Use Case wählen
-✓ Guardrails, Audits und Logging früh implementieren
-✗ Komplexität unterschätzen
-✗ Blind auf proprietäre Blackboxen setzen
+**✓ Dos & ✗ Don'ts**
+- ✓ Architektur(en) gezielt nach Risiko & Use Case wählen
+- ✓ Guardrails, Audits und Logging früh implementieren
+- ✗ Komplexität unterschätzen
+- ✗ Blind auf proprietäre Blackboxen setzen
 {{< /page-outline >}}
 
 {{< /page-section >}}

@@ -58,7 +58,7 @@ Nur technische Dokumentation, explizite Verantwortlichkeiten sowie permanente Au
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Führen Sie eine zentrale Übersicht aller eingesetzten KI-Systeme
 - ✅ Planen Sie regelmäßige Risiko- und Compliance-Checks
 - ❌ Vertrauen Sie nicht nur auf die Anbieter von KI-Lösungen
@@ -120,7 +120,7 @@ So entstehen LLM-Lösungen, die langfristig Unternehmenserfolg, Kundenschutz und
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Beginnen Sie sofort mit einem systematischen LLM/AI-Inventory
 - ✅ Verankern Sie Security by Design und Awareness
 - ❌ Reagieren Sie nicht erst, wenn der nächste Skandal aufkommt
@@ -152,7 +152,7 @@ Sind Sie bereit, die Kontrolle über Ihre KI-Landschaft zu übernehmen? Das Whit
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Starten Sie heute mit einer LLM-Sicherheitsstrategie
 - ✅ Vernetzen Sie sich mit internen und externen Expert:innen
 - ❌ Warten Sie nicht auf regulatorischen Druck

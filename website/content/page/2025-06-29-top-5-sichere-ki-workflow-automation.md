@@ -60,12 +60,12 @@ Große Sprachmodelle setzen neue Maßstäbe in Effizienz und Benutzerfreundlichk
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Zugriff strikt steuern und protokollieren
-✓ LLMs regelmäßig testen/auditieren
-✓ Klare Datenklassifikation
-✗ Keine Shadow-IT zulassen
-✗ Keine sensiblen Daten ohne Prüfung ins Modell geben
+**✓ Dos & ✗ Don'ts**
+- ✓ Zugriff strikt steuern und protokollieren
+- ✓ LLMs regelmäßig testen/auditieren
+- ✓ Klare Datenklassifikation
+- ✗ Keine Shadow-IT zulassen
+- ✗ Keine sensiblen Daten ohne Prüfung ins Modell geben
 {{< /page-outline >}}
 
 {{< /page-section >}}

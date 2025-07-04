@@ -46,7 +46,7 @@ Human-in-the-Loop (HITL) bedeutet, dass Menschen und KI gemeinsam Aufgaben löse
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Menschen an neuralgischen Punkten einbinden
 - ✅ Klare Schwellenwerte für menschliche Kontrolle definieren
 - ✅ Feedbacksysteme und Monitoring laufend betreiben
@@ -108,7 +108,7 @@ Starten Sie mit einer Bestandsaufnahme: Wo existieren in Ihren Prozessen LLM-Ris
 {{< /page-content >}}
 
 {{< page-outline >}}
-✅ Dos & ❌ Don'ts
+**✅ Dos & ❌ Don'ts**
 - ✅ Quick Audits durchführen: Schwachstellen erkennen
 - ✅ Rollen und Eskalationswege klären
 - ✅ Prototypische HITL-Lösung testen
