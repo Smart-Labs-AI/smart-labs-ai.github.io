@@ -32,12 +32,12 @@ Viele Automatisierungsinitiativen fahren gegen die Wand: Zu schnell pilotiert, z
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Frühzeitig Security-, Legal- und Compliance-Expert:innen einbinden
-✓ LLM-Modelle auf Sicherheit und Fairness prüfen
-✓ Performantes, kontinuierliches Monitoring etablieren
-✗ Schnellschüsse mit unsicheren Daten
-✗ Ignorieren regulatorischer Vorgaben
+**✓ Dos & ✗ Don'ts**
+- ✓ Frühzeitig Security-, Legal- und Compliance-Expert:innen einbinden
+- ✓ LLM-Modelle auf Sicherheit und Fairness prüfen
+- ✓ Performantes, kontinuierliches Monitoring etablieren
+- ✗ Schnellschüsse mit unsicheren Daten
+- ✗ Ignorieren regulatorischer Vorgaben
 {{< /page-outline >}}
 
 {{< /page-section >}}

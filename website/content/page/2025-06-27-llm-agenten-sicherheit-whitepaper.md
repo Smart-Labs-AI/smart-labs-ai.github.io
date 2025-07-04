@@ -103,7 +103,12 @@ Sicherheit ist kein Ziel, sondern ein laufender kollektiver Lernprozess – gepr
 {{< page-content >}}
 # Schritt für Schritt zum sicheren Smart Lab: Handlungsempfehlungen
 
-1. Risikoanalyse entlang des gesamten KI-Lebenszyklus durchführen\n2. Passgenaue Governance-Strukturen und Zugriffskontrollen einführen\n3. Pen-Tests, Monitoring und regelmäßige Audits verpflichtend einplanen\n4. Kontinuierliche Mitarbeiterschulung und Fehlerkultur etablieren\n5. Strategie für Multi-Provider- und Open-Source-Optionen entwickeln\n6. Abschluss: KI-Sicherheit als Teil der Unternehmensidentität verstehen – nicht als punktuelle Compliance.
+1. Risikoanalyse entlang des gesamten KI-Lebenszyklus durchführen
+2. Passgenaue Governance-Strukturen und Zugriffskontrollen einführen
+3. Pen-Tests, Monitoring und regelmäßige Audits verpflichtend einplanen
+4. Kontinuierliche Mitarbeiterschulung und Fehlerkultur etablieren
+5. Strategie für Multi-Provider- und Open-Source-Optionen entwickeln
+6. Abschluss: KI-Sicherheit als Teil der Unternehmensidentität verstehen – nicht als punktuelle Compliance.
 {{< /page-content >}}
 
 {{< page-outline >}}

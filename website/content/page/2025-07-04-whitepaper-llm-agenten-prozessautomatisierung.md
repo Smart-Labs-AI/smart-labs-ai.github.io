@@ -32,12 +32,12 @@ Viele Unternehmen arbeiten noch mit veralteten Tools, starren Freigabeprozessen 
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Regelmäßig Prozesse hinterfragen
-✓ LLM-Einführung nicht isoliert betrachten
-✓ Security-by-Design umsetzen
-✗ Keine Risikoabwägung ignorieren
-✗ Modelle ungeprüft einsetzen
+**✓ Dos & ✗ Don'ts**
+- ✓ Regelmäßig Prozesse hinterfragen
+- ✓ LLM-Einführung nicht isoliert betrachten
+- ✓ Security-by-Design umsetzen
+- ✗ Keine Risikoabwägung ignorieren
+- ✗ Modelle ungeprüft einsetzen
 {{< /page-outline >}}
 
 {{< /page-section >}}
@@ -61,7 +61,12 @@ LLM-Agenten stehen im Zentrum eines Innovationsschubs, doch naive Anwendung birg
 {{< page-content >}}
 # Best Practices & Lösungswege für sichere LLM-Prozessautomatisierung
 
-Die Branchenführer setzen auf mehrstufige Defense-Strategien: 1) Eingabekontrolle/Validierung gegen Prompt-Injection [1], 2) Red-Teaming und kontinuierliches Monitoring [4], 3) Zugriffsschutz, Multi-Faktor-Authentifizierung [2][3], 4) Audit-Trails und Logging [3]. Für Compliance: Sensible Daten sollten nie ungefiltert in KI-Prozesse fließen; Fehleinschätzungen lassen sich durch Human-in-the-Loop minimieren [4][6].
+Die Branchenführer setzen auf mehrstufige Defense-Strategien:
+1) Eingabekontrolle/Validierung gegen Prompt-Injection [1]
+2) Red-Teaming und kontinuierliches Monitoring [4]
+3) Zugriffsschutz, Multi-Faktor-Authentifizierung [2][3]
+4) Audit-Trails und Logging [3]
+Für Compliance: Sensible Daten sollten nie ungefiltert in KI-Prozesse fließen; Fehleinschätzungen lassen sich durch Human-in-the-Loop minimieren [4][6].
 {{< /page-content >}}
 
 {{< page-outline >}}
@@ -93,12 +98,12 @@ Vorzeigeunternehmen investieren in interne KI-Teams, bauen kontrollierte Teststr
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Pilotprojekte strukturieren und evaluieren
-✓ Externe Expertise nutzen
-✓ Qualitätssicherung als laufenden Prozess verstehen
-✗ LLM-Agenten ohne Sandbox-Tests ausrollen
-✗ Compliance-Anforderungen ausklammern
+**✓ Dos & ✗ Don'ts**
+- ✓ Pilotprojekte strukturieren und evaluieren
+- ✓ Externe Expertise nutzen
+- ✓ Qualitätssicherung als laufenden Prozess verstehen
+- ✗ LLM-Agenten ohne Sandbox-Tests ausrollen
+- ✗ Compliance-Anforderungen ausklammern
 {{< /page-outline >}}
 
 {{< /page-section >}}

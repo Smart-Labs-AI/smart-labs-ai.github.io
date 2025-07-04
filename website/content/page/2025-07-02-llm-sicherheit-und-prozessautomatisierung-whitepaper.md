@@ -32,7 +32,7 @@ Trotz Automatisierungswelle bleiben Prozesse oft fragmentiert: Legacy-Systeme, s
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - Dos: Bestehende Prozesse kritisch hinterfragen, Risikokatalog regelmäßig evaluieren, Mitarbeitende schulen.
 - Don'ts: LLMs unkontrolliert einführen, Security nur als IT-Aufgabe betrachten. Quelle: [1]
 {{< /page-outline >}}

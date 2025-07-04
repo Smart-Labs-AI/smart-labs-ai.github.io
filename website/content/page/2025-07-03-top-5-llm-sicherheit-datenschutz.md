@@ -32,7 +32,7 @@ Viele Entscheider:innen unterschätzen die Risiken: Obwohl DSGVO, EU-AI-Act & Co
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
+**✓ Dos & ✗ Don'ts**
 - ✓ Implementieren Sie Input-Validierung und Monitoring
 - ✓ Prüfen Sie, welche Daten ins LLM gelangen
 - ✗ Glauben Sie, Standardlösungen seien „sicher genug“
@@ -46,7 +46,10 @@ Viele Entscheider:innen unterschätzen die Risiken: Obwohl DSGVO, EU-AI-Act & Co
 {{< page-content >}}
 # Reality-Check: Typische Security-Pitfalls und aktuelle Regulatorik
 
-Die größten Schwachstellen im LLM-Betrieb: 1) Prompt Injection & Training Data Poisoning können zu Output-Manipulation und Datenkorruption führen. 2) Modell-Diebstahl und fehlerhafte Zugriffssteuerungen setzen Firmengeheimnisse aufs Spiel[2]. 3) Output-Exfiltration ist eine unterschätzte Gefahr. Juristisch rückt der AI-Act der EU die Haftung für schädliche AI-Ausgaben und Datenschutzverletztungen in den Fokus. Unternehmen haften für Compliance-Verstöße – proaktiv dokumentierte Security-Maßnahmen werden verlangt[3].
+Die größten Schwachstellen im LLM-Betrieb: 
+1) Prompt Injection & Training Data Poisoning können zu Output-Manipulation und Datenkorruption führen. 
+2) Modell-Diebstahl und fehlerhafte Zugriffssteuerungen setzen Firmengeheimnisse aufs Spiel[2]. 
+3) Output-Exfiltration ist eine unterschätzte Gefahr. Juristisch rückt der AI-Act der EU die Haftung für schädliche AI-Ausgaben und Datenschutzverletztungen in den Fokus. Unternehmen haften für Compliance-Verstöße – proaktiv dokumentierte Security-Maßnahmen werden verlangt[3].
 {{< /page-content >}}
 
 {{< page-outline >}}
@@ -60,7 +63,11 @@ Die größten Schwachstellen im LLM-Betrieb: 1) Prompt Injection & Training Data
 {{< page-content >}}
 # Best Practices & Handlungsguides – Sicherheit operationalisieren
 
-Praktische Maßnahmen aus MITRE ATLAS & OWASP: 1) Adversarial Training und Red Team Testing erhöhen die Angriffserkennung. 2) Input-Validierung und Output-Moderation schützen gegen Manipulationen. 3) Daten-Provenienz & Hashing verhindern Poisoning. 4) Starke Authentifizierung und rollenbasierte Zugriffsteuerung sichern LLM-APIs. Tools wie AI-SPM helfen, Angriffsflächen aktiv zu überwachen und Risiken priorisiert abzuarbeiten[2].
+Praktische Maßnahmen aus MITRE ATLAS & OWASP: 
+1) Adversarial Training und Red Team Testing erhöhen die Angriffserkennung. 
+2) Input-Validierung und Output-Moderation schützen gegen Manipulationen. 
+3) Daten-Provenienz & Hashing verhindern Poisoning. 
+4) Starke Authentifizierung und rollenbasierte Zugriffsteuerung sichern LLM-APIs. Tools wie AI-SPM helfen, Angriffsflächen aktiv zu überwachen und Risiken priorisiert abzuarbeiten[2].
 {{< /page-content >}}
 
 {{< page-outline >}}

@@ -42,7 +42,12 @@ Unternehmen investieren Milliarden in klassische SEO, doch ihre Inhalte werden v
 {{< page-content >}}
 # LLM-Optimierung: Praxis, Prinzipien und kritische Pfade – Was im Markt funktioniert (und was nicht)
 
-Die Optimierung für LLMs folgt fünf zentralen Kriterien: (1) Kontextuelle Datenintegration und Datenqualität, (2) Prompt Engineering & Retrieval-Augmented Generation, (3) Rechtliche und ethische Absicherung (AI Legals), (4) Prozessautomatisierung & User Experience (AI Prozessautomatisierung), (5) Sicherheit und Robustheit gegen Manipulation (AI Sicherheit). Typische Stolperfallen sind: Überschätzung der Effekte klassischer SEO, unzureichende Vektordatenbanken, fehlende Trainingsdatenvielfalt und mangelnde Transparenz bei Datenquellen. Neue Angriffsvektoren (wie 'Preference Manipulation Attacks'[1]) verdeutlichen, wie wichtig sichere und robuste Optimierung ist.
+Die Optimierung für LLMs folgt fünf zentralen Kriterien: 
+1) Kontextuelle Datenintegration und Datenqualität, 
+2) Prompt Engineering & Retrieval-Augmented Generation, 
+3) Rechtliche und ethische Absicherung (AI Legals), 
+4) Prozessautomatisierung & User Experience (AI Prozessautomatisierung), 
+5) Sicherheit und Robustheit gegen Manipulation (AI Sicherheit). Typische Stolperfallen sind: Überschätzung der Effekte klassischer SEO, unzureichende Vektordatenbanken, fehlende Trainingsdatenvielfalt und mangelnde Transparenz bei Datenquellen. Neue Angriffsvektoren (wie 'Preference Manipulation Attacks'[1]) verdeutlichen, wie wichtig sichere und robuste Optimierung ist.
 {{< /page-content >}}
 
 {{< page-outline >}}

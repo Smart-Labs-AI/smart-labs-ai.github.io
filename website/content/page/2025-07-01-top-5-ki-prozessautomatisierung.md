@@ -32,11 +32,11 @@ Viele Unternehmen automatisieren Prozesse oft nur schrittweise und stoßen dabei
 {{< /page-content >}}
 
 {{< page-outline >}}
-✓ Dos & ✗ Don'ts
-✓ Offene Diskussionen über Engpässe und Ängste im Team fördern
-✓ Legacy-Prozesse offen analysieren
-✗ Automatisierung nur als Tool-Einführung betrachten
-✗ Sicherheits- und Compliance-Fragen ausblenden
+**✓ Dos & ✗ Don'ts**
+- ✓ Offene Diskussionen über Engpässe und Ängste im Team fördern
+- ✓ Legacy-Prozesse offen analysieren
+- ✗ Automatisierung nur als Tool-Einführung betrachten
+- ✗ Sicherheits- und Compliance-Fragen ausblenden
 {{< /page-outline >}}
 
 {{< /page-section >}}
