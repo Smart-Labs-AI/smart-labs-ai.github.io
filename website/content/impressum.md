@@ -21,7 +21,7 @@ kontakt@smart-labs.ai
 <br>
 
 {{% title4 "Telefon" %}}
-+49 40 604 29 83 0
++49 40 604 29 67 0
 
 <br>
 
