@@ -1,26 +1,18 @@
-FROM node:24.4.0-alpine3.22 AS build
+FROM golang:1.22-bookworm AS build
 
-ENV HUGO_ENV production
+ENV HUGO_ENV=production
 
-RUN apk upgrade --no-cache
-RUN apk add --no-cache doas make git musl-dev go && \
-echo 'permit :wheel' > /etc/doas.d/doas.conf
+RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get install -y nodejs npm
 
-# Configure Go
-ENV GOROOT /usr/lib/go
-ENV GOPATH /go
-ENV PATH /go/bin:$PATH
-
-RUN mkdir -p ${GOPATH}/src ${GOPATH}/bin
-
-RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
+RUN CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.132.2
 
 WORKDIR /app/website
 COPY website/ /app/website
 
 RUN npm install
 
-RUN  hugo --minify --environment production -c content --gc --quiet; exit 0
+RUN  hugo --minify --gc
 
 FROM nginx:stable-alpine AS production
 
