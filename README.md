@@ -10,7 +10,8 @@ Deutschland
 ## Kontakt
 
 **E-Mail:** [kontakt@smart-labs.ai](mailto\:kontakt@smart-labs.ai)\
-**Telefon:** +49 40 604 29 83 0
+**Telefon:** +49 40 604 29 67 0
+
 
 ## Über das Projekt
 
