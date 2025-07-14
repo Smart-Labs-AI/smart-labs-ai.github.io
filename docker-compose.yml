@@ -1,0 +1,8 @@
+services:
+  website:
+    image: rg.nl-ams.scw.cloud/slai-cr/website:latest
+    restart: always
+    mem_limit: 100m
+    memswap_limit: 100m
+    mem_reservation: 25m
+    cpus: 0.1

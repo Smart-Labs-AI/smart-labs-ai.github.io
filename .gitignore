@@ -8,3 +8,4 @@ _gen
 .env
 website/resources/_gen
 node_modules
+.idea
