@@ -18,3 +18,4 @@ FROM nginx:stable-alpine AS production
 
 COPY nginx/ /etc/nginx/conf.d/
 COPY --from=build /app/website/public/ /usr/share/nginx/html/
+EXPOSE 80
