@@ -33,7 +33,7 @@ jobs:
 
       - name: Push images
         run: |
-         - docker compose -f docker-compose.yml -f docker-compose.prod.yml push
+         docker compose -f docker-compose.yml -f docker-compose.prod.yml push
   
 
   deploy:
