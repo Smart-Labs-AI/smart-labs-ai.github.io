@@ -22,14 +22,19 @@ jobs:
           username: ${{ secrets.REGISTRY_USER }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: ${{ secrets.OCI_REGISTRY }}/website:latest,${{ secrets.OCI_REGISTRY }}/website:${{ github.sha }}
-          cache-from: type=registry,ref=${{ secrets.OCI_REGISTRY }}/website:buildcache
-          cache-to: type=registry,ref=${{ secrets.OCI_REGISTRY }}/website:buildcache,mode=max
+      - name: Set environment variables
+        run: |
+          echo "IMAGE_TAG=latest" >> $GITHUB_ENV
+          echo "IMAGE_TAG_SHA=${{ github.sha }}" >> $GITHUB_ENV
+
+      - name: Build with Docker Compose
+        run: |
+          docker compose -f docker-compose.yml -f docker-compose.prod.yml build --build-arg BUILDKIT_INLINE_CACHE=1
+
+      - name: Push images
+        run: |
+         - docker compose -f docker-compose.yml -f docker-compose.prod.yml push
+  
 
   deploy:
     needs: build-and-push
