@@ -1,6 +1,9 @@
 services:
   website:
     image: rg.nl-ams.scw.cloud/slai-cr/website:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: unless-stopped
     mem_limit: 100m
     memswap_limit: 100m

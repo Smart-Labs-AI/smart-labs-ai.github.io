@@ -33,7 +33,7 @@ jobs:
 
       - name: Build with Docker Compose
         run: |
-          docker compose -f docker-compose.yml -f docker-compose.prod.yml build
+          docker compose -f docker-compose.yml -f docker-compose.prod.yml build --build-arg BUILDKIT_INLINE_CACHE=1
 
       - name: Push images
         run: |
