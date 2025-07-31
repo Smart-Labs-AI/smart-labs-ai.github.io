@@ -42,14 +42,22 @@ params:
     image: hero/padlock.webp
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
-  - title: Blog
+  - title: Services
+    url: /services
+  - title: Lösungen
+    url: /solutions
+  - title: Labs
+    url: /labs
+  - title: Karriere
+    url: /careers
+  - title: Content Hub
     url: /blog
-  - title: Sign in
-    url: https://acc.secphoria.app/realms/arinna/protocol/openid-connect/auth?client_id=labs-ai-landing-page&scope=openid%20profile&redirect_uri=https://acc.secphoria.app&response_type=code
-    buttonSecondary: true
   - title: Kontakt
     url: /#contact
     buttonPrimary: true
+  - title: Sign in
+    url: https://acc.secphoria.app/realms/arinna/protocol/openid-connect/auth?client_id=labs-ai-landing-page&scope=openid%20profile&redirect_uri=https://acc.secphoria.app&response_type=code
+    buttonSecondary: true
   section2:
     title: Wie sicher ist deine KI?
     subtitle: Finden Sie es mit uns heraus.
@@ -145,3 +153,9 @@ params:
         link: /impressum
       - text: Datenschutz
         link: /datenschutzerklaerung
+  services_hero:
+    pageTitle: Services
+    title: Ihre KI ist angreifbar.
+    subtitle: Finden Sie es heraus, bevor es andere tun.
+    secondaryButtontext: AI Red Teaming Audit für Unternehmen
+    secondaryButtonlink: 
