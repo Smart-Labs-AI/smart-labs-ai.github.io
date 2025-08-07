@@ -5,9 +5,9 @@
 .services-hero-background {
   height: 707px;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
   background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);
   overflow: hidden;
 }
@@ -39,7 +39,6 @@
   //z-index: 1;
 }
 
-
 .services-hero-body {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -69,4 +68,71 @@
     line-height: 140%;
     margin-bottom: 2.25rem;
   }
+}
+
+.services-hero-feature-chart {
+  display: flex;
+  flex-wrap: row;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.services-hero-feature-card-line-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  gap: 2px;
+}
+
+.services-hero-feature-card {
+  width: 180px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.15) 100%);
+  border-radius: 12px;
+  position: relative;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); // Safari support
+  
+  // Create border gradient effect
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 14px; // slightly larger to account for border width
+    border: 2px solid transparent;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%) border-box;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+.services-hero-feature-line {
+  border-top: 2px dashed #FFFFFF99;
+  width: 50px;
+  height: 1px;
+  display: inline-block;
+}
+
+.services-hero-feature-icon {
+  //width: 60px;
+  //height: 60px;
+  color: #fff;
 }
