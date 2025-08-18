@@ -12,7 +12,7 @@ jobs:
         run: git config --global init.defaultBranch main
 
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           clean: 'true'
 
@@ -48,7 +48,7 @@ jobs:
         run: git config --global init.defaultBranch main
 
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           clean: 'true'
 
