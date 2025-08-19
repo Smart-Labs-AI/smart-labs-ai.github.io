@@ -3,7 +3,7 @@
 ========================================================================== */
 
 .services-hero-background {
-  height: 707px;
+  height: 960px;
   position: absolute;
   top: 0;
   left: 0;
@@ -16,11 +16,12 @@
   content: "";
   position: absolute;
   top: 0;
-  right: -5rem;
-  width: 60%;
-  height: 707px;
-  background: url('/images/hero/services/ellipse.png') no-repeat;
-  background-position: top right;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 960px;
+  background: url('/images/services/hero/ellipse.png') no-repeat;
+  background-position: center right;
   background-size: contain;
   z-index: 0;
   pointer-events: none;
@@ -40,8 +41,9 @@
 }
 
 .services-hero-body {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  height: 960px;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 
   .services-page-title,
   .services-title,
@@ -49,7 +51,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-style: normal;
-    color: white;
+    color: #fff;
   }
 
   .services-page-title {
@@ -90,8 +92,8 @@
 }
 
 .services-hero-feature-card {
-  width: 180px;
-  height: 120px;
+  width: 210px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
