@@ -2,11 +2,14 @@
 <div style="background-color: #00002b; z-index: 1;">
     {{ partial "navbar.html" . }}
 </div>
-    {{ partial "navbar-clone.html" . }}
+{{ partial "navbar-clone.html" . }}
 
-    <section class="section">
-        {{ partial "services/hero.html" . }}
-    </section>
+<section class="section">
+    {{ partial "services/hero.html" . }}
+</section>
+<section class="section">
+    {{ partial "services/problems-section.html" . }}
+</section>
 
 {{ partial "footer.html" . }}
 {{ end }}

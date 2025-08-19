@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Services Problems Section styles
+========================================================================== */
+
+.services-problems-section {
+  height: 1424px;
+  background-color: #fff;
+  padding: 6rem 4rem;
+
+  > .container {
+    display: flex;
+    gap: 4rem;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .title-container {
+    flex: 1;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+  }
+
+  .services-problem-section-title,
+  .services-problem-title,
+  .services-problem-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+  }
+
+  .services-problem-section-title {
+    font-size: 36px;
+    color: #1A1449;
+  }
+
+  .services-problem-title {
+    font-size: 24px;
+  }
+
+  .services-problem-description {
+    font-size: 18px;
+  }
+}
+
+.services-problem-card-image {
+  width: 15rem;
+  height: 15rem;
+  right: -0.5rem;
+  top: 0;
+  position: absolute;
+}
+
+.services-problem-card-text {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.services-problem-card {
+  background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);
+  width: 620px;
+  height: 251px;
+  border-radius: 16px;
+  border-width: 1px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}

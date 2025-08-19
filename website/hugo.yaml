@@ -159,3 +159,18 @@ params:
     subtitle: Finden Sie es heraus, bevor es andere tun.
     secondaryButtontext: AI Red Teaming Audit für Unternehmen
     secondaryButtonlink: 
+  services_problems_section:
+    title: KI macht Ihr Unternehmen schneller – aber auch verwundbarer
+    problems:
+    - title: Prompt Injection
+      description: Manipulation durch schadhaften Input
+      image: /images/services/problems-section/painpoint-icon-prompt.png
+    - title: Datenlecks
+      description: Preisgabe sensibler Daten
+      image: /images/services/problems-section/painpoint-icon-leak.png
+    - title: Model Exploits
+      description: Angreifbare Logiken & generative Schwächen
+      image: /images/services/problems-section/painpoint-icon-target.png
+    - title: Compliance
+      description: Risiken durch NIS2, EU AI Act, ISO 27001 / 42001
+      image: /images/services/problems-section/painpoint-icon-compliance.png
