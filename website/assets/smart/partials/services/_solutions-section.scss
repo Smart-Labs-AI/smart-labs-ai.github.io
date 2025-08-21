@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Services Solutions Section styles
+========================================================================== */
+
+.services-solutions-section {
+  background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);
+  padding: 5rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-title,
+  .section-subtitle,
+  .service-title,
+  .feature-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+  }
+
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-title,
+  .feature-description {
+    font-size: 24px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .service {
+    border-radius: 1rem;
+    border: 1px solid var(--signature-stroke, rgba(255, 255, 255, 0.25));
+    background: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    padding: 2.5rem;
+
+    .service-header {
+      display: flex;
+      flex-direction: row;
+      gap: 1.3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .service-logo {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+
+    .features-wrapper {
+
+      .features-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .feature-card {
+        display: flex;
+        width: 380px;
+        padding: 1.5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1.5rem;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .feature-card:hover {
+        border-radius: 12px;
+        border: 1px solid transparent;
+        background: 
+          linear-gradient(138deg, rgba(168, 27, 88, 0.30) 0.21%, rgba(60, 49, 152, 0.30) 99.6%), 
+          rgba(255, 255, 255, 0.05);
+        position: relative;
+        z-index: 0;
+      }
+
+      .feature-card:hover::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 12px;
+        padding: 1px;
+        background: linear-gradient(134deg, #A81B58 14.08%, #3C3198 84.73%);
+        -webkit-mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .feature-icon-wrapper {
+        display: flex;
+        width: 3.75rem;
+        height: 3.75rem;
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 0.75rem;
+        background: linear-gradient(134deg, #A81B58 14.08%, #3C3198 84.73%);
+        box-shadow: 0 0 15px 0 rgba(166, 28, 90, 0.50);
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{{- $servicesSolutionsSection   := .Site.Params.services_solutions_section }}
+{{- $title   := index $servicesSolutionsSection "title" }}
+{{- $subtitle    := index $servicesSolutionsSection "subtitle" }}
+{{- $features   := index $servicesSolutionsSection "features" }}
+
+<section class="services-solutions-section">
+  <div class="container">
+    <div class="section-title-wrapper">
+      <h2 class="section-subtitle">AI Red Teaming Audit</h2>
+      <h1 class="section-title">Angriff, bevor es echt wird</h1>
+    </div>
+
+    <div class="service">
+      <div class="service-header">
+        <img src="/images/logos/logo-white-simple.svg" alt="Smart Lens Logo" class="service-logo" />
+        <h2 class="service-title">AI Red Teaming Audit</h2>
+      </div>
+
+      <div class="features-wrapper">
+        <div class="features-container">
+          {{ range $features }}
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img class="feature-icon" src="{{ .icon }}"/>
+            </div>
+            <h3 class="feature-description">{{ .description }}</h3>
+          </div>
+          {{ end }}
+        </div>
+        <div class="feature-chart"></div>
+      </div>
+    </div>
+  </div>
+</section>
