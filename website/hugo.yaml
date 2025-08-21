@@ -164,13 +164,13 @@ params:
     problems:
     - title: Prompt Injection
       description: Manipulation durch schadhaften Input
-      image: /images/services/problems-section/painpoint-icon-prompt.png
+      icon: /images/services/problems-section/prompt-icon.svg
     - title: Datenlecks
       description: Preisgabe sensibler Daten
-      image: /images/services/problems-section/painpoint-icon-leak.png
+      icon: /images/services/problems-section/leak-icon.svg
     - title: Model Exploits
       description: Angreifbare Logiken & generative Schwächen
-      image: /images/services/problems-section/painpoint-icon-target.png
+      icon: /images/services/problems-section/target-icon.svg
     - title: Compliance
       description: Risiken durch NIS2, EU AI Act, ISO 27001 / 42001
-      image: /images/services/problems-section/painpoint-icon-compliance.png
+      icon: /images/services/problems-section/compliance-icon.svg
