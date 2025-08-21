@@ -17,12 +17,12 @@
             {{ index .Site.Params.services_hero "pageTitle" }}
           </p>
 
-          <h1 class="services-title section-title is-1 is-spaced">
+          <h1 class="hero-title section-title is-1 is-spaced">
             {{ index .Site.Params.services_hero "title" }}
           </h1>
 
           {{ with index .Site.Params.services_hero "subtitle" }}
-            <h2 class="services-subtitle is-5">{{ . | markdownify }}</h2>
+            <h2 class="hero-subtitle is-5">{{ . | markdownify }}</h2>
           {{ end }}
           
           <!-- FIXME: spacing between text and icon -->
@@ -32,17 +32,17 @@
             <img src="/images/services/hero/arrow-right-icon.svg" alt="Arrow Right Icon">
           </a>
         </div>
-        <div class="services-hero-feature-chart column is-3">
-          <div class="services-hero-feature-card-line-element">
-            <div class="services-hero-feature-card">
+        <div class="feature-chart column is-3">
+          <div class="feature-card-line-element">
+            <div class="feature-card">
               <img src="/images/services/hero/criminal-icon.svg" alt="Criminal Icon">
             </div>
-            <p class="services-hero-feature-line" />
+            <p class="feature-line" />
           </div>
           <img src="/images/services/hero/protection-icon.svg" alt="Protection Icon">
-          <div class="services-hero-feature-card-line-element">
-            <p class="services-hero-feature-line" />
-            <div class="services-hero-feature-card">
+          <div class="feature-card-line-element">
+            <p class="feature-line" />
+            <div class="feature-card">
               <img src="/images/services/hero/database-icon.svg" alt="Database Icon">
             </div>
           </div>
@@ -56,12 +56,12 @@
             {{ index .Site.Params.services_hero "pageTitle" }}
           </p>
 
-          <h1 class="services-title section-title is-1 is-bold is-spaced">
+          <h1 class="hero-title section-title is-1 is-bold is-spaced">
             {{ index .Site.Params.services_hero "title" }}
           </h1>
 
           {{ with index .Site.Params.services_hero "subtitle" }}
-            <h2 class="services-subtitle is-5">{{ . | markdownify }}</h2>
+            <h2 class="hero-subtitle is-5">{{ . | markdownify }}</h2>
           {{ end }}
         </div>
 

@@ -5,23 +5,23 @@
 <section class="services-problems-section">
   <div class="container">
     <div class="title-container">
-      <h1 class="services-problem-section-title section-title is-1 is-spaced">
+      <h1 class="section-title section-title is-1 is-spaced">
         {{ index .Site.Params.services_problems_section "title" }}
       </h1>
     </div>
 
     <div class="cards-container">
       {{ range $problems }}
-      <div class="services-problem-card">
-        <div class="services-problem-card-icon-wrapper">
+      <div class="problem-card">
+        <div class="problem-card-icon-wrapper">
           <div class="circle circle-1"></div>
           <div class="circle circle-2"></div>
           <div class="circle circle-3"></div>
-          <img class="services-problem-icon" src="{{ .icon }}" icon />
+          <img class="problem-icon" src="{{ .icon }}" icon />
         </div>
-        <div class="services-problem-card-text">
-          <h2 class="services-problem-title">{{ .title }}</h2>
-          <p class="services-problem-description">{{ .description }}</p>
+        <div class="problem-card-text">
+          <h2 class="problem-title">{{ .title }}</h2>
+          <p class="problem-description">{{ .description }}</p>
         </div>
       </div>
       {{ end }}

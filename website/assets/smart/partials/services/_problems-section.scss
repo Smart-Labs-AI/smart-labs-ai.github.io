@@ -30,89 +30,89 @@ section.section {
     flex: 1;
   }
 
-  .services-problem-section-title,
-  .services-problem-title,
-  .services-problem-description {
+  .section-title,
+  .problem-title,
+  .problem-description {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-style: normal;
     color: #fff;
   }
 
-  .services-problem-section-title {
+  .section-title {
     font-size: 36px;
     color: #1A1449;
   }
 
-  .services-problem-title {
+  .problem-title {
     font-size: 24px;
   }
 
-  .services-problem-description {
+  .problem-description {
     font-size: 18px;
   }
-}
 
-.services-problem-card {
-  background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);
-  width: 620px;
-  height: 251px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
+  .problem-card {
+    background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);
+    width: 620px;
+    height: 251px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 
-.services-problem-card-icon-wrapper {
-  position: absolute;
-  top: -2rem;
-  right: -2rem;
-  width: 15rem; 
-  height: 15rem; 
-  pointer-events: none;
-}
+    .problem-card-icon-wrapper {
+      position: absolute;
+      top: -2rem;
+      right: -2rem;
+      width: 15rem; 
+      height: 15rem; 
+      pointer-events: none;
+      }
 
-.circle {
-  position: absolute;
-  border-radius: 50%;
-  backdrop-filter: blur(20px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+      .circle {
+      position: absolute;
+      border-radius: 50%;
+      backdrop-filter: blur(20px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      }
 
-.circle-1 {
-  width: 15rem;
-  height: 15rem;
-  background: linear-gradient(140deg, rgba(168, 27, 88, 0.25), rgba(60, 49, 152, 0.25));
-}
-.circle-2 {
-  width: 11.25rem;
-  height: 11.25rem;
-  background: linear-gradient(140deg, rgba(168, 27, 88, 0.5), rgba(60, 49, 152, 0.5));
-}
-.circle-3 {
-  width: 7.5rem;
-  height: 7.5rem;
-  background: linear-gradient(140deg, rgba(168, 27, 88, 1), rgba(60, 49, 152, 1));
-}
+      .circle-1 {
+      width: 15rem;
+      height: 15rem;
+      background: linear-gradient(140deg, rgba(168, 27, 88, 0.25), rgba(60, 49, 152, 0.25));
+      }
+      .circle-2 {
+      width: 11.25rem;
+      height: 11.25rem;
+      background: linear-gradient(140deg, rgba(168, 27, 88, 0.5), rgba(60, 49, 152, 0.5));
+      }
+      .circle-3 {
+      width: 7.5rem;
+      height: 7.5rem;
+      background: linear-gradient(140deg, rgba(168, 27, 88, 1), rgba(60, 49, 152, 1));
+      }
 
-.services-problem-icon {
-  position: absolute;
-  width: 3.75rem;
-  height: 3.75rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  z-index: 2;
-  pointer-events: none;
-}
+      .problem-icon {
+      position: absolute;
+      width: 3.75rem;
+      height: 3.75rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      z-index: 2;
+      pointer-events: none;
+      }
 
-.services-problem-card-text {
-  margin-top: auto;
-  margin-bottom: 0;
+      .problem-card-text {
+      margin-top: auto;
+      margin-bottom: 0;
+      }
+    }
 }
