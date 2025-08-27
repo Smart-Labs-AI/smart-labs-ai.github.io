@@ -101,6 +101,12 @@ params:
     - logo: ki-bundesverband.png
     - logo: arttac.png
     - logo: innogpt.png
+  section_cta:
+    subtitle: Kostenloses Erstgespräch mit einem AI Security-Experten
+    title: Lassen Sie Ihre KI prüfen.
+    title2: Bevor es andere tun.
+    buttonText: Jetzt kostenlosen Termin buchen
+    buttonLink: /#contact
   section_contact:
     title: Teste jetzt deine KI-Sicherheit
     subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere Dich mit innovativen Lösungen ab.
