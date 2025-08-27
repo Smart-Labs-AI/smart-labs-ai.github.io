@@ -1,6 +1,7 @@
 {{- $servicesSolutionsSection   := .Site.Params.services_solutions_section }}
 {{- $title   := index $servicesSolutionsSection "title" }}
 {{- $subtitle    := index $servicesSolutionsSection "subtitle" }}
+{{- $buttonText   := index $servicesSolutionsSection "buttonText" }}
 {{- $features   := index $servicesSolutionsSection "features" }}
 
 {{ $src := "/services/features.png" }}
@@ -41,7 +42,7 @@
       </div>
 
       <a class="button cta rounded secondary-btn raised">
-        Kostenloses Strategiegespräch buchen
+        {{ $buttonText }}
         <img src="/images/services/arrow-right-icon.svg" alt="Arrow Right Icon"></a>
     </div>
   </section>

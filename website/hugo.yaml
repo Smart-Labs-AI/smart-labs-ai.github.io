@@ -177,6 +177,7 @@ params:
   services_solutions_section:
     title: Angriff, bevor es echt wird
     subtitle: AI Red Teaming Audit
+    buttonText: Kostenloses Strategiegespräch buchen
     features:
       - description: Gezielte Angriffs-Simulation auf Ihre KI-Systemen
         icon: /images/services/solutions-section/simulated-attack.svg
