@@ -3,32 +3,48 @@
 {{- $subtitle    := index $servicesSolutionsSection "subtitle" }}
 {{- $features   := index $servicesSolutionsSection "features" }}
 
-<section class="services-solutions-section">
-  <div class="container">
-    <div class="section-title-wrapper">
-      <h2 class="section-subtitle">AI Red Teaming Audit</h2>
-      <h1 class="section-title">Angriff, bevor es echt wird</h1>
-    </div>
-
-    <div class="service">
-      <div class="service-header">
-        <img src="/images/logos/logo-white-simple.svg" alt="Smart Lens Logo" class="service-logo" />
-        <h2 class="service-title">AI Red Teaming Audit</h2>
+{{ $src := "/services/features.png" }}
+{{ $img := resources.Get $src }}
+{{ if $img }}
+  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+  <section class="services-solutions-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <h2 class="section-subtitle">AI Red Teaming Audit</h2>
+        <h1 class="section-title">Angriff, bevor es echt wird</h1>
       </div>
 
-      <div class="features-wrapper">
-        <div class="features-container">
-          {{ range $features }}
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <img class="feature-icon" src="{{ .icon }}"/>
-            </div>
-            <h3 class="feature-description">{{ .description }}</h3>
-          </div>
-          {{ end }}
+      <div class="service">
+        <div class="service-header">
+          <img src="/images/logos/logo-white-simple.svg" alt="Smart Lens Logo" class="service-logo" />
+          <h2 class="service-title">AI Red Teaming Audit</h2>
         </div>
-        <div class="feature-chart"></div>
+
+        <div class="features-wrapper">
+          <div class="features-container">
+            {{ range $index, $feature := $features }}
+            <input type="radio" name="feature" id="feature-{{ $index }}" class="feature-radio" hidden>
+            <label for="feature-{{ $index }}" class="feature-card">
+              <div class="feature-icon-wrapper">
+                <img class="feature-icon" src="{{ $feature.icon }}"/>
+              </div>
+              <h3 class="feature-description">{{ $feature.description }}</h3>
+              <progress class="progress is-small" value="80" max="100"></progress>
+            </label>
+            {{ end }}
+          </div>
+
+          <div class="feature-chart" style="background-image: url('{{ $processedBackground.RelPermalink }}'); background-position: top; background-repeat: no-repeat; background-size: cover;">
+            Test
+          </div>
+        </div>
       </div>
+
+      <a class="button cta rounded secondary-btn raised">
+        Kostenloses Strategiegespräch buchen
+        <img src="/images/services/arrow-right-icon.svg" alt="Arrow Right Icon"></a>
     </div>
-  </div>
-</section>
+  </section>
+{{ else }}
+  {{ errorf "Image not found: %s" $src }}
+{{ end }}

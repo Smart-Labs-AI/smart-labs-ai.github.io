@@ -25,7 +25,7 @@
 
   .section-title {
     font-size: 36px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
   }
 
   .service-title,
@@ -57,11 +57,19 @@
     }
 
     .features-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
 
       .features-container {
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
+      }
+
+      /* Radio input for each feature card */
+      .feature-radio {
+        display: none;
       }
 
       .feature-card {
@@ -76,31 +84,66 @@
         border-radius: 0.75rem;
         border: 1px solid rgba(255, 255, 255, 0.25);
         background: rgba(255, 255, 255, 0.05);
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        .progress {
+          width: 100%;
+          height: 6px;
+          background-color: #FFFFFF33;
+          border-radius: 6px;
+          display: none; /* hidden by default */
+        }
+
+        /* Chrome, Safari, Edge */
+        .progress::-webkit-progress-bar {
+          background-color: #FFFFFF33;
+          border-radius: 6px;
+        }
+
+        .progress::-webkit-progress-value {
+          background-color: #FFF;
+          border-radius: 6px;
+        }
+
+        /* Firefox */
+        .progress::-moz-progress-bar {
+          background-color: #FFF;
+          border-radius: 6px;
+        }
       }
 
+      /* Hover effect for unselected cards */
       .feature-card:hover {
         border-radius: 12px;
         border: 1px solid transparent;
-        background: 
-          linear-gradient(138deg, rgba(168, 27, 88, 0.30) 0.21%, rgba(60, 49, 152, 0.30) 99.6%), 
-          rgba(255, 255, 255, 0.05);
+        background: linear-gradient(138deg, rgba(168, 27, 88, 0.30) 0.21%, rgba(60, 49, 152, 0.30) 99.6%), rgba(255, 255, 255, 0.05);
         position: relative;
         z-index: 0;
       }
 
-      .feature-card:hover::before {
+      /* Show progress when card is selected */
+      .feature-radio:checked + .feature-card {
+        .progress {
+          display: block;
+        }
+        border-radius: 12px;
+        border: 1px solid transparent;
+        background: linear-gradient(138deg, rgba(168, 27, 88, 0.30) 0.21%, rgba(60, 49, 152, 0.30) 99.6%), rgba(255, 255, 255, 0.05);
+        position: relative;
+        z-index: 0;
+      }
+
+      .feature-radio:checked + .feature-card::before {
         content: "";
         position: absolute;
         inset: 0;
         border-radius: 12px;
         padding: 1px;
         background: linear-gradient(134deg, #A81B58 14.08%, #3C3198 84.73%);
-        -webkit-mask: 
-          linear-gradient(#fff 0 0) content-box, 
-          linear-gradient(#fff 0 0);
-        mask: 
-          linear-gradient(#fff 0 0) content-box, 
-          linear-gradient(#fff 0 0);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
         pointer-events: none;
@@ -114,11 +157,20 @@
         padding: 0.5rem;
         justify-content: center;
         align-items: center;
-
         border-radius: 0.75rem;
         background: linear-gradient(134deg, #A81B58 14.08%, #3C3198 84.73%);
         box-shadow: 0 0 15px 0 rgba(166, 28, 90, 0.50);
       }
     }
+
+    .feature-chart {
+      width: 100%;
+      align-self: stretch;
+      border-radius: 12px;
+    }
+  }
+
+  .button {
+    margin-top: 4rem;
   }
 }
