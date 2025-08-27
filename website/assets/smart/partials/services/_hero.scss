@@ -3,46 +3,22 @@
 ========================================================================== */
 
 .services-hero-background {
-  height: 960px;
+  height: 1006px;
   position: absolute;
-  top: 0;
+  top: -50px;
   left: 0;
   right: 0;
-  background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);
+  background: linear-gradient(180deg, #1A1449 0%, #00002B 100%),
+              url('{{ $processedBackground.RelPermalink }}');
+  background-position: center right, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
   overflow: hidden;
-}
-
-.services-hero-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 960px;
-  background: url('/images/services/hero/ellipse.png') no-repeat;
-  background-position: center right;
-  background-size: contain;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.services-hero-background::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2023px;
-  background: url("/images/hero/black-felt.png") repeat;
-  background-size: 150px 95px;
-  pointer-events: none;
-  //z-index: 1;
 }
 
 .services-hero-body {
   height: 860px;
-  padding-top: 12rem;
+  padding-top: 14rem;
   padding-bottom: 12rem;
 
   .services-page-title,

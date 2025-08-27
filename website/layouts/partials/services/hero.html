@@ -5,75 +5,99 @@
 {{- $secondaryButtonText := index $servicesHero "secondaryButtontext" }}
 {{- $secondaryButtonLink := index $servicesHero "secondaryButtonlink" }}
 
-<section class="hero is-default is-bold">
-  <div class="services-hero-background"></div>
+{{ $src := "/services/hero.png" }}
+{{ $img := resources.Get $src }}
+{{ if $img }}
+  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+  <section class="hero is-default is-bold">
+    <div class="services-hero-background" style="background-image: url('{{ $processedBackground.RelPermalink }}');"></div>
 
-  <div class="services-hero-body">
-    <div class="container">
-      <!-- Desktop -->
-      <div class="columns is-vcentered is-multiline is-hidden-touch">
-        <div class="column is-8 landing-caption">
-          <p class="services-page-title">
-            {{ index .Site.Params.services_hero "pageTitle" }}
-          </p>
+    <div class="services-hero-body">
+      <div class="container">
+        <!-- Desktop -->
+        <div class="columns is-vcentered is-multiline is-hidden-touch">
+          <div class="column is-8 landing-caption">
+            <p class="services-page-title">
+              {{ index .Site.Params.services_hero "pageTitle" }}
+            </p>
 
-          <h1 class="hero-title section-title is-1 is-spaced">
-            {{ index .Site.Params.services_hero "title" }}
-          </h1>
+            <h1 class="hero-title section-title is-1 is-spaced">
+              {{ index .Site.Params.services_hero "title" }}
+            </h1>
 
-          {{ with index .Site.Params.services_hero "subtitle" }}
-            <h2 class="hero-subtitle is-5">{{ . | markdownify }}</h2>
-          {{ end }}
-          
-          <!-- FIXME: spacing between text and icon -->
-          <a class="button cta rounded secondary-btn raised"
-             href="{{ index .Site.Params.services_hero "secondaryButtonlink" }}">
-            {{ index .Site.Params.services_hero "secondaryButtontext" }}
-            <img src="/images/services/hero/arrow-right-icon.svg" alt="Arrow Right Icon">
-          </a>
-        </div>
-        <div class="feature-chart column is-3">
-          <div class="feature-card-line-element">
-            <div class="feature-card">
-              <img src="/images/services/hero/criminal-icon.svg" alt="Criminal Icon">
-            </div>
-            <p class="feature-line" />
-          </div>
-          <img src="/images/services/hero/protection-icon.svg" alt="Protection Icon">
-          <div class="feature-card-line-element">
-            <p class="feature-line" />
-            <div class="feature-card">
-              <img src="/images/services/hero/database-icon.svg" alt="Database Icon">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile -->
-      <div class="columns is-vcentered is-multiline is-hidden-desktop">
-        <div class="column is-12 landing-caption">
-          <p class="services-page-title">
-            {{ index .Site.Params.services_hero "pageTitle" }}
-          </p>
-
-          <h1 class="hero-title section-title is-1 is-bold is-spaced">
-            {{ index .Site.Params.services_hero "title" }}
-          </h1>
-
-          {{ with index .Site.Params.services_hero "subtitle" }}
-            <h2 class="hero-subtitle is-5">{{ . | markdownify }}</h2>
-          {{ end }}
-        </div>
-
-        <div class="column is-12 has-text-centered">
-          <div class="buttons is-centered mt-4">
+            {{ with index .Site.Params.services_hero "subtitle" }}
+              <h2 class="hero-subtitle is-5">{{ . | markdownify }}</h2>
+            {{ end }}
+            
+            <!-- FIXME: spacing between text and icon -->
             <a class="button cta rounded secondary-btn raised"
-               href="{{ index .Site.Params.services_hero "secondaryButtonlink" }}">
+              href="{{ index .Site.Params.services_hero "secondaryButtonlink" }}">
               {{ index .Site.Params.services_hero "secondaryButtontext" }}
+              <img src="/images/services/hero/arrow-right-icon.svg" alt="Arrow Right Icon">
             </a>
+          </div>
+          <div class="feature-chart column is-3">
+            <div class="feature-card-line-element">
+              <div class="feature-card">
+                <img src="/images/services/hero/criminal-icon.svg" alt="Criminal Icon">
+              </div>
+              <p class="feature-line" />
+            </div>
+            <img src="/images/services/hero/protection-icon.svg" alt="Protection Icon">
+            <div class="feature-card-line-element">
+              <p class="feature-line" />
+              <div class="feature-card">
+                <img src="/images/services/hero/database-icon.svg" alt="Database Icon">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="columns is-centered is-multiline is-hidden-desktop">
+          <div class="column is-12 landing-caption">
+            <p class="services-page-title">
+              {{ index .Site.Params.services_hero "pageTitle" }}
+            </p>
+
+            <h1 class="hero-title section-title is-1 is-bold is-spaced">
+              {{ index .Site.Params.services_hero "title" }}
+            </h1>
+
+            {{ with index .Site.Params.services_hero "subtitle" }}
+              <h2 class="hero-subtitle is-5">{{ . | markdownify }}</h2>
+            {{ end }}
+          </div>
+
+          <div class="feature-chart column is-3">
+            <div class="feature-card-line-element">
+              <div class="feature-card">
+                <img src="/images/services/hero/criminal-icon.svg" alt="Criminal Icon">
+              </div>
+              <p class="feature-line" />
+            </div>
+            <img src="/images/services/hero/protection-icon.svg" alt="Protection Icon">
+            <div class="feature-card-line-element">
+              <p class="feature-line" />
+              <div class="feature-card">
+                <img src="/images/services/hero/database-icon.svg" alt="Database Icon">
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-12 has-text-centered">
+            <div class="buttons is-centered mt-4">
+              <a class="button cta rounded secondary-btn raised"
+                href="{{ index .Site.Params.services_hero "secondaryButtonlink" }}">
+                {{ index .Site.Params.services_hero "secondaryButtontext" }}
+                <img src="/images/services/hero/arrow-right-icon.svg" alt="Arrow Right Icon">
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+{{ else }}
+  {{ errorf "Image not found: %s" $src }}
+{{ end }}
