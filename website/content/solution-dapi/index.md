@@ -14,13 +14,13 @@ hero:
     - items:
         - item:
             name: "OpenAI" 
-            image-name: "openai"
+            id: "openai"
         - item:
             name: "Anthropic"
-            image-name: "anthropic"
+            id: "anthropic"
         - item:
             name: "Mistral"
-            image-name: "mistral"
+            id: "mistral"
   ctas:
     - label: "Jetzt für Early Access eintragen"
       href: "/todo"

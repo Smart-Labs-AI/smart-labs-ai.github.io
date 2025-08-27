@@ -1,48 +1,89 @@
-{{- $hero       := .Params.hero }}
-{{- $backgroundImage     := index $hero "background-image" }}
-{{- $title      := index $hero "title" }}
-{{- $subtitle   := index $hero "subtitle" }}
-{{- $sectionTitle        := index $hero "section-title" }}
-{{- $content    := index $hero "content" }}
-{{- $buttonText := index $hero "buttontext" }}
-{{- $buttonLink := index $hero "buttonlink" }}
-{{- $secondaryButtonText := index $hero "secondaryButtontext" }}
-{{- $secondaryButtonLink := index $hero "secondaryButtonlink" }}
-{{- $image      := index $hero "image" }}
-
+{{- $hero := .Params.hero }}
+{{- $backgroundImage := index $hero "background-image" }}
+{{- $title := index $hero "title" }}
+{{- $subtitle := index $hero "subtitle" }}
+{{- $sectionTitle := index $hero "section-title" }}
+{{- $content := index $hero "content" }}
+{{- $liveIn := index $hero "live-in" }}
+{{- $compatibility := index $hero "compatibility" }}
+{{- $ctas := index $hero "ctas" }}
 
 {{ $src := $backgroundImage }}
 {{ $img := resources.Get $src }}
 {{ if $img }}
   {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
-
+  {{ $height := $processedBackground.Height }}
   <style>
     .hero-background-custom::before {
-      background: url('{{ $processedBackground.RelPermalink }}') no-repeat top/contain;
+      background: url('{{ $processedBackground.RelPermalink }}') no-repeat center/cover;
+      height: {{ $height }}px;
     }
   </style>
-  <div class="hero-background-custom"></div>
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-vcentered is-multiline is-hidden-touch">
-        <div class="column is-8 landing-caption">
-          <h3 class="section-title is-5">{{ $sectionTitle | markdownify }}</h3>
-          <h1 class="title section-title is-1 is-bold is-spaced">
-            {{ $title }}
-          </h1>
-          {{ with $subtitle }}
-          <h2 class="subtitle is-5">
-            {{ . | markdownify }}
-          </h2>
-          {{ end }}
-          {{ with $content }}
-          <h2 class="content is-5 is-muted">
-            {{ . }}
-          </h2>
-          {{ end }}
+  
+  <section class="section">
+    <div class="section hero-container">
+      <div class="hero-background-custom"></div>
+      
+      <div class="hero-body">
+        <div class="container">
+          <div class="hero-content">
+            <div class="section-badge">
+              <span class="section-title">{{ $sectionTitle | markdownify }}</span>
+            </div>
+            
+            <h1 class="hero-title">
+              {{ $title }}
+            </h1>
+
+            {{ with $subtitle }}
+            <p class="hero-subtitle">
+              {{ . | markdownify }}
+            </p>
+            {{ end }}
+            
+            {{ with $liveIn }}
+            <div class="live-badge">
+              <span class="live-text">{{ (index . 0).text }}</span>
+              <div class="live-pill-border">
+                <div class="live-pill">
+                  <img src="/images/hero-landingpage/timer.svg">
+                  <span class="live-time">{{ (index . 1).amout }}</span>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+            
+            {{ with $compatibility }}
+            <div class="compatibility-section">
+              <p class="compatibility-text">{{ (index . 0).text }}</p>
+              <div class="compatibility-logos">
+                {{ range (index . 1).items }}
+                <div class="logo-item">
+                  <img src="/images/hero-landingpage/compatible/{{ .item.id }}.svg" style="height:24px">
+                  <span class="logo-name">{{ .item.name }}</span>
+                </div>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+            
+            {{ with $ctas }}
+            {{ range . }}
+            <div class="cta-section">
+              <a href="{{ .href }}" class="button cta rounded primary-btn raised mr-4">
+                  {{ .label }}
+                  <span class="icon ml-2">
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
+              </a>
+            </div>
+            {{ end }}
+            {{ end }}
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
+</section>
 {{ else }}
   {{ errorf "Image not found: %s" $src }}
 {{ end }}
-
