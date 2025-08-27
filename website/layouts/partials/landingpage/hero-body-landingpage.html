@@ -1,0 +1,48 @@
+{{- $hero       := .Params.hero }}
+{{- $backgroundImage     := index $hero "background-image" }}
+{{- $title      := index $hero "title" }}
+{{- $subtitle   := index $hero "subtitle" }}
+{{- $sectionTitle        := index $hero "section-title" }}
+{{- $content    := index $hero "content" }}
+{{- $buttonText := index $hero "buttontext" }}
+{{- $buttonLink := index $hero "buttonlink" }}
+{{- $secondaryButtonText := index $hero "secondaryButtontext" }}
+{{- $secondaryButtonLink := index $hero "secondaryButtonlink" }}
+{{- $image      := index $hero "image" }}
+
+
+{{ $src := $backgroundImage }}
+{{ $img := resources.Get $src }}
+{{ if $img }}
+  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+
+  <style>
+    .hero-background-custom::before {
+      background: url('{{ $processedBackground.RelPermalink }}') no-repeat top/contain;
+    }
+  </style>
+  <div class="hero-background-custom"></div>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered is-multiline is-hidden-touch">
+        <div class="column is-8 landing-caption">
+          <h3 class="section-title is-5">{{ $sectionTitle | markdownify }}</h3>
+          <h1 class="title section-title is-1 is-bold is-spaced">
+            {{ $title }}
+          </h1>
+          {{ with $subtitle }}
+          <h2 class="subtitle is-5">
+            {{ . | markdownify }}
+          </h2>
+          {{ end }}
+          {{ with $content }}
+          <h2 class="content is-5 is-muted">
+            {{ . }}
+          </h2>
+          {{ end }}
+      </div>
+  </div>
+{{ else }}
+  {{ errorf "Image not found: %s" $src }}
+{{ end }}
+
