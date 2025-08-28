@@ -59,7 +59,9 @@
               <div class="compatibility-logos">
                 {{ range (index . 1).items }}
                 <div class="logo-item">
-                  <img src="/images/hero-landingpage/compatible/{{ .item.id }}.svg" style="height:24px">
+                  <div class="logo-icon">
+                    <img src="/images/hero-landingpage/compatible/{{ .item.id }}.svg" style="height:24px">
+                  </div>
                   <span class="logo-name">{{ .item.name }}</span>
                 </div>
                 {{ end }}
