@@ -1,0 +1,63 @@
+{{- $features := .Params.features -}}
+{{- $sectionTitle := index $features "section-title" | default "" -}}
+{{- $title := index $features "title" | default "" -}}
+{{- $subtitle := index $features "subtitle" | default "" -}}
+{{- $items := index $features "items" | default (slice) -}}
+
+<section class="section section-white section-landingpage is-medium">
+  <div class="container has-text-centered">
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-8">
+        {{- if $sectionTitle }}
+          <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+        {{- end }}
+        {{- if $title }}
+          <h1 class="section-title is-spaced">{{ $title }}</h1>
+        {{- end }}
+        {{- if $subtitle }}
+          <h3 class="section-subtitle">{{ $subtitle }}</h3>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-6">
+    <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+      {{- range $i, $item := $items }}
+        {{- $cardType := index $item "cardType" | default "" -}}
+        {{- $icon := index $item "icon" | default "" -}}
+        {{- $ititle := index $item "title" | default "" -}}
+        {{- $text := index $item "text" | default "" -}}
+        {{- $url := index $item "url" | default "" -}}
+
+        <div class="column is-one-third is-flex">
+          <div class="card {{ $cardType }} is-flex is-flex-direction-column" style="height: 100%;">
+            <div class="card-content is-flex-grow-1">
+              {{- if $icon }}
+                <figure class="image is-64x64">
+                  <img src="{{ printf "images/illustrations/icons/%s.svg" $icon | relURL }}" alt="{{ $ititle }}">
+                </figure>
+              {{- end }}
+
+              {{- if $ititle }}
+                <h4 class="title is-4 mt-6">{{ $ititle | markdownify }}</h4>
+              {{- end }}
+
+              {{- if $text }}
+                <p class="subtitle mt-4">{{ $text | markdownify }}</p>
+              {{- end }}
+
+              {{- if $url }}
+                <a class="button cta rounded primary-btn raised mt-4 is-pulled-right" href="{{ $url }}" aria-label="weiter">
+                  <span class="icon">
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
+                </a>
+              {{- end }}
+            </div>
+          </div>
+        </div>
+      {{- end }}
+    </div>
+  </div>
+</section>

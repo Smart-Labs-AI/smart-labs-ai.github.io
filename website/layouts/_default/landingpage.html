@@ -1,9 +1,12 @@
 {{ define "main" }}
 
-  {{ if .Site.Params.hero }}
+  {{ if .Params.hero }}
   {{ partial "landingpage/hero-landingpage.html" . }}
   {{ end }}
 
+  {{ if .Params.features }}
+  {{ partial "landingpage/features-landingpage.html" . }}
+  {{ end }}
 
   {{ partial "footer.html" . }}
 {{ end }}

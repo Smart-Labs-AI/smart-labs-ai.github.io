@@ -8,6 +8,11 @@ $card-color-end: rgba(#21042e, $card-transparency);
 
 //Sections
 .section {
+    &.section-white {
+        background-color: white;
+        color: #191349;
+    }
+
     &.section-light-grey {
         background-color: $light-grey;
     }

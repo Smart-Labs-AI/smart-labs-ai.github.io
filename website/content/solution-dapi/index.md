@@ -1,6 +1,7 @@
 ---
 title: "Defence API für LLM Security"
 date: 2025-08-27
+layout: "landingpage"
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "Defence API für LLM Security"
@@ -24,5 +25,26 @@ hero:
   ctas:
     - label: "Jetzt für Early Access eintragen"
       href: "/todo"
-layout: "landingpage"
+features:
+  section-title: "Features"
+  title: "Was DAPI für dich übernimmt"
+  items:
+  - title: "Prompt Injection Defense"
+    text: "Blockiert Jailbreaks, Exploits & Injection-Versuche in Echtzeit – bevor sie deinen Stack erreichen."
+    icon: "prompt-injection"
+  - title: "Output Sanitization"
+    text: "Entfernt sensible oder ungewollte Inhalte aus LLM-Antworten – dynamisch und regelbasiert."
+    icon: "output-sanitization"
+  - title: "Token Usage & Zugriffskontrolle"
+    text: "Behalte volle Übersicht über API-Kosten & -Zugriffe – anonymisiert & konfigurierbar."
+    icon: "token-usage"
+  - title: "Audit-Ready Tracing"
+    text: "Erfasst jede Interaktion DSGVO- und AI-Act-konform – auf Wunsch auch ohne Payload-Logging."
+    icon: "audit-ready-tracing"
+  - title: "Multi-Model Support"
+    text: "Kompatibel mit OpenAI, Mistral, Claude – oder jedem Modell, das du selbst hostest."
+    icon: "multi-model-support"
+  - title: "Zero Trust Auth Layer"
+    text: "Sichere Authentifizierung via Key Rotation, Rate Limits & rollenbasiertem Zugriff."
+    icon: "zero-trust-auth-layer"
 ---
