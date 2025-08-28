@@ -1,0 +1,57 @@
+/* ==========================================================================
+Result Section Styles
+========================================================================== */
+
+.result-section {
+  background-color: #FFF;
+  padding: 6em 0;
+
+  .section-title,
+  .title,
+  .result-title {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    text-align: center;
+  }
+
+  .header-container {
+    margin-bottom: 8em;
+
+    .section-title {
+      font-size: 16px;
+      color: #A81B58;
+      margin-bottom: 1.5em;
+    }
+
+    .title {
+      font-size: 36px;
+      color: #1A1449;
+    }
+  }
+
+
+  .results-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .result-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 290px;
+      height: 220px;
+
+      .result-icon {
+        width: 80px;
+        height: 80px;
+      }
+
+      .result-title {
+        font-size: 24px;
+      }
+    }
+  }
+}

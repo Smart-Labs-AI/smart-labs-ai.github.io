@@ -185,3 +185,15 @@ params:
         icon: /images/services/solutions-section/analysis.svg
       - description: Sicherheitsreport und Fix-Empfehlungen, auf Wunsch mit Hands-on Support
         icon: /images/services/solutions-section/report.svg
+  services_result_section:
+    sectionTitle: Ergebnis
+    title: Sicherheit, Klarheit und Compliance
+    results:
+      - title: Technischer<br>Report
+        icon: /images/services/result-section/report-icon.svg
+      - title: Priorisierte Maßnahmenliste
+        icon: /images/services/result-section/list-icon.svg
+      - title: Fix-Workshop & Doku für Ihre Compliance
+        icon: /images/services/result-section/workshop-icon.svg
+      - title: Rückblick-Call zur Review
+        icon: /images/services/result-section/call-icon.svg
