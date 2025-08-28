@@ -31,7 +31,7 @@
         {{- $url := index $item "url" | default "" -}}
 
         <div class="column is-one-third is-flex">
-          <div class="card {{ $cardType }} is-flex is-flex-direction-column" style="height: 100%;">
+          <div class="card card-brighter {{ $cardType }} is-flex is-flex-direction-column" style="height: 100%;">
             <div class="card-content is-flex-grow-1">
               {{- if $icon }}
                 <figure class="image is-64x64">
