@@ -39,50 +39,6 @@ Hero Landingpage styles
     max-width: 800px;
   }
 
-  .live-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-  }
-
-  .live-text {
-    color: white;
-    font-size: 1rem;
-  }
-
-  .live-pill-border {
-    position:relative;
-    border-radius: 50px;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(-25deg, rgba(255, 49, 139, 0.2) 0%, rgba(119, 102, 255, 0.2) 100%);
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: 2px;
-      background: linear-gradient(-25deg, $purple  0%, $hibiscus 100%);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-  }
-
-  .live-pill {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .live-time {
-    color: white;
-    font-weight: 500;
-  }
-
   .compatibility-section {
     margin-bottom: 3rem;
   }
@@ -173,11 +129,6 @@ Hero Landingpage styles
     
     .logo-item {
       padding: 0.6rem 1.2rem;
-    }
-    
-    .live-badge {
-      flex-direction: column;
-      gap: 0.5rem;
     }
   }
 

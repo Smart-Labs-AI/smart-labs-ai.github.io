@@ -47,4 +47,8 @@ features:
   - title: "Zero Trust Auth Layer"
     text: "Sichere Authentifizierung via Key Rotation, Rate Limits & rollenbasiertem Zugriff."
     icon: "zero-trust-auth-layer"
+liveInSection:
+  background-image: "/solution/dapi/live-in-section-background.png"
+  text: "Integration in"
+  amout: 10 Minuten
 ---

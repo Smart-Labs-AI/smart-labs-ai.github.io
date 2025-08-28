@@ -1,12 +1,17 @@
 {{ define "main" }}
 
   {{ if .Params.hero }}
-  {{ partial "landingpage/hero-landingpage.html" . }}
+    {{ partial "landingpage/hero-landingpage.html" . }}
   {{ end }}
 
   {{ if .Params.features }}
-  {{ partial "landingpage/features-landingpage.html" . }}
+    {{ partial "landingpage/features-landingpage.html" . }}
   {{ end }}
+
+  {{ if .Params.liveInSection }}
+    {{ partial "landingpage/live-in-landingpage.html" . }}
+  {{ end }}
+
 
   {{ partial "footer.html" . }}
 {{ end }}
