@@ -6,23 +6,32 @@
 {{ if $img }}
   {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
   {{ $height := $processedBackground.Height }}
-  <section class="section section-landingpage live-in-section is-medium" style="background-image: url('{{ $processedBackground.RelPermalink }}'); background-position: top; background-repeat: no-repeat; background-size: cover;">
-    <div class="container has-text-centered">
-      <div class="columns is-centered is-vcentered mt-4">
-        <div class="column is-8">
-          <div class="live-badge">
-            <span class="live-text">{{ $liveIn.text }}</span>
-            <div class="live-pill-border">
-              <div class="live-pill">
-                <img src="/images/hero-landingpage/timer.svg">
-                <span class="live-time">{{ $liveIn.amout }}</span>
-              </div>
+  <section class="section section-landingpage live-in-section is-medium"
+  style="background-image: url('{{ $processedBackground.RelPermalink }}');
+         background-position: top;
+         background-repeat: no-repeat;
+         background-size: cover;
+         min-height: {{ $height }}px;
+         display: flex;
+         align-items: center; /* vertikal zentrieren */
+         justify-content: center; /* optional horizontal */
+">
+  <div class="container has-text-centered">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="live-badge" style="margin-bottom: 0">
+          <span class="live-text">{{ $liveIn.text }}</span>
+          <div class="live-pill-border">
+            <div class="live-pill">
+              <img src="/images/hero-landingpage/timer.svg">
+              <span class="live-time">{{ $liveIn.amout }}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {{ else }}
   {{ errorf "Image not found: %s" $src }}
 {{ end }}

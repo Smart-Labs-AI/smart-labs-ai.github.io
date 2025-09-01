@@ -58,7 +58,8 @@
 
     .subtitle {
       font-size: $card-subtitle-size;
-      opacity: 0.7;
+      color: #b5b5b5;
+      line-height: 1.5;
     }
 
     &.pipedriveWebForms {
@@ -87,6 +88,21 @@
 
     .title, .subtitle {
       color: $royal-blue;
+    }
+  }
+
+
+  &.section-grey {
+    .card {
+      background: white;
+      box-shadow: none;
+
+      .title {
+        color: $royal-blue;
+      }
+      .subtitle {
+        color: rgba(#1a1449, 0.6);
+      }
     }
   }
   
