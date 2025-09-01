@@ -1,0 +1,75 @@
+{{- $section_prices := .Params.section_prices -}}
+{{- $sectionTitle := index $section_prices "section-title" | default "" -}}
+{{- $title := index $section_prices "title" | default "" -}}
+{{- $subtitle := index $section_prices "subtitle" | default "" -}}
+{{- $prices := index $section_prices "prices" | default (slice) -}}
+{{- $infoBox := index $section_prices "info-box" | default (slice) -}}
+
+<section class="section section-white section-landingpage is-medium">
+  <div class="container has-text-centered">
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-8">
+        {{- if $sectionTitle }}
+          <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+        {{- end }}
+        {{- if $title }}
+          <h1 class="section-title is-spaced">{{ $title }}</h1>
+        {{- end }}
+        {{- if $subtitle }}
+          <h3 class="section-subtitle">{{ $subtitle }}</h3>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-6">
+    <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+      {{- range $i, $price := $prices }}
+        {{- $cardType := index $price "cardType" | default "" -}}
+        {{- $name := index $price "name" | default "" -}}
+        {{- $price_text := index $price "price" | default "" -}}
+        {{- $turnus := index $price "turnus" | default "" -}}
+        {{- $ctaText := index $price "ctaText" | default "" -}}
+        {{- $ctaLink := index $price "ctaLink" | default "" -}}
+        {{- $cssClass := index $price "cssClass" | default "" -}}
+      <div class="column is-one-third is-flex">
+          <div class="card {{ $cssClass }} is-flex is-flex-direction-column is-flex-grow-1 is-full-height p-0">
+            <div class="card-content is-flex-grow-1">
+              <div class="name">{{ $name }}</div>
+              <div class="price">{{ $price_text }}</div>
+              <div class="turnus">{{ $turnus }}</div>
+              <div class="cta">
+                <a href="{{ $ctaLink }}">{{ $ctaText }}</a>
+              </div>
+              {{- range $i, $feature := $price.features }}
+                {{- $name := index $feature "name" | default "" -}}
+                {{- $type := index $feature "type" | default "" -}}
+                <div class="feature {{$type}}">
+                  {{- if eq $type "add" -}}
+                    <i class="fas fa-plus"></i>
+                  {{- else -}}
+                    <i class="fas fa-check"></i>
+                  {{- end -}}
+                  <div>
+                    {{ $name | markdownify }}
+                  </div>
+                </div>
+              {{- end }}
+            </div>
+          </div>
+        </div>
+        {{- end }}
+    </div>
+  </div>
+  {{- if $infoBox }}
+  
+  <div class="container mt-6">
+    <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+      <div class="info-box">
+        <i class="fas fa-circle-info"></i>
+        {{ $infoBox | markdownify }}
+      </div>
+    </div>
+  </div>
+  {{- end }}
+</section>

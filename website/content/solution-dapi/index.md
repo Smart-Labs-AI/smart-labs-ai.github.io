@@ -81,4 +81,43 @@ section_testimonial:
     logo: innogpt.png
     text: Das Audit hat uns nicht nur technisch, sondern auch strategisch weitergebracht. Es liefert klare Entscheidungsgrundlagen für unsere Produktentwicklung – besonders in Bezug auf Sicherheit und Compliance. Der strukturierte Ablauf und die konkreten Handlungsempfehlungen machen Smart Labs AI zu einem echten Partner für nachhaltige KI-Produkte.
     face: innogpt-maurice.png
+section_prices:
+  sectionType: "section-white section-landingpage"
+  section-title: "Preise"
+  title: Finde die passende Lösung für dich
+  info-box: "**Keine harten Nutzungslimits:** Wir setzen auf Flexibilität. Du zahlst, was du brauchst"
+  prices:
+    - name: Start
+      price: "€ 5,99"
+      turnus: "monatlich"
+      ctaText: "Jetzt kostenlos testen"
+      ctaLink: "#"
+      features:
+      - name: "**10.000** API Requests"
+        type: check
+      - name: "**100** Max Token (LLM Calls)"
+        type: check
+    - name: Pro
+      price: "€ 14,90"
+      turnus: "monatlich"
+      ctaText: "Jetzt kostenlos testen"
+      ctaLink: "#"
+      cssClass: "preferred"
+      features:
+      - name: "**Unlimited** API Requests"
+        type: check
+      - name: "M Token (LLM Calls) **nach Bedarf**"
+        type: check
+      - name: "**€ 0,20** pro M Token (LLM Calls)"
+        type: add
+    - name: Enterprise
+      price: "Individuell"
+      turnus: "monatlich / jährlich"
+      ctaText: "Jetzt anfragen"
+      ctaLink: "#"
+      features:
+      - name: "API Requests **nach Volumen**"
+        type: check
+      - name: "M Token (LLM Calls) **nach Volumen**"
+        type: check
 ---

@@ -91,6 +91,24 @@
     }
   }
 
+  &.section-white {
+    .card {
+      background: white;
+      box-shadow: none;
+      border: 2px rgba($royal-blue, 0.1) solid;
+
+      &::before {
+        display: hidden;
+      }
+
+      .title {
+        color: $royal-blue;
+      }
+      .subtitle {
+        color: rgba(#1a1449, 0.6);
+      }
+    }
+  }
 
   &.section-grey {
     .card {

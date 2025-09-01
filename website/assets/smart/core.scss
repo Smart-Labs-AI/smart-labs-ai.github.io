@@ -3,21 +3,22 @@ Main SCSS file / Fresh
 ========================================================================== */
 
 //Imports
+@import 'partials/animations';
+@import 'partials/buttons';
+@import 'partials/cards';
 @import 'partials/colors';
 @import 'partials/cta_section';
-@import 'partials/navbar';
 @import 'partials/dropdowns';
-@import 'partials/sections';
+@import 'partials/footer';
+@import 'partials/forms';
 @import 'partials/hero';
 @import 'partials/hero_landingpage';
 @import 'partials/live_in_landingpage';
-@import 'partials/footer';
-@import 'partials/buttons';
-@import 'partials/cards';
-@import 'partials/forms';
-@import 'partials/animations';
+@import 'partials/navbar';
+@import 'partials/pricing';
+@import 'partials/responsive';
+@import 'partials/sections';
 @import 'partials/sidebar';
 @import 'partials/testimonials';
-@import 'partials/responsive';
 @import 'partials/utils';
 
