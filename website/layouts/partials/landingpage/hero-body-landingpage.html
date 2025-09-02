@@ -42,11 +42,11 @@
             {{ end }}
             
             {{ with $liveIn }}
-            <div class="live-badge">
+            <div class="pill-bar pill-bar-small-gap">
               <span class="live-text">{{ (index . 0).text }}</span>
-              <div class="live-pill-border">
+              <div class="pill-purple pill-small-left">
                 <div class="live-pill">
-                  <img src="/images/hero-landingpage/timer.svg">
+                  <img src="/images/hero-landingpage/timer.svg" class="ml-1">
                   <span class="live-time">{{ (index . 1).amout }}</span>
                 </div>
               </div>
@@ -54,11 +54,11 @@
             {{ end }}
             
             {{ with $compatibility }}
-            <div class="compatibility-section">
+            <div class="compatibility-section mt-6">
               <p class="compatibility-text">{{ (index . 0).text }}</p>
-              <div class="compatibility-logos">
+              <div class="pill-bar compatibility-logos">
                 {{ range (index . 1).items }}
-                <div class="logo-item">
+                <div class="pill pill-glass logo-item pill-small-left">
                   <div class="logo-icon">
                     <img src="/images/hero-landingpage/compatible/{{ .item.id }}.svg" style="height:24px">
                   </div>
@@ -72,7 +72,7 @@
             {{ with $ctas }}
             {{ range . }}
             <div class="cta-section">
-              <a href="{{ .href }}" class="button cta rounded primary-btn raised mr-4">
+              <a href="{{ .href }}" class="button rounded primary-btn raised mr-4">
                   {{ .label }}
                   <span class="icon ml-2">
                     <i class="fas fa-arrow-right"></i>

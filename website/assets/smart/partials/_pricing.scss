@@ -1,84 +1,65 @@
-.name {
-    background: linear-gradient(155deg, $hibiscus, $dark-purple);
-    color: white;
-    text-align: center;
-    padding: 16px 20px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 170%;
-    margin-bottom: 24px;
-}
-
-.price {
-    font-size: 36px;
-    font-weight: 700;
-    color: $royal-blue;
-    text-align: center;
-}
-
-.turnus {
-    color: rgba($royal-blue, 0.6);
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 3em;
-}
-
-/* Call-to-Action Button */
-.cta {
-    margin-bottom: 32px;
-    border: 6px solid rgba($hibiscus, 0.2);
-    border-radius: 50px;
-  }
-  
-.cta a {
-    display: block;
-    background: $hibiscus;
-    border-radius: 50px;
-    color: white;
-    padding: 14px 24px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-    position:relative;
-}
-
-.feature {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 14px;
-    color: $royal-blue;
-    line-height: 1.5;
-    gap: 1em;
-    margin-left: 25px;
-
-    i {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        background: $success-green;
+.section-pricing {
+    .name {
+        background: linear-gradient(155deg, $hibiscus, $dark-purple);
         color: white;
-        border-radius: 50%;
-        margin-right: 12px;
-        font-size: 12px;
-        font-weight: bold;
-        flex-shrink: 0;
-        padding-left: 1px;
-        padding-top: 1px;
+        text-align: center;
+        padding: 16px 20px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 170%;
+        margin-bottom: 24px;
     }
-}
 
-.feature + .feature {
-    padding-top: 1em;
-    border-top: 2px rgba($royal-blue, 0.1) solid;
-}
+    .price {
+        font-size: 36px;
+        font-weight: 700;
+        color: $royal-blue;
+        text-align: center;
+    }
 
-.info-box {
-    background: rgba($royal-blue, 0.1);
-    padding: 1.5em;
-    border-radius: 1em;
+    .turnus {
+        color: rgba($royal-blue, 0.6);
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        font-size: 14px;
+        color: $royal-blue;
+        line-height: 1.5;
+        gap: 1em;
+        margin-left: 25px;
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: $success-green;
+            color: white;
+            border-radius: 50%;
+            margin-right: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+            padding-left: 1px;
+            padding-top: 1px;
+        }
+    }
+
+    .feature + .feature {
+        padding-top: 1em;
+        border-top: 2px rgba($royal-blue, 0.1) solid;
+    }
+
+    .info-box {
+        background: rgba($royal-blue, 0.1);
+        padding: 1.5em;
+        border-radius: 1em;
+    }
 }

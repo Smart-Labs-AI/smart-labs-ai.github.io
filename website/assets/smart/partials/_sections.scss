@@ -36,6 +36,34 @@ Section Styles
         }
     }
 
+    &.section-background-dark {
+        color:white;
+        
+        .section-name {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.05em;
+            font-weight: 500;
+            margin-bottom: 2em;
+        }
+    
+        .section-title {
+            font-size: 3.1rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 1em;
+            color: white;
+        }
+    
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: rgba(white, 0.6);
+            line-height: 1.6;
+            margin-bottom: 2em;
+            font-weight: 400;
+        }
+    }
+
     &.section-light-grey {
         background-color: $light-grey;
     }

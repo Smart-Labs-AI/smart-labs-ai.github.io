@@ -20,5 +20,9 @@
     {{ partial "landingpage/prices-landingpage.html" . }}
   {{ end }}
 
+  {{ if .Params.section_early_access }}
+    {{ partial "landingpage/early-access-landingpage.html" . }}
+  {{ end }}
+
   {{ partial "footer.html" . }}
 {{ end }}

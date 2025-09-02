@@ -120,4 +120,19 @@ section_prices:
         type: check
       - name: "M Token (LLM Calls) **nach Volumen**"
         type: check
+section_early_access:
+  background-image: "/solution/dapi/hero.png"
+  section-title: "Early Access"
+  title: "Werde Teil unserer exklusiven Early Access Community"
+  subtitle: "Wir onboarden gezielt CTOs, Tech-Leads und AI-Ingenieur:innen, die LLM-Sicherheit jetzt ernst nehmen"
+  advantages:
+    - name: "Kostenloser Zugang zur Beta"
+      type: check
+    - name: "Kein Vendor Lock-in"
+      type: check
+    - name: "Technischer Support via Slack"
+      type: check
+  email-input-placeholder: "Hier geschäftliche E-Mail-Adresse eingeben"
+  cta-text: "Warteliste beitreten"
+  cta-link: "#"
 ---
