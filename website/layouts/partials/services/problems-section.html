@@ -1,4 +1,4 @@
-{{- $servicesProblemsSection       := .Site.Params.services_problems_section }}
+{{- $servicesProblemsSection := .Params.services_problems_section }}
 {{- $title      := index $servicesProblemsSection "title" }}
 {{- $problems   := index $servicesProblemsSection "problems" }}
 
@@ -6,7 +6,7 @@
   <div class="container">
     <div class="title-container">
       <h1 class="section-title section-title is-1 is-spaced">
-        {{ index .Site.Params.services_problems_section "title" }}
+        {{ $title }}
       </h1>
     </div>
 

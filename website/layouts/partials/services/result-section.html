@@ -1,4 +1,4 @@
-{{- $servicesResultSection := .Site.Params.services_result_section }}
+{{- $servicesResultSection := .Params.services_result_section }}
 {{- $sectionTitle := index $servicesResultSection "sectionTitle" }}
 {{- $title        := index $servicesResultSection "title" }}
 {{- $results      := index $servicesResultSection "results" }}
@@ -10,10 +10,10 @@
   </div>
   <div class="results-container">
     {{ range $results }}
-      <div class="result-card">
-        <img class="result-icon" src="{{ .icon }}">
-        <p class="result-title">{{ .title | safeHTML }}</p>
-      </div>
+    <div class="result-card">
+      <img class="result-icon" src="{{ .icon }}">
+      <p class="result-title">{{ .title | safeHTML }}</p>
+    </div>
     {{ end }}
   </div>
 </section>

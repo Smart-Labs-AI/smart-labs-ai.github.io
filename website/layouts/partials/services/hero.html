@@ -1,4 +1,4 @@
-{{- $servicesHero       := .Site.Params.services_hero }}
+{{- $servicesHero       := .Params.services_hero }}
 {{- $pageTitle  := index $servicesHero "pageTitle" }}
 {{- $title      := index $servicesHero "title" }}
 {{- $subtitle   := index $servicesHero "subtitle" }}
@@ -8,51 +8,51 @@
 {{ $src := "/services/hero.png" }}
 {{ $img := resources.Get $src }}
 {{ if $img }}
-  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
-  <section class="hero is-default is-bold">
-    <div class="services-hero-background" style="background-image: url('{{ $processedBackground.RelPermalink }}');"></div>
+{{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+<section class="hero is-default is-bold">
+  <div class="services-hero-background" style="background-image: url('{{ $processedBackground.RelPermalink }}');"></div>
 
-    <div class="services-hero-body">
-      <div class="landing-caption">
-        <p class="services-page-title">
-          {{ index .Site.Params.services_hero "pageTitle" }}
-        </p>
+  <div class="services-hero-body">
+    <div class="landing-caption">
+      <p class="services-page-title">
+        {{ $pageTitle }}
+      </p>
 
-        <h1 class="hero-title section-title">
-          {{ index .Site.Params.services_hero "title" }}
-        </h1>
+      <h1 class="hero-title section-title">
+        {{ $title }}
+      </h1>
 
-        {{ with index .Site.Params.services_hero "subtitle" }}
-          <h2 class="hero-subtitle">{{ . | markdownify }}</h2>
-        {{ end }}
-        
-        <!-- FIXME: spacing between text and icon -->
-        <a class="button cta rounded secondary-btn raised"
-          href="{{ index .Site.Params.services_hero "secondaryButtonlink" }}">
-          {{ index .Site.Params.services_hero "secondaryButtontext" }}
-          <img src="/images/services/arrow-right-icon.svg" alt="Arrow Right Icon">
-        </a>
+      {{ with $subtitle }}
+      <h2 class="hero-subtitle">{{ . | markdownify }}</h2>
+      {{ end }}
+
+      <!-- FIXME: spacing between text and icon -->
+      <a class="button cta rounded secondary-btn raised"
+         href="{{ $secondaryButtonLink }}">
+        {{ $secondaryButtonText }}
+        <img src="/images/services/arrow-right-icon.svg" alt="Arrow Right Icon">
+      </a>
+    </div>
+
+    <div class="feature-chart">
+      <div class="feature-card-line-element">
+        <div class="feature-card">
+          <img src="/images/services/hero/criminal-icon.svg" alt="Criminal Icon" class="feature-icon">
+        </div>
+        <p class="feature-line" />
       </div>
 
-      <div class="feature-chart">
-        <div class="feature-card-line-element">
-          <div class="feature-card">
-            <img src="/images/services/hero/criminal-icon.svg" alt="Criminal Icon" class="feature-icon">
-          </div>
-          <p class="feature-line" />
-        </div>
+      <img src="/images/services/hero/protection-icon.svg" alt="Protection Icon" class="feature-icon">
 
-        <img src="/images/services/hero/protection-icon.svg" alt="Protection Icon" class="feature-icon">
-
-        <div class="feature-card-line-element">
-          <p class="feature-line" />
-          <div class="feature-card">
-            <img src="/images/services/hero/database-icon.svg" alt="Database Icon" class="feature-icon">
-          </div>
+      <div class="feature-card-line-element">
+        <p class="feature-line" />
+        <div class="feature-card">
+          <img src="/images/services/hero/database-icon.svg" alt="Database Icon" class="feature-icon">
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {{ else }}
-  {{ errorf "Image not found: %s" $src }}
+{{ errorf "Image not found: %s" $src }}
 {{ end }}

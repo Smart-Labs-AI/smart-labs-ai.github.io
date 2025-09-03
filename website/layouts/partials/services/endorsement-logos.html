@@ -7,7 +7,7 @@
       {{ $companyName := .logo | default "" | strings.TrimPrefix "/" }}
       {{ $imagePath := printf "testimonial/images/logo/%s" $companyName }}
       {{ $original := resources.Get $imagePath }}
-      
+
       {{ if $original }}
         {{ $thumbnail := $original.Resize "x40 webp q85 drawing" }}
         <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .company }}">
