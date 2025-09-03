@@ -51,6 +51,22 @@ div.pill-small-left {
     border-radius: 9999px; /* macht es pillen- bzw. kreisförmig */
 }
 
+.pill-bar-big-icons {
+    .pill {
+        margin: 30px; 
+        padding: 30px; 
+        gap: 3em;
+
+        .logo-icon {
+            img {
+                height:120px;
+                width:auto;
+                margin:30px;
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .pill-bar {
         gap: 1rem;

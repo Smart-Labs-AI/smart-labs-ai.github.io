@@ -68,29 +68,6 @@
     }
   }
 
-  .card-brighter {
-    color: $royal-blue;
-    background: linear-gradient(135deg, rgba(#7766ff, 0.1) 0%, rgba(#ff318b, 0.1) 100%);
-    box-shadow: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      padding: var(--border-width);
-      background: linear-gradient(135deg, rgba($hibiscus, 0.1) 0%, rgba($purple, 0.1) 100%);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .title, .subtitle {
-      color: $royal-blue;
-    }
-  }
-
   &.section-white {
     .card {
       background: white;
@@ -108,6 +85,31 @@
         color: rgba(#1a1449, 0.6);
       }
     }
+
+    .card-brighter {
+      color: $royal-blue;
+      background: linear-gradient(135deg, rgba(#7766ff, 0.1) 0%, rgba(#ff318b, 0.1) 100%);
+      border:none;
+      box-shadow: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: var(--border-width);
+        background: linear-gradient(135deg, rgba($hibiscus, 0.1) 0%, rgba($purple, 0.1) 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      .title, .subtitle {
+        color: $royal-blue;
+      }
+  }
+
   }
 
   &.section-grey {

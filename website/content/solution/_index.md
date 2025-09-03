@@ -1,0 +1,53 @@
+---
+title: "Aktuelle Blogs"
+subtitle: "Einblicke in die Welt der KI-Sicherheit."
+layout: "solution-list"
+hero:
+  background-image: "/solution/dapi/hero.png"
+  section-title: "Lösungen"
+  title: "Drei Produkte. Eine Mission:"
+  title2: "Sichere, vertrauenswürdige KI"
+  subtitle: "Unsere Platform bietet modulare Lösungen für die Absicherung von LLMs, Chatbots & biometrischen KI-Systemen."
+  solutions:
+    - item:
+        name: "Smart Fingerprint" 
+        link: ""
+        image: "/images/illustrations/icons/fingerprint.svg"
+    - item:
+        name: "Smart Dragon"
+        link: ""
+        image: "/images/illustrations/icons/smart-dragon.svg"
+    - item:
+        name: "Defence API"
+        link: ""
+        image: "/images/illustrations/icons/llm-security.svg"
+  ctas:
+    - label: "Jetzt Beratung buchen"
+      href: "/#"
+      class: "primary-btn"
+    - label: "Plattform testen"
+      href: "/#"
+      class: "secondary-btn"
+solutionDetails:
+    - name: "Smart Fingerprint"
+      title: "Kontinuierliche Authentifizierung"
+      description: "ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher."
+      image: "/images/illustrations/icons/fingerprint.svg"
+      background: ""
+      cta-text: "Smart Fingerprint entdecken"
+      cta-link: "/#"
+    - name: "Smart Dragon"
+      title: "Sicherer Unternehmens-Chatbot"
+      description: "LLM-Chatbot mit Zugriffskontrolle, Kontextabschottung und Logging. Entwickelt für sensible Daten und geschützte Umgebungen."
+      image: "/images/illustrations/icons/smart-dragon.svg"
+      background: ""
+      cta-text: "Smart Dragen entdecken"
+      cta-link: "/#"
+    - name: "LLM Security Platform"
+      title: "Schützen Sie Ihre KI-Infrastruktur"
+      description: "Plattform für Analyse, Härtung & Auditierung von Large Language Models, Agenten & APIs – inkl. Prompt Injection Detection und Red Teaming."
+      image: "/images/illustrations/icons/llm-security.svg"
+      background: ""
+      cta-text: "LLM Security Platform entdecken"
+      cta-link: "/#"
+---
