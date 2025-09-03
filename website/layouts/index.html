@@ -15,9 +15,16 @@
 
     {{ partial "latest-posts.html" . }}
 
+    <!-- 
+    {{ if .Site.Params.section_cta }}
+    {{ partial "section_cta.html" . }}
+    {{ end }}
+    -->
+
     {{ if .Site.Params.section_contact }}
     {{ partial "section_contact.html" . }}
     {{ end }}
+
     {{ partial "footer.html" . }}
 
     {{ if .Site.Params.sidebar }}

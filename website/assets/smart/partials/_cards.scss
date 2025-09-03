@@ -58,12 +58,84 @@
 
     .subtitle {
       font-size: $card-subtitle-size;
-      opacity: 0.7;
+      color: #b5b5b5;
+      line-height: 1.5;
+    }
+
+    .card-content.alternate-card-content:nth-child(even) {
+      .columns {
+        flex-direction: row-reverse;
+      }
     }
 
     &.pipedriveWebForms {
       background: linear-gradient(-30deg, $card-color-start 0%, #151515 30%, #151515 70%, $card-color-end 100%);
       color: white;
+    }
+  }
+
+  &.section-white {
+    .card {
+      background: white;
+      box-shadow: none;
+      border: 2px rgba($royal-blue, 0.1) solid;
+
+      &::before {
+        display: hidden;
+      }
+
+      .title {
+        color: $royal-blue;
+      }
+      .subtitle {
+        color: rgba(#1a1449, 0.6);
+      }
+    }
+
+    .card-brighter {
+      color: $royal-blue;
+      background: linear-gradient(135deg, rgba(#7766ff, 0.1) 0%, rgba(#ff318b, 0.1) 100%);
+      border:none;
+      box-shadow: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: var(--border-width);
+        background: linear-gradient(135deg, rgba($hibiscus, 0.1) 0%, rgba($purple, 0.1) 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      .title, .subtitle {
+        color: $royal-blue;
+      }
+  }
+
+  }
+
+  &.section-grey {
+    .card {
+      background: white;
+      box-shadow: none;
+
+      .name {
+        color: $hibiscus;
+        font-weight: 500;
+      }
+
+      .title {
+        color: $royal-blue;
+        font-size: 2.2rem;
+      }
+      .subtitle {
+        color: $royal-blue;
+        font-size: 1.1rem;
+      }
     }
   }
   

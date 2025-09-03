@@ -1,0 +1,57 @@
+{{- $solutionDetails := .Params.solutionDetails }}
+
+
+<section class="section section-grey section-solution-design is-medium " id="section-testimonial">
+  <div class="container">
+      <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+            <div class="column is-flex is-flex-direction-column" style="gap: 2em">
+              {{ range $solutionDetails }}
+                <div class="card is-flex">
+                  <div class="card-content alternate-card-content is-flex-grow-1">
+
+                      <div class="container">
+                        <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+                          <div class="column is-flex is-flex-direction-row" style="gap: 2em">
+                                {{ $src := .background }}
+                                {{ $img := resources.Get $src }}
+                                {{ if $img }}
+                                  {{ $processedBackground := $img.Process "resize 540x webp q100" }}
+                                  {{ $height := $processedBackground.Height }}
+                                  {{ $width := $processedBackground.Width }}
+
+                                  <div class="is-flex is-align-items-center is-justify-content-center" style="background-image: url('{{ $processedBackground.RelPermalink }}'); min-width: {{ $width }}px; min-height: {{ $height }}px; background-size: cover; background-position: center;border-radius:16px">
+                                    <figure class="image is-flex is-align-items-center is-justify-content-center" style="width:120px;height:120px;margin:auto">
+                                      <img src="{{ .image }}" alt="{{ .name }}">
+                                    </figure>
+                                   </div>
+
+                                {{ else }}
+                                  {{ errorf "Image not found: %s" $src }}
+                                {{ end }}
+
+                          </div>
+                          <div class="column is-flex is-flex-direction-column" style="gap: 1em">
+                            <h4 class="name is-4 mt-5">{{ .name }}</h4>
+                            <h4 class="title is-4 mt-2">{{ .title }}</h4>
+                            <p class="subtitle mt-0">{{ .description | markdownify }}</p>
+                              {{- $ctaText := index . "cta-text" }}
+                              {{- $ctaLink := index . "cta-link" }}
+                              <a href="{{ $ctaLink }}">
+                                <span class="button contact-button rounded primary-btn raised">
+                                  {{ $ctaText }}
+                                  <span class="icon ml-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                  </span>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+                  </div>
+              {{ end }}
+            </div>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+{{- $liveIn := .Params.liveInSection }}
+{{- $backgroundImage := index $liveIn "background-image" }}
+
+{{ $src := $backgroundImage }}
+{{ $img := resources.Get $src }}
+{{ if $img }}
+  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+  {{ $height := $processedBackground.Height }}
+  <section class="section section-landingpage live-in-section is-medium"
+  style="background-image: url('{{ $processedBackground.RelPermalink }}');
+         background-position: top;
+         background-repeat: no-repeat;
+         background-size: cover;
+         min-height: {{ $height }}px;
+         display: flex;
+         align-items: center; /* vertikal zentrieren */
+         justify-content: center; /* optional horizontal */
+">
+  <div class="container has-text-centered">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="pill-bar pill-bar-small-gap">
+          <span class="live-text">{{ $liveIn.text }}</span>
+          <div class="pill pill-glass pill-rounded pill-small-left">
+              <img src="/images/hero-landingpage/timer.svg" class="ml-1">
+              <span class="live-time">{{ $liveIn.amout }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ else }}
+  {{ errorf "Image not found: %s" $src }}
+{{ end }}

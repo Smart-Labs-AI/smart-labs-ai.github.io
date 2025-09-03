@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+  {{ if .Params.hero }}
+    {{ partial "solution/hero-solutionpage.html" . }}
+  {{ end }}
+
+  {{ if .Params.solutionDetails }}
+    {{ partial "solution/solutions-solutionpage.html" . }}
+  {{ end }}
+
+  {{ partial "section_cta.html" . }}
+
+  {{ partial "footer.html" . }}
+{{ end }}

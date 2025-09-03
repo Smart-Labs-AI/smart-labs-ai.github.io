@@ -1,0 +1,91 @@
+/* ==========================================================================
+Hero Landingpage styles
+========================================================================== */
+.hero-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+
+  .hero-content {
+    justify-items: center;
+  }
+
+  .section-badge {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    max-width: 800px;
+  }
+
+  .compatibility-section {
+    margin-bottom: 3rem;
+  }
+
+  .compatibility-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .logo-icon {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.15) 100%);
+    padding: 8px 8px 1px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+
+    img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+  }
+
+  .logo-name {
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .cta-section {
+    margin-top: 2rem;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  }
+}

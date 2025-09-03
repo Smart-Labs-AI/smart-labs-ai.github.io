@@ -18,6 +18,18 @@ input.input::placeholder, textarea.textarea::placeholder {
     opacity: 40%;
 }
 
+.section-background-dark {
+    input.input {
+        background-color: white;
+    }
+    
+    input.input::placeholder { 
+        color: $royal-blue;
+        opacity: 60%;
+    }
+}
+
+
 label {
     color: $card-title-color;
 }

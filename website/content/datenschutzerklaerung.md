@@ -97,46 +97,9 @@ Datenschutzerklärung informieren.
 
 # 4 Hosting & Auftragsverarbeitung
 
-Diese Website wird bei einem externen Dienstleister gehostet (Hoster).
-Die personenbezogenen Daten, die auf dieser Website erfasst werden,
-werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v.
-a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten,
-Vertragsdaten, Kontaktdaten, Namen, Webseitenzugriffe und sonstige
-Daten, die über eine Website generiert werden, handeln. Der Einsatz des
-Hosters erfolgt zum Zwecke einer sicheren, schnellen und effizienten
-Bereitstellung unseres Online-Angebots durch einen professionellen
-Anbieter (Art. 6 (1) f DSGVO).
+Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei handelt es sich v. a. um IP-Adresse, die Adresse der vorher besuchten Website (Referer Anfrage-Header), Datum und Uhrzeit der Anfrage, Inhalt der Anforderung, HTTPS-Statuscode, übertragene Datenmenge, Website, von der die Anforderung kommt und Informationen zu Browser und Betriebssystem. Der Einsatz des Hosters erfolgt zum Zwecke einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 (1) f DSGVO).
 
-Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur
-Erfüllung seiner Leistungspflichten erforderlich ist und unsere
-Weisungen in Bezug auf diese Daten befolgen. Um die datenschutzkonforme
-Verarbeitung zu gewährleisten, haben wir einen Vertrag über
-Auftragsverarbeitung mit unserem Hoster geschlossen.
-
-Wir setzen für die Zurverfügungstellung unserer Website den
-Hoster-Service von GitHub Inc. 88 Colin P Kelly Jr St San Francisco, CA
-94107 United States ein, um selbst keinen Server in unseren
-Räumlichkeiten vorhalten zu müssen. Serverstandort ist USA. GitHub hat
-Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt.
-Diese gelten für alle weltweiten Aktivitäten, bei denen GitHub
-personenbezogene Daten von natürlichen Personen in der EU verarbeitet.
-Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs).
-Weitere Informationen finden Sie unter: [[GitHub Data Protection
-Addendum](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1%E2%80%93the-standard-contractual-clauses-processors)]
-Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten
-gegenüber GitHub finden Sie unter: [[GitHub Privacy
-Statement](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages)]
-
-Unser Hoster erhebt sog. Logfiles Daten, die Ihr Browser übermittelt:
-IP-Adresse, die Adresse der vorher besuchten Website (Referer
-Anfrage-Header), Datum und Uhrzeit der Anfrage, Inhalt der Anforderung,
-HTTPS-Statuscode, übertragene Datenmenge, Website, von der die
-Anforderung kommt und Informationen zu Browser und Betriebssystem. Das
-ist erforderlich, um unsere Website anzuzeigen und die Stabilität und
-Sicherheit im Sinne unseres berechtigten Interesses gemäß Art. 6 (1) f
-DSGVO zu gewährleisten. Es erfolgt kein Tracking und wir haben auf diese
-Daten keinen direkten Zugriff. Die Daten werden gelöscht, sobald der
-Zweck der Verarbeitung entfällt.
+Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen. Um die datenschutzkonforme Verarbeitung zu gewährleisten, haben wir einen Vertrag über Auftragsverarbeitung mit unserem Hoster geschlossen.
 
 # 5 SSL- bzw. TLS-Verschlüsselung
 

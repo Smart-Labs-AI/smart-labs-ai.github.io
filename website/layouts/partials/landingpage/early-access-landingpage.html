@@ -1,0 +1,66 @@
+{{- $earlyAccess := .Params.section_early_access }}
+{{- $backgroundImage := index $earlyAccess "background-image" }}
+{{- $sectionTitle := index $earlyAccess "section-title" | default "" -}}
+{{- $title := index $earlyAccess "title" | default "" -}}
+{{- $subtitle := index $earlyAccess "subtitle" | default "" -}}
+{{- $advantages := index $earlyAccess "advantages" | default "" -}}
+{{- $emailPlaceholder := index $earlyAccess "email-input-placeholder" | default "" -}}
+{{- $ctaLink := index $earlyAccess "cta-link" | default "" -}}
+{{- $ctaText := index $earlyAccess "cta-text" | default "" -}}
+
+{{ $src := $backgroundImage }}
+{{ $img := resources.Get $src }}
+{{ if $img }}
+  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+  {{ $height := $processedBackground.Height }}
+  <section class="section section-background-dark section-landingpage early-access-in-section is-medium"
+  style="background-image: url('{{ $processedBackground.RelPermalink }}');
+         background-position: top;
+         background-repeat: no-repeat;
+         background-size: cover;
+         min-height: {{ $height }}px;
+         display: flex;
+         align-items: center; /* vertikal zentrieren */
+         justify-content: center; /* optional horizontal */
+">
+  <div class="container has-text-centered">
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-8">
+        {{- if $sectionTitle }}
+          <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+        {{- end }}
+        {{- if $title }}
+          <h1 class="section-title is-spaced">{{ $title }}</h1>
+        {{- end }}
+        {{- if $subtitle }}
+          <h3 class="section-subtitle">{{ $subtitle }}</h3>
+        {{- end }}
+        <div class="pill-bar pill-bar-small-gap advantages" style="margin-top: 6rem">
+          {{- range $i, $advantageItem := $advantages }}
+            {{- $advantageName := index $advantageItem "name" | default "" -}}
+            <div class="pill pill-glass pill-rounded pill-small-left advantage">
+              <img src="/images/hero-landingpage/check-circle-white.svg" class="ml-1">
+              {{ $advantageName }}
+            </div>
+          {{- end }}
+        </div>
+        <div class="field mt-6">
+          <div class="control">
+            <input class="input is-fullwidth p-5 mb-6" type="email" placeholder="{{ $emailPlaceholder }}">
+            <a href="{{ $ctaLink }}">
+              <span class="button contact-button rounded primary-btn raised">
+                {{ $ctaText }}
+                <span class="icon ml-2">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ else }}
+  {{ errorf "Image not found: %s" $src }}
+{{ end }}

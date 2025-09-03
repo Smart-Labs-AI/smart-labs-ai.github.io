@@ -1,19 +1,30 @@
-{{- $section_testimonial := .Site.Params.section_testimonial }}
+{{- $section_testimonial := .Params.section_testimonial | default .Site.Params.section_testimonial }}
+{{- $sectionType := index $section_testimonial "sectionType" | default "" }}
+{{- $sectionTitle := index $section_testimonial "section-title" | default "" -}}
 {{- $title    := index $section_testimonial "title" }}
 {{- $subtitle := index $section_testimonial "subtitle" }}
 {{- $features := index $section_testimonial "features" }}
 {{- $endorsements := index $section_testimonial "endorsements" }}
 
 
-<section class="section testimonial is-medium" id="section-testimonial">
+<section class="section testimonial is-medium {{ $sectionType }}" id="section-testimonial">
   <div class="container has-text-centered">
     <div class="columns is-centered is-vcentered">
       <div class="column is-8">
-        <h1 class="title section-title is-spaced">{{ $title }}</h1>
-        <h3 class="subtitle">{{ $subtitle }}</h3>
+        {{- if $sectionTitle }}
+          <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+        {{- end }}
+        {{- if $title }}
+          <h1 class="title section-title is-spaced">{{ $title }}</h1>
+        {{- end }}
+        {{- if $subtitle }}
+          <h3 class="subtitle section-subtitle">{{ $subtitle }}</h3>
+        {{- end }}
       </div>
     </div>
   </div>
+
+
   <div class="container mt-6">
     <div class="columns is-multiline">
       {{- range $features }}
@@ -52,7 +63,7 @@
               </div>
             </div>
             <div class="content mt-4">
-              <p class="has-text-grey-light">{{ .text | markdownify }}
+              <p class="subtitle">{{ .text | markdownify }}
             </div>
           </div>
         </div>
