@@ -67,7 +67,6 @@
         gap: 1.25rem;
       }
 
-      /* Radio input for each feature card */
       .feature-radio {
         display: none;
       }
@@ -93,10 +92,9 @@
           height: 6px;
           background-color: #FFFFFF33;
           border-radius: 6px;
-          display: none; /* hidden by default */
+          display: none;
         }
 
-        /* Chrome, Safari, Edge */
         .progress::-webkit-progress-bar {
           background-color: #FFFFFF33;
           border-radius: 6px;
@@ -105,16 +103,16 @@
         .progress::-webkit-progress-value {
           background-color: #FFF;
           border-radius: 6px;
+          transition: width 0.4s ease;
         }
 
-        /* Firefox */
         .progress::-moz-progress-bar {
           background-color: #FFF;
           border-radius: 6px;
+          transition: width 0.4s ease;
         }
       }
 
-      /* Hover effect for unselected cards */
       .feature-card:hover {
         border-radius: 12px;
         border: 1px solid transparent;
@@ -123,7 +121,6 @@
         z-index: 0;
       }
 
-      /* Show progress when card is selected */
       .feature-radio:checked + .feature-card {
         .progress {
           display: block;
@@ -165,8 +162,22 @@
 
     .feature-chart {
       width: 100%;
+      padding: 6rem;
       align-self: stretch;
       border-radius: 12px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+
+      .feature-chart-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        position: relative;
+        z-index: 1;
+      }
     }
   }
 

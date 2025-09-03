@@ -1,51 +1,106 @@
-{{- $servicesSolutionsSection   := .Site.Params.services_solutions_section }}
+{{- $servicesSolutionsSection   := .Params.services_solutions_section }}
 {{- $title   := index $servicesSolutionsSection "title" }}
 {{- $subtitle    := index $servicesSolutionsSection "subtitle" }}
 {{- $buttonText   := index $servicesSolutionsSection "buttonText" }}
 {{- $features   := index $servicesSolutionsSection "features" }}
 
-{{ $src := "/services/features.png" }}
-{{ $img := resources.Get $src }}
-{{ if $img }}
-  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
-  <section class="services-solutions-section">
-    <div class="container">
-      <div class="section-title-wrapper">
-        <h2 class="section-subtitle">AI Red Teaming Audit</h2>
-        <h1 class="section-title">Angriff, bevor es echt wird</h1>
-      </div>
+{{ $src1 := "/services/features_background.png" }}
+{{ $src2 := "/services/simulated_attack.png" }}
+{{ $src3 := "/services/technical_analysis.png" }}
+{{ $src4 := "/services/report.png" }}
 
-      <div class="service">
-        <div class="service-header">
-          <img src="/images/logos/logo-white-simple.svg" alt="Smart Lens Logo" class="service-logo" />
-          <h2 class="service-title">AI Red Teaming Audit</h2>
-        </div>
+{{ $img1 := resources.Get $src1 }}
+{{ $img2 := resources.Get $src2 }}
+{{ $img3 := resources.Get $src3 }}
+{{ $img4 := resources.Get $src4 }}
 
-        <div class="features-wrapper">
-          <div class="features-container">
-            {{ range $index, $feature := $features }}
-            <input type="radio" name="feature" id="feature-{{ $index }}" class="feature-radio" hidden>
-            <label for="feature-{{ $index }}" class="feature-card">
-              <div class="feature-icon-wrapper">
-                <img class="feature-icon" src="{{ $feature.icon }}"/>
-              </div>
-              <h3 class="feature-description">{{ $feature.description }}</h3>
-              <progress class="progress is-small" value="80" max="100"></progress>
-            </label>
-            {{ end }}
-          </div>
+{{ if and $img1 $img2 $img3 $img4 }}
+{{ $processed1 := $img1.Process "resize 1800x webp q100" }}
+{{ $processed2 := $img2.Process "resize 1800x webp q100" }}
+{{ $processed3 := $img3.Process "resize 1800x webp q100" }}
+{{ $processed4 := $img4.Process "resize 1800x webp q100" }}
 
-          <div class="feature-chart" style="background-image: url('{{ $processedBackground.RelPermalink }}'); background-position: top; background-repeat: no-repeat; background-size: cover;">
-            Test
-          </div>
-        </div>
-      </div>
-
-      <a class="button cta rounded secondary-btn raised">
-        {{ $buttonText }}
-        <img src="/images/services/arrow-right-icon.svg" alt="Arrow Right Icon"></a>
+<section class="services-solutions-section">
+  <div class="container">
+    <div class="section-title-wrapper">
+      <h2 class="section-subtitle">{{ $subtitle }}</h2>
+      <h1 class="section-title">{{ $title }}</h1>
     </div>
-  </section>
+
+    <div class="service">
+      <div class="service-header">
+        <img src="/images/logos/logo-white-simple.svg" alt="Smart Lens Logo" class="service-logo" />
+        <h2 class="service-title">{{ $subtitle }}</h2>
+      </div>
+
+      <div class="features-wrapper">
+        <div class="features-container">
+          {{ range $index, $feature := $features }}
+          <input
+              type="radio"
+              name="feature"
+              id="feature-{{ $index }}"
+              class="feature-radio"
+              hidden
+              {{ if eq $index 0 }}checked{{ end }}
+              data-chart-img="{{ if eq $index 0 }}{{ $processed2.RelPermalink }}{{ else if eq $index 1 }}{{ $processed3.RelPermalink }}{{ else if eq $index 2 }}{{ $processed4.RelPermalink }}{{ else }}{{ $processed2.RelPermalink }}{{ end }}"
+              data-progress="{{ if eq $index 0 }}33.33{{ else if eq $index 1 }}66.66{{ else if eq $index 2 }}100{{ else }}0{{ end }}"
+          >
+          <label for="feature-{{ $index }}" class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img class="feature-icon" src="{{ $feature.icon }}"/>
+            </div>
+            <h3 class="feature-description">{{ $feature.description }}</h3>
+            <progress class="progress is-small" value="0" max="100"></progress>
+          </label>
+          {{ end }}
+        </div>
+
+        <div class="feature-chart" style="background-image: url('{{ $processed1.RelPermalink }}');">
+          <img class="feature-chart-image" src="{{ $processed2.RelPermalink }}" alt="Feature Image">
+        </div>
+      </div>
+    </div>
+
+    <a class="button cta rounded secondary-btn raised">
+      {{ $buttonText }}
+      <img src="/images/services/arrow-right-icon.svg" alt="Arrow Right Icon"></a>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.querySelector('.services-solutions-section .features-wrapper');
+    if (!wrapper) return;
+
+    const chartImage = wrapper.querySelector('.feature-chart .feature-chart-image');
+    const radios = wrapper.querySelectorAll('.feature-radio');
+
+    const applyState = (radio) => {
+      if (!radio) return;
+      const img = radio.getAttribute('data-chart-img');
+      const progressValue = radio.getAttribute('data-progress');
+      const progressEl = radio.nextElementSibling.querySelector('.progress');
+
+      if (img && chartImage) chartImage.src = img;
+
+      wrapper.querySelectorAll('.progress').forEach(p => p.value = 0);
+
+      if (progressEl && progressValue) {
+        progressEl.value = progressValue;
+      }
+    };
+
+    const initial = wrapper.querySelector('.feature-radio:checked') || radios[0];
+    if (initial) applyState(initial);
+
+    radios.forEach((r) => {
+      r.addEventListener('change', () => {
+        if (r.checked) applyState(r);
+      });
+    });
+  });
+</script>
 {{ else }}
-  {{ errorf "Image not found: %s" $src }}
+  {{ errorf "One or more images not found" }}
 {{ end }}
