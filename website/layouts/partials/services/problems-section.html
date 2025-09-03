@@ -13,15 +13,17 @@
     <div class="cards-container">
       {{ range $problems }}
       <div class="problem-card">
-        <div class="problem-card-icon-wrapper">
-          <div class="circle circle-1"></div>
-          <div class="circle circle-2"></div>
-          <div class="circle circle-3"></div>
-          <img class="problem-icon" src="{{ .icon }}" icon />
-        </div>
-        <div class="problem-card-text">
-          <h2 class="problem-title">{{ .title }}</h2>
-          <p class="problem-description">{{ .description }}</p>
+        <div class="problem-card-inner">
+          <div class="problem-card-icon-wrapper">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <img class="problem-icon" src="{{ .icon }}" icon />
+          </div>
+          <div class="problem-card-text">
+            <h2 class="problem-title">{{ .title }}</h2>
+            <p class="problem-description">{{ .description }}</p>
+          </div>
         </div>
       </div>
       {{ end }}
