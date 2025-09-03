@@ -12,10 +12,22 @@
                       <div class="container">
                         <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
                           <div class="column is-flex is-flex-direction-row" style="gap: 2em">
+                                {{ $src := .background }}
+                                {{ $img := resources.Get $src }}
+                                {{ if $img }}
+                                  {{ $processedBackground := $img.Process "resize 540x webp q100" }}
+                                  {{ $height := $processedBackground.Height }}
+                                  {{ $width := $processedBackground.Width }}
 
-                                <figure class="image is-64x64" style="background: grey">
-                                    <img src="{{ .image }}" alt="{{ .name }}">
-                                  </figure>
+                                  <div class="is-flex is-align-items-center is-justify-content-center" style="background-image: url('{{ $processedBackground.RelPermalink }}'); min-width: {{ $width }}px; min-height: {{ $height }}px; background-size: cover; background-position: center;border-radius:16px">
+                                    <figure class="image is-flex is-align-items-center is-justify-content-center" style="width:120px;height:120px;margin:auto">
+                                      <img src="{{ .image }}" alt="{{ .name }}">
+                                    </figure>
+                                   </div>
+
+                                {{ else }}
+                                  {{ errorf "Image not found: %s" $src }}
+                                {{ end }}
 
                           </div>
                           <div class="column is-flex is-flex-direction-column" style="gap: 2em">
