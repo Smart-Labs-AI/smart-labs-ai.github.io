@@ -78,3 +78,36 @@ Classes to change the feel of bulma buttons
     }
 }
 
+.section-pricing {
+    .cta {
+        margin-bottom: 32px;
+        border: 6px solid rgba($hibiscus, 0.2);
+        border-radius: 50px;
+    }
+    
+    .cta a {
+        display: block;
+        background: $hibiscus;
+        border-radius: 50px;
+        color: white;
+        padding: 14px 24px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        letter-spacing: 0.5px;
+        position:relative;
+    }
+}
+
+.early-access-in-section, .section-grey {
+    .button {
+        background: $hibiscus;
+        color: white;
+        border:0;
+
+        &:hover {
+            color: lightgrey;
+        }
+    }
+}

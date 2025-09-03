@@ -1,0 +1,34 @@
+{{- $section_cta   := .Site.Params.section_cta }}
+{{- if eq $section_cta true }}
+{{- $section_cta = dict "_" "_" }}
+{{- end }}
+{{- $title      := index $section_cta "title" | default ""}}
+{{- $title2     := index $section_cta "title2" | default ""}}
+{{- $subtitle   := index $section_cta "subtitle" | markdownify }}
+{{- $buttonText := index $section_cta "buttontext" | default "" }}
+
+{{ $src := "/cta/background.png" }}
+{{ $img := resources.Get $src }}
+{{ if $img }}
+  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+  <section class="section section-primary is-medium cta-section" style="background-image: url('{{ $processedBackground.RelPermalink }}'); background-position: top; background-repeat: no-repeat; background-size: cover;">
+    <div class="container is-flex is-flex-direction-column">
+      <h3 class="subtitle is-5">{{ $subtitle | markdownify }}</h3>
+      <h2 class="cta-title section-title is-2 is-spaced">{{ $title | markdownify }}</h2>
+      <h2 class="cta-title2 section-title is-2 is-spaced">{{ $title2 | markdownify }}</h2>
+      
+      <div class="is-flex-grow-1"></div>  
+      
+      <a class="button cta rounded primary-btn raised mt-4" href="/#contact" aria-label="{{ $buttonText }}">
+        <span>
+          {{ $buttonText }}
+        </span>
+        <span class="icon">
+          <i class="fas fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+  </section>
+{{ else }}
+  {{ errorf "Image not found: %s" $src }}
+{{ end }}

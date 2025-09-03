@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+  {{ if .Params.hero }}
+    {{ partial "landingpage/hero-landingpage.html" . }}
+  {{ end }}
+
+  {{ if .Params.features }}
+    {{ partial "landingpage/features-landingpage.html" . }}
+  {{ end }}
+
+  {{ if .Params.liveInSection }}
+    {{ partial "landingpage/live-in-landingpage.html" . }}
+  {{ end }}
+
+  {{ if .Params.section_testimonial }}
+    {{ partial "section_testimonial.html" . }}
+  {{ end }}
+
+  {{ if .Params.section_prices }}
+    {{ partial "landingpage/prices-landingpage.html" . }}
+  {{ end }}
+
+  {{ if .Params.section_early_access }}
+    {{ partial "landingpage/early-access-landingpage.html" . }}
+  {{ end }}
+
+  {{ partial "footer.html" . }}
+{{ end }}

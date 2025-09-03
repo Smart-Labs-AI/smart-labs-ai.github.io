@@ -1,0 +1,86 @@
+.pill-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pill-bar-small-gap {
+    gap: 1rem;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 12px;
+    padding: .75rem 1.5rem;
+}
+
+div.pill-small-left {
+    padding-left: 0.3rem;
+}
+
+.pill-glass {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.15) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pill-purple {
+    position:relative;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(-25deg, rgba(255, 49, 139, 0.2) 0%, rgba(119, 102, 255, 0.2) 100%);
+  
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      background: linear-gradient(-25deg, $purple  0%, $hibiscus 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+}
+
+.pill-rounded {
+    border-radius: 9999px; /* macht es pillen- bzw. kreisförmig */
+}
+
+.pill-bar-big-icons {
+    .pill {
+        margin: 30px; 
+        padding: 30px; 
+        gap: 3em;
+
+        .logo-icon {
+            img {
+                height:120px;
+                width:auto;
+                margin:30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pill-bar {
+        gap: 1rem;
+    }
+
+    .pill {
+      padding: 0.6rem 1.2rem;
+    }
+} 
+
+
+@media (max-width: 480px) {
+    .pill-bar {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
