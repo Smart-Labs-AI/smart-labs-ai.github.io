@@ -62,6 +62,12 @@
       line-height: 1.5;
     }
 
+    .card-content.alternate-card-content:nth-child(even) {
+      .columns {
+        flex-direction: row-reverse;
+      }
+    }
+
     &.pipedriveWebForms {
       background: linear-gradient(-30deg, $card-color-start 0%, #151515 30%, #151515 70%, $card-color-end 100%);
       color: white;
@@ -117,11 +123,18 @@
       background: white;
       box-shadow: none;
 
+      .name {
+        color: $hibiscus;
+        font-weight: 500;
+      }
+
       .title {
         color: $royal-blue;
+        font-size: 2.2rem;
       }
       .subtitle {
-        color: rgba(#1a1449, 0.6);
+        color: $royal-blue;
+        font-size: 1.1rem;
       }
     }
   }

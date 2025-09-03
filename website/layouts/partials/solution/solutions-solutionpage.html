@@ -1,13 +1,13 @@
 {{- $solutionDetails := .Params.solutionDetails }}
 
 
-<section class="section section-grey is-medium " id="section-testimonial">
+<section class="section section-grey section-solution-design is-medium " id="section-testimonial">
   <div class="container">
       <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
             <div class="column is-flex is-flex-direction-column" style="gap: 2em">
               {{ range $solutionDetails }}
                 <div class="card is-flex">
-                  <div class="card-content is-flex-grow-1">
+                  <div class="card-content alternate-card-content is-flex-grow-1">
 
                       <div class="container">
                         <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
@@ -30,18 +30,26 @@
                                 {{ end }}
 
                           </div>
-                          <div class="column is-flex is-flex-direction-column" style="gap: 2em">
-
-                                  <h4 class="is-4 mt-6">{{ .name }}</h4>
-                                  <h4 class="title is-4 mt-6">{{ .title }}</h4>
-                                  <p class="subtitle mt-4">{{ .description | markdownify }}</p>
-
+                          <div class="column is-flex is-flex-direction-column" style="gap: 1em">
+                            <h4 class="name is-4 mt-5">{{ .name }}</h4>
+                            <h4 class="title is-4 mt-2">{{ .title }}</h4>
+                            <p class="subtitle mt-0">{{ .description | markdownify }}</p>
+                              {{- $ctaText := index . "cta-text" }}
+                              {{- $ctaLink := index . "cta-link" }}
+                              <a href="{{ $ctaLink }}">
+                                <span class="button contact-button rounded primary-btn raised">
+                                  {{ $ctaText }}
+                                  <span class="icon ml-2">
+                                    <i class="fas fa-arrow-right"></i>
+                                  </span>
+                                </span>
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
 
+                    </div>
                   </div>
-                </div>
               {{ end }}
             </div>
       </div>
