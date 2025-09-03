@@ -47,7 +47,54 @@ solutionDetails:
       title: "Schützen Sie Ihre KI-Infrastruktur"
       description: "Plattform für Analyse, Härtung & Auditierung von Large Language Models, Agenten & APIs – inkl. Prompt Injection Detection und Red Teaming."
       image: "/images/illustrations/icons/llm-security.svg"
-      background: "/solution/product_background_1.png"
+      background: "/solution/product_background_3.png"
       cta-text: "LLM Security Platform entdecken"
       cta-link: "/#"
+solutionComparison:
+  section-title: "Vergleich"
+  title: "Welche Lösung passt zu Ihnen?"
+  comparison:
+    - name: "Smart Fingerprint"
+      image: "/images/illustrations/icons/fingerprint.svg"
+      category: "Kontinuierliche Authentifizierung"
+      features:
+      - "Kein Upload"
+      - "Keine Templates"
+      - "DSGVO-konform"
+      ctas:
+      - text: "Demo vereinbaren"
+        link: "/#"
+        class: "primary-btn"
+      - text: "Datasheet anfordern"
+        link: "/#"
+        class: "secondary-btn"
+    - name: "Smart Dragon"
+      image: "/images/illustrations/icons/smart-dragon.svg"
+      category: "Unternehmens-Chatbot"
+      features:
+      - "Kein Prompt-Leakage"
+      - "konsistentes Logging"
+      - "Legal & Support"
+      ctas:
+      - text: "Demo vereinbaren"
+        link: "/#"
+        class: "primary-btn"
+      - text: "Datasheet anfordern"
+        link: "/#"
+        class: "secondary-btn"
+    - name: "LLM Security Platform"
+      image: "/images/illustrations/icons/llm-security.svg"
+      category: "Plattform-Absicherung"
+      features:
+      - "LLM-Auditing"
+      - "Agent-Absicherung"
+      - "Prompt-Analyse"
+      ctas:
+      - text: "Demo vereinbaren"
+        link: "/#"
+        class: "primary-btn"
+      - text: "Datasheet anfordern"
+        link: "/#"
+        class: "secondary-btn"
+
 ---

@@ -1,0 +1,71 @@
+{{- $section_comparison := .Params.solutionComparison -}}
+{{- $sectionTitle := index $section_comparison "section-title" | default "" -}}
+{{- $title := index $section_comparison "title" | default "" -}}
+{{- $subtitle := index $section_comparison "subtitle" | default "" -}}
+{{- $comparison := index $section_comparison "comparison" | default (slice) -}}
+
+<section class="section section-comparison section-white section-solutions is-medium">
+  <div class="container has-text-centered">
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-8">
+        {{- if $sectionTitle }}
+          <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+        {{- end }}
+        {{- if $title }}
+          <h1 class="section-title is-spaced">{{ $title }}</h1>
+        {{- end }}
+        {{- if $subtitle }}
+          <h3 class="section-subtitle">{{ $subtitle }}</h3>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-6">
+    <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+      {{- range $i, $comparisonItem := $comparison}}
+        {{- $cardType := index $comparisonItem "cardType" | default "" -}}
+        {{- $name := index $comparisonItem "name" | default "" -}}
+        {{- $title := index $comparisonItem "title" | default "" -}}
+        {{- $category := index $comparisonItem "category" | default "" -}}
+        {{- $image := index $comparisonItem "image" | default "" -}}
+        {{- $ctaText := index $comparisonItem "ctaText" | default "" -}}
+        {{- $ctaLink := index $comparisonItem "ctaLink" | default "" -}}
+        {{- $cssClass := index $comparisonItem "cssClass" | default "" -}}
+      <div class="column is-one-third is-flex">
+          <div class="card {{ $cssClass }} is-flex is-flex-direction-column is-flex-grow-1 is-full-height p-0">
+            <div class="card-content is-flex-grow-1">
+              <div class="name"><img src="{{ $image }}" style="height:80px;width:auto;margin:20px"></div>
+              <h1>{{ $name }}</h1>
+              <div class="category">{{ $category }}</div>
+
+              {{- range $i, $feature := $comparisonItem.features }}
+                <div class="feature">
+                  <i class="fas fa-check"></i>
+                  <div>
+                    {{ $feature | markdownify }}
+                  </div>
+                </div>
+              {{- end }}
+
+              <div class="mt-6 mb-5">
+
+                {{- range $i, $cta := $comparisonItem.ctas }}
+                  <a href="{{ $cta.link }}">
+                    <span class="button contact-button rounded {{ $cta.class }} raised mt-3" style="width:100%">
+                      {{ $cta.text }}
+                      <span class="icon ml-2">
+                        <i class="fas fa-arrow-right"></i>
+                      </span>
+                    </span>
+                  </a>
+                {{- end }}
+
+              </div>
+            </div>
+          </div>
+        </div>
+        {{- end }}
+    </div>
+  </div>
+</section>

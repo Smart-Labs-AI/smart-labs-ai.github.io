@@ -8,6 +8,10 @@
     {{ partial "solution/solutions-solutionpage.html" . }}
   {{ end }}
 
+  {{ if .Params.solutionComparison }}
+    {{ partial "solution/comparison-solutionpage.html" . }}
+  {{ end }}
+
   {{ partial "section_cta.html" . }}
 
   {{ partial "footer.html" . }}

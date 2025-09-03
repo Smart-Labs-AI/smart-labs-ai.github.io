@@ -62,12 +62,6 @@
       line-height: 1.5;
     }
 
-    .card-content.alternate-card-content:nth-child(even) {
-      .columns {
-        flex-direction: row-reverse;
-      }
-    }
-
     &.pipedriveWebForms {
       background: linear-gradient(-30deg, $card-color-start 0%, #151515 30%, #151515 70%, $card-color-end 100%);
       color: white;
@@ -88,7 +82,7 @@
         color: $royal-blue;
       }
       .subtitle {
-        color: rgba(#1a1449, 0.6);
+        color: rgba($midnight-blue, 0.6);
       }
     }
 
@@ -260,5 +254,12 @@
     .title {
       color: rgba(255, 255, 255, 0.6);
     }
+  }
+}
+
+
+.card:nth-child(even) .card-content.alternate-card-content {
+  .columns {
+    flex-direction: row-reverse !important;
   }
 }
