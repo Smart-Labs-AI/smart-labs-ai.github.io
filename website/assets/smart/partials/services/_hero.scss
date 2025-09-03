@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Services Hero styles
+  Services Hero styles
 ========================================================================== */
 
 .services-hero-background {
@@ -17,9 +17,16 @@
 }
 
 .services-hero-body {
+  z-index: 1;
   height: 860px;
-  padding-top: 14rem;
-  padding-bottom: 12rem;
+  padding: 0 6rem;
+  margin-top: -4rem;
+  margin-bottom: 4rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
 
   .services-page-title,
   .hero-title,
@@ -47,13 +54,27 @@
     margin-bottom: 2.25rem;
   }
 
+  .landing-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .button {
+      display: inline-flex;
+      width: auto;
+      max-width: max-content;
+      white-space: nowrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+  }
+
   .feature-chart {
     display: flex;
     flex-wrap: row;
     gap: 0.25rem;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
   }
 
   .feature-card-line-element {
@@ -76,9 +97,8 @@
     border-radius: 12px;
     position: relative;
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); // Safari support
+    -webkit-backdrop-filter: blur(20px);
     
-    // Create border gradient effect
     &::before {
       content: "";
       position: absolute;
@@ -86,7 +106,7 @@
       left: -2px;
       right: -2px;
       bottom: -2px;
-      border-radius: 14px; // slightly larger to account for border width
+      border-radius: 14px;
       border: 2px solid transparent;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%) border-box;
       -webkit-mask:
@@ -112,5 +132,64 @@
     //width: 60px;
     //height: 60px;
     color: #fff;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .services-hero-body {
+    flex-direction: column;
+    gap: 8rem;
+    align-items: center;
+    justify-content: center;
+
+    .landing-caption {
+      text-align: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .services-hero-background {
+    background-position: left top, left top;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .services-hero-background {
+    left: -6rem;
+  }
+  
+}
+
+@media screen and (max-width: 720px) {
+  .services-hero-body {
+    gap: 6rem;
+
+    .feature-card {
+      width: 150px;
+      height: 105px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .services-hero-body {
+    gap: 4rem;
+
+    .feature-card {
+      width: 110px;
+      height: 75px;
+    }
+
+    .feature-line {
+      width: 30px;
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
