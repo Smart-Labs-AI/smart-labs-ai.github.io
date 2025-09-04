@@ -92,3 +92,9 @@ Hero styles
         height: 70px;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-body {
+        padding: 4rem 0;
+    }
+}

@@ -263,3 +263,11 @@
     flex-direction: row-reverse !important;
   }
 }
+
+@media (max-width: 768px) {
+  .section {
+    .card {
+        padding: 0;
+    }
+  }
+}
