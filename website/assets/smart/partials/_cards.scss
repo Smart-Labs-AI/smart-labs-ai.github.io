@@ -91,6 +91,14 @@
       .subtitle {
         color: rgba($midnight-blue, 0.6);
       }
+
+      &.card-dark {
+        color: white;
+        .title, .subtitle {
+          color: white;
+        }
+      }
+
     }
 
     .card-brighter {

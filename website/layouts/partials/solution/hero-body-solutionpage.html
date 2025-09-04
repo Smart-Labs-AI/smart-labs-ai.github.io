@@ -39,14 +39,20 @@
             </h1>
 
             <div class="pill-bar pill-bar-big-icons">
-              <div class="pill pill-glass is-flex-direction-column-tablet">
-                {{ with $solutions }}
-                {{ range . }}
-                  <div class="logo-icon">
-                    <img src="{{ .item.image }}">
-                  </div>
-                {{ end }}
-                {{ end }}
+              <div class="pill pill-glass is-flex-direction-column-tablet" >
+                  {{ with $solutions }}
+                  {{ if eq (len .) 1 }}
+                    <div class="logo-icon"style="background:none; border:none">
+                      <img src="{{ (index . 0).item.image }}">
+                    </div>
+                  {{ else }}
+                    {{ range . }}
+                      <div class="logo-icon">
+                        <img src="{{ .item.image }}">
+                      </div>
+                    {{ end }}
+                  {{ end }}
+                  {{ end }}
               </div>
             </div>
 
