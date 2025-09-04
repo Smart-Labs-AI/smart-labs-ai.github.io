@@ -2,6 +2,35 @@
 Hero styles
 ========================================================================== */
 
+.section-hero {
+    position: relative;
+
+    .hero-container {
+        min-height: 100vh;
+    }
+    
+    .hero-background-custom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .hero-background-custom::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 0;
+        margin-top: -96px;
+        margin-bottom: -20px;
+    }
+
+}
+
 .hero-background {
     height: 2023px;
     position: absolute;
@@ -35,26 +64,6 @@ Hero styles
     background-size: 150px 95px;
     pointer-events: none;
     //z-index: 1;
-}
-
-.hero-background-custom {
-    height: 2023px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 2023px;
-    overflow: hidden;
-}
-
-.hero-background-custom::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2023px;
-    z-index: 0;
 }
 
 .hero-body {

@@ -15,14 +15,14 @@
   {{ $height := $processedBackground.Height }}
   <style>
     .hero-background-custom::before {
-      background: url('{{ $processedBackground.RelPermalink }}') no-repeat center/cover;
-      height: {{ $height }}px;
+      background: url('{{ $processedBackground.RelPermalink }}') no-repeat center;
+      background-size: 100% 100%;
     }
   </style>
   
-  <section class="section">
+  <section class="section section-hero">
     <div class="section hero-container">
-      <div class="hero-background-custom"></div>
+    <div class="hero-background-custom"></div>
       
       <div class="hero-body">
         <div class="container">

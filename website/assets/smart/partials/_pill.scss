@@ -54,20 +54,25 @@ div.pill-small-left {
 .pill-bar-big-icons {
     .pill {
         margin: 30px; 
-        padding: 30px; 
+        padding: 38px 38px 31px;
         gap: 3em;
 
         .logo-icon {
             img {
                 height:120px;
                 width:auto;
-                margin:30px;
             }
         }
     }
 }
 
 @media (max-width: 768px) {
+    .pill-bar, .pill {
+        &.is-flex-direction-column-tablet {
+            flex-direction: column !important;
+        }
+    }
+
     .pill-bar {
         gap: 1rem;
     }
