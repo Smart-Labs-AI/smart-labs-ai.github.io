@@ -12,6 +12,10 @@
     {{ partial "solution-detail/advantage-solutiondetail.html" . }}
   {{ end }}
 
+  {{ if .Params.benefit }}
+    {{ partial "solution-detail/benefit-solutiondetail.html" . }}
+  {{ end }}
+
   {{ partial "section_cta.html" . }}
 
   {{ partial "footer.html" . }}

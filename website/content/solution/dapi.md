@@ -47,4 +47,9 @@ advantage:
         image: "/images/illustrations/icons/no-templates.svg"
       - title: "DSGVO-konform"
         image: "/images/illustrations/icons/dsgvo.svg"
+benefit:
+  background-image: "/solution/dapi/hero.png"
+  section-title: "Benefit"
+  title: "Ganzheitlicher Schutz für Ihre generativen KI-Anwendungen"
+  content: "ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher. ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher. ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher."
 ---

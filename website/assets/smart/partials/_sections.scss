@@ -95,6 +95,13 @@ Section Styles
     &.latest-blog-posts {
         background: linear-gradient(120deg, rgba(#A81B58, 0.2) 0%, rgba($dark-purple,0.2) 100%);
     }
+
+    &.section-solution-detail-benefit {
+        p {
+            font-size: 1.3rem;
+            color: rgba(white, 0.6)
+        }
+    }
 }
 
 //Titles
