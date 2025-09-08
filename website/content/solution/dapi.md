@@ -52,4 +52,21 @@ benefit:
   section-title: "Benefit"
   title: "Ganzheitlicher Schutz für Ihre generativen KI-Anwendungen"
   content: "ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher. ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher. ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher."
+useCases:
+  section-title: "Use Cases"
+  title: "Kontinuierliche Authentifizierung für kritische Systeme"
+  subtitle: "ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher."
+  items:
+    - title: "LLM-Auditing Use Case für Unternehmen mit KI-Einsatz"
+      image: "/images/illustrations/icons/audit.svg"
+      ctaLink: "/#"
+      ctaText: "Mehr erfahren"
+    - title: "Use Case zur Agent-Absicherung für Unternehmen"
+      image: "/images/illustrations/icons/agent.svg"
+      ctaLink: "/#"
+      ctaText: "Mehr erfahren"
+    - title: "Use Case zur Prompt-Analyse für KI in Unternehmen"
+      image: "/images/illustrations/icons/prompt.svg"
+      ctaLink: "/#"
+      ctaText: "Mehr erfahren"
 ---

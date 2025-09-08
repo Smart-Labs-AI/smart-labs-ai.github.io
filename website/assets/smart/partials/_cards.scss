@@ -146,6 +146,13 @@
         font-size: 1.1rem;
       }
     }
+
+    .card-brighter {
+      color: $royal-blue;
+      background: linear-gradient(135deg, rgba(#7766ff, 0.1) 0%, rgba(#ff318b, 0.1) 100%);
+      border:none;
+      box-shadow: none;
+    }
   }
   
   .blog-card {

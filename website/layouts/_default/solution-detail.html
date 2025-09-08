@@ -16,6 +16,10 @@
     {{ partial "solution-detail/benefit-solutiondetail.html" . }}
   {{ end }}
 
+  {{ if .Params.useCases }}
+    {{ partial "solution-detail/use-cases-solutiondetail.html" . }}
+  {{ end }}
+
   {{ partial "section_cta.html" . }}
 
   {{ partial "footer.html" . }}
