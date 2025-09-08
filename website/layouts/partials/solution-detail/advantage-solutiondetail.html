@@ -23,8 +23,8 @@
     <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
       <div class="column is-flex is-flex-direction-row is-flex-direction-column-tablet" style="gap: 2em">
           {{ range $advantages }}
-            <div class="card card-dark is-flex is-flex-direction-column has-text-centered" style="min-height: 450px;">
-              <div class="card-content is-flex is-flex-direction-column is-flex-grow-1 is-justify-content-flex-end" style="padding-bottom: 2rem;">
+            <div class="card is-flex is-flex-direction-column is-flex-grow-1 has-text-centered" style="min-height: 450px;">
+              <div class="card-content is-flex is-flex-direction-column is-flex-grow-1 is-justify-content-flex-end pill-centered" style="padding-bottom: 2rem;">
                   <div class="pill-ring-1 pill-ring-centered">
                     <div class="pill-ring-2 pill-ring-centered">
                       <div class="pill-ring-3 pill-ring-centered">
@@ -34,7 +34,7 @@
                   </div>
                   
                   <h4 class="name is-4 mb-2">{{ .name }}</h4>
-                  <h4 class="title is-4 mb-2">{{ .title }}</h4>
+                  <h4 class="title is-4 mb-2 mt-6" style="font-size: 180%;">{{ .title }}</h4>
                   <p class="subtitle mt-4 mb-0">{{ .description | markdownify }}</p>
               </div>
             </div>

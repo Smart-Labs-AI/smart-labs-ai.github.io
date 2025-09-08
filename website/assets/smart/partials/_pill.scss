@@ -66,10 +66,17 @@ div.pill-small-left {
     }
 }
 
+.pill-centered {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; 
+  }
+
 .pill-ring-centered {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .pill-ring-1 {
