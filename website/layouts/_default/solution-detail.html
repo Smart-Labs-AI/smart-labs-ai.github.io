@@ -8,6 +8,10 @@
     {{ partial "solution-detail/features-solutiondetail.html" . }}
   {{ end }}
 
+  {{ if .Params.advantage }}
+    {{ partial "solution-detail/advantage-solutiondetail.html" . }}
+  {{ end }}
+
   {{ partial "section_cta.html" . }}
 
   {{ partial "footer.html" . }}

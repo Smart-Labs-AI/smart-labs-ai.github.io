@@ -36,4 +36,15 @@ features:
         description: "ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher."
         image: "/images/illustrations/icons/audit-trails.svg"
         background: "/solution/feature-card-background.png"
+advantage:
+  section-title: "Advantage"
+  title: "Abschnittsüberschrift zum Advantage"
+  subtitle: "Dapi Subtitle"
+  advantages:
+      - title: "Kein Upload"
+        image: "/images/illustrations/icons/no-upload.svg"
+      - title: "Keine Templates"
+        image: "/images/illustrations/icons/no-templates.svg"
+      - title: "DSGVO-konform"
+        image: "/images/illustrations/icons/dsgvo.svg"
 ---
