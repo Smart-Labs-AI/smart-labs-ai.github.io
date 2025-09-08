@@ -107,3 +107,9 @@ Section Styles
         }
     }
 }
+
+@media (max-width: 768px) {
+    .is-flex-direction-column-tablet {
+        flex-direction: column !important;
+    }
+}
