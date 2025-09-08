@@ -47,9 +47,11 @@
                     </div>
                   {{ else }}
                     {{ range . }}
-                      <div class="logo-icon">
-                        <img src="{{ .item.image }}">
-                      </div>
+                      <a href="{{ .item.link }}">
+                        <div class="logo-icon">
+                          <img src="{{ .item.image }}">
+                        </div>
+                      </a>
                     {{ end }}
                   {{ end }}
                   {{ end }}
