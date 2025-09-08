@@ -130,6 +130,7 @@
   &.section-grey {
     .card {
       background: white;
+      border: 1px solid rgba($midnight-blue, 0.1);
       box-shadow: none;
 
       .name {
@@ -145,6 +146,16 @@
         color: $royal-blue;
         font-size: 1.1rem;
       }
+    }
+
+    .card-filling-image-top {
+      width:100%;
+      height:400px;
+      overflow:hidden;
+      min-width:100px;
+      border-top-right-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+      border-bottom: 1px solid rgba($midnight-blue, 0.1);
     }
 
     .card-brighter {
@@ -182,8 +193,8 @@
       img {
         width: 100%;
         height: auto;
-        border-top-left-radius: 18px;
-        border-top-right-radius: 18px;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
       }
     }
   
