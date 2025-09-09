@@ -169,6 +169,8 @@
       background-position: center;
       position: relative;
       overflow: hidden;
+      display: flex;
+      align-items: center;
 
       .feature-chart-image {
         width: 100%;
