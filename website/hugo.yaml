@@ -184,6 +184,8 @@ params:
           link: /impressum
         - text: Datenschutzerklärung
           link: /datenschutzerklaerung
+        - text: AGB
+          link: /agb
     finalLine:
       title: © 2025 Smart Labs AI GmbH – Alle Rechte vorbehalten
       links:
