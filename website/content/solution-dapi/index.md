@@ -84,7 +84,7 @@ section_testimonial:
 section_prices:
   sectionType: "section-white section-landingpage"
   section-title: "Preise"
-  title: Finde die passende Lösung für dich
+  title: "Defense API: Finde die passende Lösung für dich"
   info-box: "**Keine harten Nutzungslimits:** Wir setzen auf Flexibilität. Du zahlst, was du brauchst"
   prices:
     - name: Start
@@ -108,7 +108,7 @@ section_prices:
         type: check
       - name: "M Token (LLM Calls) **nach Bedarf**"
         type: check
-      - name: "**€ 0,20** pro M Token (LLM Calls)"
+      - name: "**€ 2,50** pro M Token (LLM Calls)"
         type: add
     - name: Enterprise
       price: "Individuell"
