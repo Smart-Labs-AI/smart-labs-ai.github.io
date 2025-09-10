@@ -2,6 +2,7 @@
 ---
 title: "Defense API"
 layout: "solution-detail"
+include_footer: true
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "LLM Security Platform"
@@ -69,4 +70,16 @@ useCases:
       image: "/images/illustrations/icons/prompt.svg"
       ctaLink: "/#"
       ctaText: "Mehr erfahren"
+footer:
+  quicklinks:
+    column2:
+      links:
+      - text: "Datenschutzerklärung DAPI"
+        link: "datenschutzerklaerung-dapi"
+      - text: "Nutzungsbedingungen DAPI" 
+        link: "nutzungsbedingungen-dapi" 
+      - text: "Leistungsbeschreibung DAPI" 
+        link: "leistungsbeschreibung-dapi"
+      - text: "Risikobewertung DAPI" 
+        link: "risikobewertung-dapi"
 ---
