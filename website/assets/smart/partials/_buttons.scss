@@ -100,8 +100,10 @@ Classes to change the feel of bulma buttons
     }
 }
 
-.early-access-in-section, .section-grey {
+.early-access-in-section, .section-comparison, .section-grey {
+
     .button {
+        font-weight: 400;
         background: $hibiscus;
         color: white;
         border:0;
@@ -110,4 +112,24 @@ Classes to change the feel of bulma buttons
             color: lightgrey;
         }
     }
+
+    .secondary-btn {
+        background: none;
+        color: $hibiscus;
+        border: 1px solid $hibiscus;
+    }
 }
+
+@media (max-width: 768px) {
+    .button {
+        white-space: normal;
+        line-height: 15px;
+    }
+
+    .card {
+        .button {
+            width: 100%;
+        }
+  
+    }
+  }

@@ -3,6 +3,9 @@ Responsive Styles
 ========================================================================== */
 
 @media (max-width: 767px) {
+    body {
+        overflow: hidden !important;
+    }
 
     .landing-caption {
         text-align: center;

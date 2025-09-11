@@ -1,4 +1,4 @@
-.section-pricing {
+.section-pricing, .section-comparison {
     .name {
         background: linear-gradient(155deg, $hibiscus, $dark-purple);
         color: white;
@@ -8,6 +8,21 @@
         font-weight: 600;
         font-size: 170%;
         margin-bottom: 24px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .category {
+        font-weight: 600;
+        text-align: center;
+        background: rgba($midnight-blue, 0.1);
+        border-radius: 15px;
+        padding: 1em;
+        margin: 3em 0;
     }
 
     .price {

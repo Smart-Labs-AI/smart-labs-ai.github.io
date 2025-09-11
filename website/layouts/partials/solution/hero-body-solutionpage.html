@@ -15,14 +15,14 @@
   {{ $height := $processedBackground.Height }}
   <style>
     .hero-background-custom::before {
-      background: url('{{ $processedBackground.RelPermalink }}') no-repeat center/cover;
-      height: {{ $height }}px;
+      background: url('{{ $processedBackground.RelPermalink }}') no-repeat center;
+      background-size: 100% 100%;
     }
   </style>
   
-  <section class="section">
+  <section class="section section-hero">
     <div class="section hero-container">
-      <div class="hero-background-custom"></div>
+    <div class="hero-background-custom"></div>
       
       <div class="hero-body">
         <div class="container">
@@ -39,14 +39,22 @@
             </h1>
 
             <div class="pill-bar pill-bar-big-icons">
-              <div class="pill pill-glass">
-                {{ with $solutions }}
-                {{ range . }}
-                  <div class="logo-icon">
-                    <img src="{{ .item.image }}">
-                  </div>
-                {{ end }}
-                {{ end }}
+              <div class="pill pill-glass is-flex-direction-column-tablet" >
+                  {{ with $solutions }}
+                  {{ if eq (len .) 1 }}
+                    <div class="logo-icon"style="background:none; border:none">
+                      <img src="{{ (index . 0).item.image }}">
+                    </div>
+                  {{ else }}
+                    {{ range . }}
+                      <a href="{{ .item.link }}">
+                        <div class="logo-icon">
+                          <img src="{{ .item.image }}">
+                        </div>
+                      </a>
+                    {{ end }}
+                  {{ end }}
+                  {{ end }}
               </div>
             </div>
 
@@ -59,7 +67,7 @@
             <div class="cta-section">
               {{ with $ctas }}
               {{ range . }}
-              <a href="{{ .href }}" class="button rounded {{ .class }} raised mr-4">
+              <a href="{{ .href }}" class="button rounded {{ .class }} raised mr-4 mb-4">
                   {{ .label }}
                   <span class="icon ml-2">
                     <i class="fas fa-arrow-right"></i>

@@ -16,19 +16,29 @@
           {{ end }}
         </div>
       </div>
-      {{- range $quickLinks }}
+      {{- $pageQuickLinks := .Params.footer.quicklinks }}
+      {{- range $colName, $colData := .Site.Params.footer.quicklinks }}
         <div class="column is-narrow mr-6">
           <div class="footer-column">
             <div class="footer-header">
-                <h3>{{ .title }}</h3>
+                <h3>{{ $colData.title }}</h3>
             </div>
             <ul class="link-list">
-              {{- range .links }}
+              {{- range $colData.links }}
               <li>
                 <a href="{{ .link }}">
                   {{ .text }}
                 </a>
               </li>
+              {{- end }}
+              {{- with (index $pageQuickLinks $colName) }}
+                {{- range .links }}
+                <li>
+                  <a href="{{ .link }}">
+                    {{ .text }}
+                  </a>
+                </li>
+                {{- end }}
               {{- end }}
             </ul>
           </div>

@@ -1,7 +1,7 @@
 {{- $solutionDetails := .Params.solutionDetails }}
 
 
-<section class="section section-grey section-solution-design is-medium " id="section-testimonial">
+<section class="section section-grey section-solution-design is-medium ">
   <div class="container">
       <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
             <div class="column is-flex is-flex-direction-column" style="gap: 2em">
@@ -19,7 +19,7 @@
                                   {{ $height := $processedBackground.Height }}
                                   {{ $width := $processedBackground.Width }}
 
-                                  <div class="is-flex is-align-items-center is-justify-content-center" style="background-image: url('{{ $processedBackground.RelPermalink }}'); min-width: {{ $width }}px; min-height: {{ $height }}px; background-size: cover; background-position: center;border-radius:16px">
+                                  <div class="is-flex is-align-items-center is-justify-content-center custom-background-image" style="background-image: url('{{ $processedBackground.RelPermalink }}'); min-height: {{ $height }}px;">
                                     <figure class="image is-flex is-align-items-center is-justify-content-center" style="width:120px;height:120px;margin:auto">
                                       <img src="{{ .image }}" alt="{{ .name }}">
                                     </figure>

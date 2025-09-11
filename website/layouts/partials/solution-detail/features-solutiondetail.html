@@ -1,0 +1,52 @@
+{{- $features := .Params.features }}
+{{- $sectionTitle := index $features "section-title" | default "" -}}
+{{- $title := index $features "title" | default "" -}}
+{{- $subtitle := index $features "subtitle" | default "" -}}
+{{- $features := index $features "features" | default "" -}}
+<section class="section section-white section-solution-detail-feature is-medium ">
+  <div class="container">
+    <div class="container has-text-centered mb-6">
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-8">
+          {{- if $sectionTitle }}
+            <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+          {{- end }}
+          {{- if $title }}
+            <h1 class="section-title is-spaced mb-4">{{ $title }}</h1>
+          {{- end }}
+          {{- if $subtitle }}
+            <h3 class="section-subtitle">{{ $subtitle }}</h3>
+          {{- end }}
+        </div>
+      </div>
+    </div>
+    <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+      <div class="column is-flex is-flex-direction-row is-flex-direction-column-tablet" style="gap: 2em">
+          {{ range $features }}
+            {{ $src := .background }}
+            {{ $img := resources.Get $src }}
+            {{ if $img }}
+              {{ $processedBackground := $img.Process "resize 540x webp q100" }}
+              {{ $height := $processedBackground.Height }}
+              {{ $width := $processedBackground.Width }}
+            <div class="card card-dark is-flex is-flex-direction-column" style="background-image: url('{{ $processedBackground.RelPermalink }}'); background-size:100% 100%; min-height: 450px;border: 0px">
+              <div class="card-content is-flex is-flex-direction-column is-flex-grow-1 is-justify-content-flex-end" style="padding-bottom: 2rem;">
+                <div class="mt-auto">
+                  <h4 class="name is-4 mb-2">{{ .name }}</h4>
+                  <h4 class="title is-4 mb-2">{{ .title }}</h4>
+                  <p class="subtitle mt-4 mb-0">{{ .description | markdownify }}</p>
+                </div>
+                <div style="position:absolute;bottom:0;right:0;width:100%;height:100%;overflow:hidden;z-index:0;pointer-events:none;">
+                    <img src="{{ .image }}" alt="{{ .name }}" 
+                        style="position:absolute;bottom:-30%;right:-30%;min-width:100%;min-height:100%;object-fit:cover;">
+                </div>
+              </div>
+            </div>
+            {{ else }}
+              {{ errorf "Image not found: %s" $src }}
+            {{ end }}
+          {{ end }}
+        </div>
+    </div>
+  </div>
+</section>

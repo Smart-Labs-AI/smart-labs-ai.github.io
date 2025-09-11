@@ -1,4 +1,4 @@
-{{- $section_prices := .Params.section_prices -}}
+{{- $section_prices := .section_prices -}}
 {{- $sectionTitle := index $section_prices "section-title" | default "" -}}
 {{- $title := index $section_prices "title" | default "" -}}
 {{- $subtitle := index $section_prices "subtitle" | default "" -}}
@@ -25,14 +25,13 @@
   <div class="container mt-6">
     <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
       {{- range $i, $price := $prices }}
-        {{- $cardType := index $price "cardType" | default "" -}}
         {{- $name := index $price "name" | default "" -}}
         {{- $price_text := index $price "price" | default "" -}}
         {{- $turnus := index $price "turnus" | default "" -}}
         {{- $ctaText := index $price "ctaText" | default "" -}}
         {{- $ctaLink := index $price "ctaLink" | default "" -}}
         {{- $cssClass := index $price "cssClass" | default "" -}}
-      <div class="column is-one-third is-flex">
+        <div class="column is-one-third is-flex">
           <div class="card {{ $cssClass }} is-flex is-flex-direction-column is-flex-grow-1 is-full-height p-0">
             <div class="card-content is-flex-grow-1">
               <div class="name">{{ $name }}</div>
@@ -58,7 +57,7 @@
             </div>
           </div>
         </div>
-        {{- end }}
+      {{- end }}
     </div>
   </div>
   {{- if $infoBox }}

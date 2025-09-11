@@ -1,0 +1,49 @@
+{{- $useCases := .Params.useCases }}
+{{- $sectionTitle := index $useCases "section-title" | default "" -}}
+{{- $title := index $useCases "title" | default "" -}}
+{{- $subtitle := index $useCases "subtitle" | default "" -}}
+{{- $items := index $useCases "items" | default "" -}}
+<section class="section section-grey section-solution-detail-use-cases is-medium ">
+  <div class="container">
+    <div class="container has-text-centered mb-6">
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-8">
+          {{- if $sectionTitle }}
+            <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+          {{- end }}
+          {{- if $title }}
+            <h1 class="section-title is-spaced mb-4">{{ $title }}</h1>
+          {{- end }}
+          {{- if $subtitle }}
+            <h3 class="section-subtitle">{{ $subtitle }}</h3>
+          {{- end }}
+        </div>
+      </div>
+    </div>
+    <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+      <div class="column is-flex is-flex-direction-row is-flex-direction-column-tablet" style="gap: 2em">
+          {{ range $items }}
+            <div class="card is-flex is-flex-direction-column is-flex-grow-1 h-full p-0">
+              <div class="card-brighter card-filling-image-top is-flex is-justify-content-center is-align-items-center">
+                <img src="{{ .image }}" alt="{{ .name }}">
+              </div>
+            
+              <div class="is-flex is-flex-direction-column is-flex-grow-1 has-text-centered pb-6 mx-5">
+                  <h4 class="name is-4 mb-2">{{ .name }}</h4>
+                  <h4 class="title is-4 mb-2 mt-5 mx-5" style="font-size: 120%;">{{ .title }}</h4>
+                  <p class="subtitle mt-4 mb-0">{{ .description | markdownify }}</p>
+                  <a href="{{ .ctaLink }}">
+                        <span class="button contact-button rounded primary-btn raised mt-3">
+                          {{ .ctaText }}
+                          <span class="icon ml-2">
+                            <i class="fas fa-arrow-right"></i>
+                          </span>
+                    </span>
+                  </a>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+    </div>
+  </div>
+</section>

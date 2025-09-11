@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div style="background-color: #00002b; z-index: 1;">
+  {{ partial "navbar.html" . }}
+</div>
+  {{ partial "navbar-clone.html" . }}
+
+  <section class="section">
+    <div class="container has-text-centered">
+      <h1 class="title section-title" style="margin-bottom: 20px;">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <h5 class="subtitle is-5 is-muted" style="color: white;">{{ . }}</h5>
+      {{ end }}
+      <div class="divider" style="margin-bottom: 20px; text-align: left"></div>
+    </div>
+  </section>
+
+  {{ range .Site.Params.pricing }}
+    {{ partial "landingpage/prices-landingpage.html" (dict "section_prices" .) }}
+  {{ end }}
+
+  {{ partial "footer.html" . }}
+{{ end }}
