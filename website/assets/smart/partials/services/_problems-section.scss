@@ -55,7 +55,7 @@ section.section {
   .problem-card {
     background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);
     width: 620px;
-    height: 251px;
+    height: 250px;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem;
@@ -71,33 +71,33 @@ section.section {
       width: 15rem; 
       height: 15rem; 
       pointer-events: none;
-      }
+    }
 
-      .circle {
+    .circle {
       position: absolute;
       border-radius: 50%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      }
+    }
 
-      .circle-1 {
+    .circle-1 {
       width: 15rem;
       height: 15rem;
       background: linear-gradient(140deg, rgba(168, 27, 88, 0.25), rgba(60, 49, 152, 0.25));
-      }
-      .circle-2 {
+    }
+    .circle-2 {
       width: 11.25rem;
       height: 11.25rem;
       background: linear-gradient(140deg, rgba(168, 27, 88, 0.5), rgba(60, 49, 152, 0.5));
-      }
-      .circle-3 {
+    }
+    .circle-3 {
       width: 7.5rem;
       height: 7.5rem;
       background: linear-gradient(140deg, rgba(168, 27, 88, 1), rgba(60, 49, 152, 1));
-      }
+    }
 
-      .problem-icon {
+    .problem-icon {
       position: absolute;
       width: 3.75rem;
       height: 3.75rem;
@@ -107,11 +107,238 @@ section.section {
       color: white;
       z-index: 2;
       pointer-events: none;
+    }
+
+    .problem-card-text {
+      margin-top: auto;
+      margin-bottom: 0;
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 1285px) {
+  .services-problems-section {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .title-container {
+      text-align: center;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+    }
+    
+    .problem-card {
+      width: 100%;
+      height: 200px;
+
+      .circle {
+        top: 45%;
+        left: 55%;
+      }
+
+      .circle-1 {
+        width: 12rem;
+        height: 12rem;
+      }
+      .circle-2 {
+        width: 9rem;
+        height: 9rem;
+      }
+      .circle-3 {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      .problem-icon {
+        width: 3rem;
+        height: 3rem;
+        top: 45%;
+        left: 55%;
       }
 
       .problem-card-text {
-      margin-top: auto;
-      margin-bottom: 0;
+        width: 60%;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .services-problems-section {
+    .problem-card {
+      height: 180px;
+
+      .circle {
+        top: 42%;
+        left: 58%;
+      }
+
+      .circle-1 {
+        width: 11rem;
+        height: 11rem;
+      }
+      .circle-2 {
+        width: 8.5rem;
+        height: 8.5rem;
+      }
+      .circle-3 {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      .problem-icon {
+        top: 42%;
+        left: 58%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+
+  .services-problems-section {
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .problem-card {
+      .problem-card-text {
+        width: 69%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .services-problems-section {
+    .container {
+      gap: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 28px;
+    }
+
+    .problem-title {
+      font-size: 20px;
+      margin-bottom: 0.5rem;
+    }
+
+    .problem-description {
+      font-size: 16px;
+    }
+
+    .cards-container {
+      gap: 1rem;
+    }
+
+    .problem-card {
+      padding: 1.5rem;
+      height: 160px;
+
+      .circle {
+        top: 38%;
+        left: 62%;
+      }
+
+      .circle-1 {
+        width: 9rem;
+        height: 9rem;
+      }
+      .circle-2 {
+        width: 7rem;
+        height: 7rem;
+      }
+      .circle-3 {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .problem-icon {
+        top: 38%;
+        left: 62%;
+      }
+
+      .problem-card-text {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .services-problems-section {
+    .problem-card {
+      width: 100%;
+      background: none;
+      border: none;
+      overflow: visible;
+      height: auto;
+      padding: 1rem 0;
+
+      .problem-card-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .problem-card-icon-wrapper {
+        position: static;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        margin: 0;
+
+        .circle {
+          display: none;
+        }
+
+        .problem-icon {
+          position: static;
+          width: 3rem;
+          height: 3rem;
+          transform: none;
+          background: linear-gradient(
+            140deg,
+            rgba(168, 27, 88, 1),
+            rgba(60, 49, 152, 1)
+          );
+          border-radius: 25%;
+          padding: 0.5rem;
+        }
+      }
+
+      .problem-card-text {
+        flex: 1;
+        margin: 0;
+        width: 100%;
+
+        .problem-title,
+        .problem-description {
+          color: #1a1449;
+        }
+
+        .problem-title {
+          margin-bottom: 0.15rem;
+        }
+      }
+    }
+  }
 }
