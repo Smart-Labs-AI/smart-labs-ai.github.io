@@ -15,9 +15,6 @@ hero:
     - label: "Demo vereinbaren"
       href: "/#"
       class: "primary-btn"
-    - label: "Datasheet anfordern"
-      href: "/#"
-      class: "secondary-btn"
 features:
   section-title: "Feature"
   title: "API Scanning, Prompt Injection Detection, Audit-Trails"

@@ -15,7 +15,7 @@
             <h1 class="section-title is-spaced mb-4">{{ $title }}</h1>
           {{- end }}
           {{- if $subtitle }}
-            <h3 class="section-subtitle">{{ $subtitle }}</h3>
+            <h3 class="section-subtitle">{{ $subtitle | markdownify }}</h3>
           {{- end }}
         </div>
       </div>
