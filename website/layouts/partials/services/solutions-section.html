@@ -34,6 +34,7 @@
       </div>
 
       <div class="features-wrapper">
+        <!-- Desktop Features Container -->
         <div class="features-container">
           {{ range $index, $feature := $features }}
           <input
@@ -45,15 +46,47 @@
               {{ if eq $index 0 }}checked{{ end }}
               data-chart-img="{{ if eq $index 0 }}{{ $processed2.RelPermalink }}{{ else if eq $index 1 }}{{ $processed3.RelPermalink }}{{ else if eq $index 2 }}{{ $processed4.RelPermalink }}{{ else }}{{ $processed2.RelPermalink }}{{ end }}"
               data-progress="{{ if eq $index 0 }}33.33{{ else if eq $index 1 }}66.66{{ else if eq $index 2 }}100{{ else }}0{{ end }}"
+              data-description="{{ $feature.description }}"
           >
           <label for="feature-{{ $index }}" class="feature-card">
-            <div class="feature-icon-wrapper">
-              <img class="feature-icon" src="{{ $feature.icon }}"/>
+            <div class="feature-card-content">
+              <div class="feature-icon-wrapper">
+                <img class="feature-icon" src="{{ $feature.icon }}"/>
+              </div>
+              <h3 class="feature-description">{{ $feature.description }}</h3>
             </div>
-            <h3 class="feature-description">{{ $feature.description }}</h3>
             <progress class="progress is-small" value="0" max="100"></progress>
           </label>
           {{ end }}
+        </div>
+
+        <!-- Mobile Features Container -->
+        <div class="features-container-mobile">
+          <div class="mobile-icon-selector">
+            {{ range $index, $feature := $features }}
+            <input
+                type="radio"
+                name="feature-mobile"
+                id="feature-mobile-{{ $index }}"
+                class="feature-radio"
+                hidden
+                {{ if eq $index 0 }}checked{{ end }}
+                data-chart-img="{{ if eq $index 0 }}{{ $processed2.RelPermalink }}{{ else if eq $index 1 }}{{ $processed3.RelPermalink }}{{ else if eq $index 2 }}{{ $processed4.RelPermalink }}{{ else }}{{ $processed2.RelPermalink }}{{ end }}"
+                data-progress="{{ if eq $index 0 }}33.33{{ else if eq $index 1 }}66.66{{ else if eq $index 2 }}100{{ else }}0{{ end }}"
+                data-description="{{ $feature.description }}"
+            >
+            <label for="feature-mobile-{{ $index }}" class="mobile-icon-btn">
+              <img class="feature-icon" src="{{ $feature.icon }}" alt="{{ $feature.description }}"/>
+            </label>
+            {{ end }}
+          </div>
+
+          <div class="mobile-shared-content">
+            <h3 class="mobile-feature-title" id="mobile-feature-title">
+              {{ (index $features 0).description }}
+            </h3>
+            <progress class="mobile-progress" id="mobile-progress" value="33.33" max="100"></progress>
+          </div>
         </div>
 
         <div class="feature-chart" style="background-image: url('{{ $processed1.RelPermalink }}');">
@@ -74,30 +107,68 @@
     if (!wrapper) return;
 
     const chartImage = wrapper.querySelector('.feature-chart .feature-chart-image');
-    const radios = wrapper.querySelectorAll('.feature-radio');
+    const desktopRadios = wrapper.querySelectorAll('input[name="feature"]');
+    const mobileRadios = wrapper.querySelectorAll('input[name="feature-mobile"]');
+    const mobileTitle = document.getElementById('mobile-feature-title');
+    const mobileProgress = document.getElementById('mobile-progress');
 
     const applyState = (radio) => {
       if (!radio) return;
       const img = radio.getAttribute('data-chart-img');
       const progressValue = radio.getAttribute('data-progress');
-      const progressEl = radio.nextElementSibling.querySelector('.progress');
+      const description = radio.getAttribute('data-description');
 
-      if (img && chartImage) chartImage.src = img;
+      if (img && chartImage) {
+        chartImage.src = img;
+      }
 
       wrapper.querySelectorAll('.progress').forEach(p => p.value = 0);
-
+      const progressEl = radio.nextElementSibling?.querySelector('.progress');
       if (progressEl && progressValue) {
         progressEl.value = progressValue;
       }
+
+      if (mobileTitle && description) {
+        mobileTitle.style.opacity = '0';
+        setTimeout(() => {
+          mobileTitle.textContent = description;
+          mobileTitle.style.opacity = '1';
+        }, 150);
+      }
+
+      if (mobileProgress && progressValue) {
+        mobileProgress.value = progressValue;
+      }
     };
 
-    const initial = wrapper.querySelector('.feature-radio:checked') || radios[0];
-    if (initial) applyState(initial);
+    const initialDesktop = wrapper.querySelector('input[name="feature"]:checked') || desktopRadios[0];
+    const initialMobile = wrapper.querySelector('input[name="feature-mobile"]:checked') || mobileRadios[0];
+    
+    if (initialDesktop) applyState(initialDesktop);
+    if (initialMobile && window.innerWidth <= 920) applyState(initialMobile);
 
-    radios.forEach((r) => {
+    desktopRadios.forEach((r) => {
       r.addEventListener('change', () => {
         if (r.checked) applyState(r);
       });
+    });
+
+    mobileRadios.forEach((r) => {
+      r.addEventListener('change', () => {
+        if (r.checked) applyState(r);
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      const isMobile = window.innerWidth <= 920;
+      const activeDesktop = wrapper.querySelector('input[name="feature"]:checked');
+      const activeMobile = wrapper.querySelector('input[name="feature-mobile"]:checked');
+      
+      if (isMobile && activeMobile) {
+        applyState(activeMobile);
+      } else if (!isMobile && activeDesktop) {
+        applyState(activeDesktop);
+      }
     });
   });
 </script>
