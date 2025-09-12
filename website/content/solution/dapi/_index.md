@@ -52,7 +52,7 @@ benefit:
   background-image: "/solution/dapi/hero.png"
   section-title: "Benefit"
   title: "Ganzheitlicher Schutz für Ihre generativen KI-Anwendungen"
-  content: "ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher. ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher. ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher."
+  content: "ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates. DSGVO-konform und fälschungssicher. ML-basierte Erkennung von Fingerabdruck & Verhalten – ohne Speicherung sensibler Templates."
 useCases:
   section-title: "Use Cases"
   title: "Kontinuierliche Authentifizierung für kritische Systeme"
