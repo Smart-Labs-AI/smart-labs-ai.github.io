@@ -63,7 +63,7 @@ solutionComparison:
       - "Privacy-by-Design: DSGVO-konform und anonymisiert"
       ctas:
       - text: "Demo vereinbaren"
-        link: "/contact#"
+        link: "/#contact"
         class: "primary-btn"
     - name: "Smart Dragon"
       image: "/images/illustrations/icons/smart-dragon.svg"
@@ -74,7 +74,7 @@ solutionComparison:
       - "Anpassbares Design"
       ctas:
       - text: "Demo vereinbaren"
-        link: "/contact#"
+        link: "/#contact"
         class: "primary-btn"
     - name: "LLM Security Platform"
       image: "/images/illustrations/icons/llm-security.svg"
@@ -86,6 +86,6 @@ solutionComparison:
       - "Security Insights & API Firewall Analytics"
       ctas:
       - text: "Demo vereinbaren"
-        link: "/contact#"
+        link: "/#contact"
         class: "primary-btn"
 ---

@@ -15,10 +15,10 @@ hero:
         image: "/images/illustrations/icons/llm-security.svg"
   ctas:
     - label: "Demo vereinbaren"
-      href: "/#"
+      href: "/#contact"
       class: "primary-btn"
     - label: "Datasheet anfordern"
-      href: "/#"
+      href: "/#contact"
       class: "secondary-btn"
 features:
   section-title: "Feature"
@@ -60,15 +60,15 @@ useCases:
   items:
     - title: "LLM-Auditing Use Case für Unternehmen mit KI-Einsatz"
       image: "/images/illustrations/icons/audit.svg"
-      ctaLink: "/#"
+      ctaLink: "/#contact"
       ctaText: "Mehr erfahren"
     - title: "Use Case zur Agent-Absicherung für Unternehmen"
       image: "/images/illustrations/icons/agent.svg"
-      ctaLink: "/#"
+      ctaLink: "/#contact"
       ctaText: "Mehr erfahren"
     - title: "Use Case zur Prompt-Analyse für KI in Unternehmen"
       image: "/images/illustrations/icons/prompt.svg"
-      ctaLink: "/#"
+      ctaLink: "/#contact"
       ctaText: "Mehr erfahren"
 footer:
   quicklinks:
