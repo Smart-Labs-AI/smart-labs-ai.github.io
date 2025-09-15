@@ -61,15 +61,15 @@ useCases:
     - title: "LLM-Auditing Use Case für Unternehmen mit KI-Einsatz"
       image: "/images/illustrations/icons/audit.svg"
       ctaLink: "/#"
-      ctaText: "Verhindert, dass LLM-basierte Agenten ungewollte Aktionen auslösen – z. B. E-Mails verschicken, Systeme manipulieren oder Daten löschen."
+      ctaText: "Mehr erfahren"
     - title: "Use Case zur Agent-Absicherung für Unternehmen"
       image: "/images/illustrations/icons/agent.svg"
       ctaLink: "/#"
-      ctaText: "Ermöglicht revisionssichere Prüfung und Protokollierung von sensiblen Antworten – ideal für Recruiting, Recht, Risk & Compliance."
+      ctaText: "Mehr erfahren"
     - title: "Use Case zur Prompt-Analyse für KI in Unternehmen"
       image: "/images/illustrations/icons/prompt.svg"
       ctaLink: "/#"
-      ctaText: "Absicherung generativer Schnittstellen (z. B. Webchat, Slack, CRM) gegen Missbrauch, Injection und Eskalation – ohne Performanceverlust."
+      ctaText: "Mehr erfahren"
 footer:
   quicklinks:
     column2:
