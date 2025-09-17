@@ -5,6 +5,11 @@ Section Styles
 
 //Sections
 .section {
+
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
+
     &.section-landingpage {
         color: $royal-blue;
     }
@@ -56,7 +61,6 @@ Section Styles
         }
     
         .section-subtitle {
-            font-size: 1.3rem;
             color: rgba(white, 0.6);
             line-height: 1.6;
             margin-bottom: 2em;
