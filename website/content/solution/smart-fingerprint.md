@@ -31,8 +31,8 @@ Unsere KI erkennt sofort, wenn das Verhalten nicht zur eingeloggten Person passt
         background: "/solution/feature-card-background.png"
 advantage:
   section-title: "Advantage"
-  title: "Abschnittsüberschrift zum Advantage"
-  subtitle: "Smart Fingerpring Subtitle"
+  title: "Deine Sicherheit. Dein Vorteil."
+  subtitle: "Smart Fingerprint schützt – ohne Upload, ohne sensible Daten, DSGVO-konform."
   advantages:
       - title: "Kein Upload"
         description: "Dein Verhalten bleibt bei dir.
