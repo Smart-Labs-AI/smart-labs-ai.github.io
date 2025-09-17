@@ -531,4 +531,6 @@ Datenschutzanfragen können Sie uns unter der E-Mail-Adresse
 
 ---
 
-{{< product_privacy_links >}}
+<h3>Produktspezifische Datenschutzerklärungen</h3>
+<p>Für einige unserer Produkte und Dienstleistungen gelten zusätzliche oder gesonderte Datenschutzerklärungen. Hier finden Sie eine Übersicht:</p>
+{{< product_documents "datenschutz" >}}

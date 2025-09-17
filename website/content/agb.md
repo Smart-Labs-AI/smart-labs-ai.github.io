@@ -181,3 +181,21 @@ Von höherer Gewalt umfasste Ereignisse:
 - Rechte und Pflichten können nur mit schriftlicher Zustimmung übertragen werden.
 - Änderungen und Ergänzungen dieser AGB sowie etwaiger Verträge bedürfen zu ihrer Wirksamkeit mindestens der Textform (z.B. E-Mail), soweit nicht ausdrücklich die Schriftform vorgesehen ist.
 - Die deutsche Sprachversion ist rechtsverbindlich.
+
+---
+
+## Produktspezifische Dokumentationen
+
+Für einzelne Produkte gelten ergänzend die folgenden spezifischen Dokumente.
+
+### Spezifische Datenschutzerklärungen
+{{< product_documents "datenschutz" >}}
+
+### Spezifische Nutzungsbedingungen
+{{< product_documents "nutzungsbedingungen" >}}
+
+### Spezifische Leistungsbeschreibungen
+{{< product_documents "leistungsbeschreibung" >}}
+
+### Spezifische Risikobewertungen
+{{< product_documents "risikobewertung" >}}

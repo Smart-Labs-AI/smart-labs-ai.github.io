@@ -1,5 +1,6 @@
 ---
 title: Nutzungsbedingungen für Defense API (DAPI)
+product_document_type: "nutzungsbedingungen"
 include_footer: true
 sidebar: false
 ---
@@ -88,4 +89,4 @@ DAPI ist eine API-Sicherheitslösung zur Absicherung von GPT-basierten Systemen 
 ### 13.3. Salvatorische Klausel 
 - Sollte eine Bestimmung dieser Bedingungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen hiervon unberührt. Die Parteien werden eine wirksame Bestimmung vereinbaren, die dem Regelungszweck am nächsten kommt. 
 
-© 2025 Smart Labs AI – Alle Rechte vorbehalten. 
+© 2025 Smart Labs AI – Alle Rechte vorbehalten.
