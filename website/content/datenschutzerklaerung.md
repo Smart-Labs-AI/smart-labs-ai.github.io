@@ -528,3 +528,7 @@ Verstoßes zuständig ist. Wir würden es begrüßen, wenn Sie zuerst mit uns
 Kontakt aufnehmen und uns Ihre Sorgen oder Beschwerden schildern. Für
 Datenschutzanfragen können Sie uns unter der E-Mail-Adresse
 [<kontakt@smart-labs.ai>] erreichen.
+
+---
+
+{{< product_privacy_links >}}

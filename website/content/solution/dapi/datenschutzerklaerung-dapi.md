@@ -1,5 +1,6 @@
 ---
 title: Datenschutzerklärung für Defense API (DAPI)
+is_product_privacy: true
 include_footer: true
 sidebar: false
 ---
