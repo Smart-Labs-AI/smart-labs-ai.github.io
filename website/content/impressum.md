@@ -7,6 +7,8 @@ sidebar: false
 {{% title4 "Anschrift" %}}
 *Smart Labs AI GmbH*
 <br>
+Nordport Towers
+<br>
 Südportal 3
 <br>
 22848 Norderstedt
@@ -47,6 +49,8 @@ DE 368 388 426
 <br>
 {{% title4 "Inhaltlich Verantwortlicher" %}}
 Stefan A. Fenn, Fabian D. Bühler
+<br>
+Nordport Towers
 <br>
 Südportal 3
 <br>

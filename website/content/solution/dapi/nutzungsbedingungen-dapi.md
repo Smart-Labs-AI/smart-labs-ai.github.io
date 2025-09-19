@@ -7,7 +7,7 @@ sidebar: false
 
 **Stand: August 2025**
 
-Diese Nutzungsbedingungen ("Bedingungen") regeln Zugang und Nutzung der Defense API ("DAPI"), angeboten von Smart Labs AI GmbH, Südportal 3, 22848 Norderstedt, Deutschland („Anbieter“, „wir“). Bei Fragen: E-Mail: [<kontakt@smart-labs.ai>]
+Diese Nutzungsbedingungen ("Bedingungen") regeln Zugang und Nutzung der Defense API ("DAPI"), angeboten von Smart Labs AI GmbH, Nordport Towers, Südportal 3, 22848 Norderstedt, Deutschland („Anbieter“, „wir“). Bei Fragen: E-Mail: [<kontakt@smart-labs.ai>]
 
 ## 1. Leistungsbeschreibung 
 DAPI ist eine API-Sicherheitslösung zur Absicherung von GPT-basierten Systemen und Agentenanwendungen. Die API dient dem Schutz vor Datenlecks, Prompt-Injections und ungewollter Wissensweitergabe durch KI-Modelle. 
@@ -68,7 +68,7 @@ DAPI ist eine API-Sicherheitslösung zur Absicherung von GPT-basierten Systemen 
 
 ## 12. Kontakt 
 
-**Anbieter**: Smart Labs AI GmbH, Südportal 3, 22848 Norderstedt, Deutschland 
+**Anbieter**: Smart Labs AI GmbH, Nordport Towers, Südportal 3, 22848 Norderstedt, Deutschland 
 
 **E-Mail**: [<kontakt@smart-labs.ai>]
 

@@ -160,8 +160,10 @@ params:
     logo: logo-white.svg
     contact:
       title: Kontakt
-      address1: Südportal 3
-      address2: 22848 Norderstedt
+      company: Smart Labs AI GmbH
+      address1: Nordport Towers
+      address2: Südportal 3
+      address3: 22848 Norderstedt
       phone: +49 40 604 29 67 0
       mail: kontakt@smart-labs.ai
       socialmedia:

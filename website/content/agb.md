@@ -6,9 +6,11 @@ sidebar: false
 
 # Allgemeine Geschäftsbedingungen (AGB)
 
-**der Smart Labs AI GmbH**
+der 
 
-Südportal 3, 22848 Norderstedt, Deutschland
+**Smart Labs AI GmbH**
+
+Nordport Towers, Südportal 3, 22848 Norderstedt, Deutschland
 
 Handelsregister Kiel, HRB 26891 KI
 

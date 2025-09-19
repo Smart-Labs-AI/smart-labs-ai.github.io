@@ -11,6 +11,8 @@ Verantwortlicher im Sinne der Datenschutzgesetze für das SaaS-Produkt **Defense
 
 **Smart Labs AI GmbH**
 
+Nordport Towers
+
 Südportal 3 
 
 22848 Norderstedt 
