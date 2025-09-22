@@ -13,7 +13,7 @@ hero:
         image: "/images/illustrations/icons/smart-dragon.svg"
   ctas:
     - label: "Demo vereinbaren"
-      href: "/#contact"
+      href: "/contact"
       class: "primary-btn"
 features:
   section-title: "Features"
@@ -51,14 +51,14 @@ useCases:
   items:
     - title: "Sichere Nutzung interner Wissensdatenbanken"
       image: "/images/illustrations/icons/company.svg"
-      ctaLink: "/#contact"
+      ctaLink: "/contact"
       ctaText: "Mehr erfahren"
     - title: "HR-Kommunikation mit Datenschutz"
       image: "/images/illustrations/icons/team.svg"
-      ctaLink: "/#contact"
+      ctaLink: "/contact"
       ctaText: "Mehr erfahren"
     - title: "Support-Bot für Produkte & Tools"
       image: "/images/illustrations/icons/support.svg"
-      ctaLink: "/#contact"
+      ctaLink: "/contact"
       ctaText: "Mehr erfahren"
 ---

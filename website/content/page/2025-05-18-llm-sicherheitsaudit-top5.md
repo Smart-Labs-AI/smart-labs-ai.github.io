@@ -107,7 +107,7 @@ LLM-Sicherheitsaudits sind längst kein Störfaktor mehr, sondern ein Katalysato
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Beginnen Sie jetzt – setzen Sie auf bewährte Audit-Frameworks, Tools und Beratung für resiliente und nachvollziehbare LLM-Systeme. Suchen Sie sich zertifizierte Partner oder entwickeln Sie eigene Prüfstrategien mit Open-Source-Standards – für maximale Sicherheit und Compliance.
 {{< /page-cta >}}
 {{< page-section >}}

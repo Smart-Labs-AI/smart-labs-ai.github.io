@@ -122,7 +122,7 @@ Starten Sie mit fundierter Sicherheitsanalyse, nutzen Sie Benchmarks, testen Sie
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Lassen Sie sich beraten: Der Weg zu sicherer KI beginnt mit individueller Risikoanalyse und einer Demo neuer Lösungen. Kontaktieren Sie uns oder laden Sie unser Whitepaper für weitere Insights!
 {{< /page-cta >}}
 {{< page-section >}}

@@ -76,7 +76,7 @@ params:
     title: KI verändert alles – Aber ist sie auch sicher?
     subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle **sicher**, **regelkonform** und **vertrauenswürdig** zu machen.
     buttontext: Erfahre mehr
-    buttonlink: "#contact"
+    buttonlink: "/contact"
     secondaryButtontext: Insights entdecken
     secondaryButtonlink: /blog
     image: hero/padlock.webp
@@ -90,7 +90,7 @@ params:
     url: https://acc.secphoria.app/realms/arinna/protocol/openid-connect/auth?client_id=labs-ai-landing-page&scope=openid%20profile&redirect_uri=https://acc.secphoria.app&response_type=code
     buttonSecondary: true
   - title: Kontakt
-    url: /#contact
+    url: /contact
     buttonPrimary: true
   section2:
     title: Wie sicher ist deine KI?
@@ -107,7 +107,7 @@ params:
       icon: eu-ai-act
     - title: Erfahre mehr darüber, wie wir Dir helfen können und buche jetzt eine **kostenlose Erstanalyse**.
       icon: smart-labs-ai-white
-      url: /#contact
+      url: /contact
       cardType: call-to-action
   section_testimonial:
     title: Das sagen unsere Kunden
@@ -148,7 +148,7 @@ params:
     title: Lassen Sie Ihre KI prüfen.
     title2: Bevor es andere tun.
     buttonText: Jetzt kostenlosen Termin buchen
-    buttonLink: /#contact
+    buttonLink: /contact
   section_contact:
     title: Teste jetzt deine KI-Sicherheit
     subtitle: Werde Partner in unserem **Proof of Concept (PoC)** und sichere Dich mit innovativen Lösungen ab.
@@ -180,7 +180,7 @@ params:
         - text: Blog
           link: /blog
         - text: Kontakt
-          link: /#contact
+          link: /contact
       column2:
         title: "Rechtliches"
         links:

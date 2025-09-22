@@ -114,7 +114,7 @@ Werden Sie Pionier der sicheren KI-Automatisierung. Starten Sie ein Pilotprojekt
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie Ihre KI-Agenten-Initiative! Sichern Sie sich jetzt Ihr persönliches Beratungsgespräch mit Smart Labs AI oder fordern Sie einen Use Case Check an. Gemeinsam transformieren und schützen wir Ihr Unternehmen Schritt für Schritt.
 {{< /page-cta >}}
 {{< page-section >}}

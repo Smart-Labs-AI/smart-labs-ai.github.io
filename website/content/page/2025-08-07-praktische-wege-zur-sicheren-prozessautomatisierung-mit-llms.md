@@ -115,7 +115,7 @@ Jetzt ist der richtige Zeitpunkt, um sichere Prozessautomatisierung Realität we
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt mit einem KI-Sicherheits-Assessment oder buchen Sie einen interdisziplinären Workshop zu LLM-Prozessautomatisierung. Kontaktieren Sie uns für praxisnahe Beratung und maßgeschneiderte Pilotprojekte, um Wettbewerbsvorteile zu sichern!
 {{< /page-cta >}}
 {{< page-section >}}

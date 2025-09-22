@@ -103,7 +103,7 @@ Starten Sie jetzt: Bewerten Sie Ihre LLM-Architektur, etablieren Sie regelmäßi
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Sie möchten Ihre LLM-Sicherheit und Datenschutzstrategie optimieren? Kontaktieren Sie zertifizierte KI-Spezialist:innen für individuelle Beratung, um Compliance, Schutz und Innovationsfähigkeit zu vereinen. Jetzt handeln und Vorsprung sichern!
 {{< /page-cta >}}
 {{< page-section >}}

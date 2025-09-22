@@ -125,7 +125,7 @@ LLM-Sicherheit ist kein Kostenfaktor, sondern der Schlüssel zu Vertrauen, Innov
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt aktiv werden: Stellen Sie LLM-Sicherheit in den Mittelpunkt Ihrer Digitalstrategie – Kontaktieren Sie unser Expertennetzwerk, laden Sie die Prüf-Checkliste herunter oder buchen Sie ein Quick Audit für Ihr Unternehmen. Ihre Zukunft sichern die Mutigen und Sorgfältigen.**
 {{< /page-cta >}}
 {{< page-section >}}

@@ -112,7 +112,7 @@ Jetzt ist die Zeit, LLM-Sicherheit und KI-Automatisierung ganzheitlich zu gestal
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt handeln: Überprüfen Sie Ihr KI-Sicherheitskonzept oder starten Sie einen Quick-Check mit unseren Expert:innen für eine souveräne KI-Zukunft!
 {{< /page-cta >}}
 {{< page-section >}}

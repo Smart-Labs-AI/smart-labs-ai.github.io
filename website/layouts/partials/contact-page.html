@@ -1,0 +1,26 @@
+{{- $section_contact   := .Params.section_contact | default .Site.Params.section_contact }} 
+{{- if eq $section_contact true }}
+{{- $section_contact = dict "_" "_" }}
+{{- end }}
+{{- $title      := index .Params "title" | default (.Title) }}
+{{- $subtitle   := index .Params "subtitle" | default (.Params.subtitle) }}
+<section class="section section-primary is-medium" id="contact" style="background-image: url('/images/hero/hero.png'); background-position: top; background-repeat: no-repeat; background-size: cover;">
+  <div class="container">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title section-title is-2 is-spaced">{{ $title | markdownify }}</h2>
+      <h3 class="subtitle is-5">{{ $subtitle | markdownify }}</h3>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns mt-6">
+        <div class="column is-6 is-offset-3">
+            <div class="card pipedriveWebForms" data-pd-webforms="{{ .Params.pipedrive_url }}">
+              <div id="pipedrive-form-placeholder" data-service="pipedrive-form">
+                <h2>Um dieses Formular zu sehen, akzeptiere bitte Marketing-Cookies.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>

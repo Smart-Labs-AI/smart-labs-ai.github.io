@@ -128,7 +128,7 @@ Wer Sicherheit und Ethik zur Basis von KI-Prozessautomatisierung macht, schafft 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt starten:**
 - Analysieren Sie Ihre bestehende KI-Strategie auf Sicherheitslücken.
 - Informieren Sie sich zu AI-Act-Compliance und Zero-Trust-Ansätzen.

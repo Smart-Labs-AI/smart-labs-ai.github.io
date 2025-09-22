@@ -113,7 +113,7 @@ Jetzt ist der Moment, strategisch zu handeln. Erstellen Sie eine eigene LLM-Risi
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Sichern Sie sich eine kostenfreie LLM-Sicherheitsberatung oder ein individuelles Audit von Smart Labs AI. Bringen Sie Ihr Unternehmen auf den neuesten Stand – Compliance, Souveränität und Prozesssicherheit inklusive.
 {{< /page-cta >}}
 {{< page-section >}}

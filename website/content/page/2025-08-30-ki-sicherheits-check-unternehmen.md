@@ -115,7 +115,7 @@ Veränderung gelingt durch konsequentes Handeln. Beginnen Sie mit Team-Schulunge
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Setzen Sie noch heute den ersten Schritt: Prüfen Sie Ihre aktuelle KI-Sicherheitslage, identifizieren Sie Schwachstellen und starten Sie Pilotprojekte mit kompetenten Partnern. Kontaktieren Sie Smart Labs AI – wir unterstützen Sie durch individuelle Beratung, Workshops und maßgeschneiderte Sicherheitskonzepte für zukunftssichere und vertrauenswürdige KI-Anwendungen.
 {{< /page-cta >}}
 {{< page-section >}}

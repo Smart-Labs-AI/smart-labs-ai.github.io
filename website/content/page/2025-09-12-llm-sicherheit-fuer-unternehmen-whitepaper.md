@@ -145,7 +145,7 @@ Setzen Sie Theorie in konkrete Schritte um: Optimieren Sie Ihre LLM-Security und
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt starten: Sichern Sie Ihr Unternehmen!**
 
 - Prüfen Sie Ihre aktuelle LLM-Security-Architektur.

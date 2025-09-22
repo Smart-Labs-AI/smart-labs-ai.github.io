@@ -114,7 +114,7 @@ Starten Sie jetzt: Identifizieren Sie relevante KI-Usecases, prüfen Sie die Ein
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Bereit für den nächsten Schritt? Sichern Sie Ihr Innovationspotenzial und Ihre Rechtssicherheit – mit maßgeschneiderten Workshops, Compliance-Audits oder einer Strategieberatung für LLM-Sicherheit und KI-Automatisierung. Jetzt Kontakt anfragen und als First Mover die Zukunft gestalten!
 {{< /page-cta >}}
 {{< page-section >}}

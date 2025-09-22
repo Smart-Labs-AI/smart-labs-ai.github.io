@@ -150,7 +150,7 @@ Die Entwicklung in Richtung autonome und sichere Prozessautomatisierung ist unum
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Sichern Sie sich Ihren Beratungstermin für ein individuelles LLM-Agenten Assessment, testen Sie eine Pilot-Implementierung oder nehmen Sie Kontakt zu unseren Experten auf, um Ihr KI-Projekt sicher, transparent und wirkungsvoll zu gestalten.
 {{< /page-cta >}}
 {{< page-section >}}

@@ -154,7 +154,7 @@ Ihr Whitepaper, Ihr Audit, Ihre Transformation: Nutzen Sie den Vorsprung jetzt!
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Nutzen Sie unseren KI-Einführungs- & Audit-Check! Erhalten Sie persönliche Beratung, Praxisleitfaden und Toolkits für sicheren, produktiven KI-Einsatz in Ihrer Organisation.**
 
 - Whitepaper downloaden

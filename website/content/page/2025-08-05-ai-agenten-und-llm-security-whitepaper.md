@@ -110,7 +110,7 @@ Die nächste Automatisierungswelle naht. Implementieren Sie verbindliche Securit
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Sie möchten Ihr Unternehmen zukunftssicher aufstellen? Starten Sie jetzt mit einer unverbindlichen Sicherheitsberatung. Gemeinsam identifizieren wir Ihre Sicherheitslücken und entwickeln Ihre individuelle Roadmap für sichere AI-Agenten und LLMs. Umsetzung leicht gemacht – für Innovation mit maximaler Kontrolle.
 {{< /page-cta >}}
 {{< page-section >}}

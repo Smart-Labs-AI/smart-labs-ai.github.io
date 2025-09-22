@@ -117,7 +117,7 @@ Starten Sie mit einer Bestandsaufnahme: Wo existieren in Ihren Prozessen LLM-Ris
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt loslegen: Klären Sie Verantwortlichkeiten, machen Sie einen ersten Prozess-Audit, holen Sie fachliche Teams ins Boot. Lassen Sie sich von Spezialisten wie Smart Labs AI zu Prototypen für sichere, kollaborative LLMs beraten.
 {{< /page-cta >}}
 {{< page-section >}}

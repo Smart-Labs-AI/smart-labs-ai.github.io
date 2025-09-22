@@ -160,7 +160,7 @@ Sind Sie bereit, die Kontrolle über Ihre KI-Landschaft zu übernehmen? Das Whit
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Werden Sie Vorreiter für sichere KI-Lösungen im Unternehmen. Starten Sie mit einer LLM-Sicherheitsbewertung oder nehmen Sie jetzt Kontakt zu unseren Expert:innen von Smart Labs AI auf. Ihr Weg zur verantwortungsbewussten KI-Nutzung beginnt heute!
 {{< /page-cta >}}
 {{< page-section >}}

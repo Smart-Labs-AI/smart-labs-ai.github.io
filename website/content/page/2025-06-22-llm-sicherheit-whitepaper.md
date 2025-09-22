@@ -103,7 +103,7 @@ Die LLM-Revolution ist nicht aufzuhalten. Wer jetzt mit Verantwortung, Weitsicht
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Sie stehen vor der Integration von LLMs in Ihre Prozesse? Packen Sie es an: Jetzt einen unverbindlichen Sicherheitscheck oder eine LLM-Sicherheitsberatung anfordern, interne Audits planen oder mit Experten Kontakt aufnehmen. Für Ihre sichere, skalierbare und zukunftsfähige KI-Landschaft – der erste Schritt zählt!
 {{< /page-cta >}}
 {{< page-section >}}

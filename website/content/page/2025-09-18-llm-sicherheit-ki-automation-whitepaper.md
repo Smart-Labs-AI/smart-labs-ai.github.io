@@ -148,7 +148,7 @@ Jetzt starten: Prüfen Sie Ihre LLM- und KI-Automatisierungslösungen, führen S
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Sie stehen am Sprungbrett: Fordern Sie unverbindlich eine Expertenberatung oder ein maßgeschneidertes Audit an und werden Sie Teil der Smart AI Sparks Community. Vernetzen Sie Ihr Unternehmen für die nächsten Schritte in der sicheren KI-Transformation!
 {{< /page-cta >}}
 {{< page-section >}}

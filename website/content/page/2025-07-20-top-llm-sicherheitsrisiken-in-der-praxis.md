@@ -145,7 +145,7 @@ Das Sicherheits-Niveau Ihrer LLM-Agenten ist eine strategische Entscheidung. Kon
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Machen Sie den ersten Schritt: Prüfen Sie Ihre LLM-Sicherheitsarchitektur mit einem fundierten Audit. Fragen Sie gezielt nach spezialisierten Security-Lösungen wie Aim Security, LayerX oder Robust Intelligence und bauen Sie internes Wissen auf – für sichere, zukunftsorientierte Innovation mit KI. Kontaktieren Sie Ihr Beratungs-/Security-Team noch heute!
 {{< /page-cta >}}
 {{< page-section >}}

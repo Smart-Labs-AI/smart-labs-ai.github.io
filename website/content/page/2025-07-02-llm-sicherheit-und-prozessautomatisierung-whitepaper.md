@@ -108,7 +108,7 @@ Jetzt ist der Moment, mehr als nur zuzusehen! Unternehmen, die praktische Handlu
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Evaluieren Sie ihre Kernprozesse und identifizieren Sie sichere Pilotfelder für KI-Automatisierung – mit verlässlichen Partnern und bewährten Frameworks. Kontaktieren Sie uns für persönliche Beratung und Best-Practice-Austausch!
 {{< /page-cta >}}
 {{< page-section >}}

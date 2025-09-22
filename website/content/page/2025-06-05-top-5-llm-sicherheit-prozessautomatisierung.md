@@ -134,7 +134,7 @@ Warten Sie nicht länger. Bringen Sie Security-Best-Practices, moderne Toolchain
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Nutzen Sie Ihr Momentum! Starten Sie noch heute mit einem Security-Quickcheck Ihrer LLM-Automatisierungsprojekte oder vereinbaren Sie ein Strategiegespräch mit unabhängigen KI-Security-Expert:innen.
 {{< /page-cta >}}
 {{< page-section >}}

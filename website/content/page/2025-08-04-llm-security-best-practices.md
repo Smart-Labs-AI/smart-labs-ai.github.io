@@ -130,7 +130,7 @@ Starten Sie frühzeitig, setzen Sie gezielt LLM-Audits ein und definieren Sie kl
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt den eigenen KI-Sicherheitsstatus mit Smart Labs AI Audit ermitteln! Kontaktieren Sie unser Team für eine unverbindliche Erstberatung oder fordern Sie den Quick-Check an. Starten Sie Ihre nächste LLM-Anwendung sicher und compliant – ganz ohne Kompromisse.
 {{< /page-cta >}}
 {{< page-section >}}

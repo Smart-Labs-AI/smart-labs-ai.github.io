@@ -132,7 +132,7 @@ Organisationen jeder Größe sollten Security-Governance, gezielte Training-Prog
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten – Machen Sie Ihre KI-Agenten sicher: Analysieren Sie Ihre aktuellen Workflows, sensibilisieren Sie Ihr Team mit Awareness-Trainings, prüfen Sie innovative Security-Layer im Proof-of-Concept. Mehr erfahren? Kontaktieren Sie KI-Security-Experten oder vernetzen Sie sich mit führenden Anbietern für eine individuelle Beratung.
 {{< /page-cta >}}
 {{< page-section >}}

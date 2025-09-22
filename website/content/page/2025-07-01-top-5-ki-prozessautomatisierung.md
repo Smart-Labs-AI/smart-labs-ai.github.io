@@ -131,7 +131,7 @@ Warten Sie nicht auf das perfekte Setup: Definieren Sie Ihr Ziel, wählen Sie ei
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Bereit, die Transformation zu starten? Nutzen Sie diese Erkenntnisse für Ihre nächste Projektplanung – oder holen Sie sich externe Unterstützung für Ihr Pilotprojekt. Setzen Sie sich ambitionierte, aber realistische Ziele. Teilen Sie diese Whitepaper-Erkenntnisse im Team und beginnen Sie sofort mit einer konkreten Use-Case-Analyse. Entscheiden Sie: Wollen Sie Treiber oder Getriebener sein?
 {{< /page-cta >}}
 {{< page-section >}}

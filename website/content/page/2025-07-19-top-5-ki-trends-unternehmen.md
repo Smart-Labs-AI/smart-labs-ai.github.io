@@ -119,7 +119,7 @@ Jetzt ist die Zeit, KI als Treiber für Transformation zu verstehen, nicht als R
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Nutzen Sie die gewonnenen Erkenntnisse: Starten Sie mit Piloten oder einer Beratung – und werden Sie Vorreiter für KI-Prozessautomatisierung. Vernetzen Sie sich mit Experten, probieren Sie Governance-Tools aus und sichern Sie die Zukunftsfähigkeit Ihres Unternehmens!
 {{< /page-cta >}}
 {{< page-section >}}

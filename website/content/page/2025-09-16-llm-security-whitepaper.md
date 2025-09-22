@@ -110,7 +110,7 @@ Wer heute Grundlagen für LLM-Sicherheit schafft, steuert seine Organisation sic
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt aktiv werden: Prüfe deinen LLM-Einsatz, stärke Prozesse für Security-by-Design und vereinbare ein Assessment mit externen KI-Sicherheitsprofis. Investiere jetzt und sichere entscheidenden Vorsprung – mehr Infos zu LLM-Sicherheitslösungen und Partnerangeboten bei DataSunrise, sequire und weiteren im Artikel verlinkten Anbietern. Kontaktaufnahme empfohlen!
 {{< /page-cta >}}
 {{< page-section >}}

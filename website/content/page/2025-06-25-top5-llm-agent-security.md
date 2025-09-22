@@ -112,7 +112,7 @@ Mit dem Agent2Agent-Protokoll entsteht erstmals die Chance, Agenten verschiedene
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt handeln: Lassen Sie Ihre LLM- und Agent-Architektur durchleuchten, schulen Sie Ihr Security-Team in Red Teaming und Threat Modeling – und sichern Sie erste A2A-Integrationen ab. Sprechen Sie mit Smart Labs AI für eine Roadmap zu resilienten Multi-Agent-Systemen.
 {{< /page-cta >}}
 {{< page-section >}}

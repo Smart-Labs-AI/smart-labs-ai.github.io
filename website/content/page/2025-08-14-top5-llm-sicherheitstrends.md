@@ -115,7 +115,7 @@ Unternehmen, die heute in LLM-Sicherheit investieren, beschleunigen Innovation, 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Nutzen Sie diesen Leitfaden als Startpunkt: Überprüfen Sie Ihre KI-Workflows auf LLM-Sicherheit, kontaktieren Sie spezialisierte Anbieter oder etablieren Sie ein AI Security Center of Excellence. Gerne beraten wir Sie individuell – die Zeit zu handeln ist jetzt!
 {{< /page-cta >}}
 {{< page-section >}}

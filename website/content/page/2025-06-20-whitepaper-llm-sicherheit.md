@@ -110,7 +110,7 @@ LLM-Security ist kein Schlusspunkt – sondern Start in die Ära der kontinuierl
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Sie wollen Ihre KI-Projekte zukunftssicher machen? Nutzen Sie das Whitepaper als Startpunkt: Entwickeln Sie Ihre Security-Strategie weiter, holen Sie sich externe Expertise, prüfen Sie Tools & Anbieter für semantische Firewalls und Policy Engines. Kontaktieren Sie Ihr KI- und Security-Team für nächste Schritte!
 {{< /page-cta >}}
 {{< page-section >}}

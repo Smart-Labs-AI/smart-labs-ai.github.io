@@ -110,7 +110,7 @@ Beginnen Sie jetzt: Wer proaktiv und sachkundig vorgeht, sichert Innovationen un
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Sie wollen LLM-Sicherheit auf Enterprise-Level? Starten Sie jetzt mit einem Security Assessment oder Proof-of-Concept! Kontaktieren Sie spezialisierte Security-Anbieter, testen Sie Ihre Prozesse und lassen Sie sich beraten für sichere KI-Projekte.
 {{< /page-cta >}}
 {{< page-section >}}

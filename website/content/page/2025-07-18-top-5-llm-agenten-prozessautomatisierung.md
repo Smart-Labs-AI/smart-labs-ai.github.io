@@ -117,7 +117,7 @@ Das vollständige Whitepaper mit den Top 5 Erfolgsstrategien gibt es hier: [2]
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Machen Sie den ersten Schritt zur KI-Prozessautomatisierung! Kontaktieren Sie unsere Expert:innen oder starten Sie einen Pilot-Use-Case in Ihrem Unternehmen. Jetzt das vollständige Whitepaper und praxisnahe Checklisten sichern – neue Effizienz wartet!
 {{< /page-cta >}}
 {{< page-section >}}

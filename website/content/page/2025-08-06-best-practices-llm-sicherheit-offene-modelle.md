@@ -153,7 +153,7 @@ Sichere LLMs sind Voraussetzung für vertrauensvolle KI-Nutzung. Jetzt ist Zeit,
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt eigene LLM-Sicherheitsstrategie entwickeln – Audits, Tech-Auswahl und Governance-Frameworks prüfen. Kontaktieren Sie spezialisierte Anbieter für eine individuelle Risikoanalyse oder vernetzen Sie Ihr Security-Team mit der LLM-Community!
 {{< /page-cta >}}
 {{< page-section >}}

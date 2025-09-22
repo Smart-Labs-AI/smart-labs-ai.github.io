@@ -96,7 +96,7 @@ Wandel startet mit einer neuen Denkweise: Unternehmen, die KI-Agenten aktiv mitg
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Gestalten Sie Ihre Zukunft jetzt: Analysieren Sie Ihre Workflows, identifizieren Sie sichere KI-Agenten-Potenziale oder kontaktieren Sie uns für eine individuelle Roadmap. Die digitale Transformation beginnt heute!
 {{< /page-cta >}}
 {{< page-section >}}

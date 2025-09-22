@@ -107,7 +107,7 @@ Souveränität in der KI-Transformation entsteht durch Handeln und klare Prioris
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt sichere KI-Transformation starten!**
 
 - Skalieren Sie Ihre LLM- und KI-Agenten-Projekte – sicher, rechtskonform und effizient.

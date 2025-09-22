@@ -123,7 +123,7 @@ Mut und Know-how schlagen Zögern. Starten Sie mit überschaubaren Pilotprojekte
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt handeln: Führen Sie ein KI-Readiness-Assessment durch, starten Sie Pilotprojekte und bauen Sie Ihr Expertennetzwerk aus. Sichern Sie sich den Vorsprung durch praxisnahes Handeln und strategische Weitsicht! Kontaktieren Sie relevante Partner oder initiieren Sie intern: Morgen ist zu spät.
 {{< /page-cta >}}
 {{< page-section >}}

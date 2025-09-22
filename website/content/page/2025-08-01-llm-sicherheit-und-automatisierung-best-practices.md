@@ -131,7 +131,7 @@ Suchen Sie den Austausch mit Expert:innen und holen Sie Security- und KI-Fachkr�
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Evaluieren Sie Ihre LLM-Sicherheitsstrategie mit Smart Labs AI – und setzen Sie die fünf Best Practices um. Vereinbaren Sie ein Strategiegespräch oder nutzen Sie Expertentools für einen Security-Review. Gestalten Sie Ihre KI-Zukunft sicher und effizient!
 {{< /page-cta >}}
 {{< page-section >}}

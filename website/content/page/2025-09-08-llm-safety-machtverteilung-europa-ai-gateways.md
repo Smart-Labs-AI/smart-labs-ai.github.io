@@ -112,7 +112,7 @@ Mit klarer Fokussierung auf Sicherheit, Compliance und Automatisierung nehmen eu
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Es ist Zeit für Entscheider: Überprüfen Sie Ihre KI-Strategie, stärken Sie Ihre Sicherheit und setzen Sie auf leistungsfähige Gateways für eine sichere LLM-Orchestrierung. Ziehen Sie Experten hinzu, starten Sie Pilotprojekte und bauen Sie interne KI-Kompetenzen auf – der Vorsprung beginnt heute!
 {{< /page-cta >}}
 {{< page-section >}}

@@ -124,7 +124,7 @@ Das Neue ist bereits Realität. Entscheidend sind Geschwindigkeit, Mut und die U
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten – Holen Sie sich unsere Übersicht zu Trusted Partners, das aktuelle Whitepaper-PDF und sichern Sie sich Zugang zu individuellen KI-Workshops. Kontaktieren Sie jetzt das Smart AI Sparks Innovationsteam!
 {{< /page-cta >}}
 {{< page-section >}}

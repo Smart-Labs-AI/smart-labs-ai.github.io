@@ -148,7 +148,7 @@ Unternehmen, die diese Punkte in ein Framework integrieren, gehören künftig zu
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt KI-Governance verankern & LLM-Sicherheit realisieren:**
 - Starten Sie umgehend mit einem Sicherheits-Audit Ihrer LLM- und KI-Systeme.
 - Etablieren Sie ein Governance-Board und setzen Sie die 7 Must-Haves um.

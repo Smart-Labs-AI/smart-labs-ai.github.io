@@ -105,7 +105,7 @@ Starten Sie mit einem Audit bestehender KI-Prozesse, fördern Sie Dialog und Awa
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Sie möchten Ihre LLM-Sicherheit auf ein neues Level heben? Starten Sie mit einem Audit Ihrer KI-Prozesse oder informieren Sie sich über spezialisierte Security-Lösungen und Beratungsangebote. Kontaktieren Sie Expert:innen, um Ihre Unternehmens-KI zukunftssicher zu machen.
 {{< /page-cta >}}
 {{< page-section >}}

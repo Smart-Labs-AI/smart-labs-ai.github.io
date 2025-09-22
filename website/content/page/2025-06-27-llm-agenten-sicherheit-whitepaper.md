@@ -134,7 +134,7 @@ Der Wettbewerb schläft nicht – aber nachhaltige KI-Sicherheit entsteht nicht 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Bereit, KI-Sicherheit skalierbar und proaktiv zu gestalten? Starten Sie jetzt mit einer individuellen Risiko-Analyse oder treten Sie in den Austausch mit Smart Labs AI. Kontaktieren Sie uns für einen Beratungstermin oder weiterführende Ressourcen – Ihr Weg zur vertrauenswürdigen KI beginnt heute.
 {{< /page-cta >}}
 {{< page-section >}}

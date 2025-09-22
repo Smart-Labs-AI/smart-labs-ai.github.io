@@ -135,7 +135,7 @@ Der Wandel zu KI-getriebener Prozessautomatisierung entscheidet über Wettbewerb
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt mit einer individuellen Potenzialanalyse! Vereinbaren Sie Ihr unverbindliches Erstgespräch und erfahren Sie, wie Sie Sicherheit, Compliance und echten ROI realisieren. Nutzen Sie Best Practices, Tools & Expertennetzwerke für eine erfolgreiche KI-Prozessautomatisierung in Ihrem Unternehmen – jetzt aktiv werden und den Vorsprung sichern.
 {{< /page-cta >}}
 {{< page-section >}}

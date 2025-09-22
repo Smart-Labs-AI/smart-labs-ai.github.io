@@ -147,7 +147,7 @@ Handeln Sie jetzt – werden Sie Vorreiter, nicht Nachzügler!
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Sichern Sie sich eine unverbindliche Strategie-Session mit SmartLabsAI! Informieren Sie sich auf https://smartlabsai.com/services/llm-security [2] zu individuellen Lösungen, Workshops oder Pilotprojekten.
 
 Handeln Sie, während andere noch zögern!

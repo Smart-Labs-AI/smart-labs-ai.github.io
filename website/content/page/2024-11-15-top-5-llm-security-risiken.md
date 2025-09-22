@@ -109,7 +109,7 @@ LLM-Sicherheitsfragen sind keine reine Technikangelegenheit: Unternehmen brauche
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt proaktiv werden: Prüfen Sie Ihre LLM-Sicherheitsarchitektur, sensibilisieren Sie Ihr Team und holen Sie sich Experten-Know-how ins Haus. Starten Sie Ihren Weg zum sicheren KI-Unternehmen – wir unterstützen Sie mit maßgeschneiderten Beratungen und Security-Sprints!
 {{< /page-cta >}}
 {{< page-section >}}

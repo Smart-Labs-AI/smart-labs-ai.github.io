@@ -139,7 +139,7 @@ Setzen Sie KI-Sicherheit und Automation für 2025 ganz oben auf Ihre Agenda!
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt ist die Zeit, vom Wissensvorsprung zur Umsetzung zu gelangen: Kontaktieren Sie zertifizierte KI-Berater:innen, sichern Sie sich Ihr kostenloses Audit und starten Sie Ihren Proof-of-Concept – schaffen Sie Sicherheit und Vertrauen mit moderner KI in Ihrem Unternehmen.
 {{< /page-cta >}}
 {{< page-section >}}

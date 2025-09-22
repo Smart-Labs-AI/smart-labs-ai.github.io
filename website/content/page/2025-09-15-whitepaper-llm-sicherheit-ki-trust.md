@@ -134,7 +134,7 @@ Jetzt ist der richtige Zeitpunkt: Führen Sie ein Assessment Ihrer LLM-Infrastru
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 🚀 Starten Sie jetzt Ihr LLM-Sicherheitsprojekt mit Smart Labs: Assessment buchen, Strategie entwickeln, Exzellenz umsetzen – www.smart-labs.ai/beratung
 {{< /page-cta >}}
 {{< page-section >}}

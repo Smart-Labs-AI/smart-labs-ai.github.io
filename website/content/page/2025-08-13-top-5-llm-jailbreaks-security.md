@@ -118,7 +118,7 @@ Starte sofort: Analysiere deine LLM-Anwendungen auf Jailbreak-Risiken und plane 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Lassen Sie Ihren ersten LLM-Security-Audit durchführen oder evaluieren Sie geeignete AI-Red-Teaming-Lösungen. Verantwortung beginnt mit dem nächsten Schritt – informieren Sie sich, sichern Sie Ihre Modelle und kommunizieren Sie die Bedeutung von KI-Security in Ihrem Unternehmen.
 {{< /page-cta >}}
 {{< page-section >}}

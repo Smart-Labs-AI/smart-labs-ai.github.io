@@ -111,7 +111,7 @@ Nehmen Sie Ihre KI-Zukunft aktiv in die Hand: Analysieren Sie bestehende Prozess
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Ihr nächster Schritt: Starten Sie mit einer ganzheitlichen Sicherheitsanalyse oder einem KI-Workshop. Fordern Sie jetzt eine unverbindliche Beratung an und sichern Sie Ihre KI-Prozesse nachhaltig!
 {{< /page-cta >}}
 {{< page-section >}}

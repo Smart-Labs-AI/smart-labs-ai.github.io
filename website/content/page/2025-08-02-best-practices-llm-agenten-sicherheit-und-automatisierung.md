@@ -134,7 +134,7 @@ Mit einer durchdachten Sicherheitsstrategie kann LLM-Automatisierung zum Innovat
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt loslegen: Ihre KI-Agenten nachhaltig absichern!**
 - Nutzen Sie das OWASP Top 10 Framework und evaluieren Sie Ihre Agenten-Lösungen anhand der aktuellen Risiken.
 - Führen Sie ein Red-Teaming oder Schwachstellen-Assessment durch – intern oder mit spezialisierten Partnern.

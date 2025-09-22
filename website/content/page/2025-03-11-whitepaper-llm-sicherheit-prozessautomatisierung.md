@@ -114,7 +114,7 @@ Das Momentum ist jetzt: Analysieren Sie bestehende Prozesse, identifizieren Sie 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Sie möchten LLM-gestützte Prozessautomatisierung sicher und wirkungsvoll einführen? Sichern Sie sich einen kostenfreien Initial-Workshop oder sprechen Sie mit unseren Expert:innen für datenschutzkonforme, skalierbare KI-Architekturen. Gemeinsam entwickeln wir Ihren Fahrplan – unverbindlich, individuell, praxisnah.
 {{< /page-cta >}}
 {{< page-section >}}

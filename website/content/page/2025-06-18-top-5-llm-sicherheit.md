@@ -124,7 +124,7 @@ Die LLM-Sicherheitswelt dreht sich 2025 schneller als jede Compliance-Agenda. Ve
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 ## Nächste Schritte: Jetzt Risiken erkennen & State-of-the-Art Security etablieren
 
 Buchen Sie einen kostenlosen Security-Workshop für Ihr Team oder fordern Sie unser LLM Security-Audit-Template an. Vernetzen Sie sich mit führenden Anbietern, prüfen Sie aktuelle AI-Lösungen und starten Sie Ihr Red-Teaming-Pilotprojekt. Gemeinsam machen wir Ihre KI nachhaltig sicher und auditierbar – Starten Sie noch heute!
