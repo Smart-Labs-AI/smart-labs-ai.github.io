@@ -28,3 +28,29 @@
     }
   }
 }
+
+@media screen and (max-width: 1100px) {
+  .endorsement-logos {
+    .logo-container {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      .logo-item {
+        img {
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .endorsement-logos {
+    .logo-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 1rem 2rem;
+    }
+  }
+}

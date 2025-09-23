@@ -42,11 +42,11 @@ services_result_section:
   results:
     - title: Technischer<br>Report
       icon: /images/services/result-section/report-icon.svg
-    - title: Priorisierte Maßnahmenliste
+    - title: Priorisierte<br>Maßnahmenliste
       icon: /images/services/result-section/list-icon.svg
     - title: Fix-Workshop & Doku für Ihre Compliance
       icon: /images/services/result-section/workshop-icon.svg
-    - title: Rückblick-Call zur Review
+    - title: Rückblick-Call<br>zur Review
       icon: /images/services/result-section/call-icon.svg
 section_testimonial:
   sectionType: "section-grey section-landingpage"
