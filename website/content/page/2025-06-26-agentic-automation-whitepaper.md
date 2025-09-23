@@ -111,7 +111,7 @@ Der Wandel beginnt jetzt – und Mittelständler haben die Chance, Pioniere vera
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Machen Sie Agentic AI zum Teil Ihrer Automatisierungsstrategie – beginnen Sie mit einer soliden Analyse Ihrer Prozesse, diskutieren Sie branchenspezifische Anwendungsfälle und holen Sie bei Bedarf Expertise ins Haus. Greifen Sie auf aktuelle Whitepapers, Studien und Austauschformate zurück, um Ihre Roadmap sicher und wirkungsvoll zu gestalten.
 {{< /page-cta >}}
 {{< page-section >}}

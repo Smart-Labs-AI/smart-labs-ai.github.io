@@ -1,5 +1,6 @@
 ---
 title: Risikobewertung des Produktes Defense API (DAPI)
+product_document_type: "risikobewertung"
 include_footer: true
 sidebar: false
 ---
@@ -162,6 +163,3 @@ sidebar: false
     <td>Wir setzen auf kontinuierliche Überwachung und regelmäßige Sicherheitsaudits, um potenzielle Schwachstellen frühzeitig zu erkennen und zu beheben. Unsere KI-Firewall wird regelmäßig mit den neuesten Sicherheitsupdates und Patches versehen. Zudem implementieren wir mehrschichtige Sicherheitsprotokolle und Verschlüsselungstechnologien, um die Widerstandsfähigkeit gegen Angriffe zu erhöhen. Schulungen und Sensibilisierungsmaßnahmen für Mitarbeiter helfen, das Bewusstsein für Sicherheitsrisiken zu schärfen und die allgemeine Sicherheitskultur zu stärken.</td>
   </tr>
 </table>
-
-
-

@@ -137,7 +137,7 @@ Mit KI-Agenten sichern Sie die Geschäftsmodelle von morgen. Worauf warten Sie n
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt individuell beraten lassen oder Whitepaper zum sicheren Einstieg in KI-Agenten herunterladen – auf https://smart-labs.ai/page/2025-09-04-ai-agenten-sicher-einfuehren. Starten Sie Ihre KI-Offensive mit Expertenbegleitung und messbarem Mehrwert!
 {{< /page-cta >}}
 {{< page-section >}}

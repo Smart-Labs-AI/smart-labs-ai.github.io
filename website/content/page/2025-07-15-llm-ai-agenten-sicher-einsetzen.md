@@ -121,7 +121,7 @@ Nachhaltiger Erfolg mit LLMs und AI-Agenten erfordert konsequente Wissensnutzung
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Machen Sie jetzt den Unterschied: Beginnen Sie mit einer Standortanalyse, holen Sie Experten zusammen und prüfen Sie relevante Use Cases. Greifen Sie auf bewährte Leitfäden zurück und sprechen Sie uns direkt für individuelle Beratung und Workshops an.
 {{< /page-cta >}}
 {{< page-section >}}

@@ -119,7 +119,7 @@ Der Einstieg in KI-Agenten sollte nicht als Expertenprojekt isoliert werden. Sch
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Nächste Schritte:**
 - Analysieren Sie Ihre aktuelle Automatisierungsstrategie mit Fokus auf AI-Governance.
 - Identifizieren Sie Pilotprozesse für sichere KI-Agenten-Implementierungen.

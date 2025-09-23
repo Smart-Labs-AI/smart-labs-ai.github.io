@@ -128,7 +128,7 @@ Handeln Sie jetzt, um Innovationsgewinne, mehr Sicherheit und besseres Risikoman
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Implementieren Sie LLMs mit solider Governance, Auditierung und skalierbaren Lösungen. Berücksichtigen Sie Sicherheit, Compliance und Produktivität von Beginn an. Holen Sie Expert:innen ins Boot, prüfen Sie passende Tools und etablieren Sie ein funktionsübergreifendes LLM-Gremium!
 {{< /page-cta >}}
 {{< page-section >}}

@@ -111,7 +111,7 @@ Die Entwicklung ist rasant: KI-Agenten werden eigenständig Tools orchestrieren 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten! Evaluieren Sie den Einsatz von KI-Agenten in Pilotprojekten, implementieren Sie Sicherheitsmechanismen und etablieren Sie laufende Kontrollprozesse. Stimmen Sie sich mit Fachbereichen ab, wählen Sie bewährte Frameworks und setzen Sie konsequent auf Governance, um Ihr Unternehmen zum digitalen Vorreiter zu entwickeln.
 {{< /page-cta >}}
 {{< page-section >}}

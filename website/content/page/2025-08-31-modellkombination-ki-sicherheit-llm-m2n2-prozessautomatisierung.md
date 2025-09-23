@@ -123,7 +123,7 @@ Das Zeitfenster für skalierte, sichere KI-Lösungen ist jetzt geöffnet. Baue a
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Lassen Sie sich individuell beraten oder entwickeln Sie gemeinsam mit Experten einen sicheren, skalierbaren KI-Prototyp für Ihr Unternehmen.
 {{< /page-cta >}}
 {{< page-section >}}

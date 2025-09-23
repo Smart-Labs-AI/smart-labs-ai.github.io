@@ -32,6 +32,9 @@
                   <h4 class="name is-4 mb-2">{{ .name }}</h4>
                   <h4 class="title is-4 mb-2 mt-5 mx-5" style="font-size: 120%;">{{ .title }}</h4>
                   <p class="subtitle mt-4 mb-0">{{ .description | markdownify }}</p>
+
+                  <div class="is-flex-grow-1 mb-4"></div>  
+
                   <a href="{{ .ctaLink }}">
                         <span class="button contact-button rounded primary-btn raised mt-3">
                           {{ .ctaText }}

@@ -120,7 +120,7 @@ Jede Entscheidung beeinflusst den KI-Reifegrad Ihres Unternehmens. Setzen Sie au
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie mit einem Security-Audit Ihrer KI-Infrastruktur. Evaluieren Sie flexible Sicherheitslösungen, setzen Sie erste Pilotprojekte zur Prozessautomatisierung um und definieren Sie klare Verantwortlichkeiten für AI-Agenten. Holen Sie sich Beratung oder eine Demo von erfahrenen KI-Sicherheitspartnern – und nutzen Sie KI als Erfolgsbasis.
 {{< /page-cta >}}
 {{< page-section >}}

@@ -124,7 +124,7 @@ Wer zögert, riskiert Angriffsflächen und Kontrollverlust. Doch jetzt ist die C
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt die Zukunft starten**  
 Nutzen Sie die Sicherheitsexpertise führender Tools wie Deepseek V3.1, Protecto, WhyLabs oder CalypsoAI. Etablieren Sie innerhalb weniger Wochen auditierbare, rechtskonforme und produktive LLM-Prozessautomatisierung. Kontaktieren Sie uns für eine individuelle Roadmap, Proof-of-Concept oder Security-Assessment.
 {{< /page-cta >}}

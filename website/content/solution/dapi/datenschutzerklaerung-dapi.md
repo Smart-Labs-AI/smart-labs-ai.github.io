@@ -1,5 +1,6 @@
 ---
 title: Datenschutzerklärung für Defense API (DAPI)
+product_document_type: "datenschutz"
 include_footer: true
 sidebar: false
 ---
@@ -9,6 +10,8 @@ sidebar: false
 Verantwortlicher im Sinne der Datenschutzgesetze für das SaaS-Produkt **Defense API (DAPI)** ist die 
 
 **Smart Labs AI GmbH**
+
+Nordport Towers
 
 Südportal 3 
 

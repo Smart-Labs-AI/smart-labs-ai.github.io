@@ -130,7 +130,7 @@ Verantwortungsvolle LLM-Nutzung ist kein einmaliges Projekt – sondern ein kont
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Kommen Sie ins Handeln! Wir unterstützen Sie bei Security-Workshops, individuellen Governance-Konzepten oder Quick-Scans Ihrer LLM-Infrastruktur für Compliance und Resilienz. Jetzt Beratung anfragen und Ihr Unternehmen KI-sicher machen.
 {{< /page-cta >}}
 {{< page-section >}}

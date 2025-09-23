@@ -124,7 +124,7 @@ Das Gleichgewicht zwischen Innovation und Sicherheit ist erreichbar. Mit transpa
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Beginnen Sie jetzt: Identifizieren Sie Ihre kritischen Szenarien, etablieren Sie ein interdisziplinäres LLM-Security-Team und nehmen Sie Kontakt zu Experten für Red Teaming und Compliance auf. So nutzen Sie LLM-Agenten sicher und skalierbar!
 {{< /page-cta >}}
 {{< page-section >}}

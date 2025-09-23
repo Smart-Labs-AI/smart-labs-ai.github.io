@@ -128,7 +128,7 @@ Die Zukunft sicherer KI liegt in überprüfbarer Transparenz. LLM-Lösungen, die
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt handeln: Prüfen Sie Ihre LLM-Systeme auf Bias, holen Sie sich Audithilfe und setzen Sie auf bewährte Benchmarks. Kontaktieren Sie Experten, bieten Sie Trainings an und etablieren Sie nachhaltige KI-Governance. Machen Sie den ersten Schritt zum resilienten LLM-Betrieb!
 {{< /page-cta >}}
 {{< page-section >}}

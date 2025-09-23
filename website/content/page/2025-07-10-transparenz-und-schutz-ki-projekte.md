@@ -130,7 +130,7 @@ Das Fazit fordert zu sofortiger Aktion mit konkreten Schritten auf.
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt durchstarten!**
 
 - Starten Sie interne Workshops zur LLM-Transparenz

@@ -100,7 +100,7 @@ Die Unternehmenswelt von morgen verlangt nach sicheren, skalierbaren Prozessen, 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Setzen Sie jetzt die ersten Schritte zur sicheren LLM-Automatisierung: Lassen Sie Ihre Risiken unabhängig prüfen, schaffen Sie Awareness in Ihrem Führungskreis, und evaluieren Sie Tool-Partner mit klaren Zertifizierungs- und Sicherheitssystemen. Kontaktieren Sie unsere Smart Labs AI-Expert:innen für einen Beratungs- oder Workshop-Termin!
 {{< /page-cta >}}
 {{< page-section >}}

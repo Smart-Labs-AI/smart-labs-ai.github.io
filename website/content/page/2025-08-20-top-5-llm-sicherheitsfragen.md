@@ -134,7 +134,7 @@ Führung zeigen heißt: Security als integralen Geschäfts- und Wettbewerbsfakto
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starte mit einem LLM-Security Assessment und evaluiere deine Prozesskette. Integriere moderne Security-Tools, stärke Awareness und lerne von Best Practices erfolgreicher Unternehmen. Wir beraten dich auf dem Weg zur resilienten KI-Automatisierung.
 {{< /page-cta >}}
 {{< page-section >}}

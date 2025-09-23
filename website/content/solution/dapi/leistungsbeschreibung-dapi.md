@@ -1,5 +1,6 @@
 ---
 title: "Leistungsbeschreibung: Defense API (DAPI)"
+product_document_type: "leistungsbeschreibung"
 include_footer: true
 sidebar: false
 ---
@@ -52,4 +53,4 @@ Minimierung von Datenlecks und ungewollter Knowledge Extraction bei der Verwendu
 ## 6. Support & Erweiterbarkeit 
 - E-Mail Support (alle Pläne)  
 - Dedizierter Customer Engineer (ab Enterprise)  
-- Roadmap-Feedback & Feature-Requests möglich 
+- Roadmap-Feedback & Feature-Requests möglich

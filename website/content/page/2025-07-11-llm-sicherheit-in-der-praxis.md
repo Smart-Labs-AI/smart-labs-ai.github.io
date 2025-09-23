@@ -132,7 +132,7 @@ Starten Sie heute:
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt aktiv werden: Testen Sie Ihre LLM-Anwendungen oder vereinbaren Sie ein Security-Briefing mit unseren Expert:innen. Weiterführende Whitepapers und Kontaktmöglichkeiten finden Sie auf unserer Website!
 {{< /page-cta >}}
 {{< page-section >}}

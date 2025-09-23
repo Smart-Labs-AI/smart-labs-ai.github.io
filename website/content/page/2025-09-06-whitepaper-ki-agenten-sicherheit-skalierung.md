@@ -160,7 +160,7 @@ Innovationsführerschaft entsteht durch aktives Handeln und smarte KI-Integratio
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt handeln! Sichern Sie sich den Smart-Labs Workshop oder starten Sie Ihr individuelles Pilotprojekt: Kontaktieren Sie unser Experten-Team für ein kostenfreies Strategiegespräch zur schnellen, sicheren Einführung skalierbarer KI-Agenten.**
 {{< /page-cta >}}
 {{< page-section >}}

@@ -22,8 +22,9 @@ möglich.
 
 # 2. Verantwortliche Stelle für die Datenverarbeitung
 
-SmartLabsAI, Südportal 3, 22848 Norderstedt, Deutschland, E-Mail:
-[<kontakt@smart-labs.ai>]
+Smart Labs AI GmbH, Nordport Towers, Südportal 3, 22848 Norderstedt, Deutschland 
+
+E-Mail: [<kontakt@smart-labs.ai>]
 
 Vertreten durch die Geschäftsführer Benjamin Gnahm, Tobias P. Metz,
 Stefan A. Fenn, Fabian D. Bühler
@@ -528,3 +529,9 @@ Verstoßes zuständig ist. Wir würden es begrüßen, wenn Sie zuerst mit uns
 Kontakt aufnehmen und uns Ihre Sorgen oder Beschwerden schildern. Für
 Datenschutzanfragen können Sie uns unter der E-Mail-Adresse
 [<kontakt@smart-labs.ai>] erreichen.
+
+---
+
+<h3>Produktspezifische Datenschutzerklärungen</h3>
+<p>Für einige unserer Produkte und Dienstleistungen gelten zusätzliche oder gesonderte Datenschutzerklärungen. Hier finden Sie eine Übersicht:</p>
+{{< product_documents "datenschutz" >}}

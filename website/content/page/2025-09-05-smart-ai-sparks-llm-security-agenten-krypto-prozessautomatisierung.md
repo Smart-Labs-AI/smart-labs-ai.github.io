@@ -100,7 +100,7 @@ Transformieren Sie Risiken zu Chancen und schaffen Sie Wachstum. Setzen Sie auf 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten! Wir bieten Workshops, individuelle Strategiegespräche und Proof-of-Concept-Angebote von Smart Labs AI. Machen Sie Ihr Unternehmen sicher und innovativ für die neue KI-Ära. Kontaktieren Sie uns für maßgeschneiderte Beratung und smarte KI-Lösungen.
 {{< /page-cta >}}
 {{< page-section >}}

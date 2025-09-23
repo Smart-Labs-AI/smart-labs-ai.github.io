@@ -113,7 +113,7 @@ Jetzt beginnt das Zeitalter auditierbarer, offener LLMs. Wer Sicherheit, Skalier
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Bereit für die Ära sicherer, offener KI? Starten Sie mit einem Security-Assessment und wählen Sie bewährte Tools sowie starke Partner für Ihre auditierbare LLM-Integration. Kontaktieren Sie unser Expertenteam für Assessments oder Pilotprojekte.
 {{< /page-cta >}}
 {{< page-section >}}

@@ -120,7 +120,7 @@ Schnell agierende Unternehmen machen KI zum Erfolgsmodell – nicht zum Risiko.
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt mit einer Auditierung Ihrer KI-Systeme, sensibilisieren Sie Ihre Teams für Bias und nutzen Sie bewährte Frameworks und Tools für transparente, resiliente Systeme. Kommen Sie mit Expert:innen für Responsible AI ins Gespräch!
 {{< /page-cta >}}
 {{< page-section >}}

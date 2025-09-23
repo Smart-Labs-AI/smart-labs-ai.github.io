@@ -115,7 +115,7 @@ Am Ende reicht Technologie allein nicht aus – es zählen Mut, Verantwortungsbe
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten – Stellen Sie ein interdisziplinäres Team auf, definieren Sie offene Leitfragen zur Regulierung und Sicherheit und prüfen Sie Ihren Status Quo mit einem Quick Audit. Für vertiefende Analysen kontaktieren Sie ausgewiesene AI-Sicherheitsexpert:innen oder starten Sie ein Pilotprojekt mit klaren Erfolgskriterien.
 {{< /page-cta >}}
 {{< page-section >}}

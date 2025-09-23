@@ -122,7 +122,7 @@ Beginnen Sie jetzt: Bauen Sie ein Expertenteam für KI-Sicherheit auf und setzen
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt Orientierung holen: Starten Sie mit einer individuellen Risikoanalyse oder einem Pilotprojekt. Nutzen Sie bewährte Security-Frameworks und bauen Sie Ihr Team gezielt auf. Kontaktieren Sie uns für Beratung, Partnerschaften oder Workshops zu LLM-Agentensicherheit und AI Governance.
 {{< /page-cta >}}
 {{< page-section >}}

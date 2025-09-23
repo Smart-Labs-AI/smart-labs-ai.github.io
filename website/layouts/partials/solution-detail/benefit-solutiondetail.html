@@ -27,13 +27,13 @@
           <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
         {{- end }}
         {{- if $title }}
-          <h1 class="section-title is-spaced">{{ $title }}</h1>
+          <h1 class="section-title is-spaced">{{ $title | markdownify }}</h1>
         {{- end }}
         {{- if $subtitle }}
-          <h3 class="section-subtitle">{{ $subtitle }}</h3>
+          <h3 class="section-subtitle">{{ $subtitle | markdownify }}</h3>
         {{- end }}
        <p>
-        {{ $content }}
+        {{ $content | markdownify }}
        </p> 
       </div>
     </div>

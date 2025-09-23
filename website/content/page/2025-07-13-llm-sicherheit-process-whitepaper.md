@@ -133,7 +133,7 @@ Starten Sie heute mit einer Analyse Ihrer KI-Assets, bewerten Sie Risiken und et
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Legen Sie KI-Sicherheit und Automatisierung an die Spitze Ihrer Agenda – starten Sie jetzt mit einer individuellen Analyse oder kontaktieren Sie erfahrene KI-Sicherheitsberater für ein kostenloses Expertengespräch.
 {{< /page-cta >}}
 {{< page-section >}}

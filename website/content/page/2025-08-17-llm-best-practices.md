@@ -122,7 +122,7 @@ LLM-Sicherheit sollte heute Priorität haben, um künftige Risiken und hohe Kost
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Setzen Sie die 5 Best Practices in Ihrem Unternehmen um: Starten Sie mit einer individuellen Risikoanalyse, holen Sie sich interne wie externe Expertise, etablieren Sie Monitoring und fördern Sie ein Sicherheitsbewusstsein im Team. Kontaktieren Sie zertifizierte Security-Partner und implementieren Sie Security-by-Design in allen KI-Prozessen!
 {{< /page-cta >}}
 {{< page-section >}}

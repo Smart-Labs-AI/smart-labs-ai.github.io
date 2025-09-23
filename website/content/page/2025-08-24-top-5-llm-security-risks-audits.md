@@ -167,7 +167,7 @@ Empfohlene Maßnahmen:
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten – Lassen Sie sich beraten, implementieren Sie einen Security Quick-Audit und nutzen Sie agile Security-Frameworks. Kontaktieren Sie uns für individuelle Empfehlungen, Workshops oder eine persönliche Risikoanalyse.
 {{< /page-cta >}}
 {{< page-section >}}

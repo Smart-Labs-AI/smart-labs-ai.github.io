@@ -3,8 +3,9 @@
 ## Unternehmensinformationen
 
 **Smart Labs AI GmbH**\
-Südportal 3\
+Nordport Towers\
 22848 Norderstedt\
+Südportal 3\
 Deutschland
 
 ## Kontakt

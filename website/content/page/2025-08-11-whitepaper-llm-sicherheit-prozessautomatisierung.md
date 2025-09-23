@@ -157,7 +157,7 @@ So werden digitale Prozesse zuverlässig und innovativ. Jetzt ist der Moment fü
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Handeln Sie jetzt: Setzen Sie auf kombinierte LLM-Sicherheit und nachhaltige Prozessautomatisierung! Kontaktieren Sie Ihr Security- und Digitalisierungsteam, starten Sie einen Proof-of-Concept mit Defense-in-Depth oder sichern Sie sich externe Beratung für ein umfassendes LLM-Sicherheitsaudit – starten Sie sicher und systematisch in die KI-Zukunft!
 {{< /page-cta >}}
 {{< page-section >}}

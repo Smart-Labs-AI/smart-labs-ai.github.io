@@ -131,7 +131,7 @@ Motivation: Ein auf Sicherheit fokussiertes Mindset ist Basis für Innovation un
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Setzen Sie sich noch heute mit uns in Verbindung, um Ihre LLM-Sicherheitsstrategie auf das nächste Level zu heben. Wir begleiten Sie von der Risikoanalyse bis zum sicheren Betrieb – praxisnah, partnerschaftlich, zukunftsorientiert. Jetzt starten und entscheidenden Wettbewerbsvorteil sichern!
 {{< /page-cta >}}
 {{< page-section >}}

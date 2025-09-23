@@ -118,7 +118,7 @@ Mit robusten Architekturen und konsequenter Umsetzung im Bereich LLM-Sicherheit 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Ergreifen Sie jetzt die Initiative: Machen Sie LLM-Sicherheit zum Herzstück Ihrer Digitalstrategie. Kontaktieren Sie unsere Expert:innen für eine individuelle Beratung, fordern Sie eine Demo führender Security-Tools an oder starten Sie sofort mit einem Compliance-Check – der beste Zeitpunkt ist jetzt!
 {{< /page-cta >}}
 {{< page-section >}}

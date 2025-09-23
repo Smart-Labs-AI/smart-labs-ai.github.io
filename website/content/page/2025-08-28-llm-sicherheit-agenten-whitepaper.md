@@ -136,7 +136,7 @@ Frühe Vorbereitung ist entscheidend. LLM-Sicherheit bedeutet: Effizienz, Schutz
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt die Potenziale von LLM-Security und Agentic AI voll ausschöpfen: Unsere Experten begleiten Sie von der Analyse bis zur erfolgreichen Umsetzung in Ihrem Unternehmen. Kontaktieren Sie Smart Labs AI für eine unverbindliche Erstberatung zu maßgeschneiderten, sicherheitsbasierten KI-Lösungen!**
 {{< /page-cta >}}
 {{< page-section >}}

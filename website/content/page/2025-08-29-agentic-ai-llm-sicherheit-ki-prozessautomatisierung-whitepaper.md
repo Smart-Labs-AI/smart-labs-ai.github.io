@@ -89,7 +89,7 @@ KI, LLMs und Agentic AI bilden das Fundament moderner Unternehmen. Wer sich heut
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt: Überprüfen Sie Ihre Prozesse auf LLM-Risiken, führen Sie ein abteilungsübergreifendes AI-Security Audit durch oder holen Sie Expertenrat ein für eine individuelle Risikoanalyse. Nutzen Sie aktuelle Whitepapers, Trainings und Netzwerke für kontinuierlichen Wissensaufbau im Team.
 {{< /page-cta >}}
 {{< page-section >}}

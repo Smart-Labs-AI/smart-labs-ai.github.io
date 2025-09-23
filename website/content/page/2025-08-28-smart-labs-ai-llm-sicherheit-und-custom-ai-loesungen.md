@@ -140,7 +140,7 @@ Starten Sie jetzt und machen Sie Ihre KI-Projekte zukunftssicher!
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Starten Sie jetzt:**
 - Auditieren Sie Ihre bestehenden KI-Lösungen auf LLM-Security
 - Kontaktieren Sie Smart Labs AI für ein individuelles Beratungsgespräch zur LLM-Sicherheit und KI-Prozessautomatisierung [2]

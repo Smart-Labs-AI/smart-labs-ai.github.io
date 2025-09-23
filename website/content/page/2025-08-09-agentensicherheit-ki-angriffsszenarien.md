@@ -130,7 +130,7 @@ Gesicherte KI-Innovation startet heute – die ersten Schritte sind erfolgsentsc
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt: Überprüfen Sie Ihre Agenteninfrastruktur, setzen Sie auf moderne KI-Security-Lösungen und bauen Sie Ihr Incident-Response-Team auf. Investieren Sie in Fachberatung, Schulungen und Governance, um Überraschungen zu vermeiden – werden Sie Vorreiter in der Agentensicherheit!
 {{< /page-cta >}}
 {{< page-section >}}

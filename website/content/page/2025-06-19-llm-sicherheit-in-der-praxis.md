@@ -118,7 +118,7 @@ Beginnen Sie jetzt mit einem AI Security Assessment. Nutzen Sie praxisorientiert
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt Ihr eigenes AI Security Assessment oder sichern Sie sich ein Beratungsgespräch mit Experten für smarte LLM-Schutzkonzepte. Werden Sie Vorreiter bei sicherer und verantwortungsvoller KI-Nutzung!
 {{< /page-cta >}}
 {{< page-section >}}

@@ -129,7 +129,7 @@ Wer LLMs strategisch nutzt, muss KI-Prozesse laufend prüfen. Eine Audit-Checkli
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Lassen Sie sich beraten: Fordern Sie die detaillierte LLM Audit-Checkliste von Smart Labs AI an und stärken Sie Ihre KI-Strategie. Für schnelle Umsetzung, gezielte Workshops oder individuelle Beratung – kontaktieren Sie uns noch heute und heben Sie Ihre Sicherheit auf das nächste Level!
 {{< /page-cta >}}
 {{< page-section >}}

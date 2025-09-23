@@ -128,7 +128,7 @@ Führende Unternehmen setzen auf integriertes Security-Monitoring, rollenbasiert
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt starten:** Identifizieren Sie Ihre wichtigsten Automatisierungsprozesse, prüfen Sie die LLM-Tauglichkeit, holen Sie erfahrene Partner für eine Sicherheitsanalyse ins Boot – oder starten Sie direkt mit einem Security Audit für Ihre KI-getriebenen Prozesse. Handeln Sie jetzt und sichern Sie sich Ihren Technologievorsprung!
 {{< /page-cta >}}
 {{< page-section >}}

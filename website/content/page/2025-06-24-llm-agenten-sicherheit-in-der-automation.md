@@ -115,7 +115,7 @@ Die Chancen werden nicht auf ewig bestehen bleiben: Wer heute beginnt, Security-
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt Kontakt aufnehmen, Pilot starten oder ein Beratungsgespräch buchen. Smart Labs zeigt, wie Sie Ihre KI-Agenten-Strategie sofort sicher, auditierbar und skalierbar machen können. 
 
 [Direkt Termin vereinbaren](#)

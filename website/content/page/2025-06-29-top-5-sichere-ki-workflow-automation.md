@@ -117,7 +117,7 @@ Wer jetzt die neue Chancen- und Sicherheitsarchitektur versteht und konsequent u
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt mit einem Security Quick-Check oder Pilotprojekt für KI-basierte Workflow-Automatisierung! Kontaktieren Sie uns oder vereinbaren Sie direkt ein Beratungsgespräch, um Ihre Prozesse sicher, skalierbar und compliant aufzustellen.
 {{< /page-cta >}}
 {{< page-section >}}

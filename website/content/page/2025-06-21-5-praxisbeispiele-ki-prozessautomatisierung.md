@@ -130,7 +130,7 @@ Zukunftssichere Unternehmen finden den Sweet Spot: Sie verbinden technische Exze
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Möchten Sie Ihre Prozesse sicher automatisieren und KI gewinnbringend einsetzen? Lassen Sie sich bei Audit, Compliance, Schulung oder Implementierung von Smart Labs AI unterstützen. Kontaktieren Sie uns noch heute für eine individuelle Erstberatung – Ihre sichere Zukunft beginnt jetzt!
 {{< /page-cta >}}
 {{< page-section >}}

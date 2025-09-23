@@ -152,7 +152,7 @@ Technische Komplexität sollte Sie nicht bremsen: Beginnen Sie mit sicherheitsor
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Nutzen Sie die Top 5 Handlungsempfehlungen als praxisnahen Fahrplan und nehmen Sie unverbindlich Kontakt zu Experten auf, um konkrete Pilotprojekte zu gestalten – jetzt operative Sicherheit und Innovationsvorsprung sichern!
 {{< /page-cta >}}
 {{< page-section >}}

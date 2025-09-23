@@ -116,7 +116,7 @@ Integrierte KI-Governance und kluges Kostenmanagement schaffen messbare Erfolge:
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt handeln: Prüfen Sie Ihre KI-Systeme auf Governance- und Kosteneffizienz. Starten Sie mit einer Status-Analyse oder Beratung und sichern Sie so nachhaltigen Unternehmenserfolg durch strategische Governance und moderne Kostenkontrolle!
 {{< /page-cta >}}
 {{< page-section >}}
