@@ -84,13 +84,7 @@ params:
   navbar:
   - title: Services
     url: /services
-  - title: Lösungen
-    url: /solutions
-  - title: Labs
-    url: /labs
-  - title: Karriere
-    url: /careers
-  - title: Content Hub
+  - title: Blog
     url: /blog
   - title: Solutions
     url: /solution

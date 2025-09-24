@@ -15,9 +15,7 @@
     {{ partial "services/solutions-section.html" . }}
 </section>
 
-<section class="section">
-    {{ partial "services/endorsement-logos.html" . }}
-</section>
+{{ partial "section_testimonial.html" . }}
 
 <section class="section">
     {{ partial "services/result-section.html" . }}
@@ -28,4 +26,9 @@
 </section>
 
 {{ partial "footer.html" . }}
+
+  {{ if .Params.sidebar }}
+  {{ partial "single/sidebar.html" . }}
+  {{ end }}
+
 {{ end }}
