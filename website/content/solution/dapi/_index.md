@@ -72,16 +72,4 @@ useCases:
       ctaLink: "/contact"
       ctaText: "Mehr erfahren"
 pricingKey: "dapi"
-footer:
-  quicklinks:
-    column2:
-      links:
-      - text: "Datenschutzerklärung DAPI"
-        link: "datenschutzerklaerung-dapi"
-      - text: "Nutzungsbedingungen DAPI" 
-        link: "nutzungsbedingungen-dapi" 
-      - text: "Leistungsbeschreibung DAPI" 
-        link: "leistungsbeschreibung-dapi"
-      - text: "Risikobewertung DAPI" 
-        link: "risikobewertung-dapi"
 ---

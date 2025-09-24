@@ -24,7 +24,7 @@
             <h4 class="title is-4 mt-6">{{ .title | markdownify }}</h4>
             <p class="subtitle mt-4">{{ .text | markdownify }}</p>
             {{- with .url }}
-              <a class="button cta rounded primary-btn raised mt-4 is-pulled-right" href="{{ . }}" aria-label="weiter">
+              <a class="button cta rounded primary-btn raised mt-4 is-pulled-right" href="{{ . | absURL }}" aria-label="weiter">
                 <span class="icon">
                   <i class="fas fa-arrow-right"></i>
                 </span>
