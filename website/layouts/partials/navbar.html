@@ -35,26 +35,26 @@
 
             <div class="navbar-dropdown">
               {{- range .sublinks }}
-              <a href="{{ .url }}" class="navbar-item">
+              <a href="{{ .url | absURL }}" class="navbar-item">
                 {{ .title }}
               </a>
               {{- end }}
             </div>
           </div>
           {{- else if .buttonPrimary }}
-          <a href="{{ .url }}" class="navbar-item">
+          <a href="{{ .url | absURL }}" class="navbar-item">
             <span class="button contact-button rounded primary-btn raised">
               {{ .title }}
             </span>
           </a>
           {{- else if .buttonSecondary }}
-          <a href="{{ .url }}" class="navbar-item">
+          <a href="{{ .url | absURL }}" class="navbar-item">
             <span class="button contact-button rounded secondary-btn raised">
               {{ .title }}
             </span>
           </a>
           {{- else }}
-          <a href="{{ .url }}" class="navbar-item is-secondary">
+          <a href="{{ .url | absURL }}" class="navbar-item is-secondary">
             {{ .title }}
           </a>
           {{- end }}

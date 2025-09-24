@@ -51,7 +51,7 @@
               <div class="mt-6 mb-5">
 
                 {{- range $i, $cta := $comparisonItem.ctas }}
-                  <a href="{{ $cta.link }}">
+                  <a href="{{ $cta.link | absURL }}">
                     <span class="button contact-button rounded {{ $cta.class }} raised mt-3" style="width:100%">
                       {{ $cta.text }}
                       <span class="icon ml-2">

@@ -12,15 +12,15 @@ hero:
   solutions:
     - item:
         name: "Smart Fingerprint" 
-        link: "smart-fingerprint"
+        link: "/solution/smart-fingerprint"
         image: "/images/illustrations/icons/fingerprint.svg"
     - item:
         name: "Smart Dragon"
-        link: "smart-dragon"
+        link: "/solution/smart-dragon"
         image: "/images/illustrations/icons/smart-dragon.svg"
     - item:
         name: "Defence API"
-        link: "dapi"
+        link: "/solution/dapi"
         image: "/images/illustrations/icons/llm-security.svg"
   ctas:
     - label: "Jetzt Beratung buchen"
@@ -36,21 +36,21 @@ solutionDetails:
       image: "/images/illustrations/icons/fingerprint.svg"
       background: "/solution/product_background_1.png"
       cta-text: "Smart Fingerprint entdecken"
-      cta-link: "smart-fingerprint"
+      cta-link: "/solution/smart-fingerprint"
     - name: "Smart Dragon"
       title: "Sicherer Unternehmens-Chatbot"
       description: "LLM-Chatbot mit Zugriffskontrolle, Kontextabschottung und Logging. Entwickelt für sensible Daten und geschützte Umgebungen."
       image: "/images/illustrations/icons/smart-dragon.svg"
       background: "/solution/product_background_2.png"
       cta-text: "Smart Dragon entdecken"
-      cta-link: "smart-dragon"
+      cta-link: "/solution/smart-dragon"
     - name: "Defense API"
       title: "DAPI: Schützen Sie Ihre KI-Infrastruktur"
       description: "Plattform für Analyse, Härtung & Auditierung von Large Language Models, Agenten und APIs – inkl. Prompt Injection Detection und Red Teaming."
       image: "/images/illustrations/icons/llm-security.svg"
       background: "/solution/product_background_3.png"
       cta-text: "Defense API entdecken"
-      cta-link: "dapi"
+      cta-link: "/solution/dapi"
 solutionComparison:
   section-title: "Vergleich"
   title: "Welche Lösung passt zu Ihnen?"

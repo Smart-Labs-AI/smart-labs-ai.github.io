@@ -32,7 +32,7 @@ params:
           price: "€ 5,99"
           turnus: "monatlich"
           ctaText: "Jetzt kostenlos testen"
-          ctaLink: "#"
+          ctaLink: "/contact"
           features:
           - name: "**10.000** API Requests"
             type: check
@@ -42,7 +42,7 @@ params:
           price: "€ 14,90"
           turnus: "monatlich"
           ctaText: "Jetzt kostenlos testen"
-          ctaLink: "#"
+          ctaLink: "/contact"
           cssClass: "preferred"
           features:
           - name: "**Unlimited** API Requests"
@@ -55,7 +55,7 @@ params:
           price: "Individuell"
           turnus: "monatlich / jährlich"
           ctaText: "Jetzt anfragen"
-          ctaLink: "#"
+          ctaLink: "/contact"
           features:
           - name: "API Requests **nach Volumen**"
             type: check
@@ -188,6 +188,8 @@ params:
           link: /
         - text: Blog
           link: /blog
+        - text: Solutions
+          link: /solution
         - text: Kontakt
           link: /contact
       column2:

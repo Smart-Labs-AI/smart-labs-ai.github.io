@@ -26,7 +26,7 @@
             <ul class="link-list">
               {{- range $colData.links }}
               <li>
-                <a href="{{ .link }}">
+                <a href="{{ .link | absURL }}">
                   {{ .text }}
                 </a>
               </li>
@@ -34,7 +34,7 @@
               {{- with (index $pageQuickLinks $colName) }}
                 {{- range .links }}
                 <li>
-                  <a href="{{ .link }}">
+                  <a href="{{ .link | absURL }}">
                     {{ .text }}
                   </a>
                 </li>
@@ -69,7 +69,7 @@
                 </li>
                 {{- range $contact.socialMedia }}
                 <li>
-                  <a class="social-media" href="{{ .link }}" aria-label="{{ .icon }}">
+                  <a class="social-media" href="{{ .link | absURL }}" aria-label="{{ .icon }}">
                     <span class="icon"><i class="fab fa-{{ .icon }}"></i></span>
                   </a>
                 </li>
@@ -93,7 +93,7 @@
           <ul class="link-list">
             {{- range $finalLine.links }}
             <li>
-              <a href="{{ .link }}"> {{ .text }} </a>
+              <a href="{{ .link | absURL }}"> {{ .text }} </a>
             </li>
             {{- end }}
           </ul>

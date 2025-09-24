@@ -28,10 +28,10 @@
         </h2>
         {{ end }}
         <div class="buttons mt-4">
-          <a class="button cta rounded primary-btn raised mr-4" href="{{ $buttonLink }}">
+          <a class="button cta rounded primary-btn raised mr-4" href="{{ $buttonLink | absURL }}">
             {{ $buttonText }}
           </a>
-          <a class="button cta rounded secondary-btn raised" href="{{ $secondaryButtonLink }}">
+          <a class="button cta rounded secondary-btn raised" href="{{ $secondaryButtonLink | absURL }}">
             {{ $secondaryButtonText }}
           </a>
         </div>
