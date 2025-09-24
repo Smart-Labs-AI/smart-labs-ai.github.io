@@ -62,7 +62,7 @@ params:
           - name: "M Token (LLM Calls) **nach Volumen**"
             type: check
   # Used as meta data; describe your site to make Google Bots happy
-  description: Smart Labs AI GmbH
+  description: Wir sichern Ihre KI-Systeme gegen Angriffe, sorgen für Compliance und schaffen Vertrauen. Entdecken Sie unsere Lösungen für LLM-Sicherheit, Prompt Injection Defense und mehr.
   # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
   # preloader: false
   navbarlogo:
