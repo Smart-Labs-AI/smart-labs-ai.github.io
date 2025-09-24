@@ -70,6 +70,7 @@ useCases:
       image: "/images/illustrations/icons/prompt.svg"
       ctaLink: "/contact"
       ctaText: "Mehr erfahren"
+pricingKey: "dapi"
 footer:
   quicklinks:
     column2:

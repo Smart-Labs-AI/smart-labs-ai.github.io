@@ -20,6 +20,11 @@
     {{ partial "solution-detail/use-cases-solutiondetail.html" . }}
   {{ end }}
 
+  {{ if .Params.pricingKey }}
+    {{ $pricingData := index .Site.Params.pricing .Params.pricingKey }}
+    {{ partial "landingpage/prices-landingpage.html" (dict "section_prices" $pricingData) }}
+  {{ end }}
+
   {{ partial "section_cta.html" . }}
 
   {{ partial "footer.html" . }}
