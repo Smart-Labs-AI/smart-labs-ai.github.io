@@ -1,10 +1,10 @@
 {
   "name": "Go",
-  "image": "mcr.microsoft.com/devcontainers/go:1-1.22-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/go:1-1.24-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/node:1": { "version": "18" }
   },
-  "postCreateCommand": "CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.132.2 && cd website && npm install",
+  "postCreateCommand": "CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.150.0 && cd website && npm install",
 
   // ⬇️ NEU: Agent-Forwarding statt ~/.ssh binden
   "mounts": [
