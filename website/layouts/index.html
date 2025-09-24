@@ -1,4 +1,13 @@
 {{ define "main" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Smart Labs AI GmbH",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ "/apple-touch-icon.png" | absURL }}"
+}
+</script>
 
     {{ if .Site.Params.hero }}
     {{ partial "hero.html" . }}
