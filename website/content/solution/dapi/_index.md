@@ -4,6 +4,8 @@ title: "Defense API (DAPI) | LLM Security Platform | Smart Labs AI"
 layout: "solution-detail"
 include_footer: true
 description: "Die Defense API (DAPI) von Smart Labs AI ist Ihre Plattform für LLM Security. Schützen Sie Ihre KI vor Prompt Injection, Datenlecks und anderen Angriffen."
+type: solution
+is_main_solution_site: true
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "LLM Security Platform"

@@ -2,6 +2,8 @@
 ---
 title: "Smart Fingerprint"
 layout: "solution-detail"
+type: solution
+is_main_solution_site: true
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "Smart Fingerprint"
