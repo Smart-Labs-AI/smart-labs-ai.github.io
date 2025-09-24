@@ -99,16 +99,20 @@ params:
     - title: KI-Sicherheit & Compliance
       text: Schütze deine KI-Systeme vor **Cyberangriffen**, **Prompt Injection** und **Datenlecks**. Erhöhe die Widerstandsfähigkeit deiner Modelle und schaffe eine sichere Umgebung für sensible Daten.
       icon: ai-security
+      alt: "Icon für KI-Sicherheit und Compliance"
     - title: Fairness & Transparenz
       text: Reduziere **Bias** in KI-Modellen und sorge für eine faire, nachvollziehbare Entscheidungsfindung. Setze auf transparente Algorithmen und gewinne das Vertrauen deiner Nutzer und Partner.
       icon: ai-transparency
+      alt: "Icon für Fairness und Transparenz"
     - title: Regulatorische Absicherung
       text: Navigiere sicher durch die komplexe Welt der KI-Regulierungen. Erfülle Vorschriften wie den **EU AI Act**, **DORA** und weitere Anforderungen, um rechtliche Risiken zu minimieren.
       icon: eu-ai-act
+      alt: "Icon für Regulatorische Absicherung"
     - title: Erfahre mehr darüber, wie wir Dir helfen können und buche jetzt eine **kostenlose Erstanalyse**.
       icon: smart-labs-ai-white
       url: /contact/free-risk-check
       cardType: call-to-action
+      alt: "Icon für Free-Risk-Check"
   section_testimonial:
     title: Das sagen unsere Kunden
     subtitle: Wir identifizieren Schwachstellen und entwickeln gezielte Maßnahmen, um Ihre Systeme gegen Angriffe abzusichern und eine zuverlässige Funktionalität zu gewährleisten. Unsere Expertise basiert auf regelmäßiger Teilnahme an CTFs und Challenges, bei denen wir Angriffe auf KI-Systeme simulieren und verteidigen. Dieses praxisnahe Wissen fließt direkt in unsere Strategien ein, um Ihre KI nachhaltig und sicher zu gestalten.
