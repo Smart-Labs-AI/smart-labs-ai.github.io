@@ -1,9 +1,37 @@
 {{- $section_prices := .section_prices -}}
+{{- $permalink := .Permalink -}}
 {{- $sectionTitle := index $section_prices "section-title" | default "" -}}
 {{- $title := index $section_prices "title" | default "" -}}
 {{- $subtitle := index $section_prices "subtitle" | default "" -}}
 {{- $prices := index $section_prices "prices" | default (slice) -}}
 {{- $infoBox := index $section_prices "info-box" | default (slice) -}}
+
+{{- $offers := slice -}}
+{{- range $i, $price := $prices -}}
+  {{- $name := index $price "name" | default "" -}}
+  {{- $price_text := index $price "price" | default "" -}}
+  {{- $turnus := index $price "turnus" | default "" -}}
+  {{- $offer := dict
+    "@type" "Offer"
+    "name" $name
+    "price" ($price_text | replaceRE "[^0-9,]+" "" | replaceRE "," ".")
+    "priceCurrency" "EUR"
+    "description" (printf "%s %s" $name $turnus)
+    "url" $permalink
+  -}}
+  {{- $offers = $offers | append $offer -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "name": "{{ $title }}",
+  "description": "{{ $subtitle }}",
+  "url": "{{ $permalink }}",
+  "itemListElement": {{ $offers }}
+}
+</script>
 
 <section class="section section-pricing section-white section-landingpage is-medium">
   <div class="container has-text-centered">

@@ -20,12 +20,12 @@
   {{ if $pricingKey }}
     {{ $pricingData := index .Site.Params.pricing $pricingKey }}
     {{ if $pricingData }}
-      {{ partial "landingpage/prices-landingpage.html" (dict "section_prices" $pricingData) }}
+      {{ partial "landingpage/prices-landingpage.html" (dict "section_prices" $pricingData "Permalink" .Permalink) }}
     {{ end }}
   {{ else }}
     {{ $section_prices := .Params.section_prices | default .Site.Params.section_prices }}
     {{ if $section_prices }}
-      {{ partial "landingpage/prices-landingpage.html" (dict "section_prices" $section_prices) }}
+      {{ partial "landingpage/prices-landingpage.html" (dict "section_prices" $section_prices "Permalink" .Permalink) }}
     {{ end }}
   {{ end }}
 
