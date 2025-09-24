@@ -9,13 +9,15 @@
 {{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 
 {{ $fonts := resources.Get "css/googlefonts.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $fonts.RelPermalink }}" integrity="{{ $fonts.Data.Integrity }}">
+<link rel="preload" href="{{ $fonts.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $fonts.RelPermalink }}" integrity="{{ $fonts.Data.Integrity }}"></noscript>
 
 
 {{- $css := resources.Get $sass | toCSS $cssOpts | postCSS (dict "config" "postcss.config.js") | minify }}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
 
-<link rel="stylesheet" href="/css/fontawesome/6.7.2/css/all.min.css">
+<link rel="preload" href="/css/fontawesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/fontawesome/6.7.2/css/all.min.css"></noscript>
 
 
 <!-- Favicon -->  
