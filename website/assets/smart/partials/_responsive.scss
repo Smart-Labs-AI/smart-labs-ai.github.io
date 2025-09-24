@@ -11,7 +11,6 @@ Responsive Styles
         text-align: center;
     }
     .navbar-menu {
-        //background: $body-background-color-nav;
         background: transparent;
         border-bottom: 1px solid rgba($white, 0.1);
         .is-static {
@@ -51,15 +50,10 @@ Responsive Styles
 }
 
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-    .navbar-menu {
-        background: $body-background-color-nav;
-    }
-    
-    .landing-caption {
-        text-align: center;
-    }
-    .navbar-menu {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+    div.navbar-menu {
+        background: transparent;
+        border-bottom: 1px solid rgba($white, 0.1);
         .is-static {
             position: absolute;
             width: 100%;
@@ -80,6 +74,10 @@ Responsive Styles
         .burger-button, .cross {
             color: white !important;
         }
+    }
+
+    .landing-caption {
+        text-align: center;
     }
     .pushed-image {
         margin-top: 0 !important;
