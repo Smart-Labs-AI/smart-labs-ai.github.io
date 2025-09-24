@@ -1,11 +1,69 @@
 {{ define "main" }}
+
+{{- /*
+Determine which pages to display.
+1. Get all pages with Type "solution".
+2. From those, only include pages where .Params.is_main_solution_site is true.
+*/ -}}
+{{ $pages := .Pages }}
+{{ if eq .Section "solution" }}
+    {{ $allTypedPages := where .Site.Pages "Type" "solution" }}
+    {{ $pages = where $allTypedPages ".Params.is_main_solution_site" true }}
+{{ end }}
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "{{ .Title }} | {{ .Site.Title }}",
+    "description": "{{ .Description }}",
+    "url": "{{ .Permalink }}",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+            {{ range $index, $page := $pages }}
+            {
+                "@type": "ListItem",
+                "position": {{ add $index 1 }},
+                "item": {
+                    "@type": "Product",
+                    "name": "{{ .Title }}",
+                    "url": "{{ .Permalink }}",
+                    "description": "{{ .Description }}"
+                }
+            }{{ if ne (add $index 1) (len $pages) }},{{ end }}
+            {{ end }}
+        ]
+    }
+}
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "{{ .Title }}",
-  "description": "{{ .Description }}",
-  "url": "{{ .Permalink }}"
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{- $currentPage := . -}}
+    {{- $pagesInPath := slice -}}
+    {{- $pagesInPath = $pagesInPath | append .Site.Home -}}
+    {{- range .Ancestors -}}
+      {{- if not .IsHome -}}
+        {{- $pagesInPath = $pagesInPath | append . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not .IsHome -}}
+      {{- $pagesInPath = $pagesInPath | append $currentPage -}}
+    {{- end -}}
+
+    {{- range $index, $page := $pagesInPath -}}
+    {
+      "@type": "ListItem",
+      "position": {{ add $index 1 }},
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }{{ if ne (add $index 1) (len $pagesInPath) }},{{ end }}
+    {{- end -}}
+  ]
 }
 </script>
 
