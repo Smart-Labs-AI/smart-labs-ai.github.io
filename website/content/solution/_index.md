@@ -1,7 +1,8 @@
 ---
-title: "Aktuelle Blogs"
+title: "Unsere Lösungen für KI-Sicherheit | Smart Labs AI"
 subtitle: "Einblicke in die Welt der KI-Sicherheit."
 layout: "solution-list"
+description: "Entdecken Sie die KI-Sicherheitslösungen von Smart Labs AI: Smart Fingerprint, Smart Dragon und die Defense API (DAPI) zum Schutz Ihrer LLMs und KI-Anwendungen."
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "Lösungen"
