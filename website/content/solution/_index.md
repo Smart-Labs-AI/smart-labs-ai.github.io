@@ -8,7 +8,7 @@ hero:
   section-title: "Lösungen"
   title: "Drei Produkte. Eine Mission:"
   title2: "Sichere, vertrauenswürdige KI"
-  subtitle: "Unsere Platform bietet modulare Lösungen für die LLM-Absicherungen, Chatbots und biometrischen KI-Systemen."
+  subtitle: "Unsere Plattform bietet modulare Lösungen für **ganzheitliche KI-Sicherheit**, von LLM-Absicherungen bis hin zu Chatbots und biometrischen Systemen – für **End-to-End-Schutz Ihrer KI-Anwendungen**."
   solutions:
     - item:
         name: "Smart Fingerprint" 
@@ -46,7 +46,7 @@ solutionDetails:
       cta-link: "/solution/smart-dragon"
     - name: "Defense API"
       title: "DAPI: Schützen Sie Ihre KI-Infrastruktur"
-      description: "Plattform für Analyse, Härtung & Auditierung von Large Language Models, Agenten und APIs – inkl. Prompt Injection Detection und Red Teaming."
+      description: "Plattform für Analyse, Härtung & Auditierung von Large Language Models, Agenten und APIs – inkl. **Prompt Injection Schutz für LLMs**. Wir bieten **Absicherung von generativen KI-Anwendungen**."
       image: "/images/illustrations/icons/llm-security.svg"
       background: "/solution/product_background_3.png"
       cta-text: "Defense API entdecken"
@@ -81,7 +81,7 @@ solutionComparison:
       image: "/images/illustrations/icons/llm-security.svg"
       category: "Plattform-Absicherung"
       features:
-      - "Modernster Schutz gegen Angriffe"
+      - "Modernster Schutz gegen Angriffe wie **Prompt Injection und Datenlecks**"
       - "Mandantenfähiges Management"
       - "Deployment-Flexibilität (SaaS & On-Prem)"
       - "Security Insights & API Firewall Analytics"

@@ -8,7 +8,7 @@ hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "LLM Security Platform"
   title: "LLM Security, die wirklich schützt."
-  subtitle: "Stoppen Sie Angriffe, bevor sie Ihre KI erreichen. Die erste Plattform zum Schutz, zur Überwachung und zur Härtung von LLMs, Agenten & AI-APIs. DSGVO-konform. Sofort einsatzbereit."
+  subtitle: "Stoppen Sie Angriffe, bevor sie Ihre KI erreichen. Die erste Plattform zum Schutz, zur Überwachung und zur Härtung von LLMs, Agenten & AI-APIs. DSGVO-konform. Sofort einsatzbereit. Wir unterstützen die **sichere Integration von Open-Source LLMs**."
   solutions:
     - item:
         name: "Defence API"
@@ -57,7 +57,7 @@ benefit:
 useCases:
   section-title: "Typische Einsatzfelder"
   title: "DAPI schützt Ihre KI, wie eine Firewall Ihre Server."
-  subtitle: "Egal ob Chatbot, Copilot oder Agent – DAPI analysiert, überwacht und blockiert, bevor etwas schiefgeht. Ohne Prompt-Speicherung. Ohne Templates. Ohne Kompromisse."
+  subtitle: "Egal ob Chatbot, Copilot oder Agent – DAPI analysiert, überwacht und blockiert, bevor etwas schiefgeht. Ohne Prompt-Speicherung. Ohne Kompromisse."
   items:
     - title: "LLM-Auditing Use Case für Unternehmen mit KI-Einsatz"
       image: "/images/illustrations/icons/audit.svg"

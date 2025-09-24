@@ -21,7 +21,7 @@ features:
   subtitle: "KI-gestützte Verhaltensbiometrie – DSGVO-konform, fälschungssicher, passiv im Hintergrund."
   features:
       - title: "Verhaltensbasierte Authentifizierung"
-        description: "**Erkenne Nutzer an ihrer Tipp- oder Swipe-Dynamik**.  Verhalte dich wie du bist – unser System analysiert Mikro-Muster in der Tipp- oder Wischbewegung eines Nutzers und erkennt so eindeutig, **wer wirklich vor dem Gerät sitzt**. Ganz ohne zusätzliche Geräte oder gespeicherte Templates. DSGVO-konform & unsichtbar im Hintergrund."
+        description: "**Erkenne Nutzer an ihrer Tipp- oder Swipe-Dynamik**.  Verhalte dich wie du bist – unser System analysiert Mikro-Muster in der Tipp- oder Wischbewegung eines Nutzers und erkennt so eindeutig, **wer wirklich vor dem Gerät sitzt**. Ganz ohne zusätzliche Geräte oder gespeicherte Daten. DSGVO-konform & unsichtbar im Hintergrund."
         image: "/images/illustrations/icons/fingerprint-background.svg"
         background: "/solution/feature-card-background.png"
       - title: "Anomalie- & Betrugserkennung"
@@ -35,12 +35,10 @@ advantage:
   subtitle: "Smart Fingerprint schützt – ohne Upload, ohne sensible Daten, DSGVO-konform."
   advantages:
       - title: "Kein Upload"
-        description: "Dein Verhalten bleibt bei dir.
-Keine Daten wandern in die Cloud. Kein Risiko."
+        description: "Dein Verhalten bleibt bei dir.  Keine Daten wandern in die Cloud. Kein Risiko."
         image: "/images/illustrations/icons/no-upload.svg"
       - title: "Keine sensiblen Daten"
-        description: "Wir speichern nichts, was man klauen könnte.
-Keine Templates, keine Profile, keine biometrischen Daten."
+        description: "Wir speichern nichts, was man klauen könnte. Keine Profile, keine biometrischen Daten."
         image: "/images/illustrations/icons/no-templates.svg"
       - title: "DSGVO-konform"
         description: "Privacy by Design. Entwickelt nach europäischen Datenschutzstandards – schlüsselfertig für regulierte Branchen."
@@ -49,9 +47,7 @@ benefit:
   background-image: "/solution/dapi/hero.png"
   section-title: "Sicherheit, der man vertrauen kann."
   title: "Datenschutz-by-Design. Ganz ohne sensible Daten."
-  content: "Smart Fingerprint erkennt Nutzer anhand ihres natürlichen Tippverhaltens – **ohne Fingerabdruck, ohne Daten-Upload, ohne Risiko**.
-Keine Templates, keine Profile – nur intelligente Mustererkennung in Echtzeit.
-**Privatsphäre bleibt gewahrt. Sicherheit bleibt stark.**"
+  content: "Smart Fingerprint erkennt Nutzer anhand ihres natürlichen Tippverhaltens – **ohne Fingerabdruck, ohne Daten-Upload, ohne Risiko**. Keine Profile – nur intelligente Mustererkennung in Echtzeit. **Privatsphäre bleibt gewahrt. Sicherheit bleibt stark.**"
 useCases:
   section-title: "Typische Einsatzfelder"
   title: "Da, wo ein einziger falscher Zugriff zu viel sein kann."

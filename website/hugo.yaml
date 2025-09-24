@@ -74,7 +74,7 @@ params:
     # height: 28
   hero:
     title: KI verändert alles – Aber ist sie auch sicher?
-    subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle **sicher**, **regelkonform** und **vertrauenswürdig** zu machen.
+    subtitle: Wir unterstützen Unternehmen dabei, ihre KI-Modelle **sicher**, **regelkonform** und **vertrauenswürdig** zu machen und minimieren Haftungsrisiken.
     buttontext: Erfahre mehr
     buttonlink: "/contact/free-risk-check"
     secondaryButtontext: Insights entdecken
@@ -97,15 +97,15 @@ params:
     subtitle: Finden Sie es mit uns heraus.
     features:
     - title: KI-Sicherheit & Compliance
-      text: Schütze deine KI-Systeme vor **Cyberangriffen**, **Prompt Injection** und **Datenlecks**. Erhöhe die Widerstandsfähigkeit deiner Modelle und schaffe eine sichere Umgebung für sensible Daten.
+      text: Schütze deine KI-Systeme vor **Cyberangriffen**, **Prompt Injection** und **Datenlecks**. Erhöhe die Widerstandsfähigkeit deiner Modelle und schaffe eine sichere Umgebung für sensible Daten. Wir implementieren **Best Practices für sichere KI-Implementierung** und unterstützen beim **Risikomanagement für künstliche Intelligenz**.
       icon: ai-security
       alt: "Icon für KI-Sicherheit und Compliance"
     - title: Fairness & Transparenz
-      text: Reduziere **Bias** in KI-Modellen und sorge für eine faire, nachvollziehbare Entscheidungsfindung. Setze auf transparente Algorithmen und gewinne das Vertrauen deiner Nutzer und Partner.
+      text: Reduziere **Bias** in KI-Modellen und sorge für eine faire, nachvollziehbare Entscheidungsfindung. Setze auf transparente Algorithmen und gewinne das Vertrauen deiner Nutzer und Partner durch **praxisnahe KI-Governance**.
       icon: ai-transparency
       alt: "Icon für Fairness und Transparenz"
     - title: Regulatorische Absicherung
-      text: Navigiere sicher durch die komplexe Welt der KI-Regulierungen. Erfülle Vorschriften wie den **EU AI Act**, **DORA** und weitere Anforderungen, um rechtliche Risiken zu minimieren.
+      text: Navigiere sicher durch die komplexe Welt der KI-Regulierungen. Erfülle Vorschriften wie den **EU AI Act**, **DORA** und weitere Anforderungen, um rechtliche Risiken zu minimieren. Wir unterstützen Sie bei der **EU AI Act Compliance** und **DORA-Konformität**.
       icon: eu-ai-act
       alt: "Icon für Regulatorische Absicherung"
     - title: Erfahre mehr darüber, wie wir Dir helfen können und buche jetzt eine **kostenlose Erstanalyse**.
