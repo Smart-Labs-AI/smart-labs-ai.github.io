@@ -43,13 +43,13 @@
                   {{ with $solutions }}
                   {{ if eq (len .) 1 }}
                     <div class="logo-icon"style="background:none; border:none">
-                      <img src="{{ (index . 0).item.image }}">
+                      <img src="{{ (index . 0).item.image }}" alt="{{ (index . 0).item.name }} Icon">
                     </div>
                   {{ else }}
                     {{ range . }}
                       <a href="{{ .item.link }}">
                         <div class="logo-icon">
-                          <img src="{{ .item.image }}">
+                          <img src="{{ .item.image }}" alt="{{ .item.name }} Icon">
                         </div>
                       </a>
                     {{ end }}
