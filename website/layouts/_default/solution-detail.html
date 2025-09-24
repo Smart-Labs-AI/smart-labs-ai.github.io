@@ -1,4 +1,17 @@
 {{ define "main" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "url": "{{ .Permalink }}",
+  "brand": {
+    "@type": "Organization",
+    "name": "Smart Labs AI GmbH"
+  }
+}
+</script>
 
   {{ if .Params.hero }}
     {{ partial "solution/hero-solutionpage.html" . }}
@@ -18,11 +31,6 @@
 
   {{ if .Params.useCases }}
     {{ partial "solution-detail/use-cases-solutiondetail.html" . }}
-  {{ end }}
-
-  {{ if .Params.pricingKey }}
-    {{ $pricingData := index .Site.Params.pricing .Params.pricingKey }}
-    {{ partial "landingpage/prices-landingpage.html" (dict "section_prices" $pricingData) }}
   {{ end }}
 
   {{ partial "section_cta.html" . }}
