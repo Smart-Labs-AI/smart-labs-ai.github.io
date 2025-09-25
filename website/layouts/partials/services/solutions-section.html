@@ -90,7 +90,9 @@
         </div>
 
         <div class="feature-chart" style="background-image: url('{{ $processed1.RelPermalink }}');">
-          <img class="feature-chart-image" src="{{ $processed2.RelPermalink }}" alt="Feature Image">
+          <img id="feature-img-0" class="feature-chart-image" src="{{ $processed2.RelPermalink }}" alt="Feature Image">
+          <img id="feature-img-1" class="feature-chart-image" src="{{ $processed3.RelPermalink }}" alt="Feature Image" style="display: none;">
+          <img id="feature-img-2" class="feature-chart-image" src="{{ $processed4.RelPermalink }}" alt="Feature Image" style="display: none;">
         </div>
       </div>
     </div>
@@ -109,25 +111,50 @@
     const wrapper = document.querySelector('.services-solutions-section .features-wrapper');
     if (!wrapper) return;
 
-    const chartImage = wrapper.querySelector('.feature-chart .feature-chart-image');
+    const chartImages = wrapper.querySelectorAll('.feature-chart .feature-chart-image');
     const desktopRadios = wrapper.querySelectorAll('input[name="feature"]');
     const mobileRadios = wrapper.querySelectorAll('input[name="feature-mobile"]');
     const mobileTitle = document.getElementById('mobile-feature-title');
     const mobileProgress = document.getElementById('mobile-progress');
 
-    const applyState = (radio) => {
+    let currentIndex = 0;
+    let intervalId;
+    let animationFrameId;
+
+    const animateProgress = (progressEl, duration) => {
+      let start = null;
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        progressEl.value = progress * 100;
+        if (progress < 1) {
+          animationFrameId = requestAnimationFrame(step);
+        }
+      };
+      animationFrameId = requestAnimationFrame(step);
+    };
+
+    const applyState = (radio, isAuto) => {
       if (!radio) return;
-      const img = radio.getAttribute('data-chart-img');
+      const imgId = radio.getAttribute('data-chart-img');
       const progressValue = radio.getAttribute('data-progress');
       const description = radio.getAttribute('data-description');
 
-      if (img && chartImage) {
-        chartImage.src = img;
+      chartImages.forEach(img => img.style.display = 'none');
+      const activeImage = document.getElementById(imgId);
+      if (activeImage) {
+        activeImage.style.display = 'block';
       }
 
-      wrapper.querySelectorAll('.progress').forEach(p => p.value = 0);
+      const progressBars = wrapper.querySelectorAll('.progress');
+      progressBars.forEach(p => p.value = 0);
+      cancelAnimationFrame(animationFrameId);
+
       const progressEl = radio.nextElementSibling?.querySelector('.progress');
-      if (progressEl && progressValue) {
+
+      if (isAuto && progressEl) {
+        animateProgress(progressEl, 2900);
+      } else if (progressEl && progressValue) {
         progressEl.value = progressValue;
       }
 
@@ -144,21 +171,49 @@
       }
     };
 
+    const startCarousel = () => {
+      const radios = window.innerWidth <= 920 ? mobileRadios : desktopRadios;
+      applyState(radios[currentIndex], true);
+      intervalId = setInterval(() => {
+        currentIndex = (currentIndex + 1) % radios.length;
+        const nextRadio = radios[currentIndex];
+        nextRadio.checked = true;
+        applyState(nextRadio, true);
+      }, 3500);
+    };
+
+    const stopCarousel = () => {
+      clearInterval(intervalId);
+      cancelAnimationFrame(animationFrameId);
+    };
+
     const initialDesktop = wrapper.querySelector('input[name="feature"]:checked') || desktopRadios[0];
     const initialMobile = wrapper.querySelector('input[name="feature-mobile"]:checked') || mobileRadios[0];
-    
-    if (initialDesktop) applyState(initialDesktop);
-    if (initialMobile && window.innerWidth <= 920) applyState(initialMobile);
 
-    desktopRadios.forEach((r) => {
+    if (initialDesktop) applyState(initialDesktop, false);
+    if (initialMobile && window.innerWidth <= 920) applyState(initialMobile, false);
+
+    desktopRadios.forEach((r, index) => {
+      r.setAttribute('data-chart-img', 'feature-img-' + index);
       r.addEventListener('change', () => {
-        if (r.checked) applyState(r);
+        if (r.checked) {
+          stopCarousel();
+          currentIndex = index;
+          applyState(r, false);
+          setTimeout(startCarousel, 3500);
+        }
       });
     });
 
-    mobileRadios.forEach((r) => {
+    mobileRadios.forEach((r, index) => {
+      r.setAttribute('data-chart-img', 'feature-img-' + index);
       r.addEventListener('change', () => {
-        if (r.checked) applyState(r);
+        if (r.checked) {
+          stopCarousel();
+          currentIndex = index;
+          applyState(r, false);
+          setTimeout(startCarousel, 3500);
+        }
       });
     });
 
@@ -166,13 +221,17 @@
       const isMobile = window.innerWidth <= 920;
       const activeDesktop = wrapper.querySelector('input[name="feature"]:checked');
       const activeMobile = wrapper.querySelector('input[name="feature-mobile"]:checked');
-      
+
       if (isMobile && activeMobile) {
-        applyState(activeMobile);
+        applyState(activeMobile, false);
       } else if (!isMobile && activeDesktop) {
-        applyState(activeDesktop);
+        applyState(activeDesktop, false);
       }
+      stopCarousel();
+      startCarousel();
     });
+
+    startCarousel();
   });
 </script>
 {{ else }}
