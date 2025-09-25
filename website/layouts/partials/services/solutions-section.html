@@ -3,22 +3,180 @@
 {{- $subtitle    := index $servicesSolutionsSection "subtitle" }}
 {{- $buttonText   := index $servicesSolutionsSection "buttonText" }}
 {{- $features   := index $servicesSolutionsSection "features" }}
-
 {{ $src1 := "/services/features_background.png" }}
 {{ $src2 := "/services/service-image-1.png" }}
 {{ $src3 := "/services/service-image-2.png" }}
 {{ $src4 := "/services/service-image-3.png" }}
-
 {{ $img1 := resources.Get $src1 }}
 {{ $img2 := resources.Get $src2 }}
 {{ $img3 := resources.Get $src3 }}
 {{ $img4 := resources.Get $src4 }}
-
 {{ if and $img1 $img2 $img3 $img4 }}
 {{ $processed1 := $img1.Process "resize 1800x webp q100" }}
 {{ $processed2 := $img2.Process "resize 1800x webp q100" }}
 {{ $processed3 := $img3.Process "resize 1800x webp q100" }}
 {{ $processed4 := $img4.Process "resize 1800x webp q100" }}
+
+<style>
+/* Progress Bar Styles */
+.progress.is-small {
+  appearance: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 8px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* WebKit Progress Styling */
+.progress.is-small::-webkit-progress-bar {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.progress.is-small::-webkit-progress-value {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Firefox Progress Styling */
+.progress.is-small::-moz-progress-bar {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-radius: 4px;
+}
+
+/* CSS Progress Animation */
+.progress.is-small.animate::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-radius: 4px;
+  width: 0%;
+  animation: progressFill 2.9s ease-out forwards;
+  z-index: 1;
+}
+
+.progress.is-small.animate.shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 2s infinite 0.5s;
+  z-index: 2;
+}
+
+@keyframes progressFill {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Feature Card Enhancements */
+.feature-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-radio:checked + .feature-card {
+  border-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+}
+
+/* Chart Container */
+.feature-chart {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  min-height: 400px;
+}
+
+/* Image Transitions */
+.feature-chart-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.feature-chart-image.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.feature-chart-image:first-child {
+  display: block;
+}
+
+/* Mobile Progress */
+.mobile-progress {
+  appearance: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 8px;
+  width: 100%;
+}
+
+.mobile-progress::-webkit-progress-bar {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.mobile-progress::-webkit-progress-value {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.mobile-progress::-moz-progress-bar {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-radius: 4px;
+}
+
+/* Mobile Title Animation */
+.mobile-feature-title {
+  transition: opacity 0.3s ease;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.feature-chart-image.active {
+  animation: fadeIn 0.6s ease-out;
+}
+</style>
 
 <section class="services-solutions-section">
   <div class="container">
@@ -26,13 +184,11 @@
       <h2 class="section-subtitle">{{ $subtitle }}</h2>
       <h1 class="section-title">{{ $title }}</h1>
     </div>
-
     <div class="service">
       <div class="service-header">
         <img src="/images/logos/logo-white-simple.svg" alt="Smart Lens Logo" class="service-logo" />
         <h2 class="service-title">{{ $subtitle }}</h2>
       </div>
-
       <div class="features-wrapper">
         <!-- Desktop Features Container -->
         <div class="features-container">
@@ -44,7 +200,7 @@
               class="feature-radio"
               hidden
               {{ if eq $index 0 }}checked{{ end }}
-              data-chart-img="{{ if eq $index 0 }}{{ $processed2.RelPermalink }}{{ else if eq $index 1 }}{{ $processed3.RelPermalink }}{{ else if eq $index 2 }}{{ $processed4.RelPermalink }}{{ else }}{{ $processed2.RelPermalink }}{{ end }}"
+              data-image-index="{{ $index }}"
               data-progress="{{ if eq $index 0 }}33.33{{ else if eq $index 1 }}66.66{{ else if eq $index 2 }}100{{ else }}0{{ end }}"
               data-description="{{ $feature.description }}"
           >
@@ -59,7 +215,7 @@
           </label>
           {{ end }}
         </div>
-
+        
         <!-- Mobile Features Container -->
         <div class="features-container-mobile">
           <div class="mobile-icon-selector">
@@ -71,7 +227,7 @@
                 class="feature-radio"
                 hidden
                 {{ if eq $index 0 }}checked{{ end }}
-                data-chart-img="{{ if eq $index 0 }}{{ $processed2.RelPermalink }}{{ else if eq $index 1 }}{{ $processed3.RelPermalink }}{{ else if eq $index 2 }}{{ $processed4.RelPermalink }}{{ else }}{{ $processed2.RelPermalink }}{{ end }}"
+                data-image-index="{{ $index }}"
                 data-progress="{{ if eq $index 0 }}33.33{{ else if eq $index 1 }}66.66{{ else if eq $index 2 }}100{{ else }}0{{ end }}"
                 data-description="{{ $feature.description }}"
             >
@@ -80,7 +236,6 @@
             </label>
             {{ end }}
           </div>
-
           <div class="mobile-shared-content">
             <h3 class="mobile-feature-title" id="mobile-feature-title">
               {{ (index $features 0).description }}
@@ -88,15 +243,14 @@
             <progress class="mobile-progress" id="mobile-progress" value="33.33" max="100"></progress>
           </div>
         </div>
-
+        
         <div class="feature-chart" style="background-image: url('{{ $processed1.RelPermalink }}');">
-          <img id="feature-img-0" class="feature-chart-image" src="{{ $processed2.RelPermalink }}" alt="Feature Image">
-          <img id="feature-img-1" class="feature-chart-image" src="{{ $processed3.RelPermalink }}" alt="Feature Image" style="display: none;">
-          <img id="feature-img-2" class="feature-chart-image" src="{{ $processed4.RelPermalink }}" alt="Feature Image" style="display: none;">
+          <img class="feature-chart-image" src="{{ $processed2.RelPermalink }}" alt="Feature Image 1" data-index="0" style="display: block;">
+          <img class="feature-chart-image" src="{{ $processed3.RelPermalink }}" alt="Feature Image 2" data-index="1">
+          <img class="feature-chart-image" src="{{ $processed4.RelPermalink }}" alt="Feature Image 3" data-index="2">
         </div>
       </div>
     </div>
-
     <a href="/contact/free-risk-check" class="button rounded secondary-btn raised mr-4 mb-4">
       {{ $buttonText }}
       <span class="icon ml-2">
@@ -107,132 +261,133 @@
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const wrapper = document.querySelector('.services-solutions-section .features-wrapper');
-    if (!wrapper) return;
+document.addEventListener('DOMContentLoaded', function () {
+  const wrapper = document.querySelector('.services-solutions-section .features-wrapper');
+  if (!wrapper) return;
+  
+  const chartImages = wrapper.querySelectorAll('.feature-chart-image');
+  const desktopRadios = wrapper.querySelectorAll('input[name="feature"]');
+  const mobileRadios = wrapper.querySelectorAll('input[name="feature-mobile"]');
+  const mobileTitle = document.getElementById('mobile-feature-title');
+  const mobileProgress = document.getElementById('mobile-progress');
+  
+  let currentIndex = 0;
+  let intervalId;
 
-    const chartImages = wrapper.querySelectorAll('.feature-chart .feature-chart-image');
-    const desktopRadios = wrapper.querySelectorAll('input[name="feature"]');
-    const mobileRadios = wrapper.querySelectorAll('input[name="feature-mobile"]');
-    const mobileTitle = document.getElementById('mobile-feature-title');
-    const mobileProgress = document.getElementById('mobile-progress');
+  // Optimierte Progress Animation
+  const animateProgress = (progressEl, isAuto = false) => {
+    // Reset
+    progressEl.classList.remove('animate', 'shimmer');
+    progressEl.value = 0;
+    
+    // Force reflow
+    void progressEl.offsetHeight;
+    
+    if (isAuto) {
+      // CSS Animation für Auto-Carousel
+      progressEl.classList.add('animate');
+      setTimeout(() => progressEl.classList.add('shimmer'), 500);
+    } else {
+      // Sofortige Anzeige für manuelle Auswahl
+      const targetValue = progressEl.closest('label').previousElementSibling.getAttribute('data-progress');
+      progressEl.value = targetValue || 0;
+    }
+  };
 
-    let currentIndex = 0;
-    let intervalId;
-    let animationFrameId;
+  // Optimierte State Application
+  const applyState = (radio, isAuto = false) => {
+    if (!radio) return;
+    
+    const imageIndex = parseInt(radio.getAttribute('data-image-index'));
+    const progressValue = radio.getAttribute('data-progress');
+    const description = radio.getAttribute('data-description');
 
-    const animateProgress = (progressEl, duration) => {
-      let start = null;
-      const step = (timestamp) => {
-        if (!start) start = timestamp;
-        const progress = Math.min((timestamp - start) / duration, 1);
-        progressEl.value = progress * 100;
-        if (progress < 1) {
-          animationFrameId = requestAnimationFrame(step);
-        }
-      };
-      animationFrameId = requestAnimationFrame(step);
-    };
+    // Image switching - alle verstecken, dann das richtige zeigen
+    chartImages.forEach(img => {
+      img.style.display = 'none';
+      img.classList.remove('active');
+    });
+    
+    // Das entsprechende Bild anzeigen
+    const activeImage = chartImages[imageIndex];
+    if (activeImage) {
+      activeImage.style.display = 'block';
+      activeImage.classList.add('active');
+    }
 
-    const applyState = (radio, isAuto) => {
-      if (!radio) return;
-      const imgId = radio.getAttribute('data-chart-img');
-      const progressValue = radio.getAttribute('data-progress');
-      const description = radio.getAttribute('data-description');
-
-      chartImages.forEach(img => img.style.display = 'none');
-      const activeImage = document.getElementById(imgId);
-      if (activeImage) {
-        activeImage.style.display = 'block';
-      }
-
-      const progressBars = wrapper.querySelectorAll('.progress');
-      progressBars.forEach(p => p.value = 0);
-      cancelAnimationFrame(animationFrameId);
-
-      const progressEl = radio.nextElementSibling?.querySelector('.progress');
-
-      if (isAuto && progressEl) {
-        animateProgress(progressEl, 2900);
-      } else if (progressEl && progressValue) {
-        progressEl.value = progressValue;
-      }
-
-      if (mobileTitle && description) {
-        mobileTitle.style.opacity = '0';
-        setTimeout(() => {
-          mobileTitle.textContent = description;
-          mobileTitle.style.opacity = '1';
-        }, 150);
-      }
-
-      if (mobileProgress && progressValue) {
-        mobileProgress.value = progressValue;
-      }
-    };
-
-    const startCarousel = () => {
-      const radios = window.innerWidth <= 920 ? mobileRadios : desktopRadios;
-      applyState(radios[currentIndex], true);
-      intervalId = setInterval(() => {
-        currentIndex = (currentIndex + 1) % radios.length;
-        const nextRadio = radios[currentIndex];
-        nextRadio.checked = true;
-        applyState(nextRadio, true);
-      }, 3500);
-    };
-
-    const stopCarousel = () => {
-      clearInterval(intervalId);
-      cancelAnimationFrame(animationFrameId);
-    };
-
-    const initialDesktop = wrapper.querySelector('input[name="feature"]:checked') || desktopRadios[0];
-    const initialMobile = wrapper.querySelector('input[name="feature-mobile"]:checked') || mobileRadios[0];
-
-    if (initialDesktop) applyState(initialDesktop, false);
-    if (initialMobile && window.innerWidth <= 920) applyState(initialMobile, false);
-
-    desktopRadios.forEach((r, index) => {
-      r.setAttribute('data-chart-img', 'feature-img-' + index);
-      r.addEventListener('change', () => {
-        if (r.checked) {
-          stopCarousel();
-          currentIndex = index;
-          applyState(r, false);
-          setTimeout(startCarousel, 3500);
-        }
-      });
+    // Progress bars reset
+    wrapper.querySelectorAll('.progress.is-small').forEach(p => {
+      p.classList.remove('animate', 'shimmer');
+      p.value = 0;
     });
 
-    mobileRadios.forEach((r, index) => {
-      r.setAttribute('data-chart-img', 'feature-img-' + index);
-      r.addEventListener('change', () => {
-        if (r.checked) {
-          stopCarousel();
-          currentIndex = index;
-          applyState(r, false);
-          setTimeout(startCarousel, 3500);
-        }
-      });
-    });
+    // Progress animation
+    const progressEl = radio.nextElementSibling?.querySelector('.progress.is-small');
+    if (progressEl) {
+      setTimeout(() => animateProgress(progressEl, isAuto), 100);
+    }
 
-    window.addEventListener('resize', () => {
-      const isMobile = window.innerWidth <= 920;
-      const activeDesktop = wrapper.querySelector('input[name="feature"]:checked');
-      const activeMobile = wrapper.querySelector('input[name="feature-mobile"]:checked');
+    // Mobile updates
+    if (mobileTitle && description && mobileTitle.textContent !== description) {
+      mobileTitle.style.opacity = '0';
+      setTimeout(() => {
+        mobileTitle.textContent = description;
+        mobileTitle.style.opacity = '1';
+      }, 150);
+    }
 
-      if (isMobile && activeMobile) {
-        applyState(activeMobile, false);
-      } else if (!isMobile && activeDesktop) {
-        applyState(activeDesktop, false);
+    if (mobileProgress && progressValue) {
+      mobileProgress.value = progressValue;
+    }
+  };
+
+  const startCarousel = () => {
+    const radios = window.innerWidth <= 920 ? mobileRadios : desktopRadios;
+    
+    intervalId = setInterval(() => {
+      currentIndex = (currentIndex + 1) % radios.length;
+      const nextRadio = radios[currentIndex];
+      nextRadio.checked = true;
+      applyState(nextRadio, true);
+    }, 3500);
+  };
+
+  const stopCarousel = () => {
+    clearInterval(intervalId);
+  };
+
+  // Initial setup
+  const activeRadio = wrapper.querySelector('input[name="feature"]:checked') || desktopRadios[0];
+  if (activeRadio) {
+    currentIndex = Array.from(desktopRadios).indexOf(activeRadio);
+    applyState(activeRadio, false);
+  }
+
+  // Event listeners - vereinfacht
+  [...desktopRadios, ...mobileRadios].forEach((radio, index) => {
+    radio.addEventListener('change', () => {
+      if (radio.checked) {
+        stopCarousel();
+        currentIndex = parseInt(radio.getAttribute('data-image-index'));
+        applyState(radio, false);
+        setTimeout(startCarousel, 3500);
       }
+    });
+  });
+
+  // Responsive handling
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
       stopCarousel();
       startCarousel();
-    });
-
-    startCarousel();
+    }, 250);
   });
+
+  // Start carousel
+  startCarousel();
+});
 </script>
 {{ else }}
   {{ errorf "One or more images not found" }}
