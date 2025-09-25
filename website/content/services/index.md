@@ -8,8 +8,8 @@ services_hero:
     pageTitle: Services
     title: Ihre KI ist angreifbar.
     subtitle: Finden Sie es heraus, bevor es andere tun.
-    secondaryButtontext: AI Red Teaming Audit für Unternehmen
-    secondaryButtonlink:
+    secondaryButtontext: AI Sicherheits Audit für Unternehmen
+    secondaryButtonlink: /contact/free-risk-check
 services_problems_section:
     title: KI macht Ihr Unternehmen schneller – aber auch verwundbarer
     problems:
@@ -31,7 +31,7 @@ services_solutions_section:
   buttonText: Kostenloses Strategiegespräch buchen
   features:
     - description: Gezielte Angriffs-Simulation auf Ihre KI-Systemen
-      icon: /images/services/solutions-section/simulated-attack.svg
+      icon: /services/service-image-1.png
     - description: Technische Analyse inkl. Prompt Injection, Leakage & Model Theft
       icon: /images/services/solutions-section/analysis.svg
     - description: Sicherheitsreport und Fix-Empfehlungen, auf Wunsch mit Hands-on Support

@@ -26,11 +26,11 @@
       <h2 class="hero-subtitle">{{ . | markdownify }}</h2>
       {{ end }}
 
-      <!-- FIXME: spacing between text and icon -->
-      <a class="button cta rounded secondary-btn raised"
-         href="{{ $secondaryButtonLink }}">
+      <a href="{{ $secondaryButtonLink }}" class="button rounded secondary-btn raised mr-4 mb-4">
         {{ $secondaryButtonText }}
-        <img src="/images/services/arrow-right-icon.svg" alt="Arrow Right Icon">
+        <span class="icon ml-2">
+          <i class="fas fa-arrow-right"></i>
+        </span>
       </a>
     </div>
 
