@@ -27,11 +27,11 @@ services_problems_section:
       icon: /images/services/problems-section/compliance-icon.svg
 services_solutions_section:
   title: Angriff, bevor es echt wird
-  subtitle: AI Red Teaming Audit
+  subtitle: AI Sicherheits Audit
   buttonText: Kostenloses Strategiegespräch buchen
   features:
     - description: Gezielte Angriffs-Simulation auf Ihre KI-Systemen
-      icon: /services/service-image-1.png
+      icon: /images/services/solutions-section/simulated-attack.svg
     - description: Technische Analyse inkl. Prompt Injection, Leakage & Model Theft
       icon: /images/services/solutions-section/analysis.svg
     - description: Sicherheitsreport und Fix-Empfehlungen, auf Wunsch mit Hands-on Support
