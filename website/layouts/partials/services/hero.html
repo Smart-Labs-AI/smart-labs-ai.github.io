@@ -1,0 +1,58 @@
+{{- $servicesHero       := .Params.services_hero }}
+{{- $pageTitle  := index $servicesHero "pageTitle" }}
+{{- $title      := index $servicesHero "title" }}
+{{- $subtitle   := index $servicesHero "subtitle" }}
+{{- $secondaryButtonText := index $servicesHero "secondaryButtontext" }}
+{{- $secondaryButtonLink := index $servicesHero "secondaryButtonlink" }}
+
+{{ $src := "/services/hero.png" }}
+{{ $img := resources.Get $src }}
+{{ if $img }}
+{{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+
+
+  <div class="services-hero-background" style="background-image: url('{{ $processedBackground.RelPermalink }}');"></div>
+
+  <div class="container services-hero-body">
+    <div class="landing-caption">
+      <p class="services-page-title">
+        {{ $pageTitle }}
+      </p>
+
+      <h1 class="hero-title section-title">
+        {{ $title }}
+      </h1>
+
+      {{ with $subtitle }}
+      <h2 class="hero-subtitle">{{ . | markdownify }}</h2>
+      {{ end }}
+
+      <a href="{{ $secondaryButtonLink }}" class="button rounded secondary-btn raised mr-4 mb-4">
+        {{ $secondaryButtonText }}
+        <span class="icon ml-2">
+          <i class="fas fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+
+    <div class="feature-chart">
+      <div class="feature-card-line-element">
+        <div class="feature-card">
+          <img src="/images/services/hero/criminal-icon.svg" alt="Criminal Icon" class="feature-icon">
+        </div>
+        <p class="feature-line" />
+      </div>
+
+      <img src="/images/services/hero/protection-icon.svg" alt="Protection Icon" class="feature-icon">
+
+      <div class="feature-card-line-element">
+        <p class="feature-line" />
+        <div class="feature-card">
+          <img src="/images/services/hero/database-icon.svg" alt="Database Icon" class="feature-icon">
+        </div>
+      </div>
+    </div>
+  </div>
+{{ else }}
+{{ errorf "Image not found: %s" $src }}
+{{ end }}

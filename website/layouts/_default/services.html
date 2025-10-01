@@ -6,7 +6,7 @@ Determine which pages to display.
 2. From those, only include pages where .Params.is_main_solution_site is true.
 */ -}}
 {{ $pages := .Pages }}
-{{ if eq .Section "solution" }}
+{{ if eq .Section "services" }}
     {{ $allTypedPages := where .Site.Pages "Type" "solution" }}
     {{ $pages = where $allTypedPages ".Params.is_main_solution_site" true }}
 {{ end }}
@@ -67,19 +67,27 @@ Determine which pages to display.
 }
 </script>
 
-  {{ if .Params.hero }}
-    {{ partial "solution/hero-solutionpage.html" . }}
-  {{ end }}
+<div style="background-color: #00002b; z-index: 1;">
+    {{ partial "navbar.html" . }}
+</div>
+{{ partial "navbar-clone.html" . }}
 
-  {{ if .Params.solutionDetails }}
-    {{ partial "solution/solutions-solutionpage.html" . }}
-      {{ end }}
+{{ partial "services/hero.html" . }}
 
-  {{ if .Params.solutionComparison }}
-    {{ partial "solution/comparison-solutionpage.html" . }}
-        {{ end }}
+{{ partial "services/problems-section.html" . }}
 
-  {{ partial "section_cta.html" . }}
+{{ partial "services/solutions-section.html" . }}
 
-  {{ partial "footer.html" . }}
+{{ partial "section_testimonial.html" . }}
+
+{{ partial "services/result-section.html" . }}
+
+{{ partial "section_cta.html" . }}
+
+{{ partial "footer.html" . }}
+
+{{ if .Params.sidebar }}
+    {{ partial "single/sidebar.html" . }}
+{{ end }}
+
 {{ end }}

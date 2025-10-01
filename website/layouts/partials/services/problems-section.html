@@ -1,0 +1,29 @@
+{{- $servicesProblemsSection := .Params.services_problems_section }}
+{{- $title      := index $servicesProblemsSection "title" }}
+{{- $problems   := index $servicesProblemsSection "problems" }}
+<section class="section section-white is-medium services-problems-section">
+  <div class="container is-flex is-flex-wrap-wrap" style="gap: 4rem">
+    <h1 class="section-title is-1 is-spaced has-text-left" style="max-width:460px; margin:0 auto">
+      {{ $title }}
+    </h1>
+      <div class="is-flex is-flex-direction-column" style="gap: 2em; flex: 1;">
+        {{ range $problems }}
+          <div class="card card-dark is-flex problem-card" style="background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);border:0;padding: 2rem; min-width:200px; height: 250px; position: relative; overflow: hidden;">
+            <div class="problem-card-icon-wrapper" style="position: absolute; top: -2rem; right: -2rem; width: 15rem; height: 15rem; pointer-events: none;">
+              <div class="pill-ring-1 pill-ring-centered">
+                <div class="pill-ring-2 pill-ring-centered">
+                  <div class="pill-ring-3 pill-ring-centered">
+                    <img src="{{ .icon }}" alt="{{ .name }}">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="problem-card-text" style="margin-right:140px">
+              <h4 class="title is-4 mb-2">{{ .title }}</h4>
+              <p class="subtitle mt-4 mb-0" style="font-size:120%; font-weight: 600;">{{ .description }}</p>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+  </div>
+</section>
