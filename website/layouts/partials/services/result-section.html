@@ -1,19 +1,41 @@
 {{- $servicesResultSection := .Params.services_result_section }}
 {{- $sectionTitle := index $servicesResultSection "sectionTitle" }}
 {{- $title        := index $servicesResultSection "title" }}
+{{- $subtitle        := index $servicesResultSection "subtitle" }}
 {{- $results      := index $servicesResultSection "results" }}
 
-<section class="result-section">
-  <div class="header-container">
-    <p class="section-title">{{ $sectionTitle }}</p>
-    <h2 class="title">{{ $title }}</h2>
-  </div>
-  <div class="results-container">
-    {{ range $results }}
-    <div class="result-card">
-      <img class="result-icon" src="{{ .icon }}">
-      <p class="result-title">{{ .title | safeHTML }}</p>
+<section class="section section-white is-medium result-section">
+  <div class="container has-text-centered">
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-8">
+        {{- if $sectionTitle }}
+          <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+        {{- end }}
+        {{- if $title }}
+          <h1 class="section-title is-spaced">{{ $title }}</h1>
+        {{- end }}
+        {{- if $subtitle }}
+          <h3 class="section-subtitle">{{ $subtitle }}</h3>
+        {{- end }}
+      </div>
     </div>
-    {{ end }}
   </div>
+
+  <div class="columns is-flex-direction-row is-flex-direction-column-tablet mt-6" style="gap: 2em">
+      {{ range $results }}
+      <div class="column">
+        <div class="card is-flex is-flex-direction-column is-flex-grow-1 p-0" style="height: 100%; background:none; border:none">
+          <div class="card-filling-image-top is-flex is-justify-content-center is-align-items-center" style="height: 200px; background:none; border:none">
+            <img src="{{ .icon }}" alt="">
+          </div>
+        
+          <div class="is-flex is-flex-direction-column is-flex-grow-1 is-justify-content-flex-start has-text-centered pb-6 mx-5">
+              <h4 class="name is-4 mb-2"></h4>
+              <h4 class="title is-4 mb-2" style="font-size:175%">{{ .title | safeHTML }}</h4>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+  </div>
+
 </section>
