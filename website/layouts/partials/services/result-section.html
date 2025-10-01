@@ -21,21 +21,22 @@
     </div>
   </div>
 
-  <div class="columns is-flex-direction-row is-flex-direction-column-tablet mt-6" style="gap: 2em">
-      {{ range $results }}
-      <div class="column">
-        <div class="card is-flex is-flex-direction-column is-flex-grow-1 p-0" style="height: 100%; background:none; border:none">
-          <div class="card-filling-image-top is-flex is-justify-content-center is-align-items-center" style="height: 200px; background:none; border:none">
-            <img src="{{ .icon }}" alt="">
-          </div>
-        
-          <div class="is-flex is-flex-direction-column is-flex-grow-1 is-justify-content-flex-start has-text-centered pb-6 mx-5">
-              <h4 class="name is-4 mb-2"></h4>
-              <h4 class="title is-4 mb-2" style="font-size:175%">{{ .title | safeHTML }}</h4>
+  <div class="container is-flex is-flex-direction-column">
+    <div class="columns is-flex-direction-row is-flex-direction-column-tablet mt-6" style="gap: 2em">
+        {{ range $results }}
+        <div class="column">
+          <div class="card is-flex is-flex-direction-column is-flex-grow-1 p-0" style="height: 100%; background:none; border:none">
+            <div class="card-filling-image-top is-flex is-justify-content-center is-align-items-center" style="height: 200px; background:none; border:none">
+              <img src="{{ .icon }}" alt="">
+            </div>
+          
+            <div class="is-flex is-flex-direction-column is-flex-grow-1 is-justify-content-flex-start has-text-centered pb-6 mx-5">
+                <h4 class="name is-4 mb-2"></h4>
+                <h4 class="title is-4 mb-2" style="font-size:175%">{{ .title | safeHTML }}</h4>
+            </div>
           </div>
         </div>
-      </div>
-      {{ end }}
+        {{ end }}
+    </div>
   </div>
-
 </section>
