@@ -82,12 +82,13 @@ params:
     image: hero/padlock.webp
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
-  - title: Services
-    url: /services
   - title: Blog
     url: /blog
   - title: Solutions
     url: /solution
+  - title: Kontakt
+    url: /contact
+    buttonPrimary: true
   - title: Sign in
     url: https://acc.secphoria.app/realms/arinna/protocol/openid-connect/auth?client_id=labs-ai-landing-page&scope=openid%20profile&redirect_uri=https://acc.secphoria.app&response_type=code
     buttonSecondary: true
