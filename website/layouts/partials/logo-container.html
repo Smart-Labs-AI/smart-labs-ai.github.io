@@ -1,0 +1,24 @@
+{{- $clientLogos := .Site.Params.section_testimonial.endorsements }}
+
+<section class="section is-medium testimonial" style="padding-top:0; padding-bottom:2em">
+  <ul>
+    <div class="logo-container">
+        {{- range $clientLogos }}
+        <li class="logo-item">
+          <a {{ if .url }} href="{{ .url }}" {{ end }}>
+            {{ $logoName := .logo | default "" | strings.TrimPrefix "/" }}
+            {{ $imagePath := printf "testimonial/images/logo/%s" $logoName }}
+            {{ $original := resources.Get $imagePath }}
+
+            {{ if $original }}
+              {{ $thumbnail := $original.Resize "x40 webp q85" }}
+              <img class="partner-logo" src="{{ $thumbnail.RelPermalink }}" alt="{{ .company }}">
+            {{ else }}
+              {{ errorf "Logo not found in assets: %s" $imagePath }}
+            {{ end }}
+          </a>
+        </li>
+        {{- end }}
+    </div>
+  </ul>
+</section>
