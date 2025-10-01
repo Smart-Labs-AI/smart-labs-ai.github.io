@@ -9,10 +9,11 @@
 {{ $img := resources.Get $src }}
 {{ if $img }}
 {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
-<section class="hero is-default is-bold">
+
+<section class="section section-hero hero is-default is-bold">
   <div class="services-hero-background" style="background-image: url('{{ $processedBackground.RelPermalink }}');"></div>
 
-  <div class="services-hero-body">
+  <div class="container services-hero-body">
     <div class="landing-caption">
       <p class="services-page-title">
         {{ $pageTitle }}
