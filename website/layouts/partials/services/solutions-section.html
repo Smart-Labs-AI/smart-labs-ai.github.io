@@ -1,8 +1,8 @@
-{{- $servicesSolutionsSection   := .Params.services_solutions_section }}
-{{- $title   := index $servicesSolutionsSection "title" }}
-{{- $subtitle    := index $servicesSolutionsSection "subtitle" }}
-{{- $buttonText   := index $servicesSolutionsSection "buttonText" }}
-{{- $features   := index $servicesSolutionsSection "features" }}
+{{- $servicesSolutionsSection   := .Params.services_solutions_section -}}
+{{- $title   := index $servicesSolutionsSection "title" -}}
+{{- $subtitle    := index $servicesSolutionsSection "subtitle" -}}
+{{- $buttonText   := index $servicesSolutionsSection "buttonText" -}}
+{{- $features   := index $servicesSolutionsSection "features" -}}
 {{ $src1 := "/services/features_background.png" }}
 {{ $src2 := "/services/service-image-1.png" }}
 {{ $src3 := "/services/service-image-2.png" }}
@@ -18,10 +18,7 @@
 {{ $processed4 := $img4.Process "resize 1800x webp q100" }}
 
 <style>
-/* Progress Bar Styles */
-.progress.is-small {
-  appearance: none;
-  border: none;
+.progress.is-small, .mobile-progress {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   height: 8px;
@@ -30,27 +27,7 @@
   overflow: hidden;
 }
 
-/* WebKit Progress Styling */
-.progress.is-small::-webkit-progress-bar {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-}
-
-.progress.is-small::-webkit-progress-value {
-  background: linear-gradient(45deg, #007bff, #0056b3);
-  border-radius: 4px;
-  transition: width 0.3s ease;
-}
-
-/* Firefox Progress Styling */
-.progress.is-small::-moz-progress-bar {
-  background: linear-gradient(45deg, #007bff, #0056b3);
-  border-radius: 4px;
-}
-
-/* CSS Progress Animation */
-.progress.is-small.animate::after {
-  content: '';
+.progress-value, .mobile-progress-value {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,8 +35,11 @@
   background: linear-gradient(45deg, #007bff, #0056b3);
   border-radius: 4px;
   width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progress.is-small.animate .progress-value {
   animation: progressFill 2.9s ease-out forwards;
-  z-index: 1;
 }
 
 .progress.is-small.animate.shimmer::before {
@@ -136,32 +116,6 @@
   display: block;
 }
 
-/* Mobile Progress */
-.mobile-progress {
-  appearance: none;
-  border: none;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  height: 8px;
-  width: 100%;
-}
-
-.mobile-progress::-webkit-progress-bar {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-}
-
-.mobile-progress::-webkit-progress-value {
-  background: linear-gradient(45deg, #007bff, #0056b3);
-  border-radius: 4px;
-  transition: width 0.3s ease;
-}
-
-.mobile-progress::-moz-progress-bar {
-  background: linear-gradient(45deg, #007bff, #0056b3);
-  border-radius: 4px;
-}
-
 /* Mobile Title Animation */
 .mobile-feature-title {
   transition: opacity 0.3s ease;
@@ -211,7 +165,7 @@
               </div>
               <h3 class="feature-description">{{ $feature.description }}</h3>
             </div>
-            <progress class="progress is-small" value="0" max="100"></progress>
+            <div class="progress is-small"><div class="progress-value"></div></div>
           </label>
           {{ end }}
         </div>
@@ -240,7 +194,7 @@
             <h3 class="mobile-feature-title" id="mobile-feature-title">
               {{ (index $features 0).description }}
             </h3>
-            <progress class="mobile-progress" id="mobile-progress" value="33.33" max="100"></progress>
+            <div class="mobile-progress" id="mobile-progress"><div class="mobile-progress-value" style="width: 33.33%"></div></div>
           </div>
         </div>
         
@@ -274,27 +228,24 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentIndex = 0;
   let intervalId;
 
-  // Optimierte Progress Animation
   const animateProgress = (progressEl, isAuto = false) => {
-    // Reset
+    const progressValueEl = progressEl.querySelector('.progress-value');
+    if (!progressValueEl) return;
+
     progressEl.classList.remove('animate', 'shimmer');
-    progressEl.value = 0;
+    progressValueEl.style.width = '0%';
     
-    // Force reflow
     void progressEl.offsetHeight;
     
     if (isAuto) {
-      // CSS Animation für Auto-Carousel
       progressEl.classList.add('animate');
       setTimeout(() => progressEl.classList.add('shimmer'), 500);
     } else {
-      // Sofortige Anzeige für manuelle Auswahl
       const targetValue = progressEl.closest('label').previousElementSibling.getAttribute('data-progress');
-      progressEl.value = targetValue || 0;
+      progressValueEl.style.width = (targetValue || 0) + '%';
     }
   };
 
-  // Optimierte State Application
   const applyState = (radio, isAuto = false) => {
     if (!radio) return;
     
@@ -302,32 +253,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const progressValue = radio.getAttribute('data-progress');
     const description = radio.getAttribute('data-description');
 
-    // Image switching - alle verstecken, dann das richtige zeigen
     chartImages.forEach(img => {
       img.style.display = 'none';
       img.classList.remove('active');
     });
     
-    // Das entsprechende Bild anzeigen
     const activeImage = chartImages[imageIndex];
     if (activeImage) {
       activeImage.style.display = 'block';
       activeImage.classList.add('active');
     }
 
-    // Progress bars reset
     wrapper.querySelectorAll('.progress.is-small').forEach(p => {
       p.classList.remove('animate', 'shimmer');
-      p.value = 0;
+      const valueEl = p.querySelector('.progress-value');
+      if (valueEl) {
+        valueEl.style.width = '0%';
+      }
     });
 
-    // Progress animation
     const progressEl = radio.nextElementSibling?.querySelector('.progress.is-small');
     if (progressEl) {
       setTimeout(() => animateProgress(progressEl, isAuto), 100);
     }
 
-    // Mobile updates
     if (mobileTitle && description && mobileTitle.textContent !== description) {
       mobileTitle.style.opacity = '0';
       setTimeout(() => {
@@ -337,7 +286,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (mobileProgress && progressValue) {
-      mobileProgress.value = progressValue;
+      const mobileProgressValue = mobileProgress.querySelector('.mobile-progress-value');
+      if (mobileProgressValue) {
+        mobileProgressValue.style.width = progressValue + '%';
+      }
     }
   };
 
@@ -356,14 +308,12 @@ document.addEventListener('DOMContentLoaded', function () {
     clearInterval(intervalId);
   };
 
-  // Initial setup
   const activeRadio = wrapper.querySelector('input[name="feature"]:checked') || desktopRadios[0];
   if (activeRadio) {
     currentIndex = Array.from(desktopRadios).indexOf(activeRadio);
     applyState(activeRadio, false);
   }
 
-  // Event listeners - vereinfacht
   [...desktopRadios, ...mobileRadios].forEach((radio, index) => {
     radio.addEventListener('change', () => {
       if (radio.checked) {
@@ -375,7 +325,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Responsive handling
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
@@ -385,7 +334,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 250);
   });
 
-  // Start carousel
   startCarousel();
 });
 </script>

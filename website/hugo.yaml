@@ -82,10 +82,12 @@ params:
     image: hero/padlock.webp
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
-  - title: Blog
-    url: /blog
+  - title: Services
+    url: /services
   - title: Solutions
     url: /solution
+  - title: Blog
+    url: /blog
   - title: Kontakt
     url: /contact
     buttonPrimary: true
@@ -181,10 +183,12 @@ params:
         links:
         - text: Start
           link: /
-        - text: Blog
-          link: /blog
+        - text: Services
+          link: /services
         - text: Solutions
           link: /solution
+        - text: Blog
+          link: /blog
         - text: Kontakt
           link: /contact
       column2:
