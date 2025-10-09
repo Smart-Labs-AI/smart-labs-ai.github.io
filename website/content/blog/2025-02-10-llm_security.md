@@ -1,7 +1,6 @@
 ---
 title: "Gefährliche KI-Modelle"
 date: 2025-02-10
-layout: "blog"
 image: "/blog/images/2025-02-10-llm_security.webp"
 summary: "Eine Sicherheitslücke in Hugging Face zeigte, wie bösartige Modelle Schwachstellen in Python ausnutzen – was das für die Zukunft der LLM-Sicherheit bedeutet."
 ---
