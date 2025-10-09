@@ -1,7 +1,6 @@
 ---
 title: "Sind KI-Agenten sicher?"
 date: 2025-02-01
-layout: "blog"
 image: "/blog/images/2025-02-01-agents_secure.jpg"
 summary: "LLMs und KI-Agenten sind anfällig für Manipulationen, weshalb robuste Sicherheitsmaßnahmen, kontinuierliche Überwachung und die Einhaltung neuer regulatorischer Anforderungen wie dem EU AI Act entscheidend sind."
 include_footer: true
