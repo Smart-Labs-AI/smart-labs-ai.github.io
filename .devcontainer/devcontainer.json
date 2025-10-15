@@ -6,14 +6,7 @@
   },
   "postCreateCommand": "CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.151.0 && cd website && npm install",
 
-  // ⬇️ NEU: Agent-Forwarding statt ~/.ssh binden
-  "mounts": [
-    "source=/run/host-services/ssh-auth.sock,target=/ssh-agent,type=bind"
-  ],
-  "containerEnv": {
-    "SSH_AUTH_SOCK": "/ssh-agent"
-  }
-
-  // optional:
-  // "remoteUser": "vscode"
+	"mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+	]
 }
