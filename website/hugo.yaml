@@ -207,3 +207,4 @@ params:
         link: /impressum
       - text: Datenschutz
         link: /datenschutzerklaerung
+  enableSmartDragon: true
