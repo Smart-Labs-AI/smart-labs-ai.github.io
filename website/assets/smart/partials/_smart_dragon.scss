@@ -1,7 +1,6 @@
 /* ==========================================================================
 Smart Dragon Styles 
 ========================================================================== */
-
 .smart-dragon-box {
   display: flex;
   flex-direction: row;
@@ -14,18 +13,51 @@ Smart Dragon Styles
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-
-  background: linear-gradient(0deg, rgba(0, 0, 43, 0.2), rgba(0, 0, 43, 0.2)),
-    linear-gradient(137.77deg, rgba(168, 27, 88, 0.2) 0.21%, rgba(60, 49, 152, 0.2) 99.6%);
+  
   padding: 8px;
-  border: 1px solid #FFFFFF1A;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 99px;
+  
+  /* Positionierung für Pseudo-Elemente */
+  position: relative;
+  isolation: isolate;
+  
+  /* Box-Shadow für Tiefe */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 43, 0.37);
+  
+  /* Erste Blur-Schicht */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 99px;
+    background: linear-gradient(0deg, rgba(0, 0, 43, 0.3), rgba(0, 0, 43, 0.3)),
+      linear-gradient(137.77deg, rgba(168, 27, 88, 0.25) 0.21%, rgba(60, 49, 152, 0.25) 99.6%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+  
+  /* Zweite Blur-Schicht für verstärkten Effekt */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 99px;
+    background: linear-gradient(0deg, rgba(0, 0, 43, 0.2), rgba(0, 0, 43, 0.2)),
+      linear-gradient(137.77deg, rgba(168, 27, 88, 0.15) 0.21%, rgba(60, 49, 152, 0.15) 99.6%);
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    z-index: -1;
+  }
   
   .logo {
     max-width: 20px;
     max-height: 20px;
     margin: 4px;
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
     
     img {
       width: 100%;
@@ -33,7 +65,7 @@ Smart Dragon Styles
       object-fit: contain;
     }
   }
-
+  
   .send-button {
     max-width: 24px;
     max-height: 24px;
@@ -41,6 +73,14 @@ Smart Dragon Styles
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    position: relative;
+    z-index: 1;
+    
+    &:hover {
+      opacity: 0.8;
+    }
     
     img {
       width: 100%;
@@ -56,6 +96,8 @@ Smart Dragon Styles
     border: none;
     padding: 0;
     box-shadow: none;
+    position: relative;
+    z-index: 1;
     
     input {
       all: unset;
@@ -65,14 +107,14 @@ Smart Dragon Styles
       font-size: 13px;
       font-weight: normal;
       color: white;
-
+      
       &::placeholder {
-        color: #FFFFFF80;
+        color: rgba(255, 255, 255, 0.5);
         font-size: 13px;
       }
-
-      &:hover {
-        border: none;
+      
+      &:focus {
+        outline: none;
       }
     }
   }
