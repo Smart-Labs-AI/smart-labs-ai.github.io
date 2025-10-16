@@ -3,9 +3,36 @@
     <img src="/images/smart-dragon/smart-dragon-icon.svg" alt="Smart Dragon Logo" />
   </div>
   <div class="input">
-    <input type="text" placeholder="Smart Dragon fragen" />
+    <textarea type="text" placeholder="Smart Dragon fragen"></textarea>
   </div>
   <div class="send-button">
     <img src="/images/smart-dragon/send-icon.svg" alt="Send Icon" />
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const smartDragonBox = document.querySelector('.smart-dragon-box');
+  const input = smartDragonBox.querySelector('.input textarea');
+  
+  // Expand on click
+  smartDragonBox.addEventListener('click', function(e) {
+    if (!smartDragonBox.classList.contains('expanded')) {
+      smartDragonBox.classList.add('expanded');
+      input.focus();
+    }
+  });
+  
+  // Collapse on click outside
+  document.addEventListener('click', function(e) {
+    if (!smartDragonBox.contains(e.target) && smartDragonBox.classList.contains('expanded')) {
+      smartDragonBox.classList.remove('expanded');
+    }
+  });
+  
+  // Prevent collapse when clicking inside
+  smartDragonBox.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+});
+</script>

@@ -4,9 +4,11 @@ Smart Dragon Styles
 .smart-dragon-box {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   max-width: 320px;
   max-height: 40px;
+  width: 320px;
+  height: 40px;
   
   position: fixed;
   bottom: 1rem;
@@ -14,28 +16,33 @@ Smart Dragon Styles
   transform: translateX(-50%);
   z-index: 1000;
   
-  padding: 8px;
+  padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 99px;
   
-  /* Positionierung für Pseudo-Elemente */
-  position: relative;
   isolation: isolate;
   
-  /* Box-Shadow für Tiefe */
   box-shadow: 0 8px 32px 0 rgba(0, 0, 43, 0.37);
+  
+  /* Smooth transitions */
+  transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   
   /* Erste Blur-Schicht */
   &::before {
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 99px;
+    border-radius: inherit;
     background: linear-gradient(0deg, rgba(0, 0, 43, 0.3), rgba(0, 0, 43, 0.3)),
       linear-gradient(137.77deg, rgba(168, 27, 88, 0.25) 0.21%, rgba(60, 49, 152, 0.25) 99.6%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: -1;
+    transition: border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   /* Zweite Blur-Schicht für verstärkten Effekt */
@@ -43,12 +50,39 @@ Smart Dragon Styles
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 99px;
+    border-radius: inherit;
     background: linear-gradient(0deg, rgba(0, 0, 43, 0.2), rgba(0, 0, 43, 0.2)),
       linear-gradient(137.77deg, rgba(168, 27, 88, 0.15) 0.21%, rgba(60, 49, 152, 0.15) 99.6%);
     backdrop-filter: blur(10px) saturate(150%);
     -webkit-backdrop-filter: blur(10px) saturate(150%);
     z-index: -1;
+    transition: border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Expanded state */
+  &.expanded {
+    max-width: 620px;
+    max-height: 120px;
+    width: 620px;
+    height: 120px;
+    border-radius: 24px;
+    align-items: flex-start;
+    
+    &::before,
+    &::after {
+      border-radius: 24px;
+    }
+    
+    .input textarea {
+      height: 80px;
+      overflow-y: auto;
+      padding-top: 4px;
+    }
+    
+    .send-button {
+      align-self: flex-end;
+      margin-bottom: 2px;
+    }
   }
   
   .logo {
@@ -74,9 +108,10 @@ Smart Dragon Styles
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, align-self 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 1;
+    align-self: center;
     
     &:hover {
       opacity: 0.8;
@@ -92,21 +127,35 @@ Smart Dragon Styles
   .input {
     margin: 0 0.5rem;
     flex-grow: 1;
-    background: none;
-    border: none;
+    background: none !important;
+    border: none !important;
     padding: 0;
-    box-shadow: none;
+    box-shadow: none !important;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    min-height: 20px;
     
-    input {
+    textarea {
       all: unset;
       width: 100%;
-      height: auto;
+      height: 20px;
+      min-height: 20px;
       font-family: inherit;
       font-size: 13px;
+      line-height: 1.5;
       font-weight: normal;
       color: white;
+      resize: none;
+      transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding-top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      display: block;
+      padding: 0;
+      margin: 0;
       
       &::placeholder {
         color: rgba(255, 255, 255, 0.5);
@@ -115,6 +164,32 @@ Smart Dragon Styles
       
       &:focus {
         outline: none;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      
+      &:hover {
+        border: none !important;
+      }
+      
+      /* Custom scrollbar for expanded state */
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 3px;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.3);
+        }
       }
     }
   }
