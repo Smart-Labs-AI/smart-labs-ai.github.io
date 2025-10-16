@@ -4,16 +4,18 @@
       <time class="post-date" style="color: rgba(255,255,255,0.8); font-size: 1.1rem; font-weight: 600;">{{ .Date.Format "02. January 2006" }}</time>
       <h1 class="title section-title" style="color: white; font-size: 3.5rem; margin: 1.5rem 0; font-family: Merriweather, serif; font-weight: 700; line-height: 1.1;">{{ .Title }}</h1>
       <h5 class="subtitle is-5 is-muted" style="color: rgba(255,255,255,0.9); font-size: 1.4rem; max-width: 900px; margin: 0 auto; line-height: 1.5;">{{ .Summary }}</h5>
-      <div class="page-header" style="margin-top: 3rem;">
-        {{ $imagePath := trim .Params.image "/" }} 
-        {{ $original := resources.Get $imagePath }}
-        {{ if $original }}
-          {{ $thumbnail := $original.Resize "959x webp q85 drawing" }}
-          <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);">
-        {{ else }}
-          {{ errorf "Image not found: %s" .Params.image }}
-        {{ end }}
-      </div>
+      {{ if .Params.image }}
+        <div class="page-header" style="margin-top: 3rem;">
+          {{ $imagePath := trim .Params.image "/" }} 
+          {{ $original := resources.Get $imagePath }}
+          {{ if $original }}
+            {{ $thumbnail := $original.Resize "959x webp q85 drawing" }}
+            <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);">
+          {{ else }}
+            {{ errorf "Image not found: %s" .Params.image }}
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
   </div>
 </div>
