@@ -21,89 +21,133 @@ document.addEventListener('DOMContentLoaded', function() {
   const input = smartDragonBox.querySelector('.input textarea');
   const sendButton = smartDragonBox.querySelector('.send-button');
   const overlay = document.querySelector('.smart-dragon-overlay');
-
+  const chatContainer = document.querySelector('.smart-dragon-chat');
+  
   // Stage variable: 1 = collapsed, 2 = expanded, 3 = overlay/chat
   let stage = 1;
-
+  
   function enterStage2() {
     stage = 2;
     smartDragonBox.classList.add('expanded');
-    input.focus();
+    
+    // Wenn bereits Text eingegeben wurde, direkt zu Stage 3
+    if (input.value.trim() !== '') {
+      enterStage3();
+    } else {
+      input.focus();
+    }
   }
-
+  
   function enterStage3() {
     stage = 3;
-    smartDragonBox.classList.add('expanded'); // keep chat expanded
+    smartDragonBox.classList.add('expanded');
     overlay.classList.add('active');
-    input.focus();
-
-    const chatContainer = document.querySelector('.smart-dragon-chat');
-    chatContainer.innerHTML = ''; // clear previous messages
-
-    // Sample conversation
-    const messages = [
-      { type: 'user', text: "Hallo, das ist Test von “Ask Smart Dragon” auf der Smart Labs AI Website." },
-      { type: 'ai', text: "Hallo, herzlich Willkommen bei Smart Labs AI! Der Test war erfolgreich!\nWie kann ich dir behilflich sein? 😊" },
-      { type: 'user', text: "Alles gut, das war's schon. Wollte es nur mal testen. Danke!" },
-      { type: 'ai', text: "Sehr gerne! Wenn du mit dem Test zufrieden warst, empfehle ich Dir Smart Dragon gerne auch für Dein Unternehmen. Mehr Informationen findest du auch auf unserer Produktseite." }
-    ];
-
-    // Render messages
-    messages.forEach(msg => {
-      const div = document.createElement('div');
-      div.classList.add('smart-dragon-message', msg.type);
-      div.textContent = msg.text;
-      chatContainer.appendChild(div);
-    });
-
+    
+    // Sample conversation (only on first open)
+    if (chatContainer.innerHTML === '') {
+      const messages = [
+        { type: 'user', text: 'Hallo, das ist Test von "Ask Smart Dragon" auf der Smart Labs AI Website.' },
+        { type: 'ai', text: "Hallo, herzlich Willkommen bei Smart Labs AI! Der Test war erfolgreich!\nWie kann ich dir behilflich sein? 😊" },
+        { type: 'user', text: "Alles gut, das war's schon. Wollte es nur mal testen. Danke!" },
+        { type: 'ai', text: "Sehr gerne! Wenn du mit dem Test zufrieden warst, empfehle ich Dir Smart Dragon gerne auch für Dein Unternehmen. Mehr Informationen findest du auch auf unserer Produktseite." }
+      ];
+      
+      messages.forEach(msg => {
+        const div = document.createElement('div');
+        div.classList.add('smart-dragon-message', msg.type);
+        div.textContent = msg.text;
+        chatContainer.appendChild(div);
+      });
+    }
+    
     // Scroll to bottom
     chatContainer.scrollTop = chatContainer.scrollHeight;
+    input.focus();
   }
-
+  
+  function sendMessage() {
+    const text = input.value.trim();
+    
+    if (text === '') return; // Keine leeren Nachrichten senden
+    
+    // Nachricht zur Chat-Ansicht hinzufügen
+    const userMsg = document.createElement('div');
+    userMsg.classList.add('smart-dragon-message', 'user');
+    userMsg.textContent = text;
+    chatContainer.appendChild(userMsg);
+    
+    // Textarea leeren
+    input.value = '';
+    
+    // Zur Stage 3 wechseln (falls noch nicht)
+    if (stage !== 3) {
+      enterStage3();
+    }
+    
+    // Scroll to bottom
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+    
+    // Optional: Hier könntest du eine AI-Antwort simulieren
+    // setTimeout(() => {
+    //   const aiMsg = document.createElement('div');
+    //   aiMsg.classList.add('smart-dragon-message', 'ai');
+    //   aiMsg.textContent = 'Das ist eine automatische Antwort...';
+    //   chatContainer.appendChild(aiMsg);
+    //   chatContainer.scrollTop = chatContainer.scrollHeight;
+    // }, 500);
+  }
+  
   function enterStage1() {
     stage = 1;
     smartDragonBox.classList.remove('expanded');
     overlay.classList.remove('active');
+    input.blur(); // Fokus entfernen
   }
-
+  
   // Click chat box → enter stage 2 if currently collapsed
   smartDragonBox.addEventListener('click', function(e) {
-    if (stage === 1) enterStage2();
-    e.stopPropagation(); // prevent collapsing
+    if (stage === 1) {
+      // Wenn Text vorhanden ist, direkt zu Stage 3
+      if (chatContainer.innerHTML !== '') {
+        enterStage3();
+      } else {
+        enterStage2();
+      }
+    }
+    e.stopPropagation();
   });
-
+  
   // Click outside → collapse if stage 2
   document.addEventListener('click', function(e) {
     if (!smartDragonBox.contains(e.target) && stage === 2) {
       enterStage1();
     }
   });
-
-  // Send button → enter stage 3 (overlay)
+  
+  // Send button → send message
   sendButton.addEventListener('click', function(e) {
     e.stopPropagation();
-    enterStage3();
+    sendMessage();
   });
-
+  
   // Overlay click → return to stage 2
   overlay.addEventListener('click', function() {
     enterStage2();
   });
-
+  
   // Escape key → always return to stage 1
   document.addEventListener('keydown', function(e) {
     if (e.key === "Escape") {
       enterStage1();
     }
   });
-
+  
   // Handle Enter / Shift+Enter in textarea
   input.addEventListener('keydown', function(e) {
     if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault(); // prevent default newline
-      enterStage3();       // trigger stage 3 (overlay)
+      e.preventDefault();
+      sendMessage();
     }
-    // Shift+Enter = allow newline (do nothing)
   });
 });
 </script>
