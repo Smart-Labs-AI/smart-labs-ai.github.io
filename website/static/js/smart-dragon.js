@@ -117,7 +117,7 @@
           align-items: flex-start;
         }
         .smart-dragon-box.expanded .input textarea {
-          height: 80px; overflow-y: auto; margin-top: 2.75rem;
+          height: 80px; overflow-y: auto;
         }
 
         .logo {
@@ -138,9 +138,11 @@
         }
         .input textarea {
           all: unset; width: 100%; height: 20px;
-          font-family: inherit; font-size: 18px; color: white;
+          font-family: inherit; font-size: 13px; color: white;
           resize: none; overflow: hidden;
           transition: height 0.4s;
+          line-height: 20px;
+          padding-top: 3px;
         }
         .input textarea::placeholder { color: rgba(255, 255, 255, 0.5); font-size: 13px; }
         .input textarea:disabled { opacity: 0.5; }
@@ -349,6 +351,7 @@
       } finally {
         this.sending = false;
         this._updateInput();
+        this.$input.focus();
       }
     }
 
