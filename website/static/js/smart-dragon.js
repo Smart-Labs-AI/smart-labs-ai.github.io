@@ -147,6 +147,17 @@
         .input textarea::placeholder { color: rgba(255, 255, 255, 0.5); font-size: 13px; }
         .input textarea:disabled { opacity: 0.5; }
 
+        .smart-dragon-box .input {
+          opacity: 1;
+          pointer-events: auto;
+          transition: opacity 0.3s, pointer-events 0s;
+        }
+
+        .smart-dragon-box:not(.expanded) .input {
+          opacity: 0;
+          pointer-events: none;
+        }
+
         .smart-dragon-chat::-webkit-scrollbar { width: 8px; }
         .smart-dragon-chat::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
         .smart-dragon-chat::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
