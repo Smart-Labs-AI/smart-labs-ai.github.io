@@ -98,62 +98,6 @@
           }
         },
     
-        // Pipedrive Chat
-        {
-          name: 'pipedrive-chat',
-          title: 'Pipedrive Chat',
-          description: 'Live-Chat-Widget für Kundenbetreuung und Support.',
-          purposes: ['marketing'],
-          cookies: [
-            ['_pipedriveLeadbooster*', '/', 'Pipedrive Chat-Funktionalität'],
-            ['leadbooster*', '.pipedrive.com', 'Chat-Sitzungsdaten']
-          ],
-          required: false,
-          optOut: false,
-          onlyOnce: true,
-          callback: function(consent, service) {
-            if (consent) {
-              if (!window.pipedriveLeadboosterConfig) {
-                window.pipedriveLeadboosterConfig = {
-                  base: 'leadbooster-chat.pipedrive.com',
-                  companyId: 13886412,
-                  playbookUuid: '10fd1b0a-bfe0-4733-8970-d52b00fcd920',
-                  version: 2
-                };
-                
-                (function () {
-                  var w = window;
-                  if (w.LeadBooster) {
-                    console.warn('LeadBooster already exists');
-                    return;
-                  }
-                  
-                  w.LeadBooster = {
-                    q: [],
-                    on: function (n, h) {
-                      this.q.push({ t: 'o', n: n, h: h });
-                    },
-                    trigger: function (n) {
-                      this.q.push({ t: 't', n: n });
-                    }
-                  };
-                })();
-                
-                var script = document.createElement('script');
-                script.src = 'https://leadbooster-chat.pipedrive.com/assets/loader.js';
-                script.async = true;
-                document.body.appendChild(script);
-              }
-            } else {
-              // Chat-Widget entfernen falls vorhanden
-              var chatElements = document.querySelectorAll('[id*="leadbooster"], [class*="leadbooster"]');
-              chatElements.forEach(function(el) {
-                el.remove();
-              });
-            }
-          }
-        },
-
         // Pipedrive Form
         {
             name: 'pipedrive-form',
@@ -184,12 +128,14 @@
     };
     </script>
     
-    <!-- Klaro laden NACH der Konfiguration -->
+    <!-- Frühe, blockierende Scripts (benötigt vor DOM und Consent) -->
     <script src="{{ "js/klaro-v0.7.js" | relURL }}"></script>
-    
-    <!-- Andere lokale Scripts (diese benötigen kein Consent) -->
-    <script src="{{ "js/jquery-3.7.1.min.js" | relURL }}"></script>
     <script src="{{ "js/modernizr-custom.js" | relURL }}"></script>
-    <script src="{{ "js/fresh.js" | relURL }}"></script>
-    <script src="{{ "js/jquery.panelslider.min.js" | relURL }}"></script>
+
+    <!-- Nachgelagerte, DOM-abhängige Scripts -->
+    <script defer src="{{ "js/jquery-3.7.1.min.js" | relURL }}"></script>
+    <script defer src="{{ "js/fresh.js" | relURL }}"></script>
+    <script defer src="{{ "js/jquery.panelslider.min.js" | relURL }}"></script>
+    <!-- TODO was braucht man für consent -->
+    <script defer src="{{ "js/smart-dragon.js" | relURL }}"></script>
     
