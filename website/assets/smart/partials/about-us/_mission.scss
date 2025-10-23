@@ -1,0 +1,38 @@
+/* ==========================================================================
+  About Us Mission styles
+========================================================================== */
+
+.aboutus-mission-container {
+  background-color: #fff;
+  padding: 6rem 4rem;
+
+  .aboutus-mission-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .aboutus-mission-title {
+      flex: 1;
+
+      font-family: Inter;
+      font-weight: 600;
+      font-style: Semi Bold;
+      font-size: 36px;
+      line-height: 120%;
+
+      color: #1A1449;
+    }
+
+    .aboutus-mission-description {
+      flex: 1;
+
+      font-family: Inter;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 18px;
+      line-height: 144%;
+
+      color: #1A1449;
+    }
+  }
+}

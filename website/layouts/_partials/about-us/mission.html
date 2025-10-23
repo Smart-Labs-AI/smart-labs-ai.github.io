@@ -1,0 +1,16 @@
+{{- $aboutUsMission     := .Params.aboutus_mission }}
+{{- $sectionTitle       := index $aboutUsMission "sectionTitle" }}
+{{- $productDescription := index $aboutUsMission "productDescription" }}
+
+
+<div class="container-fluid aboutus-mission-container">
+  <div class="aboutus-mission-content">
+    <h2 class="aboutus-mission-title section-title">
+      {{ $sectionTitle }}
+    </h2>
+
+    <div class="aboutus-mission-description">
+      {{ $productDescription | markdownify }}
+    </div>
+  </div>
+</div>

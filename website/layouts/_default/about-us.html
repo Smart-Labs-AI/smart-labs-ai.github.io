@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+{{ partial "navbar.html" . }}
+
+{{ partial "navbar-clone.html" . }}
+
+{{ partial "about-us/hero.html" . }}
+
+{{ partial "about-us/mission.html" . }}
+
+{{ partial "section_cta.html" . }}
+
+{{ partial "footer.html" . }}
+
+{{ if .Params.sidebar }}
+    {{ partial "single/sidebar.html" . }}
+{{ end }}
+
+{{ end }}

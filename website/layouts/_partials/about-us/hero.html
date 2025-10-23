@@ -1,0 +1,33 @@
+{{- $aboutUsHero := .Params.aboutus_hero }}
+{{- $pageTitle  := index $aboutUsHero "pageTitle" }}
+{{- $title      := index $aboutUsHero "title" }}
+{{- $subtitle   := index $aboutUsHero "subtitle" }}
+
+{{ $src := "/about-us/hero.png" }}
+{{ $img := resources.Get $src }}
+{{ $backgroundImage := $src }}
+{{ if $img }}
+{{ $processedBackground := $img.Process "resize 1800x webp q100" }}
+{{ $backgroundImage = $processedBackground.RelPermalink }}
+
+
+  <div class="aboutus-hero-background" style="background-image: url('{{ $backgroundImage }}');"></div>
+
+  <div class="container aboutus-hero-body">
+    <div class="landing-caption">
+      <p class="aboutus-page-title">
+        {{ $pageTitle }}
+      </p>
+
+      <h1 class="hero-title section-title">
+        {{ $title }}
+      </h1>
+
+      {{ with $subtitle }}
+      <h2 class="hero-subtitle">{{ . | markdownify }}</h2>
+      {{ end }}
+    </div>
+  </div>
+{{ else }}
+{{ errorf "Image not found: %s" $src }}
+{{ end }}
