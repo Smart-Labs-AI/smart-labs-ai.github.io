@@ -1,0 +1,108 @@
+/* ==========================================================================
+  About Us Values styles
+========================================================================== */
+
+.aboutus-values-container {
+  background-color: #F5F5F7;
+  padding: 6rem 4rem;
+
+  .aboutus-values-content {
+
+    .aboutus-mission-title {
+      text-align: center;
+      margin-bottom: 4rem;
+
+      .aboutus-mission-section-subtitle {
+        font-family: Inter;
+        font-weight: 600;
+        text-align: center;
+        font-size: 16px;
+        line-height: 100%;
+        color: #A81B58;
+        margin-bottom: 0.5rem;
+      }
+
+      .aboutus-mission-section-title {
+        font-family: Inter;
+        font-weight: 600;
+        text-align: center;
+        font-size: 36px;
+        line-height: 120%;
+        color: #1A1449;
+      }
+    }
+
+    .aboutus-values-boxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+      .aboutus-values-box {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        position: relative;
+        overflow: hidden;
+
+        // Background image for first two boxes
+        &:nth-child(1),
+        &:nth-child(2) {
+          background-image: url('/images/about-us/values/background_1.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        // Different background for third box
+        &:last-child {
+          grid-column: 1 / -1;
+          background-image: url('/images/about-us/values/background_2.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        .aboutus-values-box-icon-wrapper {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 1rem;
+
+          .aboutus-values-box-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+          }
+        }
+
+        .aboutus-values-box-text {
+          flex: 1;
+
+          .aboutus-values-box-title {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            color: #FFF;
+            margin-bottom: 0.75rem;
+            line-height: 130%;
+          }
+
+          .aboutus-values-box-description {
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 130%;
+            color: #FFF;
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

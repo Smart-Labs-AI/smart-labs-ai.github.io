@@ -1,0 +1,28 @@
+{{- $aboutUsValues   := .Params.aboutus_values }}
+{{- $sectionTitle    := index $aboutUsValues "sectionTitle" }}
+{{- $sectionSubtitle := index $aboutUsValues "sectionSubtitle" }}
+{{- $values          := index $aboutUsValues "values" }}
+
+<div class="container-fluid aboutus-values-container">
+  <div class="aboutus-values-content">
+    <div class="aboutus-mission-title">
+      <p class="aboutus-mission-section-subtitle">{{ $sectionSubtitle }}</p>
+      <h2 class="aboutus-mission-section-title">{{ $sectionTitle }}</h2>
+    </div>
+    <div class="aboutus-values-boxes">
+      {{ range $values }}
+      <div class="aboutus-values-box">
+        <div class="aboutus-values-box-icon-wrapper">
+          <img class="aboutus-values-box-icon" src="{{ .icon }}" alt="{{ .title }}">
+        </div>
+        <div class="aboutus-values-box-text">
+          <h3 class="aboutus-values-box-title">{{ .title }}</h3>
+          <div class="aboutus-values-box-description">
+            {{ .description | markdownify }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
