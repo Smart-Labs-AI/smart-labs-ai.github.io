@@ -1,0 +1,52 @@
+/* ==========================================================================
+  About Us Goal styles
+========================================================================== */
+
+.aboutus-goal-container {
+  background-color: #fff;
+  padding: 6rem 4rem;
+
+  .aboutus-goal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .aboutus-goal-title {
+      text-align: center;
+      margin-bottom: 4rem;
+
+      .aboutus-goal-section-subtitle {
+        font-family: Inter;
+        font-weight: 600;
+        text-align: center;
+        font-size: 16px;
+        line-height: 100%;
+        color: #A81B58;
+        margin-bottom: 0.5rem;
+      }
+
+      .aboutus-goal-section-title {
+        font-family: Inter;
+        font-weight: 600;
+        text-align: center;
+        font-size: 36px;
+        line-height: 120%;
+        color: #1A1449;
+      }
+    }
+
+    .aboutus-goal-description {
+      font-family: Inter;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 23px;
+      line-height: 160%;
+      text-align: center;
+
+      color: #1A1449;
+
+      max-width: 75%;
+    }
+  }
+}

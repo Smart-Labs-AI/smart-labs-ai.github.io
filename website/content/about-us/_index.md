@@ -26,4 +26,9 @@ aboutus_values:
     - title: Schulter an Schulter mit Security
       description: Red Teaming inside. Vertrauen included.
       icon: /images/about-us/values/Protect.svg
+
+aboutus_goal:
+  sectionTitle: Wir schaffen Vertrauen. Mit sicherer AI.
+  sectionSubtitle: Unsere Mission
+  goalDescription: Wir identifizieren Schwachstellen und entwickeln <b>gezielte Maßnahmen</b>, um Ihre Systeme gegen Angriffe abzusichern und eine zuverlässige Funktionalität zu gewährleisten. Unsere Expertise basiert auf regelmäßiger Teilnahme an <b>CTFs</b> und <b>Challenges</b>, bei denen wir Angriffe auf KI-Systeme simulieren und verteidigen. Dieses praxisnahe Wissen fließt direkt in unsere Strategien ein, um Ihre KI nachhaltig und sicher zu gestalten.
 --- 
