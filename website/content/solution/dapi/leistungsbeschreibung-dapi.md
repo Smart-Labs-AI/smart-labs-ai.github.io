@@ -3,6 +3,7 @@ title: "Leistungsbeschreibung: Defense API (DAPI)"
 product_document_type: "leistungsbeschreibung"
 include_footer: true
 sidebar: false
+layout: "plain"
 ---
 
 **Stand: August 2025**

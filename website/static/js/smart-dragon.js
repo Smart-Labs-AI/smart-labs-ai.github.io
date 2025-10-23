@@ -1,4 +1,4 @@
-// smartdragon-chat.js — KORRIGIERT
+// smartdragon-chat.js 
 (function () {
   class SmartDragonChat extends HTMLElement {
     constructor() {
@@ -10,7 +10,7 @@
         avatarSrc: ATTR("avatar-src", "/images/smart-dragon/smart-dragon-icon.svg"),
         sendButtonSrc: ATTR("avatar-src", "/images/smart-dragon/send-icon.svg"),
         webhookUrl: ATTR("webhook-url", "https://n8n.infra.smart-labs.ai/webhook/5c2012cb-985d-4e65-bbc4-308999ffff93/chat"),
-        termsUrl: ATTR("terms-url", "#"),
+        termsUrl: ATTR("terms-url", "/solution/smart-dragon/nutzungsbedingungen-smart-dragon/"),
         streaming: ATTR("streaming", "true").toLowerCase() === "true",
         businessSessionId: ATTR("business-session-id", "smart-dragon-website"),
         clientSessionKey: ATTR("client-session-key", "smartdragon_client_session_v1"),

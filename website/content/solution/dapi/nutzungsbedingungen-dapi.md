@@ -3,6 +3,7 @@ title: Nutzungsbedingungen für Defense API (DAPI)
 product_document_type: "nutzungsbedingungen"
 include_footer: true
 sidebar: false
+layout: "plain"
 ---
 
 **Stand: August 2025**

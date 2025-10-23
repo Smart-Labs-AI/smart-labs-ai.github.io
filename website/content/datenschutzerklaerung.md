@@ -2,6 +2,7 @@
 title: Datenschutzerklärung der Smart Labs AI GmbH
 include_footer: true
 sidebar: false
+layout: "plain"
 ---
 
 # 1. Datenschutz auf einen Blick 
