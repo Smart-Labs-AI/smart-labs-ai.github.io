@@ -36,3 +36,36 @@
     }
   }
 }
+
+@media screen and (max-width: 760px) {
+  .aboutus-mission-container {
+    .aboutus-mission-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .aboutus-mission-container {
+    padding: 4rem 2rem;
+    .aboutus-mission-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutus-mission-container {
+    .aboutus-mission-content {
+      .aboutus-mission-title {
+        font-size: 28px;
+      }
+    }
+
+    .aboutus-mission-description {
+      font-size: 16px;
+    }
+  }
+}

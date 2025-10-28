@@ -106,3 +106,115 @@
     }
   }
 }
+
+@media screen and (max-width: 760px) {
+  .aboutus-values-container {
+    .aboutus-values-content {
+      .aboutus-values-boxes {
+        grid-template-columns: 1fr;
+
+        .aboutus-values-box {
+          &:last-child {
+            background-image: url('/images/about-us/values/background_1.png');
+            grid-column: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aboutus-values-container {
+    padding: 4rem 2rem;
+    .aboutus-values-content {
+      .aboutus-values-boxes {
+        gap: 1rem;
+        .aboutus-values-box {
+          gap: 1rem;
+          .aboutus-values-box-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 0.5rem;
+          }
+          .aboutus-values-box-text {
+            .aboutus-values-box-title {
+              font-size: 20px;
+            }
+            .aboutus-values-box-description {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .aboutus-values-container {
+    .aboutus-values-content {
+      .aboutus-values-boxes {
+        .aboutus-values-box {
+          flex-direction: row;
+          .aboutus-values-box-icon-wrapper {
+            width: 30px;
+            height: 30px;
+            margin-bottom: none;
+          }
+          .aboutus-values-box-text {
+            .aboutus-values-box-title {
+              font-size: 20px;
+            }
+            .aboutus-values-box-description {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .aboutus-values-container {
+    .aboutus-values-content {
+      .aboutus-mission-title {
+        margin-bottom: 2rem;
+        .aboutus-mission-section-subtitle {
+          font-size: 14px;
+        }
+        .aboutus-mission-section-title {
+          font-size: 28px;
+        }
+      }
+      .aboutus-values-boxes {
+        .aboutus-values-box {
+          padding: 1.5rem;
+          .aboutus-values-box-text {
+            .aboutus-values-box-title {
+              font-size: 20px;
+            }
+            .aboutus-values-box-description {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .aboutus-values-container {
+    .aboutus-values-content {
+      .aboutus-values-boxes {
+        .aboutus-values-box {
+          .aboutus-values-box-icon-wrapper {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
