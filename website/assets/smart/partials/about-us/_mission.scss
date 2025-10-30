@@ -17,8 +17,7 @@
       font-family: Inter;
       font-weight: 600;
       font-style: Semi Bold;
-      font-size: 36px;
-      line-height: 120%;
+      font-size: 32px;
 
       color: #1A1449;
     }
@@ -29,15 +28,14 @@
       font-family: Inter;
       font-weight: 400;
       font-style: Regular;
-      font-size: 18px;
-      line-height: 144%;
+      font-size: 20px;
 
       color: #1A1449;
     }
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .aboutus-mission-container {
     .aboutus-mission-content {
       flex-direction: column;
@@ -50,22 +48,25 @@
   .aboutus-mission-container {
     padding: 4rem 2rem;
     .aboutus-mission-content {
+      .aboutus-mission-title {
+        font-size: 30px;
+      }
       flex-direction: column;
       gap: 2rem;
     }
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   .aboutus-mission-container {
     .aboutus-mission-content {
       .aboutus-mission-title {
         font-size: 28px;
       }
-    }
 
-    .aboutus-mission-description {
-      font-size: 16px;
+      .aboutus-mission-description {
+        font-size: 16px;
+      } 
     }
   }
 }
