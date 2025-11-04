@@ -6,6 +6,12 @@ include_footer: true
 description: "Die Defense API (DAPI) von Smart Labs AI ist Ihre Plattform für LLM Security. Schützen Sie Ihre KI vor Prompt Injection, Datenlecks und anderen Angriffen."
 type: solution
 is_main_solution_site: true
+
+applicationCategory: "SecurityApplication"
+operatingSystem: "All"
+price: 5.99
+priceCurrency: "EUR"
+
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "LLM Security Platform"
@@ -23,6 +29,7 @@ hero:
     - label: "Datasheet anfordern"
       href: "/contact"
       class: "secondary-btn"
+
 features:
   section-title: "Feature"
   title: "Warum DAPI? Weil Ihre KI keine zweite Chance verdient."
@@ -40,6 +47,7 @@ features:
         description: "Verfolgen Sie, was Ihre KI wann, warum und wie getan hat – durch Logs, Metriken und konfigurierbare Alerts."
         image: "/images/illustrations/icons/audit-trails.svg"
         background: "/solution/feature-card-background.png"
+
 advantage:
   section-title: "Vorteil"
   title: "DAPI sichert, was Ihnen gehört."
@@ -51,11 +59,13 @@ advantage:
         image: "/images/illustrations/icons/no-templates.svg"
       - title: "Agent Protection für automatisierte Workflows"
         image: "/images/illustrations/icons/dsgvo.svg"
+
 benefit:
   background-image: "/solution/dapi/hero.png"
   section-title: "Benefit"
   title: "Ganzheitlicher Schutz für Ihre generativen KI-Anwendungen"
   content: "DAPI agiert als intelligente Firewall für Ihre LLM-Anwendungen. Sie analysiert und filtert alle Anfragen in Echtzeit, blockiert schädliche Prompts und schützt Ihre KI vor unautorisierten Zugriffen und Datenlecks – für eine sichere und regelkonforme Nutzung."
+
 useCases:
   section-title: "Typische Einsatzfelder"
   title: "DAPI schützt Ihre KI, wie eine Firewall Ihre Server."
@@ -73,5 +83,6 @@ useCases:
       image: "/images/illustrations/icons/prompt.svg"
       ctaLink: "/contact"
       ctaText: "Mehr erfahren"
+
 pricingKey: "dapi"
 ---
