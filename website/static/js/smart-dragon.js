@@ -31,6 +31,7 @@
           position: fixed; inset: 0;
           backdrop-filter: blur(15px) saturate(110%);
           -webkit-backdrop-filter: blur(15px) saturate(110%);
+          background: rgba(24, 24, 64, 0.7);
           z-index: 900; opacity: 0; pointer-events: none;
           transition: opacity 0.4s ease-in-out;
         }
@@ -47,7 +48,7 @@
         }
         .smart-dragon-message.user {
           padding: 0.6rem 1rem; border-radius: 99px;
-          background-color: rgba(255, 255, 255, 0.15); color: white;
+          background-color: rgba(255, 255, 255, 0.2); color: white;
           align-self: flex-end;
         }
         .smart-dragon-message.ai {
