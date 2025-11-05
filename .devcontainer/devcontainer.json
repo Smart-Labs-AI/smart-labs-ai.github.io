@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": { "version": "18" }
   },
-  "postCreateCommand": "CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.151.0 && cd website && npm install",
+  "postCreateCommand": "CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.152.2 && cd website && npm install",
 
 	"mounts": [
 		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
