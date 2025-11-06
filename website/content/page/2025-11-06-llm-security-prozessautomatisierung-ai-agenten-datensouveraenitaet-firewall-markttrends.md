@@ -172,7 +172,7 @@ Handeln Sie jetzt, um als KI-Vorreiter Sicherheit und Innovationskraft zu verbin
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Nutzen Sie Ihre Chancen: Fordern Sie ein persönliches Briefing zur LLM-Security an, buchen Sie einen Workshop für Ihr Führungsteam oder starten Sie mit einer unverbindlichen Erstberatung zur sicheren KI-Integration. Informieren Sie sich zu den aktuellsten Lösungen und schnellen Quick Wins – jetzt Kontakt aufnehmen!
 {{< /page-cta >}}
 {{< page-section >}}

@@ -118,7 +118,7 @@ Wer KI-Risiken jetzt gezielt managt, macht Unsichtbares sichtbar und gewinnt Ver
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt durchstarten: Lassen Sie Ihr KI-Setup auf versteckte Risiken prüfen, setzen Sie auf mehrstufige Schutzmaßnahmen und stärken Sie zielgerichtet Ihr Team. Kontaktieren Sie spezialisierte Beratungen – werden Sie proaktiv, bevor Risiken zur Bedrohung werden.
 {{< /page-cta >}}
 {{< page-section >}}

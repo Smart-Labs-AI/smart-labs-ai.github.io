@@ -152,7 +152,7 @@ Nutzen Sie die aktuelle Innovationsdynamik: Starten Sie gezielte Pilotprojekte, 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Starten Sie jetzt:**
 - Prüfen Sie Ihre aktuelle Systemlandschaft auf Potenziale für KI-Agenten
 - Entwickeln Sie eine Sicherheits- und Compliance-Checkliste für LLM-Schutz

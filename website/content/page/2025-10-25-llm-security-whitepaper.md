@@ -181,7 +181,7 @@ Handeln ist jetzt gefragt. Unternehmen, die LLM-Sicherheit als dauerhaften Innov
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt LLM-Sicherheit systematisch angehen:
 - Erfassen Sie alle genutzten KI-Lösungen und bewerten Sie deren Risiken
 - Verankern Sie KI-Security und Compliance strategisch

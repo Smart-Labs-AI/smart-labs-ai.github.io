@@ -112,7 +112,7 @@ Machen Sie den nächsten Schritt: Risiken offen ansprechen, mit Pilotprojekten s
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Prüfen Sie Ihre LLM-Sicherheitsarchitektur mit praxisorientierten Checklisten, holen Sie externe Expertise für Shadow-IT-Erkennung oder implementieren Sie einen LLM-Hub zur Kontrolle Ihrer KI-Prozesse. Kontaktieren Sie führende Anbieter für individuelle Lösungen oder tauschen Sie sich in Fachcommunities aus. Ihr Vorsprung beginnt heute.
 {{< /page-cta >}}
 {{< page-section >}}

@@ -118,7 +118,7 @@ Sichern Sie Ihren Vorsprung: Beginnen Sie mit einer LLM-Risikoanalyse, starten S
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Setzen Sie jetzt den ersten Schritt: Fordern Sie unsere LLM-Sicherheits-Checkliste an, buchen Sie ein Beratungsgespräch oder nehmen Sie am praxisnahen Webinar teil – und machen Sie Ihr Unternehmen zukunftssicher im KI-Zeitalter.
 {{< /page-cta >}}
 {{< page-section >}}

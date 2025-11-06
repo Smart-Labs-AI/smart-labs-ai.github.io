@@ -105,7 +105,7 @@ Wer zögert, verliert: Nur eine frühzeitige Verbindung von Security und Innovat
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt handeln: Starten Sie Ihren Agenten-Sicherheits-Check mit modernsten Methoden! Sichern Sie Ihre KI-Zukunft – wir beraten Sie persönlich, vergleichen Lösungen oder unterstützen beim Aufbau Ihrer Agenten-Governance.
 {{< /page-cta >}}
 {{< page-section >}}

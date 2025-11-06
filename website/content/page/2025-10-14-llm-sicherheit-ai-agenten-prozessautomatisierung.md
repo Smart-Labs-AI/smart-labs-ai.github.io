@@ -106,7 +106,7 @@ Jetzt ist es Zeit, LLMs und KI-Agenten aktiv abzusichern: Mit Governance, kombin
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt aktiv werden: Optimieren Sie Ihre KIs mit maßgeschneiderter Security-Governance, Zero-Trust-Strategie und gezieltem Upskilling für Ihr Team. Lassen Sie sich beraten oder starten Sie mit einem KI-Sicherheits-Assessment!
 {{< /page-cta >}}
 {{< page-section >}}

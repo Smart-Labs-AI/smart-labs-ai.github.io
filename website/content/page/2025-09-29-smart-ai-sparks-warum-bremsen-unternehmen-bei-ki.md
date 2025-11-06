@@ -103,7 +103,7 @@ Der Wettbewerb um KI-Kompetenz, Innovationskraft und Talente ist eröffnet. Wer 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt – Bringen Sie Ihr Unternehmen mit KI voran: Vereinbaren Sie ein Beratungsgespräch, starten Sie Pilotprojekte oder etablieren Sie Ihr AI Governance-Programm. Vernetzen Sie HR und Innovation für nachhaltigen Unternehmenserfolg.
 {{< /page-cta >}}
 {{< page-section >}}

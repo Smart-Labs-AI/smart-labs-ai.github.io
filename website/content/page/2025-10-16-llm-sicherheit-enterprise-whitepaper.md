@@ -125,7 +125,7 @@ Jetzt handeln: Starten Sie mit einem LLM-Security-Audit, stärken Sie Awareness,
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Fordern Sie ein individuelles LLM-Sicherheitsaudit oder einen Workshop zur Shadow-IT-Prävention an – oder sprechen Sie mit unserem AI-Security-Team. Investieren Sie heute in Kontrolle, Vertrauen und nachhaltige Wertschöpfung.
 {{< /page-cta >}}
 {{< page-section >}}

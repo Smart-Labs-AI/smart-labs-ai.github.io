@@ -142,7 +142,7 @@ KI-Sicherheit verlangt sofortiges Handeln: Frühzeitige Projekte, Investitionen 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten! Buchen Sie ein KI-Security Assessment, entwickeln Sie individuelle AI-Governance-Strategien oder kontaktieren Sie spezialisierte Anbieter. Gestalten Sie Ihre sichere KI-Zukunft.
 {{< /page-cta >}}
 {{< page-section >}}

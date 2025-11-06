@@ -138,7 +138,7 @@ Jetzt ist der Zeitpunkt, Sichtbarkeit herzustellen, Shadow-KI zu eliminieren und
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten – Vereinbaren Sie eine individuelle Beratung, prüfen Sie Ihr Sicherheitsniveau mit modernen KI-Security-Tools oder schließen Sie sich einer Innovations-Taskforce an. Entscheiden Sie sich heute für Souveränität und eine sichere KI-Transformation.
 {{< /page-cta >}}
 {{< page-section >}}

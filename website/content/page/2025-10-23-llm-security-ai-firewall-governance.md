@@ -128,7 +128,7 @@ Jetzt ist es Zeit zu handeln: LLM-Sicherheit und Governance sind Chance und Verp
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Führen Sie interne Risk-Assessments durch, prüfen Sie Ihre LLM-Integrationen und setzen Sie auf mehrschichtige Security-Architektur (inklusive Firewall und Privacy-Layer). Ziehen Sie Experten für Workshops hinzu und trainieren Sie IT, C-Level und Compliance, um den Wandel nachhaltig zu verankern.
 {{< /page-cta >}}
 {{< page-section >}}

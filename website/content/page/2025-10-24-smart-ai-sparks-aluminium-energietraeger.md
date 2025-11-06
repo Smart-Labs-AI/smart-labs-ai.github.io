@@ -136,7 +136,7 @@ Die Zeit zur Transformation ist jetzt. Gehe mit innovativen Partnern voran, von 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt den Wandel starten: Vernetze dich mit Forschungsnetzwerken und Technologiepartnern für Machbarkeitsstudien, Implementierungskonzepte und nachhaltige Benchmark-Projekte. Setze Maßstäbe für klimaneutrale Energie und sichere dein Unternehmen gegen regulatorische und energetische Risiken ab.
 {{< /page-cta >}}
 {{< page-section >}}

@@ -111,7 +111,7 @@ Starten Sie Ihre LLM-Security-Roadmap: Schaffen Sie crossfunktionale Teams, nutz
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt informieren und Ihre individuelle LLM-Sicherheitsstrategie entwickeln! Smart Labs AI begleitet Sie bei Assessment, Implementierung und Skalierung – kontaktieren Sie unser Expertenteam für ein unverbindliches Beratungsgespräch.**
 {{< /page-cta >}}
 {{< page-section >}}

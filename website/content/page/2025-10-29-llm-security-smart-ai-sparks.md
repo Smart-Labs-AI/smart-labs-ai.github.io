@@ -126,7 +126,7 @@ Konsequente Transparenz, robustere Security-Prozesse und agentenbasierte Governa
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt starten:**
 - Qualifizieren Sie Ihre Teams für LLM- und KI-Security (etwa mit Fraunhofer- oder Cassini-Workshops [3][7]).
 - Testen Sie Pilotprojekte rund um sichere Automatisierung und Security-by-Design.

@@ -152,7 +152,7 @@ Starten Sie mit einer Analyse aller KI-Anwendungen im Unternehmen. Implementiere
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie Ihre KI-Sicherheitsstrategie: Prüfen Sie alle KI-Anwendungen im Unternehmen auf Schatten-IT und lassen Sie sich bei Bedarf von spezialisierten Partnern unterstützen. Gestalten Sie jetzt Ihre sichere KI-Zukunft!
 {{< /page-cta >}}
 {{< page-section >}}

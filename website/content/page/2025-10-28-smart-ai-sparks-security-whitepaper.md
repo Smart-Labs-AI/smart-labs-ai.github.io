@@ -114,7 +114,7 @@ Nur Unternehmen, die ihr vollständiges KI-Inventar kennen, auf Zero Trust setze
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Nutzen Sie das Momentum: Vereinbaren Sie jetzt eine Sicherheitsbewertung Ihrer KI-Landschaft oder starten Sie mit einem AI-Governance-Workshop. Fordern Sie Best-Practice-Guides und Checklisten an und vernetzen Sie sich mit Branchenkolleg:innen!
 {{< /page-cta >}}
 {{< page-section >}}

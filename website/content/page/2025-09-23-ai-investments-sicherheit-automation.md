@@ -117,7 +117,7 @@ Intelligente AI-Agenten transformieren Unternehmen durch Automatisierung, Person
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Stellen Sie Ihre KI-Strategie jetzt sicher und skalierbar auf! Prüfen Sie Best Practices, holen Sie Experten an Bord oder vernetzen Sie sich mit innovativen Partnern. Ihre smarte KI-Automatisierung beginnt heute – nutzen Sie Ihren Vorsprung.
 {{< /page-cta >}}
 {{< page-section >}}

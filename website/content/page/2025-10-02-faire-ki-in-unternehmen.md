@@ -116,7 +116,7 @@ Sind Sie bereit, Ihre KI-Strategie zu optimieren? Unsere Expert:innen beraten zu
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt Kontakt aufnehmen für maßgeschneiderte Assessments, Workshops oder Impulsvorträge zur sicheren, fairen KI-Implementierung in Ihrem Unternehmen. Machen Sie den ersten Schritt zur resilienten KI-Transformation.
 {{< /page-cta >}}
 {{< page-section >}}

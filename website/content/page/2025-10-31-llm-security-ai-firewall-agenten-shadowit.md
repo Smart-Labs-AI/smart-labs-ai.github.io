@@ -133,7 +133,7 @@ Die Weichenstellung für LLM-Sicherheit und agentische KI ist jetzt. Wer früh i
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Transformieren Sie Ihre Organisation mit sicherer, skalierbarer KI. Starten Sie mit einem Security-Assessment, holen Sie interne wie externe Experten zusammen – oder fragen Sie uns nach einer Erstanalyse für Ihren LLM-Rollout.
 {{< /page-cta >}}
 {{< page-section >}}

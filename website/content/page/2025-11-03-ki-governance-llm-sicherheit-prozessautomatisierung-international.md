@@ -111,7 +111,7 @@ Setzen Sie auf ein starkes Governance-Framework, schulen Sie Teams in KI-Ethik u
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Machen Sie den individuellen KI-Governance-Check! Vernetzen Sie Ihre Fachabteilungen und lassen Sie sich von Experten zu Compliance-Standards, LLM-Sicherheit und skalierbaren Automatisierungsstrategien beraten. Gestalten Sie Ihre digitale Zukunft – kontaktieren Sie uns für ein unverbindliches Erstgespräch oder einen Whiteboard-Workshop!
 {{< /page-cta >}}
 {{< page-section >}}

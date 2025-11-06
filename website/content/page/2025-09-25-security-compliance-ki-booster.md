@@ -130,7 +130,7 @@ Jetzt ist die Zeit, sichere und produktive KI einzuführen und Ihr Unternehmen a
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Machen Sie Ihr Unternehmen KI-ready: Vereinbaren Sie jetzt Security- und Compliance-Audits, Use-Case-Workshops und Beratung für Ihre KI-Roadmap. Maximale Sicherheit & Effizienz: Starten Sie jetzt – [Whitepaper: Security, Compliance und Produktivitäts-Booster: Erfolgsrezepte für KI-Einführung](https://smart-labs.ai/page/2025-09-25-security-compliance-ki-booster)
 {{< /page-cta >}}
 {{< page-section >}}

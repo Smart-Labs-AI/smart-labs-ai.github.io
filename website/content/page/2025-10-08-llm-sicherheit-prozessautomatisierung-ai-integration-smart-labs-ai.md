@@ -130,7 +130,7 @@ Mit intelligenter Automatisierung und starker Sicherheit lassen sich Prozesse be
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Planen Sie mit Smart Labs AI Ihre nächsten Schritte: Nutzen Sie individuelle Beratung, Whitepaper-Downloads und Experten-Sessions, um Ihre KI-Strategie sicher, effektiv und zukunftsfähig aufzustellen.
 {{< /page-cta >}}
 {{< page-section >}}

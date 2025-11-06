@@ -111,7 +111,7 @@ Jetzt ist der Moment, KI-gestützte Sicherheit strategisch zu verankern: Setzen 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt souveräne LLM-Sicherheit entwickeln: Whitepaper herunterladen, Quick-Check vereinbaren oder sich von Smart AI Sparks inspirieren lassen – Ihre nächsten Schritte für sichere KI-Innovationen im Unternehmen.
 {{< /page-cta >}}
 {{< page-section >}}

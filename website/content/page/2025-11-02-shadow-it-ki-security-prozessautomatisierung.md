@@ -112,7 +112,7 @@ Wer jetzt Transparenz schafft, Prozesse definiert und moderne Security-Plattform
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt starten:** Schaffen Sie IT-Transparenz, erkennen Sie Shadow-IT automatisiert, und initiieren Sie Compliance-Prozesse für KI und Cloud. Für vertiefende Best Practices, Whitepaper-Workshops oder Audits kontaktieren Sie uns – stärken Sie Ihre Sicherheit durch gezielte Koordination!
 {{< /page-cta >}}
 {{< page-section >}}

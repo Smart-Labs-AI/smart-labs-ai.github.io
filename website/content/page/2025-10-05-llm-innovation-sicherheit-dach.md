@@ -98,7 +98,7 @@ Wer jetzt klare Rollen, LLM-Governance und Security-Checks implementiert, versch
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten: Lassen Sie Ihre LLM-Security professionell prüfen, implementieren Sie die 10 Gebote für KI-Sicherheit und verwenden Sie Whitepaper, Cheat Sheets und Audit-Vorlagen für eine sichere, skalierbare KI-Infrastruktur. Treten Sie aktiv mit führenden KI-Sicherheitspartnern in Kontakt und setzen Sie die Praxisempfehlungen proaktiv um!
 {{< /page-cta >}}
 {{< page-section >}}

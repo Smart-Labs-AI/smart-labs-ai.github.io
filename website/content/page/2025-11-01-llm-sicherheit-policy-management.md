@@ -141,7 +141,7 @@ Transparenz und kollaborative Prozesse sind der Schlüssel für zukunftsfähige 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie Ihre sichere LLM-Transformation: Setzen Sie auf Open-Source-Tools, flexible Policy-Frameworks und Firewalls. Lassen Sie sich von Best Practices inspirieren und holen Sie Expertenrat für Ihr KI-Sicherheitskonzept. Die nächste Generation der LLM-Sicherheit beginnt heute!
 {{< /page-cta >}}
 {{< page-section >}}

@@ -135,7 +135,7 @@ Der Wandel verlangt Mut: Schatten-IT und unsichere LLMs sind reale Risiken. Jetz
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten – Nutzen Sie LLM Benchmarks, setzen Sie klare Governance auf und bringen Sie Security- sowie Automatisierungsprojekte zügig in den Proof-of-Concept. Expertenrat zu Agenten-Architektur, lokalen LLMs und Security-Best-Practices verschafft sofort messbare Vorteile. Kontaktieren Sie führende Anbieter wie AIMAX, Insider Technologies, Lakera oder Ihr IT-Security-Netzwerk für eine maßgeschneiderte Lösung.
 {{< /page-cta >}}
 {{< page-section >}}

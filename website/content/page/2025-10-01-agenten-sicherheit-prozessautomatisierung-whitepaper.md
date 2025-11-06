@@ -99,7 +99,7 @@ Identifizieren Sie Prozesse mit hohem Automatisierungspotenzial. Prüfen Sie die
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt Ihr Pilotprojekt zur sicheren Prozessautomatisierung mit KI-Agenten. Bauen Sie Expertise auf, nutzen Sie professionelle Beratung und werden Sie Vorreiter, wenn es um digitale Souveränität, Effizienz und KI-Sicherheit geht.
 {{< /page-cta >}}
 {{< page-section >}}

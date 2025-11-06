@@ -113,7 +113,7 @@ Verlassen Sie die Komfortzone. Jetzt ist der ideale Zeitpunkt, von Privacy-Asses
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie mit einer unverbindlichen Beratung oder einem individuellen KI-Sicherheits-Assessment für Ihr Unternehmen. Fordern Sie jetzt eine Executive Guidance oder eine Demo für KI-basierte Automatisierung an. Lassen Sie sich inspirieren, welche Lösungen auch für Ihre Organisation realistisch und sicher einsetzbar sind – Kontaktieren Sie unser Innovationsteam jetzt!
 {{< /page-cta >}}
 {{< page-section >}}
