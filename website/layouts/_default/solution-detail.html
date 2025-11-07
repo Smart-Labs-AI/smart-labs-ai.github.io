@@ -44,6 +44,10 @@
     {{ partial "landingpage/prices-landingpage.html" (dict "section_prices" $pricingData "Permalink" .Permalink) }}
   {{ end }}
 
+  {{ if .Params.materials }}
+    {{ partial "solution-detail/materials-solutiondetail.html" . }}
+  {{ end }}
+
   {{ partial "section_cta.html" . }}
 
   {{ partial "footer.html" . }}

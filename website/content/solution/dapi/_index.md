@@ -74,4 +74,27 @@ useCases:
       ctaLink: "/contact"
       ctaText: "Mehr erfahren"
 pricingKey: "dapi"
+materials:
+  section-title: "Ressourcen & Forschung"
+  title: "Weitere Unterlagen und Einblicke in LLM-Security-Forschung"
+  subtitle: "Alle relevanten Dokumente zur Defense API und unsere aktuelle Forschung im Bereich KI-Sicherheit. Vertiefen Sie Ihr Wissen und schützen Sie Ihre LLM-Anwendungen."
+  cards:
+    - title: "Defense API (DAPI) Dokumente"
+      description: "Hier finden Sie alle relevanten Dokumente zur Defense API."
+      links:
+        - text: "One-Pager (DE)"
+          url: "/solution/dapi/material/Defense-API - 2025.pdf"
+        - text: "One-Pager (EN)"
+          url: "/solution/dapi/material/Defense-API-2025-en.pdf"
+        - text: "Leistungsbeschreibung DAPI"
+          url: "/solution/dapi/leistungsbeschreibung-dapi"
+    - title: "Forschung zur KI-Sicherheit"
+      description: "Unsere aktuelle Forschung im Bereich LLM Security. Wir veröffentlichen regelmäßig unsere neuesten Erkenntnisse zu Angriffen und Verteidigungsstrategien für KI-Systeme."
+      links:
+        - text: "Paper: Exploiting Web Search Tools of AI Agents for Data Exfiltration (PDF)"
+          url: "/solution/dapi/material/2510.09093v1.pdf"
+        - text: "Paper: Exploiting Web Search Tools of AI Agents for Data Exfiltration (arXiv)"
+          url: "https://arxiv.org/abs/2510.09093"
+        - text: "KI-Vertrauen neu denken: LLMs sicher nutzen und gezielt schützen"
+          url: "/page/2025-11-05-llm-sicherheit-in-der-praxis-whitepaper/"
 ---
