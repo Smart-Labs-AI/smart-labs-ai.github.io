@@ -20,10 +20,9 @@
 
       const style = document.createElement("style");
       style.textContent = `
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700;800&display=swap');
         :host {
           all: initial;
-          font-family: var(--chat--font-family, 'Libre Franklin'), system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+          font-family: var(--chat--font-family, 'Inter'), system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
         }
         *, *::before, *::after { box-sizing: border-box; }
 
