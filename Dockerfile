@@ -5,7 +5,7 @@ ENV HUGO_ENV=production
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y nodejs npm
 
-RUN CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.151.0
+RUN CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.152.2
 
 WORKDIR /app/website
 COPY website/ /app/website
