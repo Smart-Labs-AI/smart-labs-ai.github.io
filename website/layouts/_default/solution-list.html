@@ -13,28 +13,39 @@ Determine which pages to display.
 
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "{{ .Title }} | {{ .Site.Title }}",
-    "description": "{{ .Description }}",
-    "url": "{{ .Permalink }}",
-    "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-            {{ range $index, $page := $pages }}
-            {
-                "@type": "ListItem",
-                "position": {{ add $index 1 }},
-                "item": {
-                    "@type": "Product",
-                    "name": "{{ .Title }}",
-                    "url": "{{ .Permalink }}",
-                    "description": "{{ .Description }}"
-                }
-            }{{ if ne (add $index 1) (len $pages) }},{{ end }}
-            {{ end }}
-        ]
-    }
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{ .Title }} | {{ .Site.Title }}",
+  "description": "{{ .Description }}",
+  "url": "{{ .Permalink }}",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {{- $length := len .Pages -}}
+      {{- range $index, $page := .Pages }}
+      {
+        "@type": "ListItem",
+        "position": {{ add $index 1 }},
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "{{ $page.Title }}",
+          "url": "{{ $page.Permalink }}",
+          "description": "{{ $page.Params.description }}",
+          "applicationCategory": "{{ $page.Params.applicationCategory }}"{{ if not $page.Params.price }},
+          "operatingSystem": "{{ $page.Params.operatingSystem }}"{{ end }}{{ with $page.Params.price }},
+          "offers": {
+            "@type": "Offer",
+            "price": {{ $page.Params.price }},
+            "priceCurrency": "{{ $page.Params.priceCurrency }}",
+            "url": "https://www.smartlabs.ai/contact/",
+            "availability": "https://schema.org/InStock",
+            "description": "Preis ab {{ $page.Params.price }} {{ $page.Params.priceCurrency }}. Demo auf Anfrage."
+          }{{ end }}
+        }
+      }{{ if lt (add $index 1) $length }},{{ end }}
+      {{- end }}
+    ]
+  }
 }
 </script>
 

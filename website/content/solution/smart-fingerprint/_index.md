@@ -2,8 +2,13 @@
 ---
 title: "Smart Fingerprint"
 layout: "solution-detail"
+description: "Smart Fingerprint erkennt Manipulationen und Verhaltensmuster in KI-Ausgaben. Die Lösung schützt Ihre Systeme vor Datenlecks und unautorisierten Zugriffen – DSGVO-konform und sicher."
 type: solution
 is_main_solution_site: true
+
+applicationCategory: "SecurityApplication"
+operatingSystem: "SaaS / Web Application"
+
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "Smart Fingerprint"
@@ -17,6 +22,7 @@ hero:
     - label: "Demo vereinbaren"
       href: "/contact"
       class: "primary-btn"
+
 features:
   section-title: "Feature"
   title: "ML-basierte Mustererkennung"
@@ -31,6 +37,7 @@ features:
 Unsere KI erkennt sofort, wenn das Verhalten nicht zur eingeloggten Person passt. So können **Account-Übernahmen, Identitätsdiebstahl oder Gerätefreigaben** frühzeitig erkannt und verhindert werden – bevor Schaden entsteht."
         image: "/images/illustrations/icons/behaviour.svg"
         background: "/solution/feature-card-background.png"
+
 advantage:
   section-title: "Advantage"
   title: "Deine Sicherheit. Dein Vorteil."
@@ -45,11 +52,13 @@ advantage:
       - title: "DSGVO-konform"
         description: "Privacy by Design. Entwickelt nach europäischen Datenschutzstandards – schlüsselfertig für regulierte Branchen."
         image: "/images/illustrations/icons/dsgvo.svg"
+
 benefit:
   background-image: "/solution/dapi/hero.png"
   section-title: "Sicherheit, der man vertrauen kann."
   title: "Datenschutz-by-Design. Ganz ohne sensible Daten."
   content: "Smart Fingerprint erkennt Nutzer anhand ihres natürlichen Tippverhaltens – **ohne Fingerabdruck, ohne Daten-Upload, ohne Risiko**. Keine Profile – nur intelligente Mustererkennung in Echtzeit. **Privatsphäre bleibt gewahrt. Sicherheit bleibt stark.**"
+
 useCases:
   section-title: "Typische Einsatzfelder"
   title: "Da, wo ein einziger falscher Zugriff zu viel sein kann."

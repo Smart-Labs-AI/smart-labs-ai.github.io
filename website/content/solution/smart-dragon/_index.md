@@ -2,8 +2,13 @@
 ---
 title: "Smart Dragon"
 layout: "solution-detail"
+description: "Smart Dragon ist der sichere Unternehmens-Chatbot von Smart Labs AI. Er beantwortet Anfragen, schützt sensible Daten und sorgt für compliance-konforme KI-Konversationen."
 type: solution
 is_main_solution_site: true
+
+applicationCategory: "BusinessApplication"
+operatingSystem: "SaaS / Web Application"
+
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "Sichere Conversational AI für Unternehmen"
@@ -17,6 +22,7 @@ hero:
     - label: "Demo vereinbaren"
       href: "/contact"
       class: "primary-btn"
+
 features:
   section-title: "Features"
   title: "Smart Dragon – Der Chatbot, der Ihre Geheimnisse für sich behält."
@@ -30,6 +36,7 @@ features:
         description: "Alle Interaktionen werden vollständig dokumentiert – nachvollziehbar, exportierbar, auswertbar. Ideal für Governance, Risk & Compliance."
         image: "/images/illustrations/icons/shield-user.svg"
         background: "/solution/feature-card-background.png"
+
 advantage:
   section-title: "Unfairer Vorteil"
   title: "Warum Smart Dragon?"
@@ -41,11 +48,13 @@ advantage:
         image: "/images/illustrations/icons/logging.svg"
       - title: "DSGVO-konform"
         image: "/images/illustrations/icons/dsgvo.svg"
+
 benefit:
   background-image: "/solution/dapi/hero.png"
   section-title: "Benefit"
   title: "Ein vertrauenswürdiger Chatbot für HR, Legal & Support"
   content: "Smart Dragon bietet Unternehmen die Möglichkeit, auf generative KI zu setzen – ohne das Risiko von Datenlecks oder Fehlverhalten. Ob interne FAQs, HR-Prozesse, Rechtsabteilungen oder IT-Support: Der Bot versteht, antwortet, schützt – in jeder Konversation."
+
 useCases:
   section-title: "Use Cases"
   title: "Smart Dragon – Der Chatbot, der Ihre Geheimnisse für sich behält."
