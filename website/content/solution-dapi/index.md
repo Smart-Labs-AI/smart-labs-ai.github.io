@@ -6,8 +6,8 @@ pricingKey: "dapi"
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "Defence API für LLM Security"
-  title: "Schütze deine KI, bevor sie dich in Schwierigkeiten bringt."
-  subtitle: "Dein Team nutzt LLMs - aber wer schützt euch vor Prompt Injection, Datenlecks und rechtlichem Ärger?"
+  title: "Firewall für KI-Systeme – EU-sicher, AI Act ready."
+  subtitle: "Vertraue nicht blind auf Hyperscaler – setze auf unabhängigen Schutz."
   live-in:
     - text: "Live in"
     - amout: 10 Minuten
@@ -28,25 +28,25 @@ hero:
       href: "/todo"
 features:
   section-title: "Features"
-  title: "Was DAPI für dich übernimmt"
+  title: "Was die Defense API (DAPI) für dich übernimmt"
   items:
   - title: "Prompt Injection Defense"
-    text: "Blockiert Jailbreaks, Exploits & Injection-Versuche in Echtzeit – bevor sie deinen Stack erreichen."
+    text: "Stoppt Jailbreaks, Exploits und Injection-Versuche in Echtzeit – bevor sie dein System kompromittieren."
     icon: "prompt-injection"
   - title: "Output Sanitization"
-    text: "Entfernt sensible oder ungewollte Inhalte aus LLM-Antworten – dynamisch und regelbasiert."
+    text: "Filtert sensible Daten und unerwünschte Inhalte aus LLM-Antworten – regelbasiert, dynamisch, sicher."
     icon: "output-sanitization"
   - title: "Token Usage & Zugriffskontrolle"
-    text: "Behalte volle Übersicht über API-Kosten & -Zugriffe – anonymisiert & konfigurierbar."
+    text: "Volle Transparenz über API-Nutzung und -Kosten – granular steuerbar, anonymisiert und DSGVO-konform."
     icon: "token-usage"
   - title: "Audit-Ready Tracing"
-    text: "Erfasst jede Interaktion DSGVO- und AI-Act-konform – auf Wunsch auch ohne Payload-Logging."
+    text: "Protokolliert jede Interaktion rechtssicher nach AI Act & DSGVO – optional auch ohne Speicherung von Payloads."
     icon: "audit-ready-tracing"
   - title: "Multi-Model Support"
-    text: "Kompatibel mit OpenAI, Mistral, Claude – oder jedem Modell, das du selbst hostest."
+    text: "Nahtlose Integration mit OpenAI, Mistral, Claude oder deinem eigenen Modell – maximale Flexibilität garantiert."
     icon: "multi-model-support"
   - title: "Zero Trust Auth Layer"
-    text: "Sichere Authentifizierung via Key Rotation, Rate Limits & rollenbasiertem Zugriff."
+    text: "Erhöhte Sicherheit durch Key Rotation, Rate Limits und rollenbasierte Zugriffskontrolle."
     icon: "zero-trust-auth-layer"
 liveInSection:
   background-image: "/solution/dapi/live-in-section-background.png"
@@ -86,7 +86,7 @@ section_early_access:
   background-image: "/solution/dapi/hero.png"
   section-title: "Early Access"
   title: "Werde Teil unserer exklusiven Early Access Community"
-  subtitle: "Wir onboarden gezielt CTOs, Tech-Leads und AI-Ingenieur:innen, die LLM-Sicherheit jetzt ernst nehmen"
+  subtitle: "Sichere dir frühen Zugang zu Europas erster Defense API und gestalte den Standard für vertrauenswürdige KI-Sicherheit aktiv mit. Wir onboarden gezielt CTOs, Tech-Leads und AI Engineers, die LLM-Sicherheit nicht aufschieben, sondern jetzt angehen."
   advantages:
     - name: "Kostenloser Zugang zur Beta"
       type: check
@@ -94,7 +94,7 @@ section_early_access:
       type: check
     - name: "Technischer Support via Slack"
       type: check
-  email-input-placeholder: "Hier geschäftliche E-Mail-Adresse eingeben"
+  email-input-placeholder: "Hier (geschäftliche) E-Mail-Adresse eingeben"
   cta-text: "Warteliste beitreten"
   cta-link: "#"
 ---
