@@ -5,6 +5,8 @@ subtitle: "kp"
 layout: "aboutus"
 
 aboutus_hero:
+  backgroundImage: "/about-us/hero.png"
+  mainImage: "/about-us/main.png"
   pageTitle: Labs
   title: Wir sind Smart Labs AI
   subtitle: Ein interdisziplinäres Team, das sichere KI nicht nur baut – sondern lebt.

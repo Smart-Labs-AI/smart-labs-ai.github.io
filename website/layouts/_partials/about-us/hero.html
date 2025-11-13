@@ -1,17 +1,19 @@
 {{- $aboutUsHero := .Params.aboutus_hero }}
+{{- $backgroundImage := index $aboutUsHero "backgroundImage" }}
+{{- $mainImage := index $aboutUsHero "mainImage" }}
 {{- $pageTitle  := index $aboutUsHero "pageTitle" }}
 {{- $title      := index $aboutUsHero "title" }}
 {{- $subtitle   := index $aboutUsHero "subtitle" }}
 
-{{ $src := "/about-us/hero.png" }}
+{{ $src := $backgroundImage }}
 {{ $img := resources.Get $src }}
 {{ $backgroundImage := $src }}
 {{ if $img }}
 {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
 {{ $backgroundImage = $processedBackground.RelPermalink }}
-
-
   <div class="aboutus-hero-background" style="background-image: url('{{ $backgroundImage }}');"></div>
+
+  {{ partial "imageproc.html" (dict "src" $mainImage "alt" "Teamfoto" "resize" "1200x" "quality" "90") }}
 
   <div class="container aboutus-hero-body">
     <div class="landing-caption">
