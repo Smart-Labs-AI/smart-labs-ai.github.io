@@ -118,13 +118,21 @@
                     // Optional: leeren, falls Benutzer später ablehnt
                     if (placeholder) {
                         placeholder.innerHTML = '<h2>Um dieses Formular zu sehen, akzeptiere bitte Marketing-Cookies.</h2>';
+                        placeholder.innerHTML += '<button class="cookie-settings-btn button is-small mt-4" onclick="openCookieSettings()" aria-label="Cookie‑Einstellungen öffnen">Cookie‑Einstellungen</button>';
                         placeholder.style.display = 'block';
                     }
                 }
             }
         }
-
       ]
+    };
+
+    window.openCookieSettings = function () {
+      if (window.klaro && typeof window.klaro.show === 'function') {
+        window.klaro.show();
+      } else {
+        console.warn('Klaro nicht geladen — versuche es später erneut.');
+      }
     };
     </script>
     

@@ -93,7 +93,15 @@
           <ul class="link-list">
             {{- range $finalLine.links }}
             <li>
-              <a href="{{ .link | absURL }}"> {{ .text }} </a>
+              {{- if eq .action "cookie" }}
+                <a href="#" onclick="openCookieSettings(); return false;" role="button" aria-label="{{ .text }} öffnen" class="cookie-settings-link">
+                  {{ .text }}
+                </a>
+              {{- else if .link }}
+                <a href="{{ .link | absURL }}"> {{ .text }} </a>
+              {{- else }}
+                <span>{{ .text }}</span>
+              {{- end }}
             </li>
             {{- end }}
           </ul>
