@@ -132,7 +132,7 @@ Wer jetzt handelt, schützt die Zukunft des Unternehmens: Überprüfen und siche
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Nutzen Sie aktuelle Security-Analysen oder starten Sie einen kontinuierlichen LLM-Sicherheits-Check. Fordern Sie eine individuelle Beratung oder Demonstration moderner LLM-Firewalls und CNAPPs an – machen Sie Ihre KI-Umgebung zukunftssicher!
 {{< /page-cta >}}
 {{< page-section >}}

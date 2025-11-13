@@ -145,7 +145,7 @@ Jetzt handeln – denn neue Angriffsvektoren entstehen ständig, und Vertrauen e
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt – Entwickeln Sie mit einem gezielten LLM-Sicherheits- und Governance-Audit Ihre Roadmap für sichere KI. Führen Sie eine umfassende Bestandsaufnahme (Data Discovery) durch, identifizieren Sie Shadow-KI und setzen Sie gezielte Security-Maßnahmen um. Kontaktieren Sie erfahrene Security-Spezialisten, um praxisnahe Workshops und individuelle Beratung zu erhalten. Sicherheit ist die Grundlage Ihrer erfolgreichen KI-Strategie!
 {{< /page-cta >}}
 {{< page-section >}}

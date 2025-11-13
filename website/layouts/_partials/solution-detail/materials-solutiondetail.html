@@ -1,0 +1,55 @@
+{{- $materials := .Params.materials }}
+{{- $sectionTitle := index $materials "section-title" | default "" -}}
+{{- $title := index $materials "title" | default "" -}}
+{{- $subtitle := index $materials "subtitle" | default "" -}}
+{{- $cards := index $materials "cards" | default "" -}}
+<section class="section section-grey section-solution-detail-materials is-medium ">
+  <div class="container">
+    <div class="container has-text-centered mb-6">
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-8">
+          {{- if $sectionTitle }}
+            <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+          {{- end }}
+          {{- if $title }}
+            <h1 class="section-title is-spaced mb-4">{{ $title }}</h1>
+          {{- end }}
+          {{- if $subtitle }}
+            <h3 class="section-subtitle">{{ $subtitle }}</h3>
+          {{- end }}
+        </div>
+      </div>
+    </div>
+    <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
+      {{ range $cards }}
+        <div class="column is-6">
+          <div class="card is-flex is-flex-direction-column is-flex-grow-1 h-full p-0">
+            <div class="is-flex is-flex-direction-column is-flex-grow-1 has-text-centered pb-6 mx-5">
+                <h4 class="title is-4 mb-2 mt-5 mx-5" style="font-size: 120%;">{{ .title }}</h4>
+                <p class="subtitle mt-4 mb-0">{{ .description | markdownify }}</p>
+                <div class="is-flex-grow-1 mb-4"></div>
+                <ul class="has-text-left">
+                  {{ range .links }}
+                    <li class="my-3" style="line-height: 3; margin-left: 2em;">
+                      <a href="{{ .url | absURL }}" target="_blank" rel="noopener noreferrer" style="word-break: break-word; font-size: 0.9em;">
+                        {{ if (hasSuffix .url ".pdf") }}
+                          <span class="icon is-small" style="margin-right: 1em;">
+                            <i class="fas fa-file-pdf fa-2x"></i>
+                          </span>
+                        {{ else }}
+                          <span class="icon is-small mr-1">
+                            <i class="fas fa-arrow-right"></i>
+                          </span>
+                        {{ end }}
+                        {{ .text }}
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

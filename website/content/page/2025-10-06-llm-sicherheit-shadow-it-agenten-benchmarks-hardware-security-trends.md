@@ -112,7 +112,7 @@ categories: ["AI Sicherheit"]
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt mit einer individuellen Risikoanalyse für Ihre LLM- und KI-Agentenprojekte. Profitieren Sie von aktuellen Benchmarks, fundierter Beratung und sicheren Technologie-Stacks – kontaktieren Sie uns oder buchen Sie einen Experten-Workshop für Ihr Team!
 {{< /page-cta >}}
 {{< page-section >}}

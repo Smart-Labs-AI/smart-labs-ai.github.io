@@ -132,7 +132,7 @@ Wer auf die nächste Security-Generation wartet, riskiert den Anschluss. Entsche
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt: Vereinbaren Sie einen AI-Security Quick-Check oder Pilotprojekt für zertifizierte LLM-Prozesse. Machen Sie Ihr Unternehmen fit für die sichere KI-Zukunft!
 {{< /page-cta >}}
 {{< page-section >}}

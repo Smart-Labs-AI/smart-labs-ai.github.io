@@ -2,6 +2,7 @@
 title: Allgemeine Geschäftsbedingungen (AGB)
 include_footer: true
 sidebar: false
+layout: "plain"
 ---
 
 # Allgemeine Geschäftsbedingungen (AGB)

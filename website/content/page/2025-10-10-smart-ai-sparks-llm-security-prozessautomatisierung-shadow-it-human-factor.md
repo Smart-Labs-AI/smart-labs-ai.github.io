@@ -136,7 +136,7 @@ Zukunftsfähige KI entsteht nicht durch blinden Aktionismus, sondern durch lerne
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starten Sie jetzt: Überprüfen Sie Ihre aktuelle KI-Landschaft, decken Sie Shadow-IT auf, führen Sie LLM-Sicherheitsaudits durch und schulen Sie Ihr Team zu aktuellen Risiken – oder lassen Sie sich begleiten!
 {{< /page-cta >}}
 {{< page-section >}}

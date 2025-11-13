@@ -119,7 +119,7 @@ Jetzt ist die Zeit, LLM-Sicherheit systematisch zu prüfen, Security-Trainings d
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starte jetzt mit einem LLM-Security-Assessment oder buche einen Enablement-Workshop für dein Team. Setze ein Zeichen als Vorreiter sicherer KI-Prozesse!
 {{< /page-cta >}}
 {{< page-section >}}

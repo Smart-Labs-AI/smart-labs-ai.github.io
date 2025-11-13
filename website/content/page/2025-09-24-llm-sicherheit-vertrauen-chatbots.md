@@ -131,7 +131,7 @@ Vertrauenswürdige, sichere KI ist heute Pflicht. Handlungsschnelle Unternehmen 
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Starte jetzt: Sichere dir einen Expert:innen-Workshop zu KI-Architekturen oder lasse bestehende Chatbots auf Risiken prüfen. Schütze dein Unternehmen aktiv!
 {{< /page-cta >}}
 {{< page-section >}}

@@ -35,14 +35,16 @@
   background: linear-gradient(45deg, #007bff, #0056b3);
   border-radius: 4px;
   width: 0%;
-  transition: width 0.3s ease;
+  transition: width 0.5s ease;
 }
 
-.progress.is-small.animate .progress-value {
-  animation: progressFill 2.9s ease-out forwards;
+.progress.is-small.animate .progress-value,
+.mobile-progress.animate .mobile-progress-value {
+  animation: progressFill 4.4s ease-out forwards;
 }
 
-.progress.is-small.animate.shimmer::before {
+.progress.is-small.shimmer::before,
+.mobile-progress.shimmer::before {
   content: '';
   position: absolute;
   top: 0;
@@ -50,7 +52,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  animation: shimmer 2s infinite 0.5s;
+  animation: shimmer 4s infinite 0.5s;
   z-index: 2;
 }
 
@@ -155,7 +157,6 @@
               hidden
               {{ if eq $index 0 }}checked{{ end }}
               data-image-index="{{ $index }}"
-              data-progress="{{ if eq $index 0 }}33.33{{ else if eq $index 1 }}66.66{{ else if eq $index 2 }}100{{ else }}0{{ end }}"
               data-description="{{ $feature.description }}"
           >
           <label for="feature-{{ $index }}" class="feature-card">
@@ -182,7 +183,6 @@
                 hidden
                 {{ if eq $index 0 }}checked{{ end }}
                 data-image-index="{{ $index }}"
-                data-progress="{{ if eq $index 0 }}33.33{{ else if eq $index 1 }}66.66{{ else if eq $index 2 }}100{{ else }}0{{ end }}"
                 data-description="{{ $feature.description }}"
             >
             <label for="feature-mobile-{{ $index }}" class="mobile-icon-btn">
@@ -194,12 +194,14 @@
             <h3 class="mobile-feature-title" id="mobile-feature-title">
               {{ (index $features 0).description }}
             </h3>
-            <div class="mobile-progress" id="mobile-progress"><div class="mobile-progress-value" style="width: 33.33%"></div></div>
+            <div class="mobile-progress" id="mobile-progress">
+              <div class="mobile-progress-value"></div>
+            </div>
           </div>
         </div>
         
         <div class="feature-chart" style="background-image: url('{{ $processed1.RelPermalink }}');">
-          <img class="feature-chart-image" src="{{ $processed2.RelPermalink }}" alt="Feature Image 1" data-index="0" style="display: block;">
+          <img class="feature-chart-image" src="{{ $processed2.RelPermalink }}" alt="Feature Image 1" data-index="0">
           <img class="feature-chart-image" src="{{ $processed3.RelPermalink }}" alt="Feature Image 2" data-index="1">
           <img class="feature-chart-image" src="{{ $processed4.RelPermalink }}" alt="Feature Image 3" data-index="2">
         </div>
@@ -227,9 +229,10 @@ document.addEventListener('DOMContentLoaded', function () {
   
   let currentIndex = 0;
   let intervalId;
+  let isManualInteraction = false;
 
   const animateProgress = (progressEl, isAuto = false) => {
-    const progressValueEl = progressEl.querySelector('.progress-value');
+    const progressValueEl = progressEl.querySelector('.progress-value, .mobile-progress-value');
     if (!progressValueEl) return;
 
     progressEl.classList.remove('animate', 'shimmer');
@@ -241,8 +244,8 @@ document.addEventListener('DOMContentLoaded', function () {
       progressEl.classList.add('animate');
       setTimeout(() => progressEl.classList.add('shimmer'), 500);
     } else {
-      const targetValue = progressEl.closest('label').previousElementSibling.getAttribute('data-progress');
-      progressValueEl.style.width = (targetValue || 0) + '%';
+      progressValueEl.style.width = '100%';
+      setTimeout(() => progressEl.classList.add('shimmer'), 500);
     }
   };
 
@@ -250,7 +253,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!radio) return;
     
     const imageIndex = parseInt(radio.getAttribute('data-image-index'));
-    const progressValue = radio.getAttribute('data-progress');
     const description = radio.getAttribute('data-description');
 
     chartImages.forEach(img => {
@@ -285,56 +287,81 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 150);
     }
 
-    if (mobileProgress && progressValue) {
+    if (mobileProgress) {
+      mobileProgress.classList.remove('animate', 'shimmer');
       const mobileProgressValue = mobileProgress.querySelector('.mobile-progress-value');
       if (mobileProgressValue) {
-        mobileProgressValue.style.width = progressValue + '%';
+        mobileProgressValue.style.width = '0%';
+        void mobileProgress.offsetHeight;
+        
+        if (isAuto) {
+          mobileProgress.classList.add('animate');
+          setTimeout(() => mobileProgress.classList.add('shimmer'), 500);
+        } else {
+          mobileProgressValue.style.width = '100%';
+          setTimeout(() => mobileProgress.classList.add('shimmer'), 500);
+        }
       }
     }
   };
 
   const startCarousel = () => {
+    if (intervalId) {
+      stopCarousel();
+    }
+    
     const radios = window.innerWidth <= 920 ? mobileRadios : desktopRadios;
     
     intervalId = setInterval(() => {
-      currentIndex = (currentIndex + 1) % radios.length;
-      const nextRadio = radios[currentIndex];
-      nextRadio.checked = true;
-      applyState(nextRadio, true);
-    }, 3500);
+      if (!isManualInteraction) {
+        currentIndex = (currentIndex + 1) % radios.length;
+        const nextRadio = radios[currentIndex];
+        nextRadio.checked = true;
+        applyState(nextRadio, true);
+      }
+    }, 5000);
   };
 
   const stopCarousel = () => {
-    clearInterval(intervalId);
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
   };
 
-  const activeRadio = wrapper.querySelector('input[name="feature"]:checked') || desktopRadios[0];
-  if (activeRadio) {
-    currentIndex = Array.from(desktopRadios).indexOf(activeRadio);
-    applyState(activeRadio, false);
-  }
-
-  [...desktopRadios, ...mobileRadios].forEach((radio, index) => {
+  [...desktopRadios, ...mobileRadios].forEach((radio) => {
     radio.addEventListener('change', () => {
       if (radio.checked) {
+        isManualInteraction = true;
         stopCarousel();
         currentIndex = parseInt(radio.getAttribute('data-image-index'));
         applyState(radio, false);
-        setTimeout(startCarousel, 3500);
+        setTimeout(() => {
+          isManualInteraction = false;
+          startCarousel();
+        }, 5000);
       }
     });
   });
+
+  setTimeout(() => {
+    const firstRadio = desktopRadios[0];
+    if (firstRadio) {
+      applyState(firstRadio, true);
+      startCarousel();
+    }
+  }, 500);
 
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-      stopCarousel();
-      startCarousel();
+      if (!isManualInteraction) {
+        stopCarousel();
+        startCarousel();
+      }
     }, 250);
   });
-
-  startCarousel();
 });
 </script>
 {{ else }}

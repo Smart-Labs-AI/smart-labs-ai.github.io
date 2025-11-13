@@ -117,7 +117,7 @@ Warten Sie nicht: Entwickeln Sie eine individuelle Roadmap für sichere LLMs und
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten – Fordern Sie ein individuelles LLM-Security-Assessment an, nehmen Sie an einem spezialisierten Governance-Workshop teil oder kontaktieren Sie unsere Experten für ein Beratungsgespräch. Machen Sie Ihre Strategie klar – handeln Sie jetzt.
 {{< /page-cta >}}
 {{< page-section >}}

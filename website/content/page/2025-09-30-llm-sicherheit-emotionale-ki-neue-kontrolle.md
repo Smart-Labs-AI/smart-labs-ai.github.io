@@ -154,7 +154,7 @@ Innovation braucht Führung. Richten Sie Sicherheitsprozesse neu aus, schulen Si
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt anpacken:** Schulen Sie Ihr Team und übernehmen Sie Führungsstärke. Kontaktieren Sie Experten, bauen Sie KI-Schutz und emotionale Filter gezielt auf und halten Sie sich über neue Angriffsarten auf dem Laufenden. Machen Sie KI zu Ihrer Stärke – nicht zum Risiko.
 {{< /page-cta >}}
 {{< page-section >}}

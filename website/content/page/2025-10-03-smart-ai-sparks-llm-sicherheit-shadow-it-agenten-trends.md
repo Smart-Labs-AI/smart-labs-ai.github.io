@@ -111,7 +111,7 @@ Führung heißt: Jetzt handeln und proaktiv sichere, erklärbare KI-Lösungen ei
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 Jetzt starten – Sichern Sie Ihre digitale Zukunft: Vereinbaren Sie einen Expert:innen-Termin, prüfen Sie aktuelle LLM-Security-Lösungen und positionieren Sie Ihr Unternehmen als Vorreiter für vertrauenswürdige KI!
 {{< /page-cta >}}
 {{< page-section >}}

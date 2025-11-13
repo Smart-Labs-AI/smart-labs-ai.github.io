@@ -3,6 +3,7 @@ title: Risikobewertung des Produktes Defense API (DAPI)
 product_document_type: "risikobewertung"
 include_footer: true
 sidebar: false
+layout: "plain"
 ---
 
 <style>

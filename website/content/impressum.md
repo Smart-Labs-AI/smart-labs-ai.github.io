@@ -2,9 +2,10 @@
 title: Impressum der Smart Labs AI GmbH
 include_footer: true
 sidebar: false
+layout: "plain"
 ---
 
-{{% title4 "Anschrift" %}}
+## Anschrift
 *Smart Labs AI GmbH*
 <br>
 Nordport Towers
@@ -15,39 +16,25 @@ Südportal 3
 <br>
 Deutschland
 
-<br>
-
-{{% title4 "E-Mail" %}}
+## E-Mail
 kontakt@smart-labs.ai
 
-<br>
-
-{{% title4 "Telefon" %}}
+## Telefon
 +49 40 604 29 67 0
 
-<br>
-
-{{% title4 "Geschäftsführer" %}}
+## Geschäftsführer
 Benjamin Gnahm, Tobias P. Metz, Stefan A. Fenn, Fabian D. Bühler
 
-<br>
-
-{{% title4 "Registergericht" %}}
+## Registergericht
 Handelsregister, Registergericht Kiel
 
-<br>
-
-{{% title4 "Registernummer" %}}
+## Registernummer
 HRB 26891 KI
 
-<br>
-
-{{% title4 "Umsatzsteuer-Identifikationsnummer" %}}
+ ## Umsatzsteuer-Identifikationsnummer
 DE 368 388 426
 
-
-<br>
-{{% title4 "Inhaltlich Verantwortlicher" %}}
+## Inhaltlich Verantwortlicher
 Stefan A. Fenn, Fabian D. Bühler
 <br>
 Nordport Towers
@@ -58,8 +45,6 @@ Südportal 3
 <br>
 Deutschland
 
-<br>
-
-{{% title4 "Streitschlichtung" %}}
+## Streitschlichtung
 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: [https://ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr)
 Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.

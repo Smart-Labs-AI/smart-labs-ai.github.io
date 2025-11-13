@@ -157,7 +157,7 @@ Wer jetzt umfassend in LLM-Sicherheit, faire Modelle und Automatisierung investi
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Jetzt durchstarten: Sicherheit in die KI-Roadmap integrieren!**
 
 - Individuelle Bestandsaufnahme: Welche LLM-Risiken betreffen Ihre Organisation?

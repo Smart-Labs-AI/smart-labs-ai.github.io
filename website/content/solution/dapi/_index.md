@@ -6,6 +6,12 @@ include_footer: true
 description: "Die Defense API (DAPI) von Smart Labs AI ist Ihre Plattform für LLM Security. Schützen Sie Ihre KI vor Prompt Injection, Datenlecks und anderen Angriffen."
 type: solution
 is_main_solution_site: true
+
+applicationCategory: "SecurityApplication"
+operatingSystem: "All"
+price: 5.99
+priceCurrency: "EUR"
+
 hero:
   background-image: "/solution/dapi/hero.png"
   section-title: "LLM Security Platform"
@@ -23,6 +29,7 @@ hero:
     - label: "Datasheet anfordern"
       href: "/contact"
       class: "secondary-btn"
+
 features:
   section-title: "Feature"
   title: "Warum DAPI? Weil Ihre KI keine zweite Chance verdient."
@@ -40,6 +47,7 @@ features:
         description: "Verfolgen Sie, was Ihre KI wann, warum und wie getan hat – durch Logs, Metriken und konfigurierbare Alerts."
         image: "/images/illustrations/icons/audit-trails.svg"
         background: "/solution/feature-card-background.png"
+
 advantage:
   section-title: "Vorteil"
   title: "DAPI sichert, was Ihnen gehört."
@@ -51,11 +59,13 @@ advantage:
         image: "/images/illustrations/icons/no-templates.svg"
       - title: "Agent Protection für automatisierte Workflows"
         image: "/images/illustrations/icons/dsgvo.svg"
+
 benefit:
   background-image: "/solution/dapi/hero.png"
   section-title: "Benefit"
   title: "Ganzheitlicher Schutz für Ihre generativen KI-Anwendungen"
   content: "DAPI agiert als intelligente Firewall für Ihre LLM-Anwendungen. Sie analysiert und filtert alle Anfragen in Echtzeit, blockiert schädliche Prompts und schützt Ihre KI vor unautorisierten Zugriffen und Datenlecks – für eine sichere und regelkonforme Nutzung."
+
 useCases:
   section-title: "Typische Einsatzfelder"
   title: "DAPI schützt Ihre KI, wie eine Firewall Ihre Server."
@@ -73,5 +83,29 @@ useCases:
       image: "/images/illustrations/icons/prompt.svg"
       ctaLink: "/contact"
       ctaText: "Mehr erfahren"
+
 pricingKey: "dapi"
+materials:
+  section-title: "Ressourcen & Forschung"
+  title: "Weitere Unterlagen und Einblicke in LLM-Security-Forschung"
+  subtitle: "Alle relevanten Dokumente zur Defense API und unsere aktuelle Forschung im Bereich KI-Sicherheit. Vertiefen Sie Ihr Wissen und schützen Sie Ihre LLM-Anwendungen."
+  cards:
+    - title: "Defense API (DAPI) Dokumente"
+      description: "Hier finden Sie alle relevanten Dokumente zur Defense API."
+      links:
+        - text: "One-Pager (DE)"
+          url: "/solution/dapi/material/Defense-API - 2025.pdf"
+        - text: "One-Pager (EN)"
+          url: "/solution/dapi/material/Defense-API-2025-en.pdf"
+        - text: "Leistungsbeschreibung DAPI"
+          url: "/solution/dapi/leistungsbeschreibung-dapi"
+    - title: "Forschung zur KI-Sicherheit"
+      description: "Unsere aktuelle Forschung im Bereich LLM Security. Wir veröffentlichen regelmäßig unsere neuesten Erkenntnisse zu Angriffen und Verteidigungsstrategien für KI-Systeme."
+      links:
+        - text: "Paper: Exploiting Web Search Tools of AI Agents for Data Exfiltration (PDF)"
+          url: "/solution/dapi/material/2510.09093v1.pdf"
+        - text: "Paper: Exploiting Web Search Tools of AI Agents for Data Exfiltration (arXiv)"
+          url: "https://arxiv.org/abs/2510.09093"
+        - text: "KI-Vertrauen neu denken: LLMs sicher nutzen und gezielt schützen"
+          url: "/page/2025-11-05-llm-sicherheit-in-der-praxis-whitepaper/"
 ---

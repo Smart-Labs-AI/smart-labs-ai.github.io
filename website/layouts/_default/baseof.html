@@ -5,31 +5,31 @@
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     {{ partial "css.html" . }}
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Smart Labs AI GmbH",
-      "url": "{{ .Site.BaseURL }}",
-      "logo": "{{ .Site.BaseURL }}images/logos/logo.svg",
-      "sameAs": [
-        "https://www.linkedin.com/company/smart-labs-ai-gmbh"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "url": "{{ .Site.BaseURL }}",
-      "name": "{{ .Site.Title }}",
-      "description": "{{ .Site.Params.description }}",
-      "publisher": {
-        "@id": "{{ .Site.BaseURL }}#organization"
-      },
-      "inLanguage": "de-DE"
-    }
-  ]
-}
-</script>
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Smart Labs AI GmbH",
+            "url": "{{ .Site.BaseURL }}",
+            "logo": "{{ .Site.BaseURL }}images/logos/logo.svg",
+            "sameAs": [
+              "https://www.linkedin.com/company/smart-labs-ai-gmbh"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "url": "{{ .Site.BaseURL }}",
+            "name": "{{ .Site.Title }}",
+            "description": "{{ .Site.Params.description }}",
+            "publisher": {
+              "@id": "{{ .Site.BaseURL }}#organization"
+            },
+            "inLanguage": "de-DE"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     {{ if ne .Site.Params.preloader false }}
@@ -43,5 +43,9 @@
     {{ end }}
 
     {{ partial "javascript.html" . }}
+    
+    {{ if .Site.Params.enableSmartDragon }}
+      {{ partial "smart-dragon.html" . }}
+    {{ end }}
   </body>
 </html>

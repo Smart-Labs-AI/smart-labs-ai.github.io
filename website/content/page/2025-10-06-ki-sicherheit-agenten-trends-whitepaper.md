@@ -96,7 +96,7 @@ Wer jetzt startet, schafft sich Vorsprung: Smart AI Security bedeutet, Risiken v
 {{< /page-outline >}}
 
 {{< /page-section >}}
-{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/#contact" >}}
+{{< page-cta image="page/images/cta.png" alt="Jetzt starten" button-text="Jetzt unverbindlich anfragen" button-link="/contact" >}}
 **Ergreifen Sie jetzt die Initiative! Vereinbaren Sie eine Erstberatung, starten Sie gezielte Schulungsprogramme oder fordern Sie unseren Leitfaden zur Umsetzung an. Wer früh aktiv wird, baut Vorsprung auf und schützt Unternehmen, Daten und Kunden!**
 {{< /page-cta >}}
 {{< page-section >}}
