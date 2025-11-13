@@ -5,15 +5,9 @@
 {{- $title      := index $aboutUsHero "title" }}
 {{- $subtitle   := index $aboutUsHero "subtitle" }}
 
-{{ $src := $backgroundImage }}
-{{ $img := resources.Get $src }}
-{{ $backgroundImage := $src }}
-{{ if $img }}
-{{ $processedBackground := $img.Process "resize 1800x webp q100" }}
-{{ $backgroundImage = $processedBackground.RelPermalink }}
-  <div class="aboutus-hero-background" style="background-image: url('{{ $backgroundImage }}');"></div>
+<div class="aboutus-hero-background" style="background-image: url('{{ partial "convert-image.html" (dict "src" $backgroundImage "resize" "1800x" "quality" "90") }}');"></div>
 
-  {{ partial "imageproc.html" (dict "src" $mainImage "alt" "Teamfoto" "resize" "1200x" "quality" "90") }}
+  <img alt="Teamfoto" src="{{ partial "convert-image.html" (dict "src" $mainImage "resize" "1200x" "quality" "90") }}">
 
   <div class="container aboutus-hero-body">
     <div class="landing-caption">
@@ -30,6 +24,3 @@
       {{ end }}
     </div>
   </div>
-{{ else }}
-{{ errorf "Image not found: %s" $src }}
-{{ end }}

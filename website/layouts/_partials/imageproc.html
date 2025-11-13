@@ -2,17 +2,5 @@
     Usage: {{ partial "imgproc.html" (dict "src" "/path/to/image.jpg" "alt" "Alt text" "resize" "1200x" "quality" "90") }}
 */}}
 
-{{ $src := .src }}
-{{ $alt := .alt | default "" }}
-{{ $resize := .resize | default "1200x" }}
-{{ $quality := .quality | default "90" }}
-{{ $format := .format | default "webp" }}
-
-{{ $img := resources.Get $src }}
-{{ if $img }}
-{{ $processString := printf "resize %s %s q%s" $resize $format $quality }}
-{{ $processed := $img.Process $processString }}
-<img src="{{ $processed.RelPermalink }}" alt="{{ $alt }}" loading="lazy" />
-{{ else }}
-{{ errorf "Image not found: %s" $src }}
-{{ end }}
+{{ $image := partial "convert-image.html" (dict "src" .src "resize" (.resize | default "1200x") "quality" (.quality | default "90") "format" (.format | default "webp")) }}
+<img src='{{ $image.url }}' alt="{{ .alt | default "" }}" loading="lazy" />

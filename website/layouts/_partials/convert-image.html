@@ -1,0 +1,25 @@
+{{/*
+    Usage: {{ partial "convert-image.html" (dict "src" "/path/to/image.jpg" "resize" "1200x" "quality" "90" "format" "webp") }}
+    Returns: Relative URL to the processed image.
+*/}}
+{{- $src := .src -}}
+{{- $resize := .resize | default "1200x" -}}
+{{- $quality := .quality | default "90" -}}
+{{- $format := .format | default "webp" -}}
+
+{{- $img := "" -}}
+{{- if not (strings.HasPrefix $src "http") -}}
+    {{- $img = resources.Get $src -}}
+{{- else -}}
+    {{- $img = resources.GetRemote $src -}}
+{{- end -}}
+
+{{- $result := dict -}}
+{{- if $img -}}
+  {{- $processString := printf "resize %s %s q%s" $resize $format $quality -}}
+  {{- $processed := $img.Process $processString -}}
+  {{- $result = dict "url" $processed.RelPermalink "width" $processed.Width "height" $processed.Height -}}
+{{- else -}}
+  {{- errorf "Image not found: %s" $src -}}
+{{- end -}}
+{{- return $result -}}
