@@ -6,23 +6,49 @@
 {{- $subtitle   := index $aboutUsHero "subtitle" }}
 
 {{- $bgImage := partial "convert-image.html" (dict "src" $backgroundImage "resize" "1800x" "quality" "90") -}}
-<div class="aboutus-hero-background" style="background-image: url('{{ $bgImage.url }}');"></div>
+{{- $mImage := partial "convert-image.html" (dict "src" $mainImage "resize" "1280x" "quality" "100") -}}
 
-{{- $mImage := partial "convert-image.html" (dict "src" $mainImage "resize" "1200x" "quality" "90") -}}
-  <img alt="Teamfoto" src="{{ $mImage.url }}">
+<style>
+  .hero-background-custom::before {
+    background: url('{{ $bgImage.url }}') no-repeat center;
+    background-size: 100% 100%;
+  }
+  .main-image-centered-rounded {
+    display: block; /* Make it a block element to apply margin auto */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px; /* Makes the image rectangular with rounded corners */
+    /* You might want to add a fixed width/height or max-width for better control */
+    max-width: 1280px; /* Example size */
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+</style>
 
-  <div class="container aboutus-hero-body">
-    <div class="landing-caption">
-      <p class="aboutus-page-title">
-        {{ $pageTitle }}
-      </p>
+<section class="section section-hero">
+  <div class="section hero-container">
+    <div class="hero-background-custom"></div>
+    
+    <div class="hero-body">
+      <div class="container">
+        <div class="hero-content">
+          <div class="section-badge">
+            <span class="section-title">{{ $pageTitle | markdownify }}</span>
+          </div>
+          
+          <h1 class="hero-title">
+            {{ $title }}
+          </h1>
 
-      <h1 class="hero-title section-title">
-        {{ $title }}
-      </h1>
+          {{ with $subtitle }}
+          <p class="hero-subtitle mt-6">
+            {{ . | markdownify }}
+          </p>
+          {{ end }}
 
-      {{ with $subtitle }}
-      <h2 class="hero-subtitle">{{ . | markdownify }}</h2>
-      {{ end }}
+          <img alt="Teamfoto" src="{{ $mImage.url }}" class="main-image-centered-rounded">
+        </div>
+      </div>
     </div>
   </div>
+</section>
