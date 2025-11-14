@@ -97,3 +97,17 @@ categories: ["AI Sicherheit"]
 
 **Kontaktieren Sie uns noch heute für Ihren kostenlosen KI-Sicherheits-Check!**
 {{< /page-cta >}}
+
+{{< page-section >}}
+
+{{< page-content >}}
+## KI-generierter Inhalt
+
+Dieser Text wurde mithilfe künstlicher Intelligenz erstellt und redaktionell überprüft. Wir setzen KI-Technologie ein, um Ihnen aktuelle und relevante Informationen bereitzustellen.
+{{< /page-content >}}
+
+{{< page-outline >}}
+
+{{< /page-outline >}}
+
+{{< /page-section >}}

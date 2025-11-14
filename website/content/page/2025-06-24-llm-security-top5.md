@@ -132,3 +132,16 @@ Sie wollen LLM-Sicherheit auf Enterprise-Level? Starten Sie jetzt mit einem Secu
 {{< /page-outline >}}
 
 {{< /page-section >}}
+{{< page-section >}}
+
+{{< page-content >}}
+## KI-generierter Inhalt
+
+Dieser Text wurde mithilfe künstlicher Intelligenz erstellt und redaktionell überprüft. Wir setzen KI-Technologie ein, um Ihnen aktuelle und relevante Informationen bereitzustellen.
+{{< /page-content >}}
+
+{{< page-outline >}}
+
+{{< /page-outline >}}
+
+{{< /page-section >}}

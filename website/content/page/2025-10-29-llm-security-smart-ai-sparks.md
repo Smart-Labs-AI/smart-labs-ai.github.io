@@ -154,3 +154,16 @@ Konsequente Transparenz, robustere Security-Prozesse und agentenbasierte Governa
 {{< /page-outline >}}
 
 {{< /page-section >}}
+{{< page-section >}}
+
+{{< page-content >}}
+## KI-generierter Inhalt
+
+Dieser Text wurde mithilfe künstlicher Intelligenz erstellt und redaktionell überprüft. Wir setzen KI-Technologie ein, um Ihnen aktuelle und relevante Informationen bereitzustellen.
+{{< /page-content >}}
+
+{{< page-outline >}}
+
+{{< /page-outline >}}
+
+{{< /page-section >}}
