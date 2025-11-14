@@ -5,9 +5,11 @@
 {{- $title      := index $aboutUsHero "title" }}
 {{- $subtitle   := index $aboutUsHero "subtitle" }}
 
-<div class="aboutus-hero-background" style="background-image: url('{{ partial "convert-image.html" (dict "src" $backgroundImage "resize" "1800x" "quality" "90") }}');"></div>
+{{- $bgImage := partial "convert-image.html" (dict "src" $backgroundImage "resize" "1800x" "quality" "90") -}}
+<div class="aboutus-hero-background" style="background-image: url('{{ $bgImage.url }}');"></div>
 
-  <img alt="Teamfoto" src="{{ partial "convert-image.html" (dict "src" $mainImage "resize" "1200x" "quality" "90") }}">
+{{- $mImage := partial "convert-image.html" (dict "src" $mainImage "resize" "1200x" "quality" "90") -}}
+  <img alt="Teamfoto" src="{{ $mImage.url }}">
 
   <div class="container aboutus-hero-body">
     <div class="landing-caption">
