@@ -1,0 +1,44 @@
+{{- $teamData       := .Params.team }}
+{{- $sectionTitle   := index $teamData "sectionTitle" }}
+{{- $sectionSubtitle:= index $teamData "sectionSubtitle" }}
+{{- $members        := index $teamData "members" }}
+
+<section class="section section-team section-grey">
+  <div class="container team-container">
+    <div class="team-content">
+      <div class="title-wrapper has-text-centered">
+        <p class="section-subtitle">{{ $sectionSubtitle }}</p>
+        <h2 class="section-title">{{ $sectionTitle }}</h2>
+      </div>
+
+      <div class="columns is-multiline is-variable is-6">
+        {{ range $members }}
+        <div class="column is-one-third-desktop is-half-tablet">
+          <div class="card team-card is-flex is-flex-direction-column is-fullheight">
+            <div class="card-image">
+              <figure class="image is-3by4 team-card-image">
+
+                {{- $teamImage := partial "convert-image.html" (dict "src" .image "resize" "800x" "quality" "90") -}}
+                <img src="{{ $teamImage.url }}" alt="{{ .name }}" style="border-radius: 6000px;">
+              </figure>
+            </div>
+
+            <div class="card-content team-card-content">
+              <p class="team-card-name">{{ .name }}</p>
+              <p class="team-card-position">{{ .position }}</p>
+
+              {{ with .linkedin }}
+              <a href="{{ . }}" class="team-card-linkedin" target="_blank" rel="noopener">
+                <span class="icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </span>
+              </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

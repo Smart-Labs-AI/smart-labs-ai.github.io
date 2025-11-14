@@ -1,6 +1,0 @@
-{{/* 
-    Usage: {{ partial "imgproc.html" (dict "src" "/path/to/image.jpg" "alt" "Alt text" "resize" "1200x" "quality" "90") }}
-*/}}
-
-{{ $image := partial "convert-image.html" (dict "src" .src "resize" (.resize | default "1200x") "quality" (.quality | default "90") "format" (.format | default "webp")) }}
-<img src='{{ $image.url }}' alt="{{ .alt | default "" }}" loading="lazy" />

@@ -1,28 +1,48 @@
 {{- $aboutUsValues   := .Params.aboutus_values }}
-{{- $sectionTitle    := index $aboutUsValues "sectionTitle" }}
-{{- $sectionSubtitle := index $aboutUsValues "sectionSubtitle" }}
+{{- $sectionTitle    := index $aboutUsValues "section-title" }}
+{{- $title := index $aboutUsValues "title" }}
 {{- $values          := index $aboutUsValues "values" }}
 
-<div class="container-fluid aboutus-values-container">
-  <div class="aboutus-values-content">
-    <div class="aboutus-mission-title">
-      <p class="aboutus-mission-section-subtitle">{{ $sectionSubtitle }}</p>
-      <h2 class="aboutus-mission-section-title">{{ $sectionTitle }}</h2>
+<section class="section section-grey">
+  <div class="container has-text-centered">
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-8">
+        {{- if $sectionTitle }}
+          <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+        {{- end }}
+        {{- if $title }}
+          <h3 class="section-title">{{ $title }}</h3>
+        {{- end }}
+      </div>
     </div>
-    <div class="aboutus-values-boxes">
-      {{ range $values }}
-      <div class="aboutus-values-box">
-        <div class="aboutus-values-box-icon-wrapper">
-          <img class="aboutus-values-box-icon" src="{{ .icon }}" alt="{{ .title }}">
-        </div>
-        <div class="aboutus-values-box-text">
-          <h3 class="aboutus-values-box-title">{{ .title }}</h3>
-          <div class="aboutus-values-box-description">
-            {{ .description | markdownify }}
+  </div>
+
+  <div class="container mt-6">
+    <div class="columns is-multiline">
+      {{ $len := len $values }}
+      {{ range $i, $e := $values }}
+      {{ $isLast := eq (add $i 1) $len }}
+      {{ $isOdd := modBool $len 2 }}
+      <div class="column {{ if and $isLast $isOdd }}is-full{{ else }}is-half{{ end }}">
+        {{ $bg := "" }}
+        {{ if or (eq $i 0) (eq $i 1) }}
+          {{ $bg = "/images/about-us/values/background_1.png" }}
+        {{ else }}
+          {{ $bg = "/images/about-us/values/background_2.png" }}
+        {{ end }}
+        <div class="card" style="background-image: url('{{ $bg }}'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white; border-radius: 24px; padding: 2rem;">
+          <div class="card-content">
+            <figure class="image is-48x48" style="margin-bottom: 1rem;">
+              <img src="{{ .icon }}" alt="{{ .title }}">
+            </figure>
+            <p class="title is-4" style="color: white; font-family: Inter; font-size: 24px; font-weight: 600;">{{ .title }}</p>
+            <div class="content" style="color: rgba(255, 255, 255, 0.7); font-family: Inter; font-size: 18px; font-weight: 400;">
+              {{ .description | markdownify }}
+            </div>
           </div>
         </div>
       </div>
       {{ end }}
     </div>
   </div>
-</div>
+</section>

@@ -6,30 +6,20 @@
 {{- $subtitle   := index $aboutUsHero "subtitle" }}
 
 {{- $bgImage := partial "convert-image.html" (dict "src" $backgroundImage "resize" "1800x" "quality" "90") -}}
-{{- $mImage := partial "convert-image.html" (dict "src" $mainImage "resize" "1280x" "quality" "100") -}}
+{{- $mainImage := partial "convert-image.html" (dict "src" $mainImage "resize" "1280x" "quality" "100") -}}
 
 <style>
   .hero-background-custom::before {
     background: url('{{ $bgImage.url }}') no-repeat center;
     background-size: 100% 100%;
   }
-  .main-image-centered-rounded {
-    display: block; /* Make it a block element to apply margin auto */
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 24px; /* Makes the image rectangular with rounded corners */
-    /* You might want to add a fixed width/height or max-width for better control */
-    max-width: 1280px; /* Example size */
-    height: auto;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-  }
 </style>
 
-<section class="section section-hero">
+<section class="section section-hero" style="padding-top: 0em">
   <div class="section hero-container">
     <div class="hero-background-custom"></div>
     
-    <div class="hero-body">
+    <div class="hero-body" style="padding-top:0">
       <div class="container">
         <div class="hero-content">
           <div class="section-badge">
@@ -41,12 +31,17 @@
           </h1>
 
           {{ with $subtitle }}
-          <p class="hero-subtitle mt-6">
+          <p class="hero-subtitle mt-3" style="max-width: 1200px;">
             {{ . | markdownify }}
           </p>
           {{ end }}
 
-          <img alt="Teamfoto" src="{{ $mImage.url }}" class="main-image-centered-rounded">
+          {{- partial "ambilight.html" (dict 
+            "image" $mainImage.url
+            "autoplay" "true"
+            "colorMode" "dominant"
+        ) -}}
+
         </div>
       </div>
     </div>

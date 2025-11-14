@@ -3,16 +3,17 @@
 {{- $sectionSubtitle := index $aboutUsGoal "sectionSubtitle" }}
 {{- $goalDescription := index $aboutUsGoal "goalDescription" }}
 
+<section class="section section-about-us-goal section-white is-medium">
+  <div class="container aboutus-goal-container">
+    <div class="aboutus-goal-content">
+      <div class="aboutus-goal-title">
+        <p class="aboutus-goal-section-subtitle">{{ $sectionSubtitle }}</p>
+        <h2 class="aboutus-goal-section-title">{{ $sectionTitle }}</h2>
+      </div>
 
-<div class="container-fluid aboutus-goal-container">
-  <div class="aboutus-goal-content">
-    <div class="aboutus-goal-title">
-      <p class="aboutus-goal-section-subtitle">{{ $sectionSubtitle }}</p>
-      <h2 class="aboutus-goal-section-title">{{ $sectionTitle }}</h2>
-    </div>
-
-    <div class="aboutus-goal-description">
-      {{ $goalDescription | markdownify }}
+      <div class="aboutus-goal-description">
+        {{ $goalDescription | markdownify }}
+      </div>
     </div>
   </div>
-</div>
+</section>

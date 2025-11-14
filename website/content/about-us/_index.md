@@ -16,8 +16,9 @@ aboutus_mission:
   productDescription: Smart Labs AI wurde gegründet, um Vertrauen in eine technologische Zukunft zu schaffen. <br><br> Wir verbinden Machine Learning, Cybersicherheit und Produktdesign zu Lösungen, die KI sicher machen – für Menschen und Organisationen.
 
 aboutus_values:
-  sectionTitle: Das macht uns aus
-  sectionSubtitle: Unsere Werte
+
+  section-title: "Unsere Werte"
+  title: "Das macht uns aus"
   values:
     - title: Verwurzelt in Europa
       description: Technologie mit Haltung, gebaut für Vertrauen.
@@ -41,4 +42,33 @@ aboutus_cta:
   primaryButtonLink:
   secondaryButtonText: Initiativ bewerben
   secondaryButtonLink:
+
+team:
+  sectionTitle: "Die Menschen hinter Smart Labs AI"
+  sectionSubtitle: "Unser Team"
+  members:
+    - name: "Stefan Fenn"
+      position: "Geschäftsführer"
+      image: "/about-us/stefan_fenn.jpeg"
+      linkedin: "https://www.linkedin.com/in/stefan-fenn-70a87482/"
+    - name: "Fabian Bühler"
+      position: "Geschäftsführer"
+      image: "/about-us/fabian_buehler.jpeg"
+      linkedin: "https://www.linkedin.com/in/fabian-b%C3%BChler/"
+    - name: "Dr. Thomas Fraunholz"
+      position: "Senior Researcher AI"
+      image: "/about-us/thomas_fraunholz.jpeg"
+      linkedin: "https://www.linkedin.com/in/thomas-fraunholz/"
+    - name: "Dr. Mohit Mittal"
+      position: "AI Data Scientist"
+      image: "/about-us/mohit_mittal.jpeg"
+      linkedin: "https://www.linkedin.com/in/dr-mohit-mittal-2b662749/"
+    - name: "Dennis Rall"
+      position: "AI Engineer"
+      image: "/about-us/dennis_rall.jpeg"
+      linkedin: "https://www.linkedin.com/in/dennis-rall/"
+    - name: "Tim Köhler"
+      position: "Principal Sofware Enineer"
+      image: "/about-us/tim_koehler.jpeg"
+      linkedin: "https://www.linkedin.com/in/tim-k%C3%B6hler-234794211/"
 --- 

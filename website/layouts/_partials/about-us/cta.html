@@ -6,26 +6,27 @@
 {{- $secondaryButtonText := index $aboutUsCta "secondaryButtonText" }}
 {{- $secondaryButtonLink := index $aboutUsCta "secondaryButtonLink" }}
 
-
-<div class="container-fluid aboutus-cta-container">
-  <div class="aboutus-cta-content">
-    <div class="aboutus-cta-title">
-      <p class="aboutus-cta-section-subtitle">{{ $sectionSubtitle }}</p>
-      <h2 class="aboutus-cta-section-title">{{ $sectionTitle }}</h2>
-    </div>
-    <div class="aboutus-cta-buttons">
-      <a href="{{ $primaryButtonLink }}" class="button rounded primary-btn raised mr-4 mb-4">
-        {{ $primaryButtonText }}
-        <span class="icon ml-2">
-          <i class="fas fa-arrow-right"></i>
-        </span>
-      </a>
-      <a href="{{ $secondaryButtonLink }}" class="button rounded secondary-btn raised mr-4 mb-4">
-        {{ $secondaryButtonText }}
-        <span class="icon ml-2">
-          <i class="fas fa-arrow-right"></i>
-        </span>
-      </a>
+<section class="section section-about-us-cta section-white is-medium">
+  <div class="container aboutus-cta-container">
+    <div class="aboutus-cta-content">
+      <div class="aboutus-cta-title">
+        <p class="aboutus-cta-section-subtitle">{{ $sectionSubtitle }}</p>
+        <h2 class="aboutus-cta-section-title">{{ $sectionTitle }}</h2>
+      </div>
+      <div class="aboutus-cta-buttons">
+        <a href="{{ $primaryButtonLink }}" class="button rounded primary-btn raised mr-4 mb-4">
+          {{ $primaryButtonText }}
+          <span class="icon ml-2">
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+        <a href="{{ $secondaryButtonLink }}" class="button rounded secondary-btn raised mr-4 mb-4">
+          {{ $secondaryButtonText }}
+          <span class="icon ml-2">
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
-</div>
+</section>

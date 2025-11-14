@@ -18,10 +18,11 @@ Section Styles
         background-color: white;
         color: $royal-blue;
 
-        .section-title {
+        .section-title, .title {
             font-weight: 600;
             font-size: 2.75rem;
             line-height: 1em;
+            color: $royal-blue;
         }
     }
 
