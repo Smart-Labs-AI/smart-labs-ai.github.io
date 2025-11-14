@@ -16,7 +16,6 @@ aboutus_mission:
   productDescription: Smart Labs AI wurde gegründet, um Vertrauen in eine technologische Zukunft zu schaffen. <br><br> Wir verbinden Machine Learning, Cybersicherheit und Produktdesign zu Lösungen, die KI sicher machen – für Menschen und Organisationen.
 
 aboutus_values:
-
   section-title: "Unsere Werte"
   title: "Das macht uns aus"
   values:
@@ -44,8 +43,8 @@ aboutus_cta:
   secondaryButtonLink:
 
 team:
+  sectionName: "Unser Team"
   sectionTitle: "Die Menschen hinter Smart Labs AI"
-  sectionSubtitle: "Unser Team"
   members:
     - name: "Stefan Fenn"
       position: "Geschäftsführer"

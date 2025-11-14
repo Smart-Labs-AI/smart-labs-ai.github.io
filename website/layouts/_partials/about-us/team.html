@@ -1,25 +1,33 @@
 {{- $teamData       := .Params.team }}
 {{- $sectionTitle   := index $teamData "sectionTitle" }}
-{{- $sectionSubtitle:= index $teamData "sectionSubtitle" }}
+{{- $sectionName    := index $teamData "sectionName" }}
 {{- $members        := index $teamData "members" }}
 
-<section class="section section-team section-grey">
-  <div class="container team-container">
-    <div class="team-content">
-      <div class="title-wrapper has-text-centered">
-        <p class="section-subtitle">{{ $sectionSubtitle }}</p>
-        <h2 class="section-title">{{ $sectionTitle }}</h2>
+<section class="section section-about-us-team section-white">
+  <div class="container has-text-centered">
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-8">
+        {{- if $sectionName }}
+          <h3 class="section-name is-5">{{ $sectionName | markdownify }}</h3>
+        {{- end }}
+        {{- if $sectionTitle }}
+          <h3 class="section-title">{{ $sectionTitle }}</h3>
+        {{- end }}
       </div>
+    </div>
+  </div>
 
+  <div class="container team-container mt-6">
+    <div class="team-content">
       <div class="columns is-multiline is-variable is-6">
         {{ range $members }}
         <div class="column is-one-third-desktop is-half-tablet">
           <div class="card team-card is-flex is-flex-direction-column is-fullheight">
             <div class="card-image">
-              <figure class="image is-3by4 team-card-image">
+              <figure class="image team-card-image">
+                {{- $teamImage := partial "convert-image.html" (dict "src" .image "resize" "300x" "quality" "90") -}}
+                {{ partial "profile-image.html" (dict "img" $teamImage.url "ctx" .) }}
 
-                {{- $teamImage := partial "convert-image.html" (dict "src" .image "resize" "800x" "quality" "90") -}}
-                <img src="{{ $teamImage.url }}" alt="{{ .name }}" style="border-radius: 6000px;">
               </figure>
             </div>
 

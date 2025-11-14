@@ -1,0 +1,116 @@
+{{/* Partial: profile-image.html
+     Übergabe:
+     {{ partial "profile-image.html" (dict "img" "bild.jpg" "ctx" .) }}
+     ODER mit bereits verarbeitetem Bild-Objekt:
+     {{ partial "profile-image.html" (dict "resource" $imgResource "ctx" .) }}
+*/}}
+
+{{ $ctx := .ctx }}
+{{ $imgPath := .img }}
+{{ $imgResource := .resource }}
+
+{{/* Page-Context ermitteln */}}
+{{ $page := $ctx }}
+{{ if $ctx.Page }}
+  {{ $page = $ctx.Page }}
+{{ end }}
+
+{{ $scratch := $page.Scratch }}
+
+{{/* --- CSS nur 1x pro Seite laden --- */}}
+{{ if not ($scratch.Get "slProfileCssAdded") }}
+  {{ $scratch.Set "slProfileCssAdded" true }}
+  <style>
+    .sl-profile-wrapper {
+      position: relative;
+      width: 170px;
+      height: 170px;
+      margin: 2rem auto;
+    }
+
+    .sl-profile-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+      animation: sl-float 5s ease-in-out infinite;
+    }
+
+    @keyframes sl-float {
+      0%   { transform: translateY(0px); }
+      50%  { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .sl-profile-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(154, 66, 255, 0.45),
+        rgba(62, 108, 255, 0.25),
+        rgba(0, 0, 0, 0)
+      );
+      filter: blur(20px);
+      animation: sl-glow 6s ease-in-out infinite alternate;
+      z-index: 1;
+    }
+
+    @keyframes sl-glow {
+      from { transform: scale(0.95); opacity: 0.8; }
+      to   { transform: scale(1.05); opacity: 1; }
+    }
+  </style>
+{{ end }}
+
+{{/* --- Bild verarbeiten & anzeigen --- */}}
+{{ $img := "" }}
+{{ $imgUrl := "" }}
+
+{{/* Fall 1: Resource-Objekt wurde direkt übergeben */}}
+{{ if $imgResource }}
+  {{ $img = $imgResource }}
+  {{ $imgUrl = $imgResource.RelPermalink }}
+
+{{/* Fall 2: Pfad wurde übergeben */}}
+{{ else if $imgPath }}
+  {{/* Versuche zuerst Page Resources */}}
+  {{ with $page.Resources.GetMatch $imgPath }}
+    {{ $img = .Fill "400x400 center" }}
+    {{ $imgUrl = $img.RelPermalink }}
+  {{ else }}
+    {{/* Fallback: Global Resources (assets-Ordner) */}}
+    {{ with resources.Get $imgPath }}
+      {{ $img = .Fill "400x400 center" }}
+      {{ $imgUrl = $img.RelPermalink }}
+    {{ else }}
+      {{/* Vielleicht ist es schon eine fertige URL? */}}
+      {{ if hasPrefix $imgPath "/" }}
+        {{ $imgUrl = $imgPath }}
+      {{ else }}
+        {{ warnf "Bild nicht gefunden: %s (Seite: %s)" $imgPath $page.RelPermalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $imgUrl }}
+  <div class="sl-profile-wrapper">
+    <div class="sl-profile-glow"></div>
+    <img 
+      src="{{ $imgUrl }}"
+      alt="Profilbild"
+      class="sl-profile-image"
+      loading="lazy"
+      width="400"
+      height="400"
+    />
+  </div>
+{{ end }}
