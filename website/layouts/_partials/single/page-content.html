@@ -8,12 +8,8 @@
         <div class="page-header" style="margin-top: 3rem;">
           {{ $imagePath := trim .Params.image "/" }} 
           {{ $original := resources.Get $imagePath }}
-          {{ if $original }}
-            {{ $thumbnail := $original.Resize "959x webp q85 drawing" }}
-            <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);">
-          {{ else }}
-            {{ errorf "Image not found: %s" .Params.image }}
-          {{ end }}
+          {{ $thumbnail := partial "convert-image.html" (dict "src" $imagePath "resize" "959x" "quality" "85" "format" "webp") }}
+          <img src="{{ $thumbnail.url }}" alt="{{ .Title }}" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);">
         </div>
       {{ end }}
     </div>
