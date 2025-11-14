@@ -30,13 +30,13 @@
         {{ else }}
           {{ $bg = "/images/about-us/values/background_2.png" }}
         {{ end }}
-        <div class="card" style="background-image: url('{{ $bg }}'); background-size: cover; background-position: center; background-repeat: no-repeat; color: white; border-radius: 24px; padding: 2rem;">
+        <div class="card card-dark" style="background-image: url('{{ $bg }}');">
           <div class="card-content">
-            <figure class="image is-48x48" style="margin-bottom: 1rem;">
+            <figure class="image is-48x48" style="margin-bottom: 4rem;">
               <img src="{{ .icon }}" alt="{{ .title }}">
             </figure>
-            <p class="title is-4" style="color: white; font-family: Inter; font-size: 24px; font-weight: 600;">{{ .title }}</p>
-            <div class="content" style="color: rgba(255, 255, 255, 0.7); font-family: Inter; font-size: 18px; font-weight: 400;">
+            <p class="title is-4">{{ .title }}</p>
+            <div class="content">
               {{ .description | markdownify }}
             </div>
           </div>
