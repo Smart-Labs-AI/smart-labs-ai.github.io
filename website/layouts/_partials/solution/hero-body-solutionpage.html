@@ -43,9 +43,12 @@
                     </div>
                   {{ else }}
                     {{ range . }}
-                      <a href="{{ .item.link }}">
+                      <a href="{{ .item.link }}" style="color:#fff !important">
                         <div class="logo-icon">
                           <img src="{{ .item.image }}" alt="{{ .item.name }} Icon">
+                        </div>
+                        <div class="logo-title mt-2">
+                          <h2 class="has-text-weight-bold">{{ .item.name }}</h2>
                         </div>
                       </a>
                     {{ end }}

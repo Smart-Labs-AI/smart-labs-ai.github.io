@@ -204,6 +204,8 @@ params:
     finalLine:
       title: © 2025 Smart Labs AI GmbH – Alle Rechte vorbehalten
       links:
+      - text: Cookies
+        action: cookie
       - text: Impressum
         link: /impressum
       - text: Datenschutz
