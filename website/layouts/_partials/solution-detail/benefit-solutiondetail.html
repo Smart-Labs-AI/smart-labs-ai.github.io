@@ -5,17 +5,13 @@
 {{- $subtitle := index $benefit "subtitle" | default "" -}}
 {{- $content := index $benefit "content" | default "" -}}
 
-{{ $src := $backgroundImage }}
-{{ $img := resources.Get $src }}
-{{ if $img }}
-  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
-  {{ $height := $processedBackground.Height }}
+{{ $image := partial "convert-image.html" (dict "src" $backgroundImage "resize" "1800x" "quality" "100") }}
   <section class="section section-background-dark section-solution-detail-benefit is-medium"
-  style="background-image: url('{{ $processedBackground.RelPermalink }}');
+  style="background-image: url('{{ $image.url }}');
          background-position: top;
          background-repeat: no-repeat;
          background-size: cover;
-         min-height: {{ $height }}px;
+         min-height: {{ $image.height }}px;
          display: flex;
          align-items: center;
          justify-content: center;
@@ -39,6 +35,3 @@
     </div>
   </div>
 </section>
-{{ else }}
-  {{ errorf "Image not found: %s" $src }}
-{{ end }}

@@ -1,0 +1,28 @@
+{{- $aboutUsMission     := .Params.aboutus_mission }}
+{{- $sectionTitle       := index $aboutUsMission "sectionTitle" }}
+{{- $productDescription := index $aboutUsMission "productDescription" }}
+
+<style>
+.section.section-about-us-mission h4.title {
+  font-size:1.5em; 
+  font-family: 'Inter', sans-serif; 
+  font-weight: 600;
+}
+</style>
+
+<section class="section section-grey section-about-us-mission is-medium">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half">
+        <h4 class="title is-4">
+          {{ $sectionTitle }}
+        </h4>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          {{ $productDescription | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

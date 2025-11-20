@@ -5,13 +5,8 @@
 {{- $secondaryButtonText := index $servicesHero "secondaryButtontext" }}
 {{- $secondaryButtonLink := index $servicesHero "secondaryButtonlink" }}
 
-{{ $src := "/services/hero.png" }}
-{{ $img := resources.Get $src }}
-{{ if $img }}
-{{ $processedBackground := $img.Process "resize 1800x webp q100" }}
-
-
-  <div class="services-hero-background" style="background-image: url('{{ $processedBackground.RelPermalink }}');"></div>
+{{ $image := partial "convert-image.html" (dict "src" "/services/hero.png" "resize" "1800x" "quality" "100") }}
+<div class="services-hero-background" style="background-image: url('{{ $image.url }}');"></div>
 
   <div class="container services-hero-body">
     <div class="landing-caption">
@@ -29,7 +24,7 @@
 
       <a href="{{ $secondaryButtonLink }}" class="button rounded secondary-btn raised mr-4 mb-4">
         {{ $secondaryButtonText }}
-        <span class="icon ml-2">
+        <span class="icon">
           <i class="fas fa-arrow-right"></i>
         </span>
       </a>
@@ -53,6 +48,3 @@
       </div>
     </div>
   </div>
-{{ else }}
-{{ errorf "Image not found: %s" $src }}
-{{ end }}

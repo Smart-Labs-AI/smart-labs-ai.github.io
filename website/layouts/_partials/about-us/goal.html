@@ -1,0 +1,19 @@
+{{- $aboutUsGoal     := .Params.aboutus_goal }}
+{{- $sectionTitle    := index $aboutUsGoal "sectionTitle" }}
+{{- $sectionSubtitle := index $aboutUsGoal "sectionSubtitle" }}
+{{- $goalDescription := index $aboutUsGoal "goalDescription" }}
+
+<section class="section section-white is-medium">
+  <div class="container">
+    <div class="has-text-centered">
+      <div class="title-wrapper" style="margin-bottom: 4rem;">
+        <p class="section-subtitle" style="font-family: Inter; font-weight: 600; font-size: 16px; color: #A81B58; margin-bottom: 1rem;">{{ $sectionSubtitle }}</p>
+        <h2 class="section-title" style="font-family: Inter; font-weight: 600; font-size: 36px; color: #1A1449;">{{ $sectionTitle }}</h2>
+      </div>
+
+      <div class="content" style="font-family: Inter; font-weight: 400; font-size: 23px; color: #1A1449; max-width: 75%; margin: 0 auto;">
+        {{ $goalDescription | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>

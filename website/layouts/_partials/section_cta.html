@@ -7,11 +7,8 @@
 {{- $subtitle   := index $section_cta "subtitle" | markdownify }}
 {{- $buttonText := index $section_cta "buttontext" | default "" }}
 
-{{ $src := "/cta/background.png" }}
-{{ $img := resources.Get $src }}
-{{ if $img }}
-  {{ $processedBackground := $img.Process "resize 1800x webp q100" }}
-  <section class="section section-primary is-medium cta-section" style="background-image: url('{{ $processedBackground.RelPermalink }}'); background-position: top; background-repeat: no-repeat; background-size: cover;">
+{{ $image := partial "convert-image.html" (dict "src" "/cta/background.png" "resize" "1800x" "quality" "100") }}
+<section class="section section-primary is-medium cta-section" style="background-image: url('{{ $image.url }}'); background-position: top; background-repeat: no-repeat; background-size: cover;">
     <div class="container is-flex is-flex-direction-column">
       <h3 class="subtitle is-5">{{ $subtitle | markdownify }}</h3>
       <h2 class="cta-title section-title is-2 is-spaced">{{ $title | markdownify }}</h2>
@@ -31,6 +28,3 @@
       <div class="is-flex-grow-1"></div>  
     </div>
   </section>
-{{ else }}
-  {{ errorf "Image not found: %s" $src }}
-{{ end }}

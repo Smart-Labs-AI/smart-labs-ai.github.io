@@ -1,0 +1,944 @@
+{{- $image := .image -}}
+{{- $class := .class | default "ambilight-image" -}}
+{{- $alt := .alt | default "Image with ambilight effect" -}}
+{{- $showControls := .showControls | default false -}}
+{{- $id := .id | default (printf "ambilight-%d" now.Unix) -}}
+
+{{- /* Default Parameters */ -}}
+{{- $blur := .blur | default 90 -}}
+{{- $brightness := .brightness | default 30 -}}
+{{- $saturation := .saturation | default 60 -}}
+{{- $spread := .spread | default 15 -}}
+{{- $opacity := .opacity | default 7 -}}
+{{- $edgeSampling := .edgeSampling | default 25 -}}
+{{- $colorVibrance := .colorVibrance | default 74 -}}
+{{- $animationSpeed := .animationSpeed | default 4 -}}
+{{- $edgeAnimation := .edgeAnimation | default 73 -}}
+{{- $colorMode := .colorMode | default "dominant" -}}
+{{- $autoplay := .autoplay | default false -}}
+{{- $quality := .quality | default "medium" -}}
+
+<style>
+.ambilight-container-{{ $id }} {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    margin: 0 auto;
+}
+
+.ambilight-wrapper-{{ $id }} {
+    position: relative;
+    display: inline-block;
+}
+
+.ambilight-image-{{ $id }} {
+    position: relative;
+    z-index: 2;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.ambilight-canvas-{{ $id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    will-change: filter, opacity;
+}
+
+@media (max-width: 768px) {
+    .ambilight-container-{{ $id }} {
+        padding: 60px 20px;
+    }
+}
+
+{{- if $showControls }}
+.ambilight-controls-{{ $id }} {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 40px;
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ambilight-controls-{{ $id }} h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.ambilight-control-group {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ambilight-control-group label {
+    color: #ddd;
+    font-size: 14px;
+    min-width: 160px;
+}
+
+.ambilight-control-group .value {
+    color: #4CAF50;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: right;
+}
+
+.ambilight-control-group input[type="range"] {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 150px;
+    -webkit-appearance: none;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+.ambilight-control-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.ambilight-control-group input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    border: none;
+}
+
+.ambilight-toggle-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.ambilight-toggle-button:hover {
+    background: #45a049;
+}
+
+.ambilight-toggle-button.active {
+    background: #f44336;
+}
+
+.ambilight-mode-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.ambilight-mode-button {
+    flex: 1;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 13px;
+}
+
+.ambilight-mode-button.active {
+    background: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.ambilight-mode-button:hover {
+    background: rgba(76, 175, 80, 0.3);
+}
+
+.quality-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quality-badge {
+    flex: 1;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #999;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 12px;
+    text-align: center;
+}
+
+.quality-badge.active {
+    background: #2196F3;
+    color: white;
+    border-color: #2196F3;
+}
+{{- end }}
+</style>
+
+<div class="ambilight-container-{{ $id }}">
+    <div class="ambilight-wrapper-{{ $id }}">
+        <canvas class="ambilight-canvas-{{ $id }}"></canvas>
+        <img src="{{ $image }}" 
+             alt="{{ $alt }}" 
+             class="ambilight-image-{{ $id }} {{ $class }}"
+             crossorigin="anonymous"
+             loading="lazy">
+    </div>
+</div>
+
+{{- if $showControls }}
+<div class="ambilight-controls-{{ $id }}">
+    <h3>⭐ Ambilight Einstellungen</h3>
+    
+    <div class="ambilight-control-group">
+        <label>Performance:</label>
+        <div class="quality-selector">
+            <button class="quality-badge" data-quality="low">Niedrig 🐌</button>
+            <button class="quality-badge {{ if eq $quality "medium" }}active{{ end }}" data-quality="medium">Mittel ⚡</button>
+            <button class="quality-badge" data-quality="high">Hoch 🔥</button>
+        </div>
+    </div>
+    
+    <div class="ambilight-control-group">
+        <label>Farbmodus:</label>
+        <div class="ambilight-mode-selector">
+            <button class="ambilight-mode-button" data-mode="edge">Rand</button>
+            <button class="ambilight-mode-button {{ if eq $colorMode "vibrant" }}active{{ end }}" data-mode="vibrant">Knallig</button>
+            <button class="ambilight-mode-button {{ if eq $colorMode "dominant" }}active{{ end }}" data-mode="dominant">Dominant</button>
+            <button class="ambilight-mode-button" data-mode="mixed">Mixed</button>
+        </div>
+    </div>
+    
+    <div class="ambilight-control-group">
+        <label>Blur-Stärke:</label>
+        <input type="range" class="blur-range" min="40" max="140" value="{{ $blur }}">
+        <span class="value blur-value">{{ $blur }}px</span>
+    </div>
+    
+    <div class="ambilight-control-group">
+        <label>Helligkeit:</label>
+        <input type="range" class="brightness-range" min="15" max="50" step="1" value="{{ $brightness }}">
+        <span class="value brightness-value">{{ div $brightness 10.0 }}x</span>
+    </div>
+    
+    <div class="ambilight-control-group">
+        <label>Sättigung:</label>
+        <input type="range" class="saturation-range" min="15" max="80" step="1" value="{{ $saturation }}">
+        <span class="value saturation-value">{{ div $saturation 10.0 }}x</span>
+    </div>
+    
+    <div class="ambilight-control-group">
+        <label>Ausbreitung:</label>
+        <input type="range" class="spread-range" min="10" max="35" step="1" value="{{ $spread }}">
+        <span class="value spread-value">{{ div $spread 10.0 }}x</span>
+    </div>
+    
+    <div class="ambilight-control-group">
+        <label>Transparenz:</label>
+        <input type="range" class="opacity-range" min="3" max="10" step="1" value="{{ $opacity }}">
+        <span class="value opacity-value">{{ div $opacity 10.0 }}</span>
+    </div>
+
+    <div class="ambilight-control-group">
+        <label>Edge Sampling:</label>
+        <input type="range" class="edge-range" min="10" max="40" step="1" value="{{ $edgeSampling }}">
+        <span class="value edge-value">{{ $edgeSampling }}%</span>
+    </div>
+
+    <div class="ambilight-control-group">
+        <label>Farbvibration:</label>
+        <input type="range" class="color-vibrance-range" min="0" max="100" step="1" value="{{ $colorVibrance }}">
+        <span class="value color-vibrance-value">{{ $colorVibrance }}%</span>
+    </div>
+
+    <div class="ambilight-control-group">
+        <label>Animations-Speed:</label>
+        <input type="range" class="speed-range" min="1" max="10" step="1" value="{{ $animationSpeed }}">
+        <span class="value speed-value">{{ $animationSpeed }}</span>
+    </div>
+
+    <div class="ambilight-control-group">
+        <label>Edge Animation:</label>
+        <input type="range" class="edge-animation-range" min="0" max="100" step="1" value="{{ $edgeAnimation }}">
+        <span class="value edge-animation-value">{{ $edgeAnimation }}%</span>
+    </div>
+    
+    <button class="ambilight-toggle-button">Animation starten</button>
+</div>
+{{- end }}
+
+<script>
+(function() {
+    const containerId = '{{ $id }}';
+    
+    // Performance Presets
+    const qualityPresets = {
+        low: {
+            canvasScale: 0.25,
+            sampleStep: 32,
+            sections: 6,
+            fps: 30,
+            blurQuality: 'low'
+        },
+        medium: {
+            canvasScale: 0.4,
+            sampleStep: 16,
+            sections: 8,
+            fps: 45,
+            blurQuality: 'medium'
+        },
+        high: {
+            canvasScale: 0.6,
+            sampleStep: 8,
+            sections: 12,
+            fps: 60,
+            blurQuality: 'high'
+        }
+    };
+    
+    class AmbilightEffect {
+        constructor(imageElement, options = {}) {
+            this.image = imageElement;
+            this.wrapper = imageElement.parentElement;
+            this.canvas = this.wrapper.querySelector('.ambilight-canvas-' + containerId);
+            this.ctx = this.canvas.getContext('2d', { 
+                alpha: true,
+                desynchronized: true,
+                willReadFrequently: false
+            });
+            
+            this.quality = '{{ $quality }}';
+            this.qualitySettings = qualityPresets[this.quality];
+            
+            this.options = {
+                blur: {{ $blur }},
+                spread: {{ div $spread 10.0 }},
+                brightness: {{ div $brightness 10.0 }},
+                saturation: {{ div $saturation 10.0 }},
+                opacity: {{ div $opacity 10.0 }},
+                animationSpeed: {{ $animationSpeed }},
+                edgeSampling: {{ div $edgeSampling 100.0 }},
+                colorMode: '{{ $colorMode }}',
+                colorVibrance: {{ div $colorVibrance 100.0 }},
+                edgeAnimation: {{ div $edgeAnimation 100.0 }},
+                ...options
+            };
+
+            this.animating = false;
+            this.animationFrame = null;
+            this.animationTime = 0;
+            this.edgeOffsets = { top: 0, bottom: 0, left: 0, right: 0 };
+            this.lastFrameTime = 0;
+            this.frameInterval = 1000 / this.qualitySettings.fps;
+            
+            // Cache für Farben
+            this.colorCache = new Map();
+            this.cacheTimeout = null;
+            
+            // OffscreenCanvas für bessere Performance (falls unterstützt)
+            this.useOffscreen = typeof OffscreenCanvas !== 'undefined';
+            
+            this.init();
+        }
+        
+        init() {
+            if (this.image.complete) {
+                this.setup();
+            } else {
+                this.image.addEventListener('load', () => this.setup());
+            }
+            
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    this.clearCache();
+                    this.setup();
+                }, 250);
+            });
+        }
+        
+        clearCache() {
+            this.colorCache.clear();
+            if (this.cacheTimeout) {
+                clearTimeout(this.cacheTimeout);
+            }
+        }
+        
+        rgbToHsl(r, g, b) {
+            r /= 255; g /= 255; b /= 255;
+            const max = Math.max(r, g, b), min = Math.min(r, g, b);
+            let h, s, l = (max + min) / 2;
+
+            if (max === min) {
+                h = s = 0;
+            } else {
+                const d = max - min;
+                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                switch (max) {
+                    case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+                    case g: h = ((b - r) / d + 2) / 6; break;
+                    case b: h = ((r - g) / d + 4) / 6; break;
+                }
+            }
+            return [h * 360, s * 100, l * 100];
+        }
+        
+        hslToRgb(h, s, l) {
+            h /= 360; s /= 100; l /= 100;
+            let r, g, b;
+
+            if (s === 0) {
+                r = g = b = l;
+            } else {
+                const hue2rgb = (p, q, t) => {
+                    if (t < 0) t += 1;
+                    if (t > 1) t -= 1;
+                    if (t < 1/6) return p + (q - p) * 6 * t;
+                    if (t < 1/2) return q;
+                    if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                    return p;
+                };
+                const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+                const p = 2 * l - q;
+                r = hue2rgb(p, q, h + 1/3);
+                g = hue2rgb(p, q, h);
+                b = hue2rgb(p, q, h - 1/3);
+            }
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+        }
+        
+        setup() {
+            const rect = this.image.getBoundingClientRect();
+            const spread = this.options.spread;
+            
+            // Reduzierte Canvas-Größe für Performance
+            const scale = this.qualitySettings.canvasScale;
+            this.canvas.width = Math.floor(rect.width * spread * scale);
+            this.canvas.height = Math.floor(rect.height * spread * scale);
+            
+            // CSS-Größe bleibt voll
+            this.canvas.style.width = Math.floor(rect.width * spread) + 'px';
+            this.canvas.style.height = Math.floor(rect.height * spread) + 'px';
+            
+            // Bildglättung optimieren
+            this.ctx.imageSmoothingEnabled = true;
+            this.ctx.imageSmoothingQuality = this.qualitySettings.blurQuality;
+            
+            this.createAmbilight();
+            this.updateStyles();
+        }
+        
+        createAmbilight() {
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            
+            const scale = this.qualitySettings.canvasScale;
+            const imgWidth = Math.floor(this.image.width * scale);
+            const imgHeight = Math.floor(this.image.height * scale);
+            
+            // Erstelle temporäres Canvas nur einmal
+            if (!this.tempCanvas) {
+                this.tempCanvas = document.createElement('canvas');
+                this.tempCtx = this.tempCanvas.getContext('2d', { willReadFrequently: true });
+            }
+            
+            this.tempCanvas.width = imgWidth;
+            this.tempCanvas.height = imgHeight;
+            this.tempCtx.clearRect(0, 0, imgWidth, imgHeight);
+            this.tempCtx.drawImage(this.image, 0, 0, imgWidth, imgHeight);
+            
+            const edgePercent = this.options.edgeSampling;
+            const edgeWidth = Math.floor(imgWidth * edgePercent);
+            const edgeHeight = Math.floor(imgHeight * edgePercent);
+            
+            const x = (this.canvas.width - imgWidth) / 2;
+            const y = (this.canvas.height - imgHeight) / 2;
+            
+            this.ctx.drawImage(this.image, x, y, imgWidth, imgHeight);
+            this.drawExtendedEdges(this.tempCanvas, this.tempCtx, imgWidth, imgHeight, edgeWidth, edgeHeight, x, y);
+            this.enhanceColors();
+        }
+        
+        drawExtendedEdges(tempCanvas, tempCtx, imgWidth, imgHeight, edgeWidth, edgeHeight, offsetX, offsetY) {
+            const sections = this.qualitySettings.sections;
+            
+            // Oben
+            for (let i = 0; i < sections; i++) {
+                const sectionWidth = imgWidth / sections;
+                const sx = Math.floor(i * sectionWidth);
+                const cacheKey = `top-${i}`;
+                
+                let color = this.colorCache.get(cacheKey);
+                if (!color) {
+                    const edgeData = tempCtx.getImageData(sx, 0, Math.ceil(sectionWidth), edgeHeight);
+                    color = this.extractColor(edgeData);
+                    this.colorCache.set(cacheKey, color);
+                }
+                
+                const gradient = this.ctx.createLinearGradient(
+                    offsetX + sx, 0, 
+                    offsetX + sx, offsetY + this.edgeOffsets.top
+                );
+                gradient.addColorStop(0, `rgba(${color.r}, ${color.g}, ${color.b}, 0)`);
+                gradient.addColorStop(1, `rgb(${color.r}, ${color.g}, ${color.b})`);
+                this.ctx.fillStyle = gradient;
+                this.ctx.fillRect(offsetX + sx, 0, Math.ceil(sectionWidth), offsetY + this.edgeOffsets.top);
+            }
+            
+            // Unten
+            for (let i = 0; i < sections; i++) {
+                const sectionWidth = imgWidth / sections;
+                const sx = Math.floor(i * sectionWidth);
+                const cacheKey = `bottom-${i}`;
+                
+                let color = this.colorCache.get(cacheKey);
+                if (!color) {
+                    const edgeData = tempCtx.getImageData(sx, imgHeight - edgeHeight, Math.ceil(sectionWidth), edgeHeight);
+                    color = this.extractColor(edgeData);
+                    this.colorCache.set(cacheKey, color);
+                }
+                
+                const gradient = this.ctx.createLinearGradient(
+                    offsetX + sx, offsetY + imgHeight,
+                    offsetX + sx, this.canvas.height
+                );
+                gradient.addColorStop(0, `rgb(${color.r}, ${color.g}, ${color.b})`);
+                gradient.addColorStop(1, `rgba(${color.r}, ${color.g}, ${color.b}, 0)`);
+                this.ctx.fillStyle = gradient;
+                this.ctx.fillRect(
+                    offsetX + sx, 
+                    offsetY + imgHeight - this.edgeOffsets.bottom, 
+                    Math.ceil(sectionWidth), 
+                    this.canvas.height - offsetY - imgHeight + this.edgeOffsets.bottom
+                );
+            }
+            
+            // Links
+            for (let i = 0; i < sections; i++) {
+                const sectionHeight = imgHeight / sections;
+                const sy = Math.floor(i * sectionHeight);
+                const cacheKey = `left-${i}`;
+                
+                let color = this.colorCache.get(cacheKey);
+                if (!color) {
+                    const edgeData = tempCtx.getImageData(0, sy, edgeWidth, Math.ceil(sectionHeight));
+                    color = this.extractColor(edgeData);
+                    this.colorCache.set(cacheKey, color);
+                }
+                
+                const gradient = this.ctx.createLinearGradient(
+                    0, offsetY + sy,
+                    offsetX + this.edgeOffsets.left, offsetY + sy
+                );
+                gradient.addColorStop(0, `rgba(${color.r}, ${color.g}, ${color.b}, 0)`);
+                gradient.addColorStop(1, `rgb(${color.r}, ${color.g}, ${color.b})`);
+                this.ctx.fillStyle = gradient;
+                this.ctx.fillRect(0, offsetY + sy, offsetX + this.edgeOffsets.left, Math.ceil(sectionHeight));
+            }
+            
+            // Rechts
+            for (let i = 0; i < sections; i++) {
+                const sectionHeight = imgHeight / sections;
+                const sy = Math.floor(i * sectionHeight);
+                const cacheKey = `right-${i}`;
+                
+                let color = this.colorCache.get(cacheKey);
+                if (!color) {
+                    const edgeData = tempCtx.getImageData(imgWidth - edgeWidth, sy, edgeWidth, Math.ceil(sectionHeight));
+                    color = this.extractColor(edgeData);
+                    this.colorCache.set(cacheKey, color);
+                }
+                
+                const gradient = this.ctx.createLinearGradient(
+                    offsetX + imgWidth, offsetY + sy,
+                    this.canvas.width, offsetY + sy
+                );
+                gradient.addColorStop(0, `rgb(${color.r}, ${color.g}, ${color.b})`);
+                gradient.addColorStop(1, `rgba(${color.r}, ${color.g}, ${color.b}, 0)`);
+                this.ctx.fillStyle = gradient;
+                this.ctx.fillRect(
+                    offsetX + imgWidth - this.edgeOffsets.right, 
+                    offsetY + sy, 
+                    this.canvas.width - offsetX - imgWidth + this.edgeOffsets.right, 
+                    Math.ceil(sectionHeight)
+                );
+            }
+            
+            // Ecken - nur bei höherer Qualität
+            if (this.quality !== 'low') {
+                this.fillCornerRadial(tempCtx, 0, 0, edgeWidth, edgeHeight, offsetX, offsetY, 'top-left');
+                this.fillCornerRadial(tempCtx, imgWidth - edgeWidth, 0, edgeWidth, edgeHeight, offsetX + imgWidth, offsetY, 'top-right');
+                this.fillCornerRadial(tempCtx, 0, imgHeight - edgeHeight, edgeWidth, edgeHeight, offsetX, offsetY + imgHeight, 'bottom-left');
+                this.fillCornerRadial(tempCtx, imgWidth - edgeWidth, imgHeight - edgeHeight, edgeWidth, edgeHeight, offsetX + imgWidth, offsetY + imgHeight, 'bottom-right');
+            }
+        }
+        
+        fillCornerRadial(tempCtx, sx, sy, sw, sh, cx, cy, corner) {
+            const cacheKey = `corner-${corner}`;
+            let color = this.colorCache.get(cacheKey);
+            
+            if (!color) {
+                const edgeData = tempCtx.getImageData(sx, sy, sw, sh);
+                color = this.extractColor(edgeData);
+                this.colorCache.set(cacheKey, color);
+            }
+            
+            let x1, y1, x2, y2;
+            const maxRadius = Math.max(this.canvas.width, this.canvas.height) * 0.5;
+            
+            switch(corner) {
+                case 'top-left': x1 = cx; y1 = cy; x2 = 0; y2 = 0; break;
+                case 'top-right': x1 = cx; y1 = cy; x2 = this.canvas.width; y2 = 0; break;
+                case 'bottom-left': x1 = cx; y1 = cy; x2 = 0; y2 = this.canvas.height; break;
+                case 'bottom-right': x1 = cx; y1 = cy; x2 = this.canvas.width; y2 = this.canvas.height; break;
+            }
+            
+            const gradient = this.ctx.createRadialGradient(x1, y1, 0, x1, y1, maxRadius);
+            gradient.addColorStop(0, `rgb(${color.r}, ${color.g}, ${color.b})`);
+            gradient.addColorStop(0.5, `rgba(${color.r}, ${color.g}, ${color.b}, 0.3)`);
+            gradient.addColorStop(1, `rgba(${color.r}, ${color.g}, ${color.b}, 0)`);
+            this.ctx.fillStyle = gradient;
+            this.ctx.fillRect(Math.min(x1, x2), Math.min(y1, y2), Math.abs(x2 - x1), Math.abs(y2 - y1));
+        }
+        
+        extractColor(imageData) {
+            const data = imageData.data;
+            const pixels = [];
+            const step = this.qualitySettings.sampleStep;
+            
+            // Nur jeden n-ten Pixel sampeln
+            for (let i = 0; i < data.length; i += step * 4) {
+                const r = data[i], g = data[i + 1], b = data[i + 2];
+                const brightness = (r + g + b) / 3;
+                if (brightness > 20) {
+                    pixels.push({ r, g, b });
+                }
+            }
+            
+            if (pixels.length === 0) return { r: 50, g: 50, b: 50 };
+            
+            switch(this.options.colorMode) {
+                case 'vibrant': return this.getMostVibrantColor(pixels);
+                case 'dominant': return this.getDominantColor(pixels);
+                case 'mixed': return this.getMixedColor(pixels);
+                default: return this.getAverageColor(pixels);
+            }
+        }
+        
+        getAverageColor(pixels) {
+            let r = 0, g = 0, b = 0;
+            const len = pixels.length;
+            
+            for (let i = 0; i < len; i++) {
+                r += pixels[i].r;
+                g += pixels[i].g;
+                b += pixels[i].b;
+            }
+            
+            return { 
+                r: Math.round(r / len), 
+                g: Math.round(g / len), 
+                b: Math.round(b / len) 
+            };
+        }
+        
+        getMostVibrantColor(pixels) {
+            let mostVibrant = { r: 0, g: 0, b: 0, saturation: 0 };
+            const len = pixels.length;
+            
+            // Nur eine Auswahl prüfen für Performance
+            const checkEvery = Math.max(1, Math.floor(len / 20));
+            
+            for (let i = 0; i < len; i += checkEvery) {
+                const pixel = pixels[i];
+                const [h, s, l] = this.rgbToHsl(pixel.r, pixel.g, pixel.b);
+                const vibranceScore = s * (1 - Math.abs(l - 50) / 50) * (this.options.colorVibrance + 0.3);
+                
+                if (vibranceScore > mostVibrant.saturation) {
+                    mostVibrant = { ...pixel, saturation: vibranceScore };
+                }
+            }
+            
+            return { r: mostVibrant.r, g: mostVibrant.g, b: mostVibrant.b };
+        }
+        
+        getDominantColor(pixels) {
+            const buckets = {};
+            const bucketSize = 48; // Größere Buckets = schneller
+            const len = pixels.length;
+            
+            for (let i = 0; i < len; i++) {
+                const pixel = pixels[i];
+                const bucketR = Math.floor(pixel.r / bucketSize) * bucketSize;
+                const bucketG = Math.floor(pixel.g / bucketSize) * bucketSize;
+                const bucketB = Math.floor(pixel.b / bucketSize) * bucketSize;
+                const key = `${bucketR},${bucketG},${bucketB}`;
+                
+                if (!buckets[key]) {
+                    buckets[key] = { r: bucketR, g: bucketG, b: bucketB, count: 0 };
+                }
+                buckets[key].count++;
+            }
+            
+            let dominant = { count: 0, r: 50, g: 50, b: 50 };
+            for (let key in buckets) {
+                if (buckets[key].count > dominant.count) {
+                    dominant = buckets[key];
+                }
+            }
+            
+            return { r: dominant.r, g: dominant.g, b: dominant.b };
+        }
+        
+        getMixedColor(pixels) {
+            const vibrant = this.getMostVibrantColor(pixels);
+            const average = this.getAverageColor(pixels);
+            const mix = this.options.colorVibrance;
+            
+            return {
+                r: Math.round(vibrant.r * mix + average.r * (1 - mix)),
+                g: Math.round(vibrant.g * mix + average.g * (1 - mix)),
+                b: Math.round(vibrant.b * mix + average.b * (1 - mix))
+            };
+        }
+        
+        enhanceColors() {
+            const imageData = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+            const data = imageData.data;
+            const brightness = this.options.brightness;
+            const saturation = this.options.saturation;
+            
+            // Batch-Verarbeitung für bessere Performance
+            for (let i = 0; i < data.length; i += 4) {
+                let [h, s, l] = this.rgbToHsl(data[i], data[i + 1], data[i + 2]);
+                
+                s = Math.min(100, s * saturation);
+                l = Math.min(100, l * brightness);
+                
+                [data[i], data[i + 1], data[i + 2]] = this.hslToRgb(h, s, l);
+            }
+            
+            this.ctx.putImageData(imageData, 0, 0);
+        }
+        
+        updateStyles() {
+            this.canvas.style.filter = `blur(${this.options.blur}px)`;
+            this.canvas.style.opacity = this.options.opacity;
+        }
+        
+        updateOptions(newOptions) {
+            this.options = { ...this.options, ...newOptions };
+            if (!this.animating) {
+                this.clearCache();
+                this.setup();
+            }
+        }
+        
+        setQuality(quality) {
+            this.quality = quality;
+            this.qualitySettings = qualityPresets[quality];
+            this.frameInterval = 1000 / this.qualitySettings.fps;
+            this.clearCache();
+            this.setup();
+        }
+
+        startAnimation() {
+            if (this.animating) return;
+            this.animating = true;
+            this.animationTime = 0;
+            this.lastFrameTime = performance.now();
+            this.animate();
+        }
+
+        stopAnimation() {
+            this.animating = false;
+            if (this.animationFrame) {
+                cancelAnimationFrame(this.animationFrame);
+                this.animationFrame = null;
+            }
+            this.edgeOffsets = { top: 0, bottom: 0, left: 0, right: 0 };
+            this.clearCache();
+            this.setup();
+        }
+
+        animate(currentTime) {
+            if (!this.animating) return;
+            
+            // FPS-Limiting
+            const elapsed = currentTime - this.lastFrameTime;
+            
+            if (elapsed < this.frameInterval) {
+                this.animationFrame = requestAnimationFrame((time) => this.animate(time));
+                return;
+            }
+            
+            this.lastFrameTime = currentTime - (elapsed % this.frameInterval);
+            this.animationTime += 0.01 * this.options.animationSpeed;
+
+            const blurBase = this.options.blur;
+            const animatedBlur = blurBase + Math.sin(this.animationTime) * 30;
+            
+            const brightnessBase = this.options.brightness;
+            const animatedBrightness = Math.max(1.5, brightnessBase + Math.sin(this.animationTime * 1.3) * 0.5);
+            
+            const saturationBase = this.options.saturation;
+            const animatedSaturation = Math.max(2.0, saturationBase + Math.sin(this.animationTime * 0.9) * 0.7);
+            
+            const opacityBase = this.options.opacity;
+            const animatedOpacity = Math.max(0.4, Math.min(1, opacityBase + Math.sin(this.animationTime * 0.8) * 0.15));
+            
+            const spreadBase = this.options.spread;
+            const animatedSpread = spreadBase + Math.sin(this.animationTime * 0.6) * 0.15;
+
+            const edgeAnimIntensity = this.options.edgeAnimation;
+            this.edgeOffsets.top = Math.sin(this.animationTime * 1.2) * 30 * edgeAnimIntensity;
+            this.edgeOffsets.bottom = Math.sin(this.animationTime * 0.9 + Math.PI) * 25 * edgeAnimIntensity;
+            this.edgeOffsets.left = Math.sin(this.animationTime * 1.1 + Math.PI/2) * 28 * edgeAnimIntensity;
+            this.edgeOffsets.right = Math.sin(this.animationTime * 0.85 + Math.PI*1.5) * 27 * edgeAnimIntensity;
+
+            const rect = this.image.getBoundingClientRect();
+            const scale = this.qualitySettings.canvasScale;
+            this.canvas.width = Math.floor(rect.width * animatedSpread * scale);
+            this.canvas.height = Math.floor(rect.height * animatedSpread * scale);
+            this.canvas.style.width = Math.floor(rect.width * animatedSpread) + 'px';
+            this.canvas.style.height = Math.floor(rect.height * animatedSpread) + 'px';
+
+            const originalBrightness = this.options.brightness;
+            const originalSaturation = this.options.saturation;
+            this.options.brightness = animatedBrightness;
+            this.options.saturation = animatedSaturation;
+            
+            this.createAmbilight();
+            
+            this.options.brightness = originalBrightness;
+            this.options.saturation = originalSaturation;
+
+            this.canvas.style.filter = `blur(${animatedBlur}px)`;
+            this.canvas.style.opacity = animatedOpacity;
+
+            this.animationFrame = requestAnimationFrame((time) => this.animate(time));
+        }
+    }
+
+    let ambilightInstance;
+    
+    function initAmbilight() {
+        const image = document.querySelector('.ambilight-image-' + containerId);
+        if (!image) return;
+        
+        const init = () => {
+            ambilightInstance = new AmbilightEffect(image);
+            {{- if $autoplay }}
+            ambilightInstance.startAnimation();
+            {{- end }}
+            setupControls();
+        };
+        
+        if (image.complete) {
+            init();
+        } else {
+            image.addEventListener('load', init);
+        }
+    }
+
+    function setupControls() {
+        {{- if $showControls }}
+        const container = document.querySelector('.ambilight-controls-' + containerId);
+        if (!container) return;
+
+        // Quality Selector
+        const qualityButtons = container.querySelectorAll('.quality-badge');
+        qualityButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                qualityButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const quality = button.dataset.quality;
+                ambilightInstance.setQuality(quality);
+            });
+        });
+
+        const modeButtons = container.querySelectorAll('.ambilight-mode-button');
+        modeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modeButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                ambilightInstance.updateOptions({ colorMode: button.dataset.mode });
+            });
+        });
+
+        const setupRange = (className, valueName, property, multiplier = 1, suffix = '') => {
+            const range = container.querySelector('.' + className);
+            const value = container.querySelector('.' + valueName);
+            if (range && value) {
+                range.addEventListener('input', (e) => {
+                    const val = parseFloat(e.target.value) * multiplier;
+                    value.textContent = (multiplier === 1 ? val : val.toFixed(1)) + suffix;
+                    ambilightInstance.updateOptions({ [property]: val });
+                });
+            }
+        };
+
+        setupRange('blur-range', 'blur-value', 'blur', 1, 'px');
+        setupRange('brightness-range', 'brightness-value', 'brightness', 0.1, 'x');
+        setupRange('saturation-range', 'saturation-value', 'saturation', 0.1, 'x');
+        setupRange('spread-range', 'spread-value', 'spread', 0.1, 'x');
+        setupRange('opacity-range', 'opacity-value', 'opacity', 0.1, '');
+        setupRange('edge-range', 'edge-value', 'edgeSampling', 0.01, '%');
+        setupRange('color-vibrance-range', 'color-vibrance-value', 'colorVibrance', 0.01, '%');
+        setupRange('speed-range', 'speed-value', 'animationSpeed', 1, '');
+        setupRange('edge-animation-range', 'edge-animation-value', 'edgeAnimation', 0.01, '%');
+
+        const toggleButton = container.querySelector('.ambilight-toggle-button');
+        if (toggleButton) {
+            toggleButton.addEventListener('click', () => {
+                if (ambilightInstance.animating) {
+                    ambilightInstance.stopAnimation();
+                    toggleButton.textContent = 'Animation starten';
+                    toggleButton.classList.remove('active');
+                } else {
+                    ambilightInstance.startAnimation();
+                    toggleButton.textContent = 'Animation stoppen';
+                    toggleButton.classList.add('active');
+                }
+            });
+        }
+        {{- end }}
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAmbilight);
+    } else {
+        initAmbilight();
+    }
+})();
+</script>

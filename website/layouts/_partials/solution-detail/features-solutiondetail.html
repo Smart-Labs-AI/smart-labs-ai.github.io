@@ -23,13 +23,8 @@
     <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
       <div class="column is-flex is-flex-direction-row is-flex-direction-column-tablet" style="gap: 2em">
           {{ range $features }}
-            {{ $src := .background }}
-            {{ $img := resources.Get $src }}
-            {{ if $img }}
-              {{ $processedBackground := $img.Process "resize 540x webp q100" }}
-              {{ $height := $processedBackground.Height }}
-              {{ $width := $processedBackground.Width }}
-            <div class="card card-dark is-flex is-flex-direction-column" style="background-image: url('{{ $processedBackground.RelPermalink }}'); background-size:100% 100%; min-height: 450px;border: 0px">
+            {{ $image := partial "convert-image.html" (dict "src" .background "resize" "540x" "quality" "100") }}
+            <div class="card card-dark is-flex is-flex-direction-column" style="background-image: url('{{ $image.url }}'); background-size:100% 100%; min-height: 450px;border: 0px">
               <div class="card-content is-flex is-flex-direction-column is-flex-grow-1 is-justify-content-flex-end" style="padding-bottom: 2rem;">
                 <div class="mt-auto">
                   <h4 class="name is-4 mb-2">{{ .name }}</h4>
@@ -42,9 +37,7 @@
                 </div>
               </div>
             </div>
-            {{ else }}
-              {{ errorf "Image not found: %s" $src }}
-            {{ end }}
+            
           {{ end }}
         </div>
     </div>

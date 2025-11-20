@@ -1,0 +1,46 @@
+{{- $aboutUsCta          := .Params.aboutus_cta }}
+{{- $sectionSubtitle     := index $aboutUsCta "sectionSubtitle" }}
+{{- $sectionTitle        := index $aboutUsCta "sectionTitle" }}
+{{- $primaryButtonText   := index $aboutUsCta "primaryButtonText" }}
+{{- $primaryButtonLink   := index $aboutUsCta "primaryButtonLink" }}
+{{- $secondaryButtonText := index $aboutUsCta "secondaryButtonText" }}
+{{- $secondaryButtonLink := index $aboutUsCta "secondaryButtonLink" }}
+
+<section class="section section-white">
+  <div class="container">
+    <div class="card card-dark" style="background-image: url('/images/about-us/values/background_2.png'); background-size: cover; background-position: center;">
+      <img src="/images/about-us/values/logo.png" alt="logo" style="position: absolute; top: 0; right: 0; height: 100%; z-index: 1;">
+      <div style="display: flex; flex-direction: column; padding: 4rem;">
+        <div style="margin-bottom: 8rem;width:75%">
+          <p class="subtitle is-6" style="color: rgba(255, 255, 255, 0.6);">{{ $sectionSubtitle }}</p>
+          <h2 class="title is-4 mt-4" style="font-size:2em">{{ $sectionTitle }}</h2>
+        </div>
+        <div class="buttons" style="position: relative; z-index: 2; margin-top: auto; gap: 1rem;">
+          
+          {{ if $primaryButtonLink }}
+          <a href="{{ $primaryButtonLink }}" class="button cta rounded primary-btn raised mt-0" aria-label="{{ $primaryButtonText }}">
+            <span>
+              {{ $primaryButtonText }}
+            </span>
+            <span class="icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </a>
+          {{ end }}
+
+          {{ if $secondaryButtonLink }}
+          <a href="{{ $secondaryButtonLink }}" class="button cta rounded secondary-btn raised mt-0" aria-label="{{ $secondaryButtonLink }}">
+            <span>
+              {{ $secondaryButtonText }}
+            </span>
+            <span class="icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </a>
+          {{ end }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

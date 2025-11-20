@@ -39,12 +39,8 @@
                 {{ $imagePath := trim .Params.image "/" }} 
                 {{ $original := resources.Get $imagePath }}
                 
-                {{ if $original }}
-                  {{ $thumbnail := $original.Resize "959x webp q85 drawing" }}
-                  <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}">
-                {{ else }}
-                  {{ errorf "Image not found: %s" .Params.image }}
-                {{ end }}
+                {{ $thumbnail := partial "convert-image.html" (dict "src" $imagePath "resize" "959x" "quality" "85" "format" "webp") }}
+                <img src="{{ $thumbnail.url }}" alt="{{ .Title }}">
               </div>
             {{ end }}
           </div>

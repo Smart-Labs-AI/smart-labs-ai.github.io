@@ -12,22 +12,12 @@
                       <div class="container">
                         <div class="columns is-multiline is-flex-wrap-wrap is-justify-content-center">
                           <div class="column is-flex is-flex-direction-row" style="gap: 2em">
-                                {{ $src := .background }}
-                                {{ $img := resources.Get $src }}
-                                {{ if $img }}
-                                  {{ $processedBackground := $img.Process "resize 540x webp q100" }}
-                                  {{ $height := $processedBackground.Height }}
-                                  {{ $width := $processedBackground.Width }}
-
-                                  <div class="is-flex is-align-items-center is-justify-content-center custom-background-image" style="background-image: url('{{ $processedBackground.RelPermalink }}'); min-height: {{ $height }}px;">
+                                {{ $image := partial "convert-image.html" (dict "src" .background "resize" "540x" "quality" "100") }}
+                                  <div class="is-flex is-align-items-center is-justify-content-center custom-background-image" style="background-image: url('{{ $image.url }}'); min-height: {{ $image.height }}px;">
                                     <figure class="image is-flex is-align-items-center is-justify-content-center" style="width:120px;height:120px;margin:auto">
                                       <img src="{{ .image }}" alt="{{ .name }}">
                                     </figure>
                                    </div>
-
-                                {{ else }}
-                                  {{ errorf "Image not found: %s" $src }}
-                                {{ end }}
 
                           </div>
                           <div class="column is-flex is-flex-direction-column" style="gap: 1em">

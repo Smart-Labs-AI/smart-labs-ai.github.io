@@ -35,12 +35,8 @@
                 {{ $imagePath := printf "testimonial/images/face/%s" $faceName }}
                 {{ $original := resources.Get $imagePath }}
 
-                {{ if $original }}
-                  {{ $thumbnail := $original.Resize "64x64 webp q85" }}
-                  <img class="round-image" src="{{ $thumbnail.RelPermalink }}" alt="{{ .name }}">
-                {{ else }}
-                  {{ errorf "Image not found in assets: %s" $imagePath }}
-                {{ end }}
+                {{ $thumbnail := partial "convert-image.html" (dict "src" $imagePath "resize" "64x64" "quality" "85" "format" "webp") }}
+                <img class="round-image" src="{{ $thumbnail.url }}" alt="{{ .name }}">
               </figure>
               <div class="ml-4 is-flex is-flex-direction-column">
                 <div class="is-flex is-flex-direction-column">
@@ -51,12 +47,8 @@
                   {{ $imagePath := printf "testimonial/images/logo/%s" $companyName }}
                   {{ $original := resources.Get $imagePath }}
 
-                  {{ if $original }}
-                    {{ $thumbnail := $original.Resize "x40 webp q85" }}
-                    <img style="height:40px;" src="{{ $thumbnail.RelPermalink }}" alt="{{ .company }}">
-                  {{ else }}
-                    {{ errorf "Image not found in assets: %s" $imagePath }}
-                  {{ end }}
+                  {{ $thumbnail := partial "convert-image.html" (dict "src" $imagePath "resize" "x40" "quality" "85" "format" "webp") }}
+                    <img style="height:40px;" src="{{ $thumbnail.url }}" alt="{{ .company }}">
                 </div>
               </div>
             </div>

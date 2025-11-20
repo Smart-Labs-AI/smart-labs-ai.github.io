@@ -1,0 +1,48 @@
+{{- $aboutUsValues   := .Params.aboutus_values }}
+{{- $sectionTitle    := index $aboutUsValues "section-title" }}
+{{- $title := index $aboutUsValues "title" }}
+{{- $values          := index $aboutUsValues "values" }}
+
+<section class="section section-grey">
+  <div class="container has-text-centered">
+    <div class="columns is-centered is-vcentered">
+      <div class="column is-8">
+        {{- if $sectionTitle }}
+          <h3 class="section-name is-5">{{ $sectionTitle | markdownify }}</h3>
+        {{- end }}
+        {{- if $title }}
+          <h3 class="section-title">{{ $title }}</h3>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-6">
+    <div class="columns is-multiline">
+      {{ $len := len $values }}
+      {{ range $i, $e := $values }}
+      {{ $isLast := eq (add $i 1) $len }}
+      {{ $isOdd := modBool $len 2 }}
+      <div class="column {{ if and $isLast $isOdd }}is-full{{ else }}is-half{{ end }}">
+        {{ $bg := "" }}
+        {{ if or (eq $i 0) (eq $i 1) }}
+          {{ $bg = "/images/about-us/values/background_1.png" }}
+        {{ else }}
+          {{ $bg = "/images/about-us/values/background_2.png" }}
+        {{ end }}
+        <div class="card card-dark" style="background-image: url('{{ $bg }}');">
+          <div class="card-content">
+            <figure class="image is-48x48" style="margin-bottom: 4rem;">
+              <img src="{{ .icon }}" alt="{{ .title }}">
+            </figure>
+            <p class="title is-4">{{ .title }}</p>
+            <div class="content">
+              {{ .description | markdownify }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

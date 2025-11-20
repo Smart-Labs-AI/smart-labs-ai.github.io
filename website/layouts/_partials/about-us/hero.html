@@ -1,0 +1,50 @@
+{{- $aboutUsHero := .Params.aboutus_hero }}
+{{- $backgroundImage := index $aboutUsHero "backgroundImage" }}
+{{- $mainImage := index $aboutUsHero "mainImage" }}
+{{- $pageTitle  := index $aboutUsHero "pageTitle" }}
+{{- $title      := index $aboutUsHero "title" }}
+{{- $subtitle   := index $aboutUsHero "subtitle" }}
+
+{{- $bgImage := partial "convert-image.html" (dict "src" $backgroundImage "resize" "1800x" "quality" "90") -}}
+{{- $mainImage := partial "convert-image.html" (dict "src" $mainImage "resize" "1280x" "quality" "100") -}}
+
+<style>
+  .hero-background-custom::before {
+    background: url('{{ $bgImage.url }}') no-repeat center;
+    background-size: 100% 100%;
+  }
+</style>
+
+<section class="section section-hero" style="padding-top: 0em">
+  <div class="section hero-container">
+    <div class="hero-background-custom"></div>
+    
+    <div class="hero-body" style="padding-top:0">
+      <div class="container">
+        <div class="hero-content">
+          <div class="section-badge">
+            <span class="section-title">{{ $pageTitle | markdownify }}</span>
+          </div>
+          
+          <h1 class="hero-title">
+            {{ $title }}
+          </h1>
+
+          {{ with $subtitle }}
+          <p class="hero-subtitle mt-3" style="max-width: 1200px;">
+            {{ . | markdownify }}
+          </p>
+          {{ end }}
+
+          {{- partial "ambilight.html" (dict 
+            "id" "ambilight-hero"
+            "image" $mainImage.url
+            "autoplay" "true"
+            "colorMode" "dominant"
+        ) -}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

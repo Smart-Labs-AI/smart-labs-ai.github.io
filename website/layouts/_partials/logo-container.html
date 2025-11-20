@@ -10,12 +10,8 @@
             {{ $imagePath := printf "testimonial/images/logo/%s" $logoName }}
             {{ $original := resources.Get $imagePath }}
 
-            {{ if $original }}
-              {{ $thumbnail := $original.Resize "x40 webp q85" }}
-              <img class="partner-logo" src="{{ $thumbnail.RelPermalink }}" alt="{{ .company }}">
-            {{ else }}
-              {{ errorf "Logo not found in assets: %s" $imagePath }}
-            {{ end }}
+            {{ $thumbnail := partial "convert-image.html" (dict "src" $imagePath "resize" "x40" "quality" "85" "format" "webp") }}
+            <img class="partner-logo" src="{{ $thumbnail.url }}" alt="{{ .company }}">
           </a>
         </li>
         {{- end }}

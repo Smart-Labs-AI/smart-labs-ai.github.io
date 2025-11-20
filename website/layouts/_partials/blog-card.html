@@ -3,12 +3,8 @@
     {{ $imagePath := trim .Params.image "/" }} 
     {{ $original := resources.Get $imagePath }}
     
-    {{ if $original }}
-      {{ $thumbnail := $original.Resize "384x webp q85 drawing" }}
-      <img src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" style="object-fit: cover; object-position: center;" class="blog-image">
-    {{ else }}
-      {{ errorf "Image not found: %s" .Params.image }}
-    {{ end }}
+    {{ $thumbnail := partial "convert-image.html" (dict "src" $imagePath "resize" "384x" "quality" "85" "format" "webp") }}
+    <img src="{{ $thumbnail.url }}" alt="{{ .Title }}" style="object-fit: cover; object-position: center;" class="blog-image">
   </div>
 
   <div class="blog-card-content is-flex is-flex-direction-column is-flex-grow-1">

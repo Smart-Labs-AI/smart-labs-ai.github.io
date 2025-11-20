@@ -24,19 +24,8 @@ Content hier
 <div class="section-image">
 
 {{ if .Get "image" }}
-{{ $img := resources.Get (.Get "image") }}
-{{ if $img }}
-  {{ $width := .Get "width" | default "800" }}
-  {{ $processString := printf "resize %sx webp q90" $width }}
-  {{ $processed := $img.Process $processString }}
-  <img src="{{ $processed.RelPermalink }}" alt="{{ .Get "alt" | default "CTA Bild" }}" loading="lazy" />
-{{ else }}
-  <div class="page-image-error">
-    <div class="error-icon">📷</div>
-    <div class="error-title">Bild nicht gefunden</div>
-    <div class="error-path">{{ .Get "image" }}</div>
-  </div>
-{{ end }}
+  {{ $image := partial "convert-image.html" (dict "src" (.Get "image") "resize" (printf "%sx" (.Get "width" | default "800")) "quality" "90") }}
+  <img src='{{ $image.url }}' alt="{{ .Get "alt" | default "CTA Bild" }}" loading="lazy" />
 {{ end }}
 
 </div>
