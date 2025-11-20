@@ -22,26 +22,22 @@
       <div class="columns is-multiline is-variable is-6">
         {{ range $members }}
         <div class="column is-one-third-desktop is-half-tablet">
-          <div class="card team-card is-flex is-flex-direction-column is-fullheight">
-            <div class="card-image">
-              <figure class="image team-card-image">
-                {{- $teamImage := partial "convert-image.html" (dict "src" .image "resize" "300x" "quality" "90") -}}
+          <div class="card card-dark team-card is-flex is-flex-direction-column is-fullheight" style="background: linear-gradient(180deg, #1A1449 0%, #00002B 100%);">
+            <figure class="image">
+                {{- $teamImage := partial "convert-image.html" (dict "src" .image "resize" "200x" "quality" "90") -}}
                 {{ partial "profile-image.html" (dict "img" $teamImage.url "ctx" .) }}
-
-              </figure>
-            </div>
+            </figure>
 
             <div class="card-content team-card-content">
-              <p class="team-card-name">{{ .name }}</p>
-              <p class="team-card-position">{{ .position }}</p>
-
-              {{ with .linkedin }}
-              <a href="{{ . }}" class="team-card-linkedin" target="_blank" rel="noopener">
-                <span class="icon">
-                  <i class="fab fa-linkedin-in"></i>
-                </span>
-              </a>
-              {{ end }}
+              <p class="team-card-name" style="font-size: 1.5em">{{ .name }}</p>
+              <p class="team-card-position" style="color:rgba(255, 255, 255, 0.7)">
+                {{ with .linkedin }}
+                    <a href="{{ . }}" class="social-media" href="https://www.linkedin.com/company/smart-labs-ai-gmbh" aria-label="linkedin" style="color:#98a9c3;font-size:1.5em">
+                            <span class="icon"><i class="fab fa-linkedin"></i></span>
+                        </a>
+                {{ end }}
+                {{ .position }}
+              </p>
             </div>
           </div>
         </div>
