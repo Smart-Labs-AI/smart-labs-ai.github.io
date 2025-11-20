@@ -1,0 +1,21 @@
+# General
+.git
+.github
+.gitignore
+.DS_Store
+
+# Docker & Compose artifacts
+*.env
+
+# Hugo build output (never needed in context)
+website/public
+website/resources
+website/.hugo_build.lock
+
+# Node
+website/node_modules
+
+# Other caches
+**/.cache
+**/tmp
+**/.tmp

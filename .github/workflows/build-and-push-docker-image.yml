@@ -31,13 +31,21 @@ jobs:
           echo "IMAGE_TAG=latest" >> $GITHUB_ENV
           echo "IMAGE_TAG_SHA=${{ github.sha }}" >> $GITHUB_ENV
 
-      - name: Build with Docker Compose
-        run: |
-          docker compose -f docker-compose.yml -f docker-compose.prod.yml build --build-arg BUILDKIT_INLINE_CACHE=1
-
-      - name: Push images
-        run: |
-         docker compose -f docker-compose.yml -f docker-compose.prod.yml push
+      - name: Build and push (with Buildx cache)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: |
+            rg.nl-ams.scw.cloud/slai-cr/website:latest
+            rg.nl-ams.scw.cloud/slai-cr/website:${{ github.sha }}
+          cache-from: |
+            type=gha
+            type=registry,ref=rg.nl-ams.scw.cloud/slai-cr/website:latest
+          cache-to: type=gha,mode=max
+          build-args: |
+            BUILDKIT_INLINE_CACHE=1
   
 
   deploy:

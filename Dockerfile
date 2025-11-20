@@ -1,21 +1,42 @@
-FROM golang:1.25.1-bookworm AS build
+# syntax=docker/dockerfile:1.6-labs
 
-ENV HUGO_ENV=production
+FROM node:20-bookworm-slim AS build
 
-RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install -y nodejs npm
+ARG HUGO_VERSION=0.132.2
+ENV HUGO_ENV=production \
+    HUGO_CACHEDIR=/root/.cache/hugo
 
-RUN CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@v0.152.2
+# Base packages and Hugo (extended) binary
+RUN --mount=type=cache,target=/var/cache/apt \
+    --mount=type=cache,target=/var/lib/apt \
+    apt-get update && apt-get install -y --no-install-recommends \
+      ca-certificates curl git \
+    && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app/website
-COPY website/ /app/website
+RUN curl -fsSL -o /tmp/hugo.tar.gz \
+      https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz \
+    && tar -xzf /tmp/hugo.tar.gz -C /usr/local/bin hugo \
+    && rm /tmp/hugo.tar.gz \
+    && hugo version
 
-RUN npm install
+WORKDIR /src/website
 
-RUN  hugo --minify --gc
+# 1) Install node deps with maximum cache reuse
+COPY website/package*.json ./
+RUN --mount=type=cache,target=/root/.npm npm ci --no-audit --no-fund
+
+# 2) Copy the rest of the source
+COPY website/ ./
+
+# Ensure PostCSS binaries are discoverable when Hugo runs
+ENV PATH="/src/website/node_modules/.bin:${PATH}"
+
+# 3) Build the site with Hugo
+RUN --mount=type=cache,target=/root/.cache/hugo \
+    hugo --minify --gc
 
 FROM nginx:stable-alpine AS production
 
 COPY nginx/ /etc/nginx/conf.d/
-COPY --from=build /app/website/public/ /usr/share/nginx/html/
+COPY --from=build /src/website/public/ /usr/share/nginx/html/
 EXPOSE 80
