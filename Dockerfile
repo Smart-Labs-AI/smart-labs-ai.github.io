@@ -2,7 +2,7 @@
 
 FROM node:20-bookworm-slim AS build
 
-ARG HUGO_VERSION=0.132.2
+ARG HUGO_VERSION=0.152.2
 ENV HUGO_ENV=production \
     HUGO_CACHEDIR=/root/.cache/hugo
 
@@ -10,7 +10,7 @@ ENV HUGO_ENV=production \
 RUN --mount=type=cache,target=/var/cache/apt \
     --mount=type=cache,target=/var/lib/apt \
     apt-get update && apt-get install -y --no-install-recommends \
-      ca-certificates curl git \
+      ca-certificates curl git golang-go \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL -o /tmp/hugo.tar.gz \
@@ -33,10 +33,14 @@ ENV PATH="/src/website/node_modules/.bin:${PATH}"
 
 # 3) Build the site with Hugo
 RUN --mount=type=cache,target=/root/.cache/hugo \
+    --mount=type=cache,target=/root/go/pkg/mod \
+    --mount=type=cache,target=/root/.cache/go-build \
     hugo --minify --gc
 
-FROM nginx:stable-alpine AS production
+FROM nginxinc/nginx-unprivileged:alpine
+
+EXPOSE 8080
+USER nginx
 
 COPY nginx/ /etc/nginx/conf.d/
 COPY --from=build /src/website/public/ /usr/share/nginx/html/
-EXPOSE 80

@@ -60,7 +60,7 @@ team:
       image: "/about-us/dennis_rall.jpeg"
       linkedin: "https://www.linkedin.com/in/dennis-rall/"
     - name: "Tim Köhler"
-      position: "Principal Sofware Enineer"
+      position: "Principal Sofware Engineer"
       image: "/about-us/tim_koehler.jpeg"
       linkedin: "https://www.linkedin.com/in/tim-k%C3%B6hler-234794211/"
 --- 
