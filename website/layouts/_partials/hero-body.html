@@ -6,6 +6,8 @@
 {{- $buttonLink := index $hero "buttonlink" }}
 {{- $secondaryButtonText := index $hero "secondaryButtontext" }}
 {{- $secondaryButtonLink := index $hero "secondaryButtonlink" }}
+{{- $tertiaryButtonText := index $hero "tertiaryButtontext" }}
+{{- $tertiaryButtonLink := index $hero "tertiaryButtonlink" }}
 {{- $image      := index $hero "image" }}
 
 <div class="hero-background"></div>
@@ -34,6 +36,11 @@
           <a class="button cta rounded secondary-btn raised" href="{{ $secondaryButtonLink | absURL }}">
             {{ $secondaryButtonText }}
           </a>
+          {{ if and $tertiaryButtonText $tertiaryButtonLink }}
+          <a class="button cta rounded secondary-btn raised" href="{{ $tertiaryButtonLink | absURL }}">
+            {{ $tertiaryButtonText }}
+          </a>
+          {{ end }}
         </div>
       </div>
       <div class="column is-4">
@@ -72,6 +79,11 @@
           <a class="button cta rounded secondary-btn raised" href="{{ $secondaryButtonLink }}">
             {{ $secondaryButtonText }}
           </a>
+          {{ if and $tertiaryButtonText $tertiaryButtonLink }}
+          <a class="button cta rounded primary-btn btn-outlined raised" href="{{ $tertiaryButtonLink | absURL }}">
+            {{ $tertiaryButtonText }}
+          </a>
+          {{ end }}
         </div>
       </div>
     </div>

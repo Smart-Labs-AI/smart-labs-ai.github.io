@@ -79,6 +79,8 @@ params:
     buttonlink: "/contact/free-risk-check"
     secondaryButtontext: Insights entdecken
     secondaryButtonlink: /blog
+    tertiaryButtontext: Über Smart Labs AI
+    tertiaryButtonlink: /about-us
     image: hero/padlock.webp
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
@@ -86,6 +88,8 @@ params:
     url: /services
   - title: Solutions
     url: /solution
+  - title: Über uns
+    url: /about-us
   - title: Blog
     url: /blog
   - title: Kontakt
