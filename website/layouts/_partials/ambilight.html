@@ -336,6 +336,7 @@
                 desynchronized: true,
                 willReadFrequently: false
             });
+            this.baseTransform = 'translate(-50%, -50%)';
             
             this.quality = '{{ $quality }}';
             this.qualitySettings = qualityPresets[this.quality];
@@ -450,6 +451,7 @@
             // CSS-Größe bleibt voll
             this.canvas.style.width = Math.floor(rect.width * spread) + 'px';
             this.canvas.style.height = Math.floor(rect.height * spread) + 'px';
+            this.canvas.style.transform = this.baseTransform;
             
             // Bildglättung optimieren
             this.ctx.imageSmoothingEnabled = true;
@@ -787,6 +789,7 @@
                 this.animationFrame = null;
             }
             this.edgeOffsets = { top: 0, bottom: 0, left: 0, right: 0 };
+            this.canvas.style.transform = this.baseTransform;
             this.clearCache();
             this.setup();
         }
@@ -821,21 +824,16 @@
             const opacityBase = this.options.opacity;
             const animatedOpacity = Math.max(0.4, Math.min(1, opacityBase + Math.sin(this.animationTime * 0.8) * 0.15));
             
-            const spreadBase = this.options.spread;
+            const spreadBase = this.options.spread || 1;
             const animatedSpread = spreadBase + Math.sin(this.animationTime * 0.6) * 0.15;
+            const spreadScale = animatedSpread / spreadBase;
+            this.canvas.style.transform = `${this.baseTransform} scale(${spreadScale})`;
 
             const edgeAnimIntensity = this.options.edgeAnimation;
             this.edgeOffsets.top = Math.sin(this.animationTime * 1.2) * 30 * edgeAnimIntensity;
             this.edgeOffsets.bottom = Math.sin(this.animationTime * 0.9 + Math.PI) * 25 * edgeAnimIntensity;
             this.edgeOffsets.left = Math.sin(this.animationTime * 1.1 + Math.PI/2) * 28 * edgeAnimIntensity;
             this.edgeOffsets.right = Math.sin(this.animationTime * 0.85 + Math.PI*1.5) * 27 * edgeAnimIntensity;
-
-            const rect = this.image.getBoundingClientRect();
-            const scale = this.qualitySettings.canvasScale;
-            this.canvas.width = Math.floor(rect.width * animatedSpread * scale);
-            this.canvas.height = Math.floor(rect.height * animatedSpread * scale);
-            this.canvas.style.width = Math.floor(rect.width * animatedSpread) + 'px';
-            this.canvas.style.height = Math.floor(rect.height * animatedSpread) + 'px';
 
             const originalBrightness = this.options.brightness;
             const originalSaturation = this.options.saturation;
