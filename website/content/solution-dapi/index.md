@@ -1,11 +1,11 @@
 ---
-title: "Defence API für LLM Security"
+title: "Defense API für LLM Security"
 date: 2025-08-27
 layout: "landingpage"
 pricingKey: "dapi"
 hero:
   background-image: "/solution/dapi/hero.png"
-  section-title: "Defence API für LLM Security"
+  section-title: "Defense API für LLM Security"
   title: "Schütze deine KI, bevor sie dich in Schwierigkeiten bringt."
   subtitle: "Dein Team nutzt LLMs - aber wer schützt euch vor Prompt Injection, Datenlecks und rechtlichem Ärger?"
   live-in:

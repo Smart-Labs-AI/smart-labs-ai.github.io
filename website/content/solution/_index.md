@@ -19,7 +19,7 @@ hero:
         link: "/solution/smart-dragon"
         image: "/images/illustrations/icons/smart-dragon.svg"
     - item:
-        name: "Defence API"
+        name: "Defense API"
         link: "/solution/dapi"
         image: "/images/illustrations/icons/llm-security.svg"
   ctas:

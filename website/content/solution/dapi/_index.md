@@ -19,7 +19,7 @@ hero:
   subtitle: "Stoppen Sie Angriffe, bevor sie Ihre KI erreichen. Die erste Plattform zum Schutz, zur Überwachung und zur Härtung von LLMs, Agenten & AI-APIs. DSGVO-konform. Sofort einsatzbereit. Wir unterstützen die **sichere Integration von Open-Source LLMs**."
   solutions:
     - item:
-        name: "Defence API"
+        name: "Defense API"
         link: ""
         image: "/images/illustrations/icons/llm-security.svg"
   ctas:
