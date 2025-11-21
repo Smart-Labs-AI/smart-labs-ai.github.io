@@ -793,6 +793,9 @@
 
         animate(currentTime) {
             if (!this.animating) return;
+            if (typeof currentTime !== 'number') {
+                currentTime = performance.now();
+            }
             
             // FPS-Limiting
             const elapsed = currentTime - this.lastFrameTime;
@@ -803,7 +806,8 @@
             }
             
             this.lastFrameTime = currentTime - (elapsed % this.frameInterval);
-            this.animationTime += 0.01 * this.options.animationSpeed;
+            const deltaSeconds = elapsed / 1000;
+            this.animationTime += deltaSeconds * this.options.animationSpeed;
 
             const blurBase = this.options.blur;
             const animatedBlur = blurBase + Math.sin(this.animationTime) * 30;
