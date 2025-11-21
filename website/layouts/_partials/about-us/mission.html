@@ -4,9 +4,23 @@
 
 <style>
 .section.section-about-us-mission h4.title {
-  font-size:1.5em; 
-  font-family: 'Inter', sans-serif; 
+  font-size: clamp(1.15rem, calc(0.95rem + 1.2vw), 1.75rem);
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
+  line-height: 1.35;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  .section.section-about-us-mission h4.title {
+    font-size: 1.25rem;
+  }
+
+  .section.section-about-us-mission .columns {
+    gap: 1.5rem;
+  }
 }
 </style>
 
