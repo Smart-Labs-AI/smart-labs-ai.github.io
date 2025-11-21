@@ -300,6 +300,20 @@
 <script>
 (function() {
     const containerId = '{{ $id }}';
+    const uaData = navigator.userAgentData;
+    let isChromeMobile = false;
+
+    if (uaData && Array.isArray(uaData.brands)) {
+        const isChromiumBrand = uaData.brands.some(brand => /Chrom(?:e|ium)/i.test(brand.brand));
+        isChromeMobile = isChromiumBrand && uaData.mobile;
+    } else {
+        const ua = (navigator.userAgent || '').toLowerCase();
+        const isMobileUA = /mobi|android|iphone|ipad|ipod/.test(ua);
+        const isChromeUA = /chrome|crios|crmo/.test(ua) && !/edg|edge|opr|opera|samsungbrowser/.test(ua);
+        isChromeMobile = isMobileUA && isChromeUA;
+    }
+
+    const shouldAutoplay = {{ if $autoplay }}true{{ else }}false{{ end }};
     
     // Performance Presets
     const qualityPresets = {
@@ -328,6 +342,7 @@
     
     class AmbilightEffect {
         constructor(imageElement, options = {}) {
+            const { disableAnimation = false, ...effectOptions } = options;
             this.image = imageElement;
             this.wrapper = imageElement.parentElement;
             this.canvas = this.wrapper.querySelector('.ambilight-canvas-' + containerId);
@@ -337,6 +352,7 @@
                 willReadFrequently: false
             });
             this.baseTransform = 'translate(-50%, -50%)';
+            this.animationDisabled = disableAnimation;
             
             this.quality = '{{ $quality }}';
             this.qualitySettings = qualityPresets[this.quality];
@@ -352,7 +368,7 @@
                 colorMode: '{{ $colorMode }}',
                 colorVibrance: {{ div $colorVibrance 100.0 }},
                 edgeAnimation: {{ div $edgeAnimation 100.0 }},
-                ...options
+                ...effectOptions
             };
 
             this.animating = false;
@@ -775,6 +791,7 @@
         }
 
         startAnimation() {
+            if (this.animationDisabled) return;
             if (this.animating) return;
             this.animating = true;
             this.animationTime = 0;
@@ -859,10 +876,12 @@
         if (!image) return;
         
         const init = () => {
-            ambilightInstance = new AmbilightEffect(image);
-            {{- if $autoplay }}
-            ambilightInstance.startAnimation();
-            {{- end }}
+            ambilightInstance = new AmbilightEffect(image, {
+                disableAnimation: isChromeMobile
+            });
+            if (shouldAutoplay && !ambilightInstance.animationDisabled) {
+                ambilightInstance.startAnimation();
+            }
             setupControls();
         };
         
@@ -922,17 +941,22 @@
 
         const toggleButton = container.querySelector('.ambilight-toggle-button');
         if (toggleButton) {
-            toggleButton.addEventListener('click', () => {
-                if (ambilightInstance.animating) {
-                    ambilightInstance.stopAnimation();
-                    toggleButton.textContent = 'Animation starten';
-                    toggleButton.classList.remove('active');
-                } else {
-                    ambilightInstance.startAnimation();
-                    toggleButton.textContent = 'Animation stoppen';
-                    toggleButton.classList.add('active');
-                }
-            });
+            if (ambilightInstance.animationDisabled) {
+                toggleButton.disabled = true;
+                toggleButton.textContent = 'Animation auf diesem Gerät deaktiviert';
+            } else {
+                toggleButton.addEventListener('click', () => {
+                    if (ambilightInstance.animating) {
+                        ambilightInstance.stopAnimation();
+                        toggleButton.textContent = 'Animation starten';
+                        toggleButton.classList.remove('active');
+                    } else {
+                        ambilightInstance.startAnimation();
+                        toggleButton.textContent = 'Animation stoppen';
+                        toggleButton.classList.add('active');
+                    }
+                });
+            }
         }
         {{- end }}
     }
