@@ -23,9 +23,14 @@
       <div class="hero-body">
         <div class="container">
           <div class="hero-content">
-            <div class="section-badge">
-              <span class="section-title">{{ $sectionTitle | markdownify }}</span>
-            </div>
+            {{ with $solutions }}
+            {{ if eq (len .) 1 }}
+            {{ else}}
+              <div class="section-badge">
+                <span class="section-title">{{ $sectionTitle | markdownify }}</span>
+              </div>
+            {{ end }}
+            {{ end }}
             
             <h1 class="hero-title">
               {{ $title }}
@@ -38,9 +43,11 @@
               <div class="pill pill-glass is-flex-direction-column-tablet" >
                   {{ with $solutions }}
                   {{ if eq (len .) 1 }}
-                    <div class="logo-icon"style="background:none; border:none">
-                      <img src="{{ (index . 0).item.image }}" alt="{{ (index . 0).item.name }} Icon">
-                    </div>
+                    <a href="{{ (index . 0).item.link }}" style="color:#fff !important">
+                      <div class="logo-icon"style="background:none; border:none">
+                        <img src="{{ (index . 0).item.image }}" alt="{{ (index . 0).item.name }} Icon">
+                      </div>
+                    </a>
                   {{ else }}
                     {{ range . }}
                       <a href="{{ .item.link }}" style="color:#fff !important">
@@ -56,6 +63,13 @@
                   {{ end }}
               </div>
             </div>
+            {{ with $solutions }}
+              {{ if eq (len .) 1 }}
+              <div class="logo-title">
+                <h2 class="has-text-weight-bold" style="color:#fff !important; font-size: 1.5rem;">{{ (index . 0).item.name }}</h2>
+              </div>
+            {{ end }}
+            {{ end }}
 
             {{ with $subtitle }}
             <p class="hero-subtitle mt-6">
