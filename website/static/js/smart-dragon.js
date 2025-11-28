@@ -59,21 +59,20 @@
 
         /* CONSENT CHECKBOX */
         .consent-box {
-          display: flex; align-items: flex-start; gap: 0.75rem;
+          display: flex; align-items: center; gap: 0.75rem;
           padding: 1rem; margin: 0.5rem 0;
           background: rgba(255, 255, 255, 0.1);
           border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.2);
           max-width: 65%; align-self: flex-start;
         }
         .consent-box input[type="checkbox"] {
-          margin-top: 0.2rem; cursor: pointer;
+          margin-top: 0; cursor: pointer;
           width: 20px; height: 20px; flex-shrink: 0;
           accent-color: #F37536;
         }
         .consent-box label {
           color: white; font-size: 15px; line-height: 1.5;
-          cursor: pointer; user-select: none;
-        }
+        } 
         .consent-box label a {
           color: #F37536; text-decoration: underline;
         }
@@ -164,6 +163,7 @@
 
         @media (max-width: 768px) {
           .smart-dragon-chat { padding: 2rem; }
+          .consent-box { max-width: 100%; }
         }
       `;
 
