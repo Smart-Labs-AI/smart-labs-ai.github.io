@@ -1,12 +1,18 @@
 {{- $aboutUsHero := .Params.aboutus_hero }}
 {{- $backgroundImage := index $aboutUsHero "backgroundImage" }}
-{{- $mainImage := index $aboutUsHero "mainImage" }}
+{{- $mainImages := index $aboutUsHero "mainImages" }}
+{{- $carouselSettings := index $aboutUsHero "carousel" }}
 {{- $pageTitle  := index $aboutUsHero "pageTitle" }}
 {{- $title      := index $aboutUsHero "title" }}
 {{- $subtitle   := index $aboutUsHero "subtitle" }}
 
 {{- $bgImage := partial "convert-image.html" (dict "src" $backgroundImage "resize" "1800x" "quality" "90") -}}
-{{- $mainImage := partial "convert-image.html" (dict "src" $mainImage "resize" "1280x" "quality" "100") -}}
+
+{{- $processedImages := slice }}
+{{- range $mainImages }}
+  {{- $img := partial "convert-image.html" (dict "src" . "resize" "1280x" "quality" "100") }}
+  {{- $processedImages = $processedImages | append $img.url }}
+{{- end }}
 
 <style>
   .hero-background-custom::before {
@@ -36,13 +42,15 @@
           </p>
           {{ end }}
 
-          {{- partial "ambilight.html" (dict 
-            "id" "ambilight-hero"
-            "image" $mainImage.url
-            "autoplay" "true"
-            "colorMode" "dominant"
-            "animationSpeed" "0.7"
-        ) -}}
+          {{- partial "ambilight-carousel.html" (dict 
+              "id" "ambilight-hero"
+              "images" $processedImages
+              "autoplay" true
+              "colorMode" "dominant"
+              "animationSpeed" 0.7
+              "carouselInterval" (cond $carouselSettings (default 4000 (index $carouselSettings "interval")) 4000)
+              "carouselTransition" (cond $carouselSettings (default 800 (index $carouselSettings "transition")) 800)
+          ) -}}
 
         </div>
       </div>
