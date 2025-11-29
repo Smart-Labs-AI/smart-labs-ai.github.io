@@ -1,7 +1,7 @@
 
 ---
 title: "Services"
-subtitle: "kp"
+subtitle: "Einblicke in die Welt der KI-Sicherheit."
 layout: "services"
 
 services_hero:
