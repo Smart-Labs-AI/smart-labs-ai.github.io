@@ -42,16 +42,10 @@
           </p>
           {{ end }}
 
-          {{- partial "ambilight-carousel.html" (dict 
-              "id" "ambilight-hero"
-              "images" $processedImages
-              "autoplay" true
-              "colorMode" "dominant"
-              "animationSpeed" 0.7
-              "carouselInterval" (cond $carouselSettings (default 4000 (index $carouselSettings "interval")) 4000)
-              "carouselTransition" (cond $carouselSettings (default 800 (index $carouselSettings "transition")) 800)
-          ) -}}
-
+            {{- partial "ambilight-carousel.html" (dict
+            "mainImages" $processedImages
+            "carousel" $carouselSettings
+            ) -}}
         </div>
       </div>
     </div>
