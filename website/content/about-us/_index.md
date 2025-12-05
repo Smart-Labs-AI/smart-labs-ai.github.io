@@ -5,7 +5,20 @@ description: "Smart Labs AI macht KI-Systeme sicher. Unser interdisziplinäres T
 layout: "aboutus"
 aboutus_hero:
   backgroundImage: "/about-us/hero.png"
-  mainImage: "/about-us/main.png"
+  mainImages:
+    - "/about-us/main.jpg"
+    - "/about-us/main1.jpg"
+    - "/about-us/main2.jpg"
+  carousel:
+    interval: 4000
+    transition: 800
+  ambilight:
+    blur: 90
+    brightness: 30
+    saturation: 60
+    spread: 15
+    opacity: 7
+    quality: "medium"
   title: Wir sind Smart Labs AI
   subtitle: Das interdisziplinäre Team für sichere KI-Systeme – gebaut von Experten, die KI-Sicherheit nicht nur verstehen, sondern leben.
 aboutus_mission:

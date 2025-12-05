@@ -1,0 +1,512 @@
+
+{{ $images := .mainImages }}
+{{ $interval := default 3000 .carousel.interval }}
+{{ $transition := default 700 .carousel.transition }}
+
+{{ $blur := default 90 .ambilight.blur }}
+{{ $brightness := default 30 .ambilight.brightness }}
+{{ $saturation := default 60 .ambilight.saturation }}
+{{ $spread := default 15 .ambilight.spread }}
+{{ $opacity := default 7 .ambilight.opacity }}
+{{ $edgeSampling := default 25 .ambilight.edgeSampling }}
+{{ $colorVibrance := default 74 .ambilight.colorVibrance }}
+{{ $animationSpeed := default 4 .ambilight.animationSpeed }}
+{{ $edgeAnimation := default 73 .ambilight.edgeAnimation }}
+{{ $colorMode := default "dominant" .ambilight.colorMode }}
+{{ $quality := default "medium" .ambilight.quality }}
+
+{{ $carouselId := printf "carousel-%d" now.UnixNano }}
+
+{{ if $images }}
+
+<style>
+    .carousel-ambilight-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        margin: 0 auto;
+    }
+
+    .carousel-ambilight-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .carousel-ambilight-canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        pointer-events: none;
+        will-change: filter, opacity;
+    }
+
+    .carousel-main-wrapper {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel-nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .carousel-nav-btn.carousel-prev {
+        left: 1rem;
+    }
+
+    .carousel-nav-btn.carousel-next {
+        right: 1rem;
+    }
+
+    .carousel-nav-btn span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 9999px;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(4px);
+        transition: all 0.2s;
+    }
+
+    .carousel-nav-btn:hover span {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .carousel-nav-btn svg {
+        width: 1rem;
+        height: 1rem;
+        color: white;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 30;
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        border-radius: 9999px;
+    }
+
+    .carousel-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .carousel-indicator:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .carousel-indicator.active {
+        background-color: white;
+        width: 24px;
+        border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-ambilight-container {
+            padding: 30px 10px;
+        }
+
+        .carousel-nav-btn.carousel-prev {
+            left: 0.5rem;
+        }
+
+        .carousel-nav-btn.carousel-next {
+            right: 0.5rem;
+        }
+
+        .carousel-indicators {
+            bottom: 0.75rem;
+            gap: 0.4rem;
+            padding: 0.4rem 0.6rem;
+        }
+
+        .carousel-indicator {
+            width: 6px;
+            height: 6px;
+        }
+
+        .carousel-indicator.active {
+            width: 18px;
+        }
+    }
+</style>
+
+<!-- Carousel Container with Ambilight -->
+<div class="horizontal-carousel carousel-ambilight-container" id="{{ $carouselId }}" data-interval="{{ $interval }}">
+    <div class="carousel-ambilight-wrapper">
+        <!-- Ambilight Canvas -->
+        <canvas class="carousel-ambilight-canvas"></canvas>
+
+        <!-- Carousel Main Wrapper -->
+        <div class="carousel-main-wrapper">
+            <!-- Track -->
+            <div class="carousel-track" style="display: flex; flex-direction: row; flex-wrap: nowrap; width: 100%; transition: transform ease-in-out; transition-duration: {{ $transition }}ms;">
+                {{ range $index, $element := $images }}
+                <div style="flex: none; width: 100%;">
+                    <img src="{{ $element }}" alt="Slide {{ $index }}" class="carousel-slide-image" style="width: 100%; height: auto; object-fit: cover; display: block;" crossorigin="anonymous" loading="{{ if eq $index 0 }}eager{{ else }}lazy{{ end }}">
+                </div>
+                {{ end }}
+            </div>
+
+            <!-- Previous Button -->
+            <button type="button" class="carousel-nav-btn carousel-prev" aria-label="Previous slide">
+                <span>
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Next Button -->
+            <button type="button" class="carousel-nav-btn carousel-next" aria-label="Next slide">
+                <span>
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-indicators">
+                {{ range $index, $element := $images }}
+                <button type="button" class="carousel-indicator{{ if eq $index 0 }} active{{ end }}" data-index="{{ $index }}" aria-label="Go to slide {{ add $index 1 }}"></button>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        const carouselId = '{{ $carouselId }}';
+
+        const qualityPresets = {
+            low: { canvasScale: 0.25, sampleStep: 32, sections: 6, fps: 30 },
+            medium: { canvasScale: 0.4, sampleStep: 16, sections: 8, fps: 45 },
+            high: { canvasScale: 0.6, sampleStep: 8, sections: 12, fps: 60 }
+        };
+
+        class CarouselAmbilight {
+            constructor(carouselElement, options = {}) {
+                this.carousel = carouselElement;
+                this.wrapper = carouselElement.querySelector('.carousel-ambilight-wrapper');
+                this.canvas = carouselElement.querySelector('.carousel-ambilight-canvas');
+                this.mainWrapper = carouselElement.querySelector('.carousel-main-wrapper');
+                this.track = carouselElement.querySelector('.carousel-track');
+                this.images = carouselElement.querySelectorAll('.carousel-slide-image');
+                this.indicators = carouselElement.querySelectorAll('.carousel-indicator');
+                this.ctx = this.canvas.getContext('2d', { willReadFrequently: true });
+
+                this.options = {
+                    blur: {{ $blur }},
+                brightness: {{ $brightness }} / 10,
+                saturation: {{ $saturation }} / 10,
+                spread: {{ $spread }} / 10,
+                opacity: {{ $opacity }} / 10,
+                edgeSampling: {{ $edgeSampling }} / 100,
+                colorVibrance: {{ $colorVibrance }} / 100,
+                animationSpeed: {{ $animationSpeed }},
+                edgeAnimation: {{ $edgeAnimation }} / 100,
+                colorMode: '{{ $colorMode }}',
+                    quality: '{{ $quality }}',
+            ...options
+            };
+
+                this.currentIndex = 0;
+                this.totalSlides = this.images.length;
+                this.isAnimating = false;
+                this.animationFrame = null;
+                this.autoPlayInterval = null;
+                this.time = 0;
+
+                this.preset = qualityPresets[this.options.quality] || qualityPresets.medium;
+
+                this.init();
+            }
+
+            init() {
+                const firstImage = this.images[0];
+                if (firstImage.complete) {
+                    this.setup();
+                } else {
+                    firstImage.addEventListener('load', () => this.setup());
+                }
+
+                this.images.forEach((img, index) => {
+                    if (index > 0 && !img.complete) {
+                        img.addEventListener('load', () => {
+                            if (index === this.currentIndex) {
+                                this.updateAmbilight();
+                            }
+                        });
+                    }
+                });
+            }
+
+            setup() {
+                this.setupCanvas();
+                this.setupControls();
+                this.updateAmbilight();
+                this.startAnimation();
+                this.startAutoPlay();
+
+                window.addEventListener('resize', () => {
+                    this.setupCanvas();
+                    this.updateAmbilight();
+                });
+            }
+
+            setupCanvas() {
+                const rect = this.mainWrapper.getBoundingClientRect();
+                const scale = this.preset.canvasScale;
+                const spread = this.options.spread;
+
+                this.canvas.width = rect.width * scale * spread;
+                this.canvas.height = rect.height * scale * spread;
+                this.canvas.style.width = `${rect.width * spread}px`;
+                this.canvas.style.height = `${rect.height * spread}px`;
+            }
+
+            setupControls() {
+                const nextBtn = this.carousel.querySelector('.carousel-next');
+                const prevBtn = this.carousel.querySelector('.carousel-prev');
+
+                if (this.totalSlides <= 1) {
+                    if (nextBtn) nextBtn.style.display = 'none';
+                    if (prevBtn) prevBtn.style.display = 'none';
+                    this.carousel.querySelector('.carousel-indicators')?.style.setProperty('display', 'none');
+                    return;
+                }
+
+                nextBtn?.addEventListener('click', () => {
+                    this.nextSlide();
+                    this.restartAutoPlay();
+                });
+
+                prevBtn?.addEventListener('click', () => {
+                    this.prevSlide();
+                    this.restartAutoPlay();
+                });
+
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        this.goToSlide(index);
+                        this.restartAutoPlay();
+                    });
+                });
+
+                this.carousel.addEventListener('mouseenter', () => this.stopAutoPlay());
+                this.carousel.addEventListener('mouseleave', () => this.startAutoPlay());
+            }
+
+            goToSlide(index) {
+                this.currentIndex = index;
+                this.updateCarousel();
+            }
+
+            nextSlide() {
+                this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            prevSlide() {
+                this.currentIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            updateCarousel() {
+                const translateX = -(this.currentIndex * 100);
+                this.track.style.transform = `translateX(${translateX}%)`;
+
+                this.indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentIndex);
+                });
+
+                setTimeout(() => this.updateAmbilight(), 100);
+            }
+
+            updateAmbilight() {
+                const currentImage = this.images[this.currentIndex];
+                if (!currentImage || !currentImage.complete || currentImage.naturalWidth === 0) return;
+                this.currentImageData = this.extractColors(currentImage);
+            }
+
+            extractColors(image) {
+                const tempCanvas = document.createElement('canvas');
+                const tempCtx = tempCanvas.getContext('2d', { willReadFrequently: true });
+                const size = 100;
+                tempCanvas.width = size;
+                tempCanvas.height = size;
+
+                try {
+                    tempCtx.drawImage(image, 0, 0, size, size);
+                    const imageData = tempCtx.getImageData(0, 0, size, size);
+                    return this.analyzeColors(imageData, size);
+                } catch (e) {
+                    console.warn('Could not extract colors:', e);
+                    return null;
+                }
+            }
+
+            analyzeColors(imageData, size) {
+                const { data } = imageData;
+                const edgeSize = Math.floor(size * this.options.edgeSampling);
+                const edges = { top: [], right: [], bottom: [], left: [] };
+                const step = this.preset.sampleStep;
+
+                for (let i = 0; i < size; i += step) {
+                    for (let j = 0; j < edgeSize; j += step) {
+                        const idx = (j * size + i) * 4;
+                        edges.top.push([data[idx], data[idx + 1], data[idx + 2]]);
+                    }
+                    for (let j = size - edgeSize; j < size; j += step) {
+                        const idx = (j * size + i) * 4;
+                        edges.bottom.push([data[idx], data[idx + 1], data[idx + 2]]);
+                    }
+                    for (let j = 0; j < edgeSize; j += step) {
+                        const idx = (i * size + j) * 4;
+                        edges.left.push([data[idx], data[idx + 1], data[idx + 2]]);
+                    }
+                    for (let j = size - edgeSize; j < size; j += step) {
+                        const idx = (i * size + j) * 4;
+                        edges.right.push([data[idx], data[idx + 1], data[idx + 2]]);
+                    }
+                }
+
+                const avgColor = (colors) => {
+                    if (colors.length === 0) return [128, 128, 128];
+                    const sum = colors.reduce((acc, c) => [acc[0] + c[0], acc[1] + c[1], acc[2] + c[2]], [0, 0, 0]);
+                    return sum.map(v => Math.round(v / colors.length));
+                };
+
+                return {
+                    top: avgColor(edges.top),
+                    right: avgColor(edges.right),
+                    bottom: avgColor(edges.bottom),
+                    left: avgColor(edges.left)
+                };
+            }
+
+            startAnimation() {
+                const animate = () => {
+                    this.time += 0.016 * this.options.animationSpeed;
+                    this.render();
+                    this.animationFrame = requestAnimationFrame(animate);
+                };
+                animate();
+            }
+
+            render() {
+                if (!this.currentImageData) return;
+
+                const { width, height } = this.canvas;
+                const ctx = this.ctx;
+
+                ctx.clearRect(0, 0, width, height);
+
+                const colors = this.currentImageData;
+                const edgeAnim = this.options.edgeAnimation;
+                const vibrance = this.options.colorVibrance;
+
+                const gradient = ctx.createRadialGradient(
+                    width / 2, height / 2, 0,
+                    width / 2, height / 2, Math.max(width, height) / 2
+                );
+
+                const animateColor = (color, offset) => {
+                    const wave = Math.sin(this.time + offset) * edgeAnim * 30;
+                    return color.map(c => Math.min(255, Math.max(0, c + wave * vibrance)));
+                };
+
+                const topColor = animateColor(colors.top, 0);
+                const rightColor = animateColor(colors.right, Math.PI / 2);
+                const bottomColor = animateColor(colors.bottom, Math.PI);
+                const leftColor = animateColor(colors.left, Math.PI * 1.5);
+
+                const centerColor = [
+                    (topColor[0] + rightColor[0] + bottomColor[0] + leftColor[0]) / 4,
+                    (topColor[1] + rightColor[1] + bottomColor[1] + leftColor[1]) / 4,
+                    (topColor[2] + rightColor[2] + bottomColor[2] + leftColor[2]) / 4
+                ];
+
+                gradient.addColorStop(0, `rgba(${centerColor.join(',')}, ${this.options.opacity})`);
+                gradient.addColorStop(0.5, `rgba(${centerColor.join(',')}, ${this.options.opacity * 0.6})`);
+                gradient.addColorStop(1, `rgba(${centerColor.join(',')}, 0)`);
+
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, width, height);
+
+                this.canvas.style.filter = `
+                    blur(${this.options.blur}px)
+                    brightness(${this.options.brightness})
+                    saturate(${this.options.saturation})
+                `;
+            }
+
+            startAutoPlay() {
+                this.stopAutoPlay();
+                const intervalTime = parseInt(this.carousel.dataset.interval) || 3000;
+                this.autoPlayInterval = setInterval(() => this.nextSlide(), intervalTime);
+            }
+
+            stopAutoPlay() {
+                if (this.autoPlayInterval) {
+                    clearInterval(this.autoPlayInterval);
+                    this.autoPlayInterval = null;
+                }
+            }
+
+            restartAutoPlay() {
+                this.stopAutoPlay();
+                this.startAutoPlay();
+            }
+
+            destroy() {
+                this.stopAutoPlay();
+                if (this.animationFrame) {
+                    cancelAnimationFrame(this.animationFrame);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById(carouselId);
+            if (carousel) {
+                new CarouselAmbilight(carousel);
+            }
+        });
+    })();
+</script>
+{{ end }}
