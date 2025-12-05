@@ -6,11 +6,9 @@ layout: "aboutus"
 aboutus_hero:
   backgroundImage: "/about-us/hero.png"
   mainImages:
-    - "/about-us/main.png"
-    - "/about-us/main1.png"
-    - "/about-us/main2.png"
-    - "/about-us/main3.png"
-    - "/about-us/main4.png"
+    - "/about-us/main.jpg"
+    - "/about-us/main1.jpg"
+    - "/about-us/main2.jpg"
   carousel:
     interval: 4000
     transition: 800
